@@ -1,0 +1,44 @@
+Phase 3 — Evidence Model + Cost Control
+Date: 2026-05-12T13:12:30+00:00
+Qube: cloud-dev-workbench
+Project: yandex-cloud-security-remediation-program
+
+Documentation checks:
+[OK] docs/evidence-index.md
+[OK] docs/cost-control.md
+[OK] docs/resource-inventory.md
+[OK] docs/publication-safety-checklist.md
+[OK] evidence/before-after-metrics.md
+
+Script checks:
+[OK] scripts/collect-evidence.sh executable
+[OK] scripts/redact-evidence.sh executable
+[OK] scripts/cost-check.sh executable
+[OK] scripts/destroy-checklist.sh executable
+
+Evidence checks:
+[OK] tool version evidence
+
+Sensitive file checks:
+[OK] No Terraform state files
+[OK] No kubeconfig files
+[OK] No key/token-like files
+[OK] No billing-data directory content
+[OK] No raw-audit-logs directory content
+
+Cloud cost control:
+[OK] No Yandex Cloud resources created in this phase
+[OK] No promo code activation in this phase
+[OK] No Managed Kubernetes created in this phase
+[OK] No Compute nodes created in this phase
+[OK] No LoadBalancer created in this phase
+[OK] No public IP created in this phase
+
+Git diff summary:
+ PROJECT_TREE.txt                                       |  2 ++
+ .../YCSEC_03_OUTPUT_evidence_cost_control.txt          | 18 +-----------------
+ 2 files changed, 3 insertions(+), 17 deletions(-)
+
+Git status:
+ M PROJECT_TREE.txt
+ M evidence/command-outputs/YCSEC_03_OUTPUT_evidence_cost_control.txt

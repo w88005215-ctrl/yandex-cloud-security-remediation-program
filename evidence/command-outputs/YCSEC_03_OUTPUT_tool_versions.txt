@@ -1,0 +1,89 @@
+YCSEC Tool Version Inventory
+Date: 2026-05-12T13:12:07+00:00
+Qube: cloud-dev-workbench
+
+Git repository:
+/home/user/projects/yandex-cloud-security-remediation-program
+
+Git status:
+?? docs/cost-control.md
+?? docs/evidence-index.md
+?? docs/publication-safety-checklist.md
+?? docs/resource-inventory.md
+?? evidence/before-after-metrics.md
+?? evidence/command-outputs/YCSEC_03_OUTPUT_tool_versions.txt
+?? scripts/collect-evidence.sh
+?? scripts/cost-check.sh
+?? scripts/destroy-checklist.sh
+?? scripts/redact-evidence.sh
+
+Tool versions:
+
+[git]
+git version 2.54.0
+
+[yc]
+not installed
+
+[terraform]
+not installed
+
+[tofu]
+not installed
+
+[kubectl]
+not installed
+
+[helm]
+not installed
+
+[jq]
+jq: error: version/0 is not defined at <top-level>, line 1:
+version
+jq: 1 compile error
+
+[yq]
+not installed
+
+[docker]
+not installed
+
+[podman]
+not installed
+
+[kind]
+not installed
+
+[k3d]
+not installed
+
+[trivy]
+not installed
+
+[checkov]
+not installed
+
+[gitleaks]
+not installed
+
+[semgrep]
+not installed
+
+[syft]
+not installed
+
+[grype]
+not installed
+
+[kube-score]
+not installed
+
+[kubescape]
+not installed
+
+[kyverno]
+not installed
+
+[cosign]
+not installed
+

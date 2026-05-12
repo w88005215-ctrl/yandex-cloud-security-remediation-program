@@ -1,0 +1,23 @@
+Phase 3C — Clean Phase 3 Git History
+Date: 2026-05-12T13:13:49+00:00
+Qube: cloud-dev-workbench
+
+Latest commits:
+bd6ff96 docs: add evidence and cost control model
+d6ca698 docs: add root portfolio documentation
+a13fd21 chore: initialize repository skeleton
+
+Tags:
+v0.1-skeleton
+v0.2-root-docs
+v0.3-evidence-cost-control
+
+Tag points:
+v0.1-skeleton -> a13fd21bf4eea399c5c7840e16eda7ada6e22382
+v0.2-root-docs -> d6ca69804d7d056524f2482f2e4b5325855e19da
+v0.3-evidence-cost-control -> bd6ff96a2b80a63052cc672f5fccf52820442fff
+
+Validation:
+[OK] Phase 3 commit exists
+[OK] v0.3 tag points to HEAD
+[WARN] working tree has changes before adding cleanup evidence
