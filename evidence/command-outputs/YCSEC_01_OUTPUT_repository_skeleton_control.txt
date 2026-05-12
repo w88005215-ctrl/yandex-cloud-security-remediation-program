@@ -1,0 +1,171 @@
+Phase 1A — Repository Skeleton Control
+Date: 2026-05-12T12:42:24+00:00
+Qube: cloud-dev-workbench
+Project: yandex-cloud-security-remediation-program
+
+Directory checks:
+[OK] docs/ru
+[OK] docs/en
+[OK] terraform/modules/network
+[OK] terraform/modules/iam
+[OK] terraform/modules/oidc
+[OK] terraform/modules/audit
+[OK] terraform/modules/registry
+[OK] terraform/modules/object-storage
+[OK] terraform/modules/managed-kubernetes
+[OK] terraform/environments/bootstrap
+[OK] terraform/environments/dev
+[OK] terraform/environments/prod-like
+[OK] kubernetes/insecure-baseline
+[OK] kubernetes/hardened
+[OK] evidence/command-outputs
+[OK] evidence/screenshots
+[OK] evidence/before
+[OK] evidence/after
+[OK] evidence/sanitized
+
+File checks:
+[OK] .gitignore
+[OK] PROJECT_TREE.txt
+[OK] README.md placeholder
+[OK] README_RU.md placeholder
+[OK] README_EN.md placeholder
+[OK] .github/workflows/.gitkeep
+
+Secret/state safety checks:
+[OK] No Terraform state files
+[OK] No kubeconfig files
+[OK] No key/token-like files
+
+Current branch:
+main
+
+Git status:
+?? .github/
+?? .gitignore
+?? GITHUB_PUBLICATION_NOTE.md
+?? LICENSE
+?? PORTFOLIO_SUMMARY.md
+?? PROJECT_TREE.txt
+?? README.md
+?? README_EN.md
+?? README_RU.md
+?? RELEASE_CHECKLIST.md
+?? SECURITY.md
+?? ci/
+?? diagrams/
+?? docs/
+?? evidence/
+?? kubernetes/
+?? presentation/
+?? reports/
+?? scripts/
+?? terraform/
+
+Project tree preview:
+.
+.git
+.git/HEAD
+.git/config
+.git/description
+.git/hooks
+.git/hooks/applypatch-msg.sample
+.git/hooks/commit-msg.sample
+.git/hooks/fsmonitor-watchman.sample
+.git/hooks/post-update.sample
+.git/hooks/pre-applypatch.sample
+.git/hooks/pre-commit.sample
+.git/hooks/pre-merge-commit.sample
+.git/hooks/pre-push.sample
+.git/hooks/pre-rebase.sample
+.git/hooks/pre-receive.sample
+.git/hooks/prepare-commit-msg.sample
+.git/hooks/push-to-checkout.sample
+.git/hooks/sendemail-validate.sample
+.git/hooks/update.sample
+.git/info
+.git/info/exclude
+.git/objects
+.git/objects/info
+.git/objects/pack
+.git/refs
+.git/refs/heads
+.git/refs/tags
+.github
+.github/workflows
+.github/workflows/.gitkeep
+.gitignore
+GITHUB_PUBLICATION_NOTE.md
+LICENSE
+PORTFOLIO_SUMMARY.md
+PROJECT_TREE.txt
+README.md
+README_EN.md
+README_RU.md
+RELEASE_CHECKLIST.md
+SECURITY.md
+ci
+ci/.gitkeep
+diagrams
+diagrams/.gitkeep
+docs
+docs/.gitkeep
+docs/en
+docs/en/.gitkeep
+docs/ru
+docs/ru/.gitkeep
+evidence
+evidence/.gitkeep
+evidence/after
+evidence/after/.gitkeep
+evidence/before
+evidence/before/.gitkeep
+evidence/before_after
+evidence/before_after/.gitkeep
+evidence/command-outputs
+evidence/command-outputs/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt
+evidence/sanitized
+evidence/sanitized/.gitkeep
+evidence/screenshots
+evidence/screenshots/.gitkeep
+kubernetes
+kubernetes/.gitkeep
+kubernetes/demo-app
+kubernetes/demo-app/.gitkeep
+kubernetes/hardened
+kubernetes/hardened/.gitkeep
+kubernetes/insecure-baseline
+kubernetes/insecure-baseline/.gitkeep
+kubernetes/kyverno-policies
+kubernetes/kyverno-policies/.gitkeep
+kubernetes/namespaces
+kubernetes/namespaces/.gitkeep
+kubernetes/network-policies
+kubernetes/network-policies/.gitkeep
+kubernetes/pod-security
+kubernetes/pod-security/.gitkeep
+kubernetes/rbac
+kubernetes/rbac/.gitkeep
+presentation
+presentation/.gitkeep
+reports
+reports/.gitkeep
+scripts
+scripts/.gitkeep
+terraform
+terraform/.gitkeep
+terraform/environments
+terraform/environments/.gitkeep
+terraform/environments/bootstrap
+terraform/environments/dev
+terraform/environments/prod-like
+terraform/modules
+terraform/modules/.gitkeep
+terraform/modules/audit
+terraform/modules/iam
+terraform/modules/managed-kubernetes
+terraform/modules/network
+terraform/modules/object-storage
+terraform/modules/oidc
+terraform/modules/registry

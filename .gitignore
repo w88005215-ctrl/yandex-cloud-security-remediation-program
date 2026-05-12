@@ -1,0 +1,103 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cache/
+tmp/
+temp/
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Terraform / OpenTofu
+.terraform/
+.terraform.d/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl.tmp
+
+# Terraform variable files that may contain sensitive values
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Yandex Cloud credentials and keys
+authorized_key.json
+service_account_key.json
+yc-sa-key.json
+*-sa-key.json
+*.authorized-key.json
+*.service-account-key.json
+
+# Generic secrets / keys / tokens
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.csr
+*.token
+*.secret
+*.secrets
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+secrets/
+tokens/
+credentials/
+private/
+
+# Kubernetes sensitive files
+*kubeconfig*
+kubeconfig
+*.kubeconfig
+kubeconfig-*
+admin.conf
+.kube/
+
+# Cloud and audit data that must be sanitized before publication
+raw-audit-logs/
+billing-data/
+evidence/raw/
+evidence/private/
+evidence/**/raw-*
+evidence/**/*_raw.*
+evidence/**/*secret*
+evidence/**/*token*
+evidence/**/*kubeconfig*
+evidence/**/*billing*
+
+# Reports generated locally
+*.pdf
+*.docx
+*.pptx
+
+# Python / tooling cache
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / frontend tooling
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

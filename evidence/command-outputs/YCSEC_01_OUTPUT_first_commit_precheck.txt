@@ -1,0 +1,88 @@
+Phase 1B — First Commit Precheck
+Date: 2026-05-12T12:48:15+00:00
+Qube: cloud-dev-workbench
+Project: yandex-cloud-security-remediation-program
+
+Git identity:
+user.name=w88005215-ctrl
+user.email=w88005215@gmail.com.com
+
+Branch:
+main
+
+Required files:
+[OK] .gitignore
+[OK] PROJECT_TREE.txt
+[OK] README.md placeholder
+[OK] README_RU.md placeholder
+[OK] README_EN.md placeholder
+[OK] SECURITY.md placeholder
+[OK] RELEASE_CHECKLIST.md placeholder
+[OK] GITHUB_PUBLICATION_NOTE.md placeholder
+[OK] PORTFOLIO_SUMMARY.md placeholder
+
+Required directories:
+[OK] terraform/modules
+[OK] terraform/environments
+[OK] kubernetes/insecure-baseline
+[OK] kubernetes/hardened
+[OK] evidence/command-outputs
+[OK] evidence/screenshots
+[OK] .github/workflows
+
+Sensitive file checks:
+[OK] No Terraform state files
+[OK] No kubeconfig files
+[OK] No key/token-like files
+
+Git status before commit:
+A  .github/workflows/.gitkeep
+A  .gitignore
+A  GITHUB_PUBLICATION_NOTE.md
+A  LICENSE
+A  PORTFOLIO_SUMMARY.md
+A  PROJECT_TREE.txt
+A  README.md
+A  README_EN.md
+A  README_RU.md
+A  RELEASE_CHECKLIST.md
+A  SECURITY.md
+A  ci/.gitkeep
+A  diagrams/.gitkeep
+A  docs/.gitkeep
+A  docs/en/.gitkeep
+A  docs/ru/.gitkeep
+A  evidence/.gitkeep
+A  evidence/after/.gitkeep
+A  evidence/before/.gitkeep
+A  evidence/before_after/.gitkeep
+A  evidence/command-outputs/.gitkeep
+A  evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt
+A  evidence/sanitized/.gitkeep
+A  evidence/screenshots/.gitkeep
+A  kubernetes/.gitkeep
+A  kubernetes/demo-app/.gitkeep
+A  kubernetes/hardened/.gitkeep
+A  kubernetes/insecure-baseline/.gitkeep
+A  kubernetes/kyverno-policies/.gitkeep
+A  kubernetes/namespaces/.gitkeep
+A  kubernetes/network-policies/.gitkeep
+A  kubernetes/pod-security/.gitkeep
+A  kubernetes/rbac/.gitkeep
+A  presentation/.gitkeep
+A  reports/.gitkeep
+A  scripts/.gitkeep
+A  terraform/.gitkeep
+A  terraform/environments/.gitkeep
+A  terraform/environments/bootstrap/.gitkeep
+A  terraform/environments/dev/.gitkeep
+A  terraform/environments/prod-like/.gitkeep
+A  terraform/modules/.gitkeep
+A  terraform/modules/audit/.gitkeep
+A  terraform/modules/iam/.gitkeep
+A  terraform/modules/managed-kubernetes/.gitkeep
+A  terraform/modules/network/.gitkeep
+A  terraform/modules/object-storage/.gitkeep
+A  terraform/modules/oidc/.gitkeep
+A  terraform/modules/registry/.gitkeep
+?? evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt
