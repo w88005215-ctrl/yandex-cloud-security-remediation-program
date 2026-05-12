@@ -1,0 +1,111 @@
+# Yandex Cloud Security Remediation Program
+
+Terraform + IAM/OIDC/SAML + Managed Kubernetes Hardening + Audit Evidence
+
+## Project purpose
+
+This repository demonstrates a production-like cloud security remediation program on real managed cloud infrastructure using Yandex Cloud.
+
+The project is designed as a portfolio-grade Cloud Security / DevSecOps case. It shows how an insecure cloud and Kubernetes baseline can be identified, remediated, measured and documented with audit-ready evidence.
+
+## Scope
+
+The project covers:
+
+- Terraform / OpenTofu infrastructure as code
+- Yandex Cloud IAM and least privilege
+- GitHub Actions OIDC / Workload Identity Federation
+- SAML/SSO federation pattern
+- Yandex Managed Service for Kubernetes
+- Kubernetes insecure baseline
+- Kubernetes hardening
+- RBAC least privilege
+- NetworkPolicy
+- Pod Security Standards
+- Kyverno policy-as-code
+- CI/CD security gates
+- Trivy, Checkov, Gitleaks, Syft, Grype and related security tooling
+- Audit Trails and sanitized evidence
+- Before/after remediation metrics
+- Risk register
+- Control matrix
+- AWS/GCP/Azure control mapping
+- RU/EN final reports
+
+## Positioning
+
+This is not claimed as AWS, GCP or Azure production experience.
+
+Correct positioning:
+
+Production-like cloud security remediation program on real managed cloud infrastructure with provider-agnostic controls mapped to AWS/GCP/Azure.
+
+## Operating model
+
+The project follows a local-first and short cloud evidence run model:
+
+1. Prepare Terraform, Kubernetes manifests, CI/CD checks and evidence model locally.
+2. Run local validation and security scans.
+3. Create short-lived Yandex Cloud resources only when evidence collection is ready.
+4. Collect evidence.
+5. Apply remediation.
+6. Measure before/after outcomes.
+7. Check cost.
+8. Destroy expensive resources.
+
+Managed Kubernetes clusters, compute nodes, public IP addresses and load balancers must not be left running without an active evidence purpose.
+
+## Repository structure
+
+Main areas:
+
+- terraform/ — Terraform modules and environments
+- kubernetes/ — insecure baseline, hardened manifests, RBAC, NetworkPolicy, PSS and Kyverno policies
+- .github/workflows/ — CI/CD security gates and OIDC-based cloud workflow
+- docs/ — architecture, threat model, control matrix, risk register and mapping
+- evidence/ — sanitized command outputs, screenshots and before/after metrics
+- reports/ — final RU/EN reports
+- presentation/ — presentation outline
+- scripts/ — helper scripts for evidence, redaction, cost checks and destroy checks
+
+## Evidence-first approach
+
+Each important phase must produce evidence:
+
+- command outputs go to evidence/command-outputs/
+- screenshots go to evidence/screenshots/
+- baseline findings go to evidence/before/
+- remediation results go to evidence/after/
+- sanitized audit artifacts go to evidence/sanitized/
+- measurable outcomes go to evidence/before-after-metrics.md
+
+## Safety rules
+
+The repository must never contain:
+
+- Terraform state
+- kubeconfig files
+- service account keys
+- IAM tokens
+- OIDC tokens
+- raw audit logs
+- billing data
+- unredacted screenshots
+- personal or payment data
+
+## Current status
+
+Project phase:
+
+- v0.1-skeleton — repository skeleton initialized
+- Phase 2 — root portfolio documentation in progress
+
+## Intended audience
+
+This project is prepared for:
+
+- GitHub portfolio review
+- technical interview discussion
+- cloud security / DevSecOps demonstration
+- academic or training project defense
+- security engineering review

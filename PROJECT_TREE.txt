@@ -19,6 +19,10 @@
 ./evidence/before/.gitkeep
 ./evidence/before_after/.gitkeep
 ./evidence/command-outputs/.gitkeep
+./evidence/command-outputs/YCSEC_01C_OUTPUT_git_author_email_fix.txt
+./evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt
+./evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_result.txt
+./evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt
 ./evidence/sanitized/.gitkeep
 ./evidence/screenshots/.gitkeep
 ./kubernetes/.gitkeep

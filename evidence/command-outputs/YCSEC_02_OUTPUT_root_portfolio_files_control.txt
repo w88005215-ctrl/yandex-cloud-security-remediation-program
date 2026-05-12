@@ -1,0 +1,66 @@
+Phase 2 — Root Portfolio Documentation Control
+Date: 2026-05-12T12:56:42+00:00
+Qube: cloud-dev-workbench
+Project: yandex-cloud-security-remediation-program
+
+Git identity:
+user.name=w88005215-ctrl
+user.email=w88005215@gmail.com
+
+Root documentation files:
+[OK] README.md
+[OK] README_RU.md
+[OK] README_EN.md
+[OK] PORTFOLIO_SUMMARY.md
+[OK] GITHUB_PUBLICATION_NOTE.md
+[OK] RELEASE_CHECKLIST.md
+[OK] SECURITY.md
+[OK] LICENSE
+[OK] PROJECT_TREE.txt
+
+Core structure checks:
+[OK] terraform/modules
+[OK] terraform/environments
+[OK] kubernetes/insecure-baseline
+[OK] kubernetes/hardened
+[OK] evidence/command-outputs
+[OK] docs/ru
+[OK] docs/en
+
+Sensitive file checks:
+[OK] No Terraform state files
+[OK] No kubeconfig files
+[OK] No key/token-like files
+[OK] No billing-data directory content
+[OK] No raw-audit-logs directory content
+
+Cloud cost control:
+[OK] No Yandex Cloud resources created in this phase
+[OK] No Managed Kubernetes created in this phase
+[OK] No Compute nodes created in this phase
+[OK] No LoadBalancer created in this phase
+[OK] No public IP created in this phase
+
+Git diff summary:
+ GITHUB_PUBLICATION_NOTE.md |  66 +++++++++++++++++++++++++++
+ LICENSE                    |  20 ++++++++
+ PORTFOLIO_SUMMARY.md       |  67 +++++++++++++++++++++++++++
+ PROJECT_TREE.txt           |   4 ++
+ README.md                  | 111 +++++++++++++++++++++++++++++++++++++++++++++
+ README_EN.md               |  90 ++++++++++++++++++++++++++++++++++++
+ README_RU.md               |  92 +++++++++++++++++++++++++++++++++++++
+ RELEASE_CHECKLIST.md       |  82 +++++++++++++++++++++++++++++++++
+ SECURITY.md                |  63 +++++++++++++++++++++++++
+ 9 files changed, 595 insertions(+)
+
+Git status:
+ M GITHUB_PUBLICATION_NOTE.md
+ M LICENSE
+ M PORTFOLIO_SUMMARY.md
+ M PROJECT_TREE.txt
+ M README.md
+ M README_EN.md
+ M README_RU.md
+ M RELEASE_CHECKLIST.md
+ M SECURITY.md
+?? evidence/command-outputs/YCSEC_02_OUTPUT_root_portfolio_files_control.txt
