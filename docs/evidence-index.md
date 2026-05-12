@@ -88,3 +88,12 @@ architecture -> implementation -> scan result -> remediation -> audit evidence -
 | EVID-LOCAL-006 | Phase 4 | docs/toolchain-model.md | Toolchain installation and validation model | Yes | Yes |
 | EVID-LOCAL-007 | Phase 4 | evidence/command-outputs/YCSEC_04_OUTPUT_qubes_toolchain_discovery.txt | Qubes/AppVM environment discovery | Yes | Yes |
 | EVID-LOCAL-008 | Phase 4 | evidence/command-outputs/YCSEC_04_OUTPUT_toolchain_check.txt | Current local toolchain status | Yes | Yes |
+
+
+## Phase 5 evidence
+
+| Evidence ID | Phase | File | Description | Sanitized | Public |
+|---|---|---|---|---:|---:|
+| EVID-LOCAL-013 | Phase 5 | evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_check.txt | Clean final local toolchain validation | Yes | Yes |
+| EVID-LOCAL-014 | Phase 5 | evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_control.txt | Final clean toolchain control evidence | Yes | Yes |
+| EVID-LOCAL-015 | Phase 5 | evidence/command-outputs/YCSEC_05_OUTPUT_final_git_control.txt | Git commit and tag evidence for toolchain baseline | Yes | Yes |

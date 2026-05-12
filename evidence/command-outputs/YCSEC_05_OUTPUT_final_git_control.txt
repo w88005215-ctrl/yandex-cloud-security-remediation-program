@@ -1,0 +1,22 @@
+Phase 5C-R — Final Git Control
+Date: 2026-05-12T15:05:02+00:00
+
+Latest commits:
+69a69c5 chore: complete full local security toolchain
+0d805ba docs: add Qubes-aware toolchain discovery
+4346f6c docs: add evidence and cost control model
+d6ca698 docs: add root portfolio documentation
+a13fd21 chore: initialize repository skeleton
+
+Tags:
+v0.1-skeleton
+v0.2-root-docs
+v0.3-evidence-cost-control
+v0.4-toolchain-discovery
+v0.5-full-toolchain
+
+Tag on HEAD:
+v0.5-full-toolchain
+
+Git status:
+?? evidence/command-outputs/YCSEC_05_OUTPUT_final_git_control.txt

@@ -19,6 +19,7 @@
 ./docs/qubes-workstation-model.md
 ./docs/resource-inventory.md
 ./docs/ru/.gitkeep
+./docs/toolchain-installation.md
 ./docs/toolchain-model.md
 ./evidence/.gitkeep
 ./evidence/after/.gitkeep
@@ -36,8 +37,12 @@
 ./evidence/command-outputs/YCSEC_03_OUTPUT_evidence_cost_control.txt
 ./evidence/command-outputs/YCSEC_03_OUTPUT_final_git_control.txt
 ./evidence/command-outputs/YCSEC_03_OUTPUT_tool_versions.txt
+./evidence/command-outputs/YCSEC_04_OUTPUT_final_git_control.txt
 ./evidence/command-outputs/YCSEC_04_OUTPUT_qubes_toolchain_discovery.txt
 ./evidence/command-outputs/YCSEC_04_OUTPUT_toolchain_check.txt
+./evidence/command-outputs/YCSEC_04_OUTPUT_toolchain_phase_control.txt
+./evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_check.txt
+./evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_control.txt
 ./evidence/sanitized/.gitkeep
 ./evidence/screenshots/.gitkeep
 ./kubernetes/.gitkeep

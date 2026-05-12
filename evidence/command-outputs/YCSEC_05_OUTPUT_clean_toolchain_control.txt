@@ -1,0 +1,66 @@
+Phase 5C-R — Clean Toolchain Final Control
+Date: 2026-05-12T15:05:02+00:00
+Qube: cloud-dev-workbench
+Project: yandex-cloud-security-remediation-program
+
+Toolchain result:
+[OK] no FAIL findings in clean toolchain check
+[OK] no WARN findings in clean toolchain check
+
+Trusted gitleaks path:
+[OK] gitleaks found at /usr/bin/gitleaks
+8.30.0
+[OK] gitleaks uses TemplateVM/Fedora package path
+
+Documentation checks:
+[OK] docs/toolchain-installation.md
+[OK] docs/evidence-index.md
+
+Script checks:
+[OK] scripts/check-toolchain.sh executable
+
+Legacy cleanup checks:
+[OK] legacy failed evidence files are absent
+[OK] legacy installer scripts are absent
+
+Sensitive file checks:
+[OK] No Terraform state files
+[OK] No kubeconfig files
+[OK] No key/token-like files
+
+Cloud cost control:
+[OK] No Yandex Cloud resources created in this phase
+[OK] No promo code activation in this phase
+[OK] No Managed Kubernetes created in this phase
+[OK] No Compute nodes created in this phase
+[OK] No LoadBalancer created in this phase
+[OK] No public IP created in this phase
+
+Git status:
+ M PROJECT_TREE.txt
+ M docs/evidence-index.md
+ M docs/toolchain-installation.md
+ D evidence/command-outputs/YCSEC_05R2_OUTPUT_final_control.txt
+ D evidence/command-outputs/YCSEC_05R2_OUTPUT_final_toolchain_gap_repair.txt
+ D evidence/command-outputs/YCSEC_05R2_OUTPUT_full_toolchain_check.txt
+ D evidence/command-outputs/YCSEC_05R3_OUTPUT_final_binary_repair.txt
+ D evidence/command-outputs/YCSEC_05R3_OUTPUT_final_control.txt
+ D evidence/command-outputs/YCSEC_05R3_OUTPUT_full_toolchain_check.txt
+ D evidence/command-outputs/YCSEC_05R4_OUTPUT_final_control.txt
+ D evidence/command-outputs/YCSEC_05R4_OUTPUT_final_git_control.txt
+ D evidence/command-outputs/YCSEC_05R4_OUTPUT_full_toolchain_check.txt
+ D evidence/command-outputs/YCSEC_05R4_OUTPUT_gitleaks_binary_repair.txt
+ D evidence/command-outputs/YCSEC_05R_OUTPUT_full_toolchain_check_after_repair.txt
+ D evidence/command-outputs/YCSEC_05R_OUTPUT_toolchain_repair_control.txt
+ D evidence/command-outputs/YCSEC_05R_OUTPUT_toolchain_repair_install.txt
+ D evidence/command-outputs/YCSEC_05_OUTPUT_full_toolchain_check.txt
+ D evidence/command-outputs/YCSEC_05_OUTPUT_full_toolchain_control.txt
+ D evidence/command-outputs/YCSEC_05_OUTPUT_full_toolchain_install.txt
+ M scripts/check-toolchain.sh
+ D scripts/install-user-toolchain.sh
+ D scripts/repair-final-binary-tools.sh
+ D scripts/repair-final-toolchain-gaps.sh
+ D scripts/repair-gitleaks-binary.sh
+ D scripts/repair-user-toolchain.sh
+?? evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_check.txt
+?? evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_control.txt
