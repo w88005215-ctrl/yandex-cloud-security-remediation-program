@@ -1,0 +1,57 @@
+Phase 4 — Qubes-aware Toolchain Discovery Control
+Date: 2026-05-12T13:18:54+00:00
+Qube: cloud-dev-workbench
+Project: yandex-cloud-security-remediation-program
+
+Documentation checks:
+[OK] docs/qubes-workstation-model.md
+[OK] docs/toolchain-model.md
+[OK] docs/evidence-index.md
+[OK] docs/resource-inventory.md
+
+Script checks:
+[OK] scripts/qubes-toolchain-discovery.sh executable
+[OK] scripts/check-toolchain.sh executable
+
+Evidence checks:
+[OK] Qubes discovery evidence
+[OK] toolchain check evidence
+
+Current required tool gaps:
+[WARN] yc missing
+[WARN] tofu missing
+[WARN] kubectl missing
+[WARN] gitleaks missing
+[WARN] checkov missing
+[WARN] trivy missing
+
+Sensitive file checks:
+[OK] No Terraform state files
+[OK] No kubeconfig files
+[OK] No key/token-like files
+
+Cloud cost control:
+[OK] No Yandex Cloud resources created in this phase
+[OK] No promo code activation in this phase
+[OK] No Managed Kubernetes created in this phase
+[OK] No Compute nodes created in this phase
+[OK] No LoadBalancer created in this phase
+[OK] No public IP created in this phase
+
+Git diff summary:
+ PROJECT_TREE.txt           | 7 +++++++
+ docs/evidence-index.md     | 9 +++++++++
+ docs/resource-inventory.md | 7 +++++++
+ 3 files changed, 23 insertions(+)
+
+Git status:
+ M PROJECT_TREE.txt
+ M docs/evidence-index.md
+ M docs/resource-inventory.md
+?? docs/qubes-workstation-model.md
+?? docs/toolchain-model.md
+?? evidence/command-outputs/YCSEC_04_OUTPUT_qubes_toolchain_discovery.txt
+?? evidence/command-outputs/YCSEC_04_OUTPUT_toolchain_check.txt
+?? evidence/command-outputs/YCSEC_04_OUTPUT_toolchain_phase_control.txt
+?? scripts/check-toolchain.sh
+?? scripts/qubes-toolchain-discovery.sh

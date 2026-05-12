@@ -63,3 +63,10 @@ After each cloud-run:
 - record retained resources and reason;
 - save cost check evidence;
 - save destroy evidence.
+
+## Phase 4 local resources
+
+| Date | Phase | Resource | Type | Location | Purpose | Cost Risk | Status | Destroy Condition | Evidence |
+|---|---|---|---|---|---|---|---|---|---|
+| 2026-05-12 | Phase 4 | Toolchain discovery scripts | Local scripts | cloud-dev-workbench | Detect local toolchain gaps | None | Active | N/A | EVID-LOCAL-007 |
+| 2026-05-12 | Phase 4 | Toolchain model docs | Documentation | cloud-dev-workbench | Qubes-aware installation model | None | Active | N/A | EVID-LOCAL-006 |

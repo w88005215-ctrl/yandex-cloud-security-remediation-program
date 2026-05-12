@@ -79,3 +79,12 @@ Before public release, redact or remove:
 Evidence in this project is intentionally structured so a reviewer can trace the path:
 
 architecture -> implementation -> scan result -> remediation -> audit evidence -> control matrix -> final report.
+
+## Phase 4 evidence
+
+| Evidence ID | Phase | File | Description | Sanitized | Public |
+|---|---|---|---|---:|---:|
+| EVID-LOCAL-005 | Phase 4 | docs/qubes-workstation-model.md | Qubes workstation isolation model | Yes | Yes |
+| EVID-LOCAL-006 | Phase 4 | docs/toolchain-model.md | Toolchain installation and validation model | Yes | Yes |
+| EVID-LOCAL-007 | Phase 4 | evidence/command-outputs/YCSEC_04_OUTPUT_qubes_toolchain_discovery.txt | Qubes/AppVM environment discovery | Yes | Yes |
+| EVID-LOCAL-008 | Phase 4 | evidence/command-outputs/YCSEC_04_OUTPUT_toolchain_check.txt | Current local toolchain status | Yes | Yes |

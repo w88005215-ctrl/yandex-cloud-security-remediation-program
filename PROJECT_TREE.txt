@@ -16,8 +16,10 @@
 ./docs/en/.gitkeep
 ./docs/evidence-index.md
 ./docs/publication-safety-checklist.md
+./docs/qubes-workstation-model.md
 ./docs/resource-inventory.md
 ./docs/ru/.gitkeep
+./docs/toolchain-model.md
 ./evidence/.gitkeep
 ./evidence/after/.gitkeep
 ./evidence/before-after-metrics.md
@@ -30,9 +32,12 @@
 ./evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt
 ./evidence/command-outputs/YCSEC_02_OUTPUT_final_git_control.txt
 ./evidence/command-outputs/YCSEC_02_OUTPUT_root_portfolio_files_control.txt
+./evidence/command-outputs/YCSEC_03C_OUTPUT_git_history_cleanup.txt
 ./evidence/command-outputs/YCSEC_03_OUTPUT_evidence_cost_control.txt
 ./evidence/command-outputs/YCSEC_03_OUTPUT_final_git_control.txt
 ./evidence/command-outputs/YCSEC_03_OUTPUT_tool_versions.txt
+./evidence/command-outputs/YCSEC_04_OUTPUT_qubes_toolchain_discovery.txt
+./evidence/command-outputs/YCSEC_04_OUTPUT_toolchain_check.txt
 ./evidence/sanitized/.gitkeep
 ./evidence/screenshots/.gitkeep
 ./kubernetes/.gitkeep
@@ -47,9 +52,11 @@
 ./presentation/.gitkeep
 ./reports/.gitkeep
 ./scripts/.gitkeep
+./scripts/check-toolchain.sh
 ./scripts/collect-evidence.sh
 ./scripts/cost-check.sh
 ./scripts/destroy-checklist.sh
+./scripts/qubes-toolchain-discovery.sh
 ./scripts/redact-evidence.sh
 ./terraform/.gitkeep
 ./terraform/environments/.gitkeep
