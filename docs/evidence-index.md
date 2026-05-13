@@ -106,3 +106,18 @@ architecture -> implementation -> scan result -> remediation -> audit evidence -
 | EVID-IAC-001 | Phase 6 | evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt | Clean local Terraform/OpenTofu and security gate output | Yes | Yes |
 | EVID-IAC-002 | Phase 6 | evidence/command-outputs/YCSEC_06_OUTPUT_iac_skeleton_control.txt | IaC skeleton final control evidence | Yes | Yes |
 | EVID-IAC-003 | Phase 6 | evidence/command-outputs/YCSEC_06_OUTPUT_final_git_control.txt | Git commit and tag evidence for IaC skeleton | Yes | Yes |
+
+## Phase 7 evidence
+
+| Evidence ID | Phase | File | Description | Sanitized | Public |
+|---|---|---|---|---:|---:|
+| EVID-CTRL-001 | Phase 7 | docs/control-matrix.md | Security control matrix | Yes | Yes |
+| EVID-CTRL-002 | Phase 7 | docs/risk-register.md | Risk register | Yes | Yes |
+| EVID-CTRL-003 | Phase 7 | docs/ru/threat-model.md | RU threat model | Yes | Yes |
+| EVID-CTRL-004 | Phase 7 | docs/en/threat-model.md | EN threat model | Yes | Yes |
+| EVID-CTRL-005 | Phase 7 | docs/ru/iam-oidc-saml-design.md | RU IAM/OIDC/SAML design | Yes | Yes |
+| EVID-CTRL-006 | Phase 7 | docs/en/iam-oidc-saml-design.md | EN IAM/OIDC/SAML design | Yes | Yes |
+| EVID-CTRL-007 | Phase 7 | diagrams/ycsec-iam-oidc-saml-flow.mmd | IAM/OIDC/SAML flow diagram | Yes | Yes |
+| EVID-CTRL-008 | Phase 7 | diagrams/ycsec-evidence-flow.mmd | Evidence flow diagram | Yes | Yes |
+| EVID-CTRL-009 | Phase 7 | evidence/command-outputs/YCSEC_07_OUTPUT_control_model_validation.txt | Phase 7 control evidence | Yes | Yes |
+| EVID-CTRL-010 | Phase 7 | evidence/command-outputs/YCSEC_07_OUTPUT_final_git_control.txt | Phase 7 git evidence | Yes | Yes |

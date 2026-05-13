@@ -1,0 +1,61 @@
+Phase 7 — Security Control Model Validation
+Date: 2026-05-13T09:09:52+00:00
+Qube: cloud-dev-workbench
+Project: yandex-cloud-security-remediation-program
+
+Security control documents:
+[OK] docs/ru/security-control-model.md
+[OK] docs/en/security-control-model.md
+[OK] docs/ru/threat-model.md
+[OK] docs/en/threat-model.md
+[OK] docs/ru/iam-oidc-saml-design.md
+[OK] docs/en/iam-oidc-saml-design.md
+[OK] docs/risk-register.md
+[OK] docs/control-matrix.md
+[OK] docs/multi-cloud-control-mapping.md
+
+Diagram checks:
+[OK] diagrams/ycsec-iam-oidc-saml-flow.mmd
+[OK] diagrams/ycsec-evidence-flow.mmd
+
+Content checks:
+[OK] OIDC covered in RU design
+[OK] SAML covered in EN design
+[OK] key leakage threat documented
+[OK] risk register has R-001
+[OK] control matrix has IAM-01
+[OK] multi-cloud mapping present
+
+Evidence checks:
+[OK] docs/evidence-index.md
+[OK] Phase 7 evidence indexed
+
+Sensitive file checks:
+[OK] No Terraform state files
+[OK] No kubeconfig files
+[OK] No key/token-like files
+
+Cloud cost control:
+[OK] No Yandex Cloud resources created in this phase
+[OK] No promo code activation in this phase
+[OK] No terraform apply executed in this phase
+[OK] No Managed Kubernetes created in this phase
+[OK] No Compute nodes created in this phase
+[OK] No LoadBalancer created in this phase
+[OK] No public IP created in this phase
+
+Git status:
+ M PROJECT_TREE.txt
+ M docs/evidence-index.md
+?? diagrams/ycsec-evidence-flow.mmd
+?? diagrams/ycsec-iam-oidc-saml-flow.mmd
+?? docs/control-matrix.md
+?? docs/en/iam-oidc-saml-design.md
+?? docs/en/security-control-model.md
+?? docs/en/threat-model.md
+?? docs/multi-cloud-control-mapping.md
+?? docs/risk-register.md
+?? docs/ru/iam-oidc-saml-design.md
+?? docs/ru/security-control-model.md
+?? docs/ru/threat-model.md
+?? evidence/command-outputs/YCSEC_07_OUTPUT_control_model_validation.txt

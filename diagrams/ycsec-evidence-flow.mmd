@@ -1,0 +1,14 @@
+flowchart TD
+  phase[Project Phase] --> command[Command Output]
+  command --> evidence[evidence/command-outputs]
+  evidence --> validation[OK FAIL WARN Validation]
+  validation --> index[docs/evidence-index.md]
+  index --> metrics[evidence/before-after-metrics.md]
+  metrics --> report[Final RU and EN Reports]
+
+  screenshots[evidence/screenshots] --> index
+  before[evidence/before] --> metrics
+  after[evidence/after] --> metrics
+  raw[Raw Sensitive Evidence] --> redact[Redaction]
+  redact --> sanitized[evidence/sanitized]
+  sanitized --> report

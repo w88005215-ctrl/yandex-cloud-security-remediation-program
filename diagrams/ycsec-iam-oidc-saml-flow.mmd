@@ -1,0 +1,19 @@
+flowchart LR
+  dev[Developer in cloud-dev-workbench] --> git[GitHub Repository]
+  git --> gha[GitHub Actions]
+  gha --> oidc[OIDC Trust]
+  oidc --> sa_plan[Plan Service Account]
+  oidc --> sa_apply[Apply Service Account]
+  sa_plan --> yc_read[Yandex Cloud Read and Plan Scope]
+  sa_apply --> yc_apply[Yandex Cloud Controlled Apply Scope]
+
+  human[Human Reviewer] --> saml[SAML SSO Pattern]
+  saml --> groups[Identity Groups]
+  groups --> viewer[Read-only Review Access]
+  groups --> audit[Audit Review Access]
+  groups --> breakglass[Break-glass Admin Access]
+
+  yc_apply --> evidence[Evidence Collection]
+  yc_read --> evidence
+  evidence --> sanitized[Sanitized Evidence]
+  sanitized --> report[Final Reports]
