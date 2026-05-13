@@ -26,6 +26,7 @@
 ./docs/en/terraform-architecture.md
 ./docs/en/threat-model.md
 ./docs/en/yandex-cloud-readiness.md
+./docs/en/yandex-cloud-smoke-run.md
 ./docs/evidence-index.md
 ./docs/multi-cloud-control-mapping.md
 ./docs/publication-safety-checklist.md
@@ -40,6 +41,7 @@
 ./docs/ru/terraform-architecture.md
 ./docs/ru/threat-model.md
 ./docs/ru/yandex-cloud-readiness.md
+./docs/ru/yandex-cloud-smoke-run.md
 ./docs/toolchain-installation.md
 ./docs/toolchain-model.md
 ./evidence/.gitkeep
@@ -77,7 +79,18 @@
 ./evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt
 ./evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt
 ./evidence/command-outputs/YCSEC_10_OUTPUT_final_control.txt
+./evidence/command-outputs/YCSEC_10_OUTPUT_final_git_control.txt
 ./evidence/command-outputs/YCSEC_10_OUTPUT_yandex_cloud_readiness.txt
+./evidence/command-outputs/YCSEC_11R_OUTPUT_cluster_list_after_apply.txt
+./evidence/command-outputs/YCSEC_11R_OUTPUT_final_cloud_cleanup_verification.txt
+./evidence/command-outputs/YCSEC_11R_OUTPUT_manual_cleanup_after_lost_state.txt
+./evidence/command-outputs/YCSEC_11R_OUTPUT_runtime_snapshot_before_destroy.txt
+./evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt
+./evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_plan_after_disk_fix.txt
+./evidence/command-outputs/YCSEC_11_OUTPUT_final_control.txt
+./evidence/command-outputs/YCSEC_11_OUTPUT_final_git_control.txt
+./evidence/command-outputs/YCSEC_11_OUTPUT_post_sanitization_cloud_verification.txt
+./evidence/command-outputs/YCSEC_11_TERRAFORM_cloud_smoke.tfplan
 ./evidence/sanitized/.gitkeep
 ./evidence/screenshots/.gitkeep
 ./kubernetes/.gitkeep
@@ -114,6 +127,7 @@
 ./scripts/redact-evidence.sh
 ./scripts/run-local-kubernetes-runtime-validation.sh
 ./scripts/run-local-security-gates.sh
+./scripts/run-yandex-cloud-smoke-run.sh
 ./scripts/validate-kubernetes-static-baseline.sh
 ./terraform/.gitkeep
 ./terraform/README.md
@@ -126,6 +140,13 @@
 ./terraform/environments/bootstrap/terraform.tfvars.example
 ./terraform/environments/bootstrap/variables.tf
 ./terraform/environments/bootstrap/versions.tf
+./terraform/environments/cloud-smoke/.terraform.lock.hcl
+./terraform/environments/cloud-smoke/main.tf
+./terraform/environments/cloud-smoke/outputs.tf
+./terraform/environments/cloud-smoke/providers.tf
+./terraform/environments/cloud-smoke/terraform.tfvars.example
+./terraform/environments/cloud-smoke/variables.tf
+./terraform/environments/cloud-smoke/versions.tf
 ./terraform/environments/dev/.gitkeep
 ./terraform/environments/dev/.terraform.lock.hcl
 ./terraform/environments/dev/main.tf

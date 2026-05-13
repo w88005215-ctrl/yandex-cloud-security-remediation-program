@@ -1,0 +1,3 @@
+cloud_id  = "replace-with-yc-cloud-id"
+folder_id = "replace-with-yc-folder-id"
+zone      = "ru-central1-a"

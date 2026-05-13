@@ -1,0 +1,166 @@
+Phase 11R — Manual YC Cleanup After Lost Terraform State
+Date: 2026-05-13T16:17:24+00:00
+Qube: cloud-dev-workbench
+
+Reason:
+[OK] Terraform local state is absent, so terraform destroy cannot see live cloud resources
+[OK] cleanup is performed through read/list + delete operations for Phase 11 smoke resources
+
+Pre-cleanup inventory:
+
+Managed Kubernetes clusters:
++----------------------+---------------------+---------------------+---------+---------+-----------------------+--------------------+
+|          ID          |        NAME         |     CREATED AT      | HEALTH  | STATUS  |   EXTERNAL ENDPOINT   | INTERNAL ENDPOINT  |
++----------------------+---------------------+---------------------+---------+---------+-----------------------+--------------------+
+| <redacted-yc-id> | ycsec-smoke-cluster | 2026-05-13 15:57:43 | HEALTHY | RUNNING | https://<redacted-ip> | https://<redacted-ip> |
++----------------------+---------------------+---------------------+---------+---------+-----------------------+--------------------+
+
+
+Managed Kubernetes node groups:
++----------------------+----------------------+------------------------+----------------------+---------------------+---------+------+
+|          ID          |      CLUSTER ID      |          NAME          |  INSTANCE GROUP ID   |     CREATED AT      | STATUS  | SIZE |
++----------------------+----------------------+------------------------+----------------------+---------------------+---------+------+
+| <redacted-yc-id> | <redacted-yc-id> | ycsec-smoke-node-group | <redacted-yc-id> | 2026-05-13 16:05:40 | RUNNING |    1 |
++----------------------+----------------------+------------------------+----------------------+---------------------+---------+------+
+
+
+Compute instances:
++----------------------+---------------------------+---------------+---------+-------------+-------------+
+|          ID          |           NAME            |    ZONE ID    | STATUS  | EXTERNAL IP | INTERNAL IP |
++----------------------+---------------------------+---------------+---------+-------------+-------------+
+| <redacted-yc-id> | <redacted-yc-id>-iloj | ru-central1-a | RUNNING |             | <redacted-ip>  |
++----------------------+---------------------------+---------------+---------+-------------+-------------+
+
+
+VPC subnets:
++----------------------+-----------------------------------------------------------+----------------------+----------------+---------------+-----------------+
+|          ID          |                           NAME                            |      NETWORK ID      | ROUTE TABLE ID |     ZONE      |      RANGE      |
++----------------------+-----------------------------------------------------------+----------------------+----------------+---------------+-----------------+
+| ajc53qhkk6eud5bd9qtg | default-ru-central1-e                                     | <redacted-yc-id> |                | ru-central1-e | [<redacted-ip>/24] |
+| e2l47ehs7b0p701avdl4 | default-ru-central1-b                                     | <redacted-yc-id> |                | ru-central1-b | [<redacted-ip>/24] |
+| <redacted-yc-id> | ycsec-smoke-subnet                                        | <redacted-yc-id> |                | ru-central1-a | [<redacted-ip>/24]  |
+| <redacted-yc-id> | k8s-cluster-<redacted-yc-id>-pod-cidr-reservation     | <redacted-yc-id> |                | ru-central1-a | [<redacted-ip>/16] |
+| <redacted-yc-id> | k8s-cluster-<redacted-yc-id>-service-cidr-reservation | <redacted-yc-id> |                | ru-central1-a | [<redacted-ip>/16]  |
+| <redacted-yc-id> | default-ru-central1-a                                     | <redacted-yc-id> |                | ru-central1-a | [<redacted-ip>/24] |
+| fl8p9pkge7pf9l5h3q1b | default-ru-central1-d                                     | <redacted-yc-id> |                | ru-central1-d | [<redacted-ip>/24] |
++----------------------+-----------------------------------------------------------+----------------------+----------------+---------------+-----------------+
+
+
+VPC networks:
++----------------------+---------------------+
+|          ID          |        NAME         |
++----------------------+---------------------+
+| <redacted-yc-id> | default             |
+| <redacted-yc-id> | ycsec-smoke-network |
++----------------------+---------------------+
+
+
+Service accounts:
++----------------------+------------------------+--------+---------------------+-----------------------+
+|          ID          |          NAME          | LABELS |     CREATED AT      | LAST AUTHENTICATED AT |
++----------------------+------------------------+--------+---------------------+-----------------------+
+| <redacted-yc-id> | ycsec-smoke-nodes-sa   |        | 2026-05-13 15:57:27 | 2026-05-13 16:00:00   |
+| <redacted-yc-id> | ycsec-smoke-cluster-sa |        | 2026-05-13 15:57:27 | 2026-05-13 16:00:00   |
++----------------------+------------------------+--------+---------------------+-----------------------+
+
+
+Step 1 — delete smoke Kubernetes cluster
+...1s...6s...11s...16s...22s...27s...32s...38s...43s...49s...54s...59s...1m4s...1m9s...1m15s...1m20s...1m25s...1m30s...1m36s...1m41s...1m46s...1m51s...1m57s...2m2s...2m7s...2m12s...2m17s...2m22s...2m28s...done (2m33s)
+[OK] cluster delete requested: ycsec-smoke-cluster
+
+Step 2 — wait until smoke cluster disappears
+[OK] smoke cluster is absent
+
+Step 3 — post-cluster Kubernetes inventory
++----+------+------------+--------+--------+-------------------+-------------------+
+| ID | NAME | CREATED AT | HEALTH | STATUS | EXTERNAL ENDPOINT | INTERNAL ENDPOINT |
++----+------+------------+--------+--------+-------------------+-------------------+
++----+------+------------+--------+--------+-------------------+-------------------+
+
+
++----+------------+------+-------------------+------------+--------+------+
+| ID | CLUSTER ID | NAME | INSTANCE GROUP ID | CREATED AT | STATUS | SIZE |
++----+------------+------+-------------------+------------+--------+------+
++----+------------+------+-------------------+------------+--------+------+
+
+
+Step 4 — delete smoke subnet if present
+...1s...done (5s)
+[OK] subnet delete requested: <redacted-yc-id>
+
+Step 5 — delete smoke network if present
+[OK] network delete requested: <redacted-yc-id>
+
+Step 6 — remove IAM bindings and delete smoke service accounts
+...1s...done (3s)
+effective_deltas:
+  - action: REMOVE
+    access_binding:
+      role_id: k8s.clusters.agent
+      subject:
+        id: <redacted-yc-id>
+        type: serviceAccount
+
+...1s...done (2s)
+effective_deltas:
+  - action: REMOVE
+    access_binding:
+      role_id: vpc.publicAdmin
+      subject:
+        id: <redacted-yc-id>
+        type: serviceAccount
+
+...1s...done (3s)
+[OK] deleted service account: ycsec-smoke-cluster-sa
+...1s...done (3s)
+effective_deltas:
+  - action: REMOVE
+    access_binding:
+      role_id: container-registry.images.puller
+      subject:
+        id: <redacted-yc-id>
+        type: serviceAccount
+
+...1s...done (4s)
+[OK] deleted service account: ycsec-smoke-nodes-sa
+
+Final inventory:
+
+Managed Kubernetes clusters:
++----+------+------------+--------+--------+-------------------+-------------------+
+| ID | NAME | CREATED AT | HEALTH | STATUS | EXTERNAL ENDPOINT | INTERNAL ENDPOINT |
++----+------+------------+--------+--------+-------------------+-------------------+
++----+------+------------+--------+--------+-------------------+-------------------+
+
+
+Managed Kubernetes node groups:
++----+------------+------+-------------------+------------+--------+------+
+| ID | CLUSTER ID | NAME | INSTANCE GROUP ID | CREATED AT | STATUS | SIZE |
++----+------------+------+-------------------+------------+--------+------+
++----+------------+------+-------------------+------------+--------+------+
+
+
+Compute instances:
++----+------+---------+--------+-------------+-------------+
+| ID | NAME | ZONE ID | STATUS | EXTERNAL IP | INTERNAL IP |
++----+------+---------+--------+-------------+-------------+
++----+------+---------+--------+-------------+-------------+
+
+
+Smoke VPC subnets:
++----------------------+-----------------------+----------------------+----------------+---------------+-----------------+
+|          ID          |         NAME          |      NETWORK ID      | ROUTE TABLE ID |     ZONE      |      RANGE      |
++----------------------+-----------------------+----------------------+----------------+---------------+-----------------+
++----------------------+-----------------------+----------------------+----------------+---------------+-----------------+
+
+Smoke VPC networks:
++----------------------+---------+
+|          ID          |  NAME   |
++----------------------+---------+
++----------------------+---------+
+
+Smoke service accounts:
++----+------+--------+------------+-----------------------+
+| ID | NAME | LABELS | CREATED AT | LAST AUTHENTICATED AT |
++----+------+--------+------------+-----------------------+
++----+------+--------+------------+-----------------------+

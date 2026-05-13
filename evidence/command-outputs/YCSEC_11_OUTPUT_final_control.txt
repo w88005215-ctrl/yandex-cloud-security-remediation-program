@@ -1,0 +1,36 @@
+Phase 11C — Yandex Cloud Smoke-run Control
+Date: 2026-05-13T16:38:32+00:00
+Qube: cloud-dev-workbench
+Project: yandex-cloud-security-remediation-program
+
+Smoke-run result:
+[OK] corrected smoke plan evidence exists
+[OK] smoke apply evidence exists
+[OK] cluster list after apply evidence exists
+[OK] runtime snapshot before destroy evidence exists
+[OK] manual cleanup evidence exists
+[OK] final cloud cleanup verification exists
+
+Known issue captured:
+[OK] first node-group attempt failed because boot disk was below Yandex Cloud minimum
+[OK] boot disk size was corrected to 30 GB before successful apply
+[OK] Terraform local state was unavailable for destroy, so cleanup was completed with YC CLI
+
+Final cloud cleanup checks:
+[OK] smoke Kubernetes cluster absent
+[OK] smoke Kubernetes node group absent
+[OK] smoke compute instances absent
+[OK] smoke subnet absent
+[OK] smoke network absent
+[OK] smoke service accounts absent
+
+Local artifact checks:
+[OK] Terraform runtime artifacts absent from repository tree
+
+Sensitive file checks:
+[OK] No Terraform state files
+[OK] No kubeconfig files
+[OK] No key/token-like files
+
+Repository state note:
+[OK] git status is intentionally checked outside this tracked evidence file
