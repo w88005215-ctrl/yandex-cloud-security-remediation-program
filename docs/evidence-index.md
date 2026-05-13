@@ -121,3 +121,12 @@ architecture -> implementation -> scan result -> remediation -> audit evidence -
 | EVID-CTRL-008 | Phase 7 | diagrams/ycsec-evidence-flow.mmd | Evidence flow diagram | Yes | Yes |
 | EVID-CTRL-009 | Phase 7 | evidence/command-outputs/YCSEC_07_OUTPUT_control_model_validation.txt | Phase 7 control evidence | Yes | Yes |
 | EVID-CTRL-010 | Phase 7 | evidence/command-outputs/YCSEC_07_OUTPUT_final_git_control.txt | Phase 7 git evidence | Yes | Yes |
+
+
+## Phase 8 evidence
+
+| Evidence ID | Phase | File | Description | Sanitized | Public |
+|---|---|---|---|---:|---:|
+| EVID-K8S-001 | Phase 8 | evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt | Kubernetes static manifest validation output | Yes | Yes |
+| EVID-K8S-002 | Phase 8 | evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt | Final Kubernetes static baseline control evidence | Yes | Yes |
+| EVID-K8S-003 | Phase 8 | evidence/command-outputs/YCSEC_08_OUTPUT_final_git_control.txt | Git commit and tag evidence for Kubernetes static baseline | Yes | Yes |

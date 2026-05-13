@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ycsec-insecure
+  labels:
+    app.kubernetes.io/part-of: ycsec
+    ycsec.io/profile: insecure-baseline
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/audit: baseline
+    pod-security.kubernetes.io/warn: baseline

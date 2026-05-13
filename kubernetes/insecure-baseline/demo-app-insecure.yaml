@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ycsec-demo-insecure
+  namespace: ycsec-insecure
+  labels:
+    app.kubernetes.io/name: ycsec-demo
+    app.kubernetes.io/part-of: ycsec
+    ycsec.io/profile: insecure-baseline
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: ycsec-demo
+      ycsec.io/profile: insecure-baseline
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: ycsec-demo
+        app.kubernetes.io/part-of: ycsec
+        ycsec.io/profile: insecure-baseline
+    spec:
+      containers:
+        - name: web
+          image: nginx:1.27-alpine
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+          securityContext:
+            privileged: true
+            runAsUser: 0
+            allowPrivilegeEscalation: true
+            readOnlyRootFilesystem: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ycsec-demo-insecure
+  namespace: ycsec-insecure
+  labels:
+    app.kubernetes.io/name: ycsec-demo
+    app.kubernetes.io/part-of: ycsec
+    ycsec.io/profile: insecure-baseline
+spec:
+  type: NodePort
+  selector:
+    app.kubernetes.io/name: ycsec-demo
+    ycsec.io/profile: insecure-baseline
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80

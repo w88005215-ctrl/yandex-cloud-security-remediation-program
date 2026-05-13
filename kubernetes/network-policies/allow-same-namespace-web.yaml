@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: ycsec-allow-same-namespace-web
+  namespace: ycsec-hardened
+  labels:
+    app.kubernetes.io/part-of: ycsec
+    ycsec.io/profile: hardened
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: ycsec-demo
+      ycsec.io/profile: hardened
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - podSelector: {}
+      ports:
+        - protocol: TCP
+          port: 8080

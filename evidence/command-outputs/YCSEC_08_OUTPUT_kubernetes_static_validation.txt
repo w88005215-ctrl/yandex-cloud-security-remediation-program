@@ -1,0 +1,115 @@
+YCSEC Phase 8R2 — Kubernetes Static Baseline Validation
+Date: 2026-05-13T09:30:30+00:00
+Qube: cloud-dev-workbench
+
+Tool checks
+[OK] yq -> /home/user/.local/bin/yq
+[OK] gitleaks -> /usr/bin/gitleaks
+
+Documentation checks
+[OK] docs/ru/kubernetes-security-model.md
+[OK] docs/en/kubernetes-security-model.md
+
+Manifest presence checks
+[OK] kubernetes/namespaces/ycsec-insecure.yaml
+[OK] kubernetes/namespaces/ycsec-hardened.yaml
+[OK] kubernetes/insecure-baseline/demo-app-insecure.yaml
+[OK] kubernetes/hardened/demo-app-hardened.yaml
+[OK] kubernetes/rbac/ycsec-demo-readonly.yaml
+[OK] kubernetes/network-policies/default-deny.yaml
+[OK] kubernetes/network-policies/allow-dns-egress.yaml
+[OK] kubernetes/network-policies/allow-same-namespace-web.yaml
+[OK] kubernetes/kyverno-policies/disallow-privileged.yaml
+[OK] kubernetes/kyverno-policies/require-non-root.yaml
+[OK] kubernetes/kyverno-policies/require-readonly-rootfs.yaml
+[OK] kubernetes/kyverno-policies/require-resource-limits.yaml
+[OK] kubernetes/pod-security/README.md
+
+YAML parse checks
+[OK] YAML parse: kubernetes/namespaces/ycsec-insecure.yaml
+[OK] YAML parse: kubernetes/namespaces/ycsec-hardened.yaml
+[OK] YAML parse: kubernetes/insecure-baseline/demo-app-insecure.yaml
+[OK] YAML parse: kubernetes/hardened/demo-app-hardened.yaml
+[OK] YAML parse: kubernetes/rbac/ycsec-demo-readonly.yaml
+[OK] YAML parse: kubernetes/network-policies/default-deny.yaml
+[OK] YAML parse: kubernetes/network-policies/allow-dns-egress.yaml
+[OK] YAML parse: kubernetes/network-policies/allow-same-namespace-web.yaml
+[OK] YAML parse: kubernetes/kyverno-policies/disallow-privileged.yaml
+[OK] YAML parse: kubernetes/kyverno-policies/require-non-root.yaml
+[OK] YAML parse: kubernetes/kyverno-policies/require-readonly-rootfs.yaml
+[OK] YAML parse: kubernetes/kyverno-policies/require-resource-limits.yaml
+
+Static baseline scope decision
+[OK] Phase 8 is static/offline manifest validation
+[OK] kubectl apply is intentionally not used in Phase 8
+[OK] kubectl dry-run is intentionally not used as a blocking check in Phase 8
+[OK] runtime Kubernetes API validation is deferred to Phase 9
+
+Insecure baseline expected-risk checks
+[OK] baseline demonstrates privileged container risk
+[OK] baseline demonstrates root user risk
+[OK] baseline demonstrates privilege escalation risk
+[OK] baseline demonstrates NodePort exposure risk
+
+Hardened baseline security checks
+[OK] hardened namespace enforces restricted Pod Security
+[OK] hardened workload runs as non-root
+[OK] hardened workload disables privilege escalation
+[OK] hardened workload uses read-only root filesystem
+[OK] hardened workload disables privileged mode
+[OK] hardened workload defines dropped Linux capabilities
+[OK] hardened workload drops all Linux capabilities
+[OK] hardened workload uses RuntimeDefault seccomp
+[OK] hardened workload defines resource requests
+[OK] hardened workload defines resource limits
+[OK] service account token automount disabled
+[OK] hardened service uses ClusterIP
+
+NetworkPolicy checks
+[OK] default deny NetworkPolicy declares policyTypes
+[OK] default deny NetworkPolicy covers ingress
+[OK] default deny NetworkPolicy covers egress
+[OK] DNS egress policy targets kube-system DNS
+[OK] DNS egress policy allows DNS port 53
+[OK] same namespace web policy uses podSelector for same-namespace peer selection
+[OK] same namespace web policy does not require namespaceSelector
+[OK] same namespace web policy allows application port 8080
+
+RBAC checks
+[OK] RBAC Role present
+[OK] RBAC RoleBinding present
+[OK] RBAC readonly get permission present
+[OK] RBAC readonly list permission present
+[OK] RBAC readonly watch permission present
+
+Kyverno policy checks
+[OK] Kyverno privileged policy is ClusterPolicy
+[OK] Kyverno privileged policy checks privileged containers
+[OK] Kyverno non-root policy checks runAsNonRoot
+[OK] Kyverno readonly rootfs policy checks readOnlyRootFilesystem
+[OK] Kyverno resource policy checks resource requirements
+
+Secret scan
+[90m9:30AM[0m [32mINF[0m [1m7 commits scanned.[0m
+[90m9:30AM[0m [32mINF[0m [1mscanned ~173329 bytes (173.33 KB) in 134ms[0m
+[90m9:30AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks secret scan
+
+Sensitive file checks
+[OK] No Terraform state files
+[OK] No kubeconfig files
+[OK] No key/token-like files
+
+Cloud cost control
+[OK] No Yandex Cloud resources created in this phase
+[OK] No promo code activation in this phase
+[OK] No terraform apply executed in this phase
+[OK] No kubectl apply to a real cluster executed in this phase
+[OK] No Managed Kubernetes created in this phase
+[OK] No Compute nodes created in this phase
+[OK] No LoadBalancer created in this phase
+[OK] No public IP created in this phase
+
+Validation summary
+[OK] Kubernetes static baseline validation completed without blocking failures
+[OK] No warning findings

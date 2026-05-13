@@ -1,0 +1,13 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: ycsec-default-deny
+  namespace: ycsec-hardened
+  labels:
+    app.kubernetes.io/part-of: ycsec
+    ycsec.io/profile: hardened
+spec:
+  podSelector: {}
+  policyTypes:
+    - Ingress
+    - Egress

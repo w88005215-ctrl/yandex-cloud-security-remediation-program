@@ -1,0 +1,23 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: ycsec-require-non-root
+  annotations:
+    policies.kyverno.io/title: Require non-root workloads
+    policies.kyverno.io/category: Pod Security
+spec:
+  validationFailureAction: Audit
+  background: true
+  rules:
+    - name: require-run-as-non-root
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+      validate:
+        message: "Pods must run as non-root."
+        pattern:
+          spec:
+            securityContext:
+              runAsNonRoot: true

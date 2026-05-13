@@ -54,3 +54,33 @@ Use:
 ## Reviewer note
 
 This table will become one of the main portfolio artifacts. It should be easy to connect each row to command outputs, screenshots, scan reports and the final report.
+
+## Phase 8 Kubernetes baseline metrics
+
+| Control | Insecure baseline | Hardened state | Evidence |
+|---|---|---|---|
+| Runs as non-root | No | Yes | kubernetes/insecure-baseline, kubernetes/hardened |
+| Privileged container | Yes | No | deployment securityContext |
+| Privilege escalation | Allowed | Disabled | deployment securityContext |
+| Read-only root filesystem | No | Yes | deployment securityContext |
+| Linux capabilities | Not dropped | Drop ALL | deployment securityContext |
+| Resource requests and limits | Missing | Present | deployment resources |
+| Service exposure | NodePort | ClusterIP | service manifest |
+| Namespace Pod Security | privileged | restricted | namespace labels |
+| Network default deny | Missing | Present | NetworkPolicy manifests |
+| RBAC least privilege | Missing | Present | RBAC manifests |
+| Policy-as-code | Missing | Present | Kyverno policies |
+
+## Phase 8 — Kubernetes static baseline metrics
+
+| Area | Before | After | Evidence |
+|---|---:|---:|---|
+| Privileged workload example | Not documented | Documented as insecure baseline | kubernetes/insecure-baseline/demo-app-insecure.yaml |
+| Root container example | Not documented | Documented as insecure baseline | kubernetes/insecure-baseline/demo-app-insecure.yaml |
+| Hardened non-root workload | Not documented | Documented | kubernetes/hardened/demo-app-hardened.yaml |
+| Read-only root filesystem | Not documented | Documented | kubernetes/hardened/demo-app-hardened.yaml |
+| Dropped Linux capabilities | Not documented | Documented | kubernetes/hardened/demo-app-hardened.yaml |
+| RuntimeDefault seccomp | Not documented | Documented | kubernetes/hardened/demo-app-hardened.yaml |
+| Default deny NetworkPolicy | Not documented | Documented | kubernetes/network-policies/default-deny.yaml |
+| Kyverno policy-as-code | Not documented | Documented | kubernetes/kyverno-policies/ |
+| Runtime enforcement | Not tested in Phase 8 | Deferred to Phase 9 | docs/en/kubernetes-security-model.md |
