@@ -87,6 +87,7 @@
 ./evidence/command-outputs/YCSEC_11R_OUTPUT_runtime_snapshot_before_destroy.txt
 ./evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt
 ./evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_plan_after_disk_fix.txt
+./evidence/command-outputs/YCSEC_11_1_OUTPUT_cloud_zero_resource_verification.txt
 ./evidence/command-outputs/YCSEC_11_OUTPUT_final_control.txt
 ./evidence/command-outputs/YCSEC_11_OUTPUT_final_git_control.txt
 ./evidence/command-outputs/YCSEC_11_OUTPUT_post_sanitization_cloud_verification.txt

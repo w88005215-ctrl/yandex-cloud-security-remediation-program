@@ -1,0 +1,19 @@
+Phase 11.1 — Smoke-run Script Safety Control
+
+Result:
+[OK] smoke-run script uses temporary Terraform runtime outside repository
+[OK] smoke-run script requires explicit cloud-run approval
+[OK] smoke-run script checks for existing smoke resources before apply
+[OK] smoke-run script has cleanup trap for interrupted runs
+[OK] smoke-run script runs mandatory destroy after validation
+[OK] binary Terraform plan is not stored in evidence
+[OK] Terraform runtime artifacts are not stored in repository
+
+Boundary:
+[OK] this safety update does not create Yandex Cloud resources
+[OK] cloud verification is read-only
+[OK] Phase 11 smoke resources remain absent
+
+Verification:
+[OK] use external git status to verify clean working tree
+[OK] use external git tag --points-at HEAD to verify release marker

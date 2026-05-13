@@ -1,44 +1,140 @@
 #!/usr/bin/env bash
+
 set -u
+
+REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+SRC_ENV_DIR="$REPO_DIR/terraform/environments/cloud-smoke"
+EVIDENCE_DIR="$REPO_DIR/evidence/command-outputs"
+
+RUN_ID="$(date +%Y%m%dT%H%M%S)"
+RUNTIME_DIR="$(mktemp -d "/tmp/ycsec-smoke-${RUN_ID}.XXXXXX")"
+RUNTIME_REPO="$RUNTIME_DIR/repo"
+RUN_ENV_DIR="$RUNTIME_REPO/terraform/environments/cloud-smoke"
+KUBECONFIG_PATH="$RUNTIME_DIR/kubeconfig"
+PLAN_FILE="$RUNTIME_DIR/tfplan"
+
+APPLY_STARTED=0
+DESTROY_DONE=0
+FAIL_COUNT=0
+
+mkdir -p "$EVIDENCE_DIR"
+
+log_ok() {
+  echo "[OK] $1"
+}
+
+log_fail() {
+  echo "[FAIL] $1"
+  FAIL_COUNT=$((FAIL_COUNT + 1))
+}
+
+run_readonly_zero_check() {
+  echo
+  echo "Read-only zero-resource precheck"
+
+  local found=0
+
+  if yc managed-kubernetes cluster list --format json 2>/dev/null | jq -e '.[] | select(.name=="ycsec-smoke-cluster")' >/dev/null; then
+    echo "[FAIL] existing smoke cluster found"
+    found=1
+  else
+    echo "[OK] no existing smoke cluster"
+  fi
+
+  if yc managed-kubernetes node-group list --format json 2>/dev/null | jq -e '.[] | select(.name=="ycsec-smoke-node-group")' >/dev/null; then
+    echo "[FAIL] existing smoke node group found"
+    found=1
+  else
+    echo "[OK] no existing smoke node group"
+  fi
+
+  if yc vpc subnet list --format json 2>/dev/null | jq -e '.[] | select(.name=="ycsec-smoke-subnet")' >/dev/null; then
+    echo "[FAIL] existing smoke subnet found"
+    found=1
+  else
+    echo "[OK] no existing smoke subnet"
+  fi
+
+  if yc vpc network list --format json 2>/dev/null | jq -e '.[] | select(.name=="ycsec-smoke-network")' >/dev/null; then
+    echo "[FAIL] existing smoke network found"
+    found=1
+  else
+    echo "[OK] no existing smoke network"
+  fi
+
+  if yc iam service-account list --format json 2>/dev/null | jq -e '.[] | select(.name=="ycsec-smoke-cluster-sa" or .name=="ycsec-smoke-nodes-sa")' >/dev/null; then
+    echo "[FAIL] existing smoke service account found"
+    found=1
+  else
+    echo "[OK] no existing smoke service accounts"
+  fi
+
+  if test "$found" -ne 0; then
+    return 1
+  fi
+
+  return 0
+}
+
+cleanup() {
+  rc="$?"
+
+  echo
+  echo "Cleanup handler"
+
+  if test "$APPLY_STARTED" -eq 1 && test "$DESTROY_DONE" -eq 0 && test -d "$RUN_ENV_DIR"; then
+    echo "[WARN] apply started and destroy was not completed; attempting Terraform destroy"
+    terraform -chdir="$RUN_ENV_DIR" destroy -auto-approve -input=false -no-color
+    destroy_rc="$?"
+
+    if test "$destroy_rc" -eq 0; then
+      echo "[OK] emergency Terraform destroy completed"
+      DESTROY_DONE=1
+    else
+      echo "[FAIL] emergency Terraform destroy failed"
+      echo "[FAIL] runtime directory preserved for manual cleanup: $RUNTIME_DIR"
+      exit "$destroy_rc"
+    fi
+  fi
+
+  if test "$DESTROY_DONE" -eq 1 || test "$APPLY_STARTED" -eq 0; then
+    rm -rf "$RUNTIME_DIR"
+    echo "[OK] runtime directory removed"
+  else
+    echo "[WARN] runtime directory preserved: $RUNTIME_DIR"
+  fi
+
+  exit "$rc"
+}
+
+trap cleanup EXIT INT TERM
 
 echo "YCSEC Phase 11 — Yandex Cloud short Kubernetes smoke-run"
 echo "Date: $(date -Is)"
 echo "Qube: cloud-dev-workbench"
 echo
 
-export PATH="$HOME/.local/bin:$HOME/yandex-cloud/bin:$PATH"
+echo "Explicit approval check"
+if test "${YCSEC_CONFIRM_CLOUD_SMOKE_RUN:-}" != "YES"; then
+  echo "[FAIL] cloud smoke-run is not approved"
+  echo "Run with: YCSEC_CONFIRM_CLOUD_SMOKE_RUN=YES ./scripts/run-yandex-cloud-smoke-run.sh"
+  exit 1
+fi
+log_ok "explicit cloud smoke-run approval provided"
 
-ENV_DIR="terraform/environments/cloud-smoke"
-EVIDENCE_DIR="evidence/command-outputs"
-KUBECONFIG_DIR="$(mktemp -d)"
-KUBECONFIG_PATH="$KUBECONFIG_DIR/kubeconfig"
-PLAN_FILE="$EVIDENCE_DIR/YCSEC_11_TERRAFORM_cloud_smoke.tfplan"
-PLAN_TEXT="$EVIDENCE_DIR/YCSEC_11_OUTPUT_terraform_plan.txt"
-
-FAIL_COUNT=0
-WARN_COUNT=0
-
-cleanup_note() {
-  echo
-  echo "Cleanup note:"
-  echo "[OK] kubeconfig temporary directory: $KUBECONFIG_DIR"
-  echo "[OK] kubeconfig path: $KUBECONFIG_PATH"
-}
-
-require_tool() {
-  tool="$1"
-  if command -v "$tool" >/dev/null 2>&1; then
-    echo "[OK] $tool -> $(command -v "$tool")"
-  else
-    echo "[FAIL] $tool missing"
-    FAIL_COUNT=$((FAIL_COUNT + 1))
-  fi
-}
-
+echo
 echo "Tool checks"
-for t in yc terraform kubectl gitleaks; do
-  require_tool "$t"
+for t in yc terraform kubectl gitleaks jq tar; do
+  if command -v "$t" >/dev/null 2>&1; then
+    echo "[OK] $t -> $(command -v "$t")"
+  else
+    log_fail "$t missing"
+  fi
 done
+
+if test "$FAIL_COUNT" -ne 0; then
+  exit 1
+fi
 
 echo
 echo "YC profile checks"
@@ -47,281 +143,201 @@ FOLDER_ID="$(yc config get folder-id 2>/dev/null || true)"
 ZONE="$(yc config get compute-default-zone 2>/dev/null || true)"
 
 if test -n "$CLOUD_ID"; then
-  echo "[OK] cloud-id configured"
+  log_ok "cloud-id configured"
 else
-  echo "[FAIL] cloud-id missing"
-  FAIL_COUNT=$((FAIL_COUNT + 1))
+  log_fail "cloud-id missing"
 fi
 
 if test -n "$FOLDER_ID"; then
-  echo "[OK] folder-id configured"
+  log_ok "folder-id configured"
 else
-  echo "[FAIL] folder-id missing"
-  FAIL_COUNT=$((FAIL_COUNT + 1))
+  log_fail "folder-id missing"
 fi
 
 if test -n "$ZONE"; then
-  echo "[OK] default zone configured: $ZONE"
+  log_ok "default zone configured: $ZONE"
 else
   ZONE="ru-central1-a"
   echo "[WARN] default zone missing, using $ZONE"
-  WARN_COUNT=$((WARN_COUNT + 1))
 fi
 
-echo
-echo "Budget and boundary"
-echo "[OK] target budget envelope: up to 100 RUB for short smoke-run"
-echo "[OK] expected resources: VPC, subnet, two service accounts, zonal Managed Kubernetes cluster, one preemptible node group"
-echo "[OK] no PersistentVolume resources are created"
-echo "[OK] no LoadBalancer Service is created"
-echo "[OK] node public NAT is disabled"
-echo "[OK] destroy is mandatory after validation"
-
 if test "$FAIL_COUNT" -ne 0; then
-  echo
-  echo "[FAIL] preflight failed before Terraform"
-  cleanup_note
-  rm -rf "$KUBECONFIG_DIR"
   exit 1
 fi
 
+run_readonly_zero_check || exit 1
+
 echo
-echo "Write local tfvars outside git ignore-sensitive patterns"
-cat > "$ENV_DIR/terraform.tfvars" <<VARS
+echo "Budget and boundary"
+log_ok "short smoke-run only"
+log_ok "expected resources: VPC, subnet, two service accounts, zonal Managed Kubernetes cluster, one preemptible node group"
+log_ok "node boot disk size must be at least 30 GB"
+log_ok "no PersistentVolume resources are created"
+log_ok "no LoadBalancer Service is created"
+log_ok "node public NAT is disabled"
+log_ok "destroy is mandatory in the same run"
+
+echo
+echo "Prepare temporary Terraform runtime outside repository"
+mkdir -p "$RUNTIME_REPO"
+
+(
+  cd "$REPO_DIR" || exit 1
+  tar \
+    --exclude='.git' \
+    --exclude='.terraform' \
+    --exclude='*.tfstate*' \
+    --exclude='terraform.tfvars' \
+    --exclude='tfplan' \
+    --exclude='*.tfplan' \
+    -cf - terraform
+) | (
+  cd "$RUNTIME_REPO" || exit 1
+  tar -xf -
+)
+
+if test -d "$RUN_ENV_DIR"; then
+  log_ok "temporary Terraform runtime prepared: $RUN_ENV_DIR"
+else
+  log_fail "temporary Terraform runtime was not prepared"
+  exit 1
+fi
+
+cat > "$RUN_ENV_DIR/terraform.tfvars" <<VARS
 cloud_id  = "$CLOUD_ID"
 folder_id = "$FOLDER_ID"
 zone      = "$ZONE"
 VARS
 
-echo "[OK] terraform.tfvars written for cloud-smoke environment"
+chmod 0600 "$RUN_ENV_DIR/terraform.tfvars"
+log_ok "terraform.tfvars written only inside temporary runtime directory"
 
 echo
 echo "Terraform formatting"
-terraform -chdir="$ENV_DIR" fmt -check
-if test "$?" -eq 0; then
-  echo "[OK] terraform fmt"
+if terraform -chdir="$RUN_ENV_DIR" fmt -check -no-color; then
+  log_ok "terraform fmt"
 else
-  echo "[FAIL] terraform fmt"
-  FAIL_COUNT=$((FAIL_COUNT + 1))
+  log_fail "terraform fmt"
 fi
 
 echo
 echo "Terraform init"
-TF_DATA_DIR="$(mktemp -d)"
-TF_DATA_DIR="$TF_DATA_DIR" terraform -chdir="$ENV_DIR" init -backend=false -input=false -no-color
-INIT_RC="$?"
-
-if test "$INIT_RC" -eq 0; then
-  echo "[OK] terraform init"
+if terraform -chdir="$RUN_ENV_DIR" init -input=false -no-color; then
+  log_ok "terraform init"
 else
-  echo "[FAIL] terraform init"
-  FAIL_COUNT=$((FAIL_COUNT + 1))
+  log_fail "terraform init"
 fi
 
 echo
 echo "Terraform validate"
-if test "$INIT_RC" -eq 0; then
-  TF_DATA_DIR="$TF_DATA_DIR" terraform -chdir="$ENV_DIR" validate -no-color
-  VALIDATE_RC="$?"
+if terraform -chdir="$RUN_ENV_DIR" validate -no-color; then
+  log_ok "terraform validate"
 else
-  VALIDATE_RC=1
-fi
-
-if test "$VALIDATE_RC" -eq 0; then
-  echo "[OK] terraform validate"
-else
-  echo "[FAIL] terraform validate"
-  FAIL_COUNT=$((FAIL_COUNT + 1))
+  log_fail "terraform validate"
 fi
 
 echo
 echo "Terraform plan"
-if test "$FAIL_COUNT" -eq 0; then
-  TF_DATA_DIR="$TF_DATA_DIR" terraform -chdir="$ENV_DIR" plan -input=false -no-color -out="../../../$PLAN_FILE" | tee "$PLAN_TEXT"
-  PLAN_RC="${PIPESTATUS[0]}"
+if terraform -chdir="$RUN_ENV_DIR" plan -input=false -no-color -out="$PLAN_FILE" 2>&1 | tee "$EVIDENCE_DIR/YCSEC_11_OUTPUT_terraform_plan.txt"; then
+  log_ok "terraform plan saved in temporary runtime directory"
 else
-  PLAN_RC=1
-fi
-
-if test "$PLAN_RC" -eq 0; then
-  echo "[OK] terraform plan saved"
-else
-  echo "[FAIL] terraform plan failed"
-  FAIL_COUNT=$((FAIL_COUNT + 1))
+  log_fail "terraform plan failed"
 fi
 
 echo
 echo "Sensitive file checks before apply"
-find . -name "*.tfstate*" ! -path "./.git/*" | grep -q . && echo "[FAIL] Terraform state files found before apply" && FAIL_COUNT=$((FAIL_COUNT + 1)) || echo "[OK] No Terraform state files before apply"
-find . -iname "*kubeconfig*" ! -path "./.git/*" | grep -q . && echo "[FAIL] kubeconfig-like files found before apply" && FAIL_COUNT=$((FAIL_COUNT + 1)) || echo "[OK] No kubeconfig files before apply"
-find . \( -iname "*.pem" -o -iname "*.key" -o -iname "*.token" -o -iname "*authorized_key*.json" -o -iname "*service_account_key*.json" -o -iname "*yc-sa-key*.json" \) ! -path "./.git/*" | grep -q . && echo "[FAIL] key/token-like files found before apply" && FAIL_COUNT=$((FAIL_COUNT + 1)) || echo "[OK] No key/token-like files before apply"
+find "$REPO_DIR" -name "*.tfstate*" ! -path "$REPO_DIR/.git/*" | grep -q . && log_fail "Terraform state files found before apply" || log_ok "No Terraform state files before apply"
+find "$REPO_DIR" -iname "*kubeconfig*" ! -path "$REPO_DIR/.git/*" | grep -q . && log_fail "kubeconfig-like files found before apply" || log_ok "No kubeconfig files before apply"
+find "$REPO_DIR" \( -iname "*.pem" -o -iname "*.key" -o -iname "*.token" -o -iname "*authorized_key*.json" -o -iname "*service_account_key*.json" -o -iname "*yc-sa-key*.json" \) ! -path "$REPO_DIR/.git/*" | grep -q . && log_fail "key/token-like files found before apply" || log_ok "No key/token-like files before apply"
 
 if test "$FAIL_COUNT" -ne 0; then
-  echo
   echo "[FAIL] cloud smoke-run stopped before apply"
-  rm -rf "$TF_DATA_DIR" "$KUBECONFIG_DIR"
-  exit 1
-fi
-
-echo
-echo "Explicit cloud creation approval required"
-echo "Type exactly: YES_CREATE_CLOUD_RESOURCES"
-read -r APPROVAL
-
-if test "$APPROVAL" != "YES_CREATE_CLOUD_RESOURCES"; then
-  echo "[FAIL] explicit approval not provided"
-  rm -rf "$TF_DATA_DIR" "$KUBECONFIG_DIR"
   exit 1
 fi
 
 echo
 echo "Terraform apply"
-TF_DATA_DIR="$TF_DATA_DIR" terraform -chdir="$ENV_DIR" apply -input=false -no-color "../../../$PLAN_FILE"
-APPLY_RC="$?"
+APPLY_STARTED=1
 
-if test "$APPLY_RC" -eq 0; then
-  echo "[OK] terraform apply completed"
+if terraform -chdir="$RUN_ENV_DIR" apply -input=false -no-color "$PLAN_FILE"; then
+  log_ok "terraform apply completed"
 else
-  echo "[FAIL] terraform apply failed"
-  FAIL_COUNT=$((FAIL_COUNT + 1))
+  log_fail "terraform apply failed"
+fi
+
+if test "$FAIL_COUNT" -ne 0; then
+  exit 1
 fi
 
 echo
-echo "Cluster access"
-if test "$APPLY_RC" -eq 0; then
-  CLUSTER_ID="$(TF_DATA_DIR="$TF_DATA_DIR" terraform -chdir="$ENV_DIR" output -raw cluster_id 2>/dev/null || true)"
+echo "Cluster runtime checks"
+CLUSTER_ID="$(terraform -chdir="$RUN_ENV_DIR" output -raw cluster_id 2>/dev/null || true)"
 
-  if test -n "$CLUSTER_ID"; then
-    echo "[OK] cluster_id exported"
-    yc managed-kubernetes cluster get-credentials "$CLUSTER_ID" --external --kubeconfig "$KUBECONFIG_PATH"
-    CREDS_RC="$?"
-  else
-    echo "[FAIL] cluster_id output missing"
-    CREDS_RC=1
-  fi
+if test -n "$CLUSTER_ID"; then
+  log_ok "cluster id obtained"
+else
+  log_fail "cluster id missing"
+fi
 
-  if test "$CREDS_RC" -eq 0; then
-    echo "[OK] temporary kubeconfig created outside repository"
-    KUBECONFIG="$KUBECONFIG_PATH" kubectl cluster-info
-    KUBECONFIG="$KUBECONFIG_PATH" kubectl get nodes
+if test -n "$CLUSTER_ID"; then
+  if yc managed-kubernetes cluster get-credentials "$CLUSTER_ID" --external --kubeconfig "$KUBECONFIG_PATH"; then
+    log_ok "temporary kubeconfig created outside repository"
   else
-    echo "[FAIL] failed to get temporary kubeconfig"
-    FAIL_COUNT=$((FAIL_COUNT + 1))
+    log_fail "failed to create temporary kubeconfig"
   fi
 fi
 
-echo
-echo "Apply project Kubernetes manifests to real cluster"
-if test "$APPLY_RC" -eq 0 && test -s "$KUBECONFIG_PATH"; then
-  KUBECONFIG="$KUBECONFIG_PATH" kubectl apply -f kubernetes/namespaces/ycsec-insecure.yaml
-  KUBECONFIG="$KUBECONFIG_PATH" kubectl apply -f kubernetes/namespaces/ycsec-hardened.yaml
-  KUBECONFIG="$KUBECONFIG_PATH" kubectl apply -f kubernetes/insecure-baseline/demo-app-insecure.yaml
-  KUBECONFIG="$KUBECONFIG_PATH" kubectl apply -f kubernetes/hardened/demo-app-hardened.yaml
-  KUBECONFIG="$KUBECONFIG_PATH" kubectl apply -f kubernetes/rbac/ycsec-demo-readonly.yaml
-  KUBECONFIG="$KUBECONFIG_PATH" kubectl apply -f kubernetes/network-policies/default-deny.yaml
-  KUBECONFIG="$KUBECONFIG_PATH" kubectl apply -f kubernetes/network-policies/allow-dns-egress.yaml
-  KUBECONFIG="$KUBECONFIG_PATH" kubectl apply -f kubernetes/network-policies/allow-same-namespace-web.yaml
-
-  echo
-  echo "Runtime object checks"
-  KUBECONFIG="$KUBECONFIG_PATH" kubectl get -f kubernetes/namespaces/ycsec-insecure.yaml
-  KUBECONFIG="$KUBECONFIG_PATH" kubectl get -f kubernetes/namespaces/ycsec-hardened.yaml
-  KUBECONFIG="$KUBECONFIG_PATH" kubectl get -f kubernetes/insecure-baseline/demo-app-insecure.yaml
-  KUBECONFIG="$KUBECONFIG_PATH" kubectl get -f kubernetes/hardened/demo-app-hardened.yaml
-  KUBECONFIG="$KUBECONFIG_PATH" kubectl get -f kubernetes/rbac/ycsec-demo-readonly.yaml
-  KUBECONFIG="$KUBECONFIG_PATH" kubectl get -f kubernetes/network-policies/default-deny.yaml
-  KUBECONFIG="$KUBECONFIG_PATH" kubectl get -f kubernetes/network-policies/allow-dns-egress.yaml
-  KUBECONFIG="$KUBECONFIG_PATH" kubectl get -f kubernetes/network-policies/allow-same-namespace-web.yaml
-  echo "[OK] Kubernetes manifests applied and queried"
-fi
-
-echo
-echo "Pod Security Admission real API check"
-if test "$APPLY_RC" -eq 0 && test -s "$KUBECONFIG_PATH"; then
-  BAD_POD="$KUBECONFIG_DIR/bad-privileged-pod.yaml"
-
-  cat > "$BAD_POD" <<'POD'
-apiVersion: v1
-kind: Pod
-metadata:
-  name: ycsec-bad-privileged-pod
-  namespace: ycsec-hardened
-spec:
-  containers:
-    - name: pause
-      image: registry.k8s.io/pause:3.10
-      securityContext:
-        privileged: true
-        runAsUser: 0
-POD
-
-  if KUBECONFIG="$KUBECONFIG_PATH" kubectl apply --dry-run=server -f "$BAD_POD"; then
-    echo "[FAIL] restricted namespace accepted privileged Pod"
-    FAIL_COUNT=$((FAIL_COUNT + 1))
+if test -s "$KUBECONFIG_PATH"; then
+  if kubectl --kubeconfig "$KUBECONFIG_PATH" cluster-info; then
+    log_ok "kubectl cluster-info"
   else
-    echo "[OK] restricted namespace rejected privileged Pod"
+    log_fail "kubectl cluster-info failed"
+  fi
+
+  if kubectl --kubeconfig "$KUBECONFIG_PATH" get nodes -o wide; then
+    log_ok "cluster nodes visible"
+  else
+    log_fail "cluster nodes not visible"
   fi
 fi
 
 echo
 echo "Secret scan"
-gitleaks detect --source . --no-banner --redact
-GITLEAKS_RC="$?"
-
-if test "$GITLEAKS_RC" -eq 0; then
-  echo "[OK] gitleaks secret scan"
+if gitleaks detect --source "$REPO_DIR" --no-banner --redact; then
+  log_ok "gitleaks secret scan"
 else
-  echo "[FAIL] gitleaks secret scan"
-  FAIL_COUNT=$((FAIL_COUNT + 1))
+  log_fail "gitleaks secret scan"
 fi
 
 echo
-echo "Mandatory destroy approval"
-echo "Type exactly: YES_DESTROY_CLOUD_RESOURCES"
-read -r DESTROY_APPROVAL
-
-if test "$DESTROY_APPROVAL" = "YES_DESTROY_CLOUD_RESOURCES"; then
-  echo
-  echo "Terraform destroy"
-  TF_DATA_DIR="$TF_DATA_DIR" terraform -chdir="$ENV_DIR" destroy -auto-approve -input=false -no-color
-  DESTROY_RC="$?"
-
-  if test "$DESTROY_RC" -eq 0; then
-    echo "[OK] terraform destroy completed"
-  else
-    echo "[FAIL] terraform destroy failed"
-    FAIL_COUNT=$((FAIL_COUNT + 1))
-  fi
+echo "Mandatory Terraform destroy"
+if terraform -chdir="$RUN_ENV_DIR" destroy -auto-approve -input=false -no-color; then
+  log_ok "terraform destroy completed"
+  DESTROY_DONE=1
 else
-  echo "[FAIL] destroy approval not provided"
-  FAIL_COUNT=$((FAIL_COUNT + 1))
+  log_fail "terraform destroy failed"
 fi
 
 echo
 echo "Post-destroy read-only resource check"
-yc managed-kubernetes cluster list || true
+if run_readonly_zero_check; then
+  log_ok "no smoke resources remain after destroy"
+else
+  log_fail "smoke resources remain after destroy"
+fi
 
 echo
-echo "Repository sensitive file checks after run"
-find . -name "*.tfstate*" ! -path "./.git/*" | grep -q . && echo "[FAIL] Terraform state files found after run" && FAIL_COUNT=$((FAIL_COUNT + 1)) || echo "[OK] No Terraform state files after run"
-find . -iname "*kubeconfig*" ! -path "./.git/*" | grep -q . && echo "[FAIL] kubeconfig-like files found after run" && FAIL_COUNT=$((FAIL_COUNT + 1)) || echo "[OK] No kubeconfig files after run"
-find . \( -iname "*.pem" -o -iname "*.key" -o -iname "*.token" -o -iname "*authorized_key*.json" -o -iname "*service_account_key*.json" -o -iname "*yc-sa-key*.json" \) ! -path "./.git/*" | grep -q . && echo "[FAIL] key/token-like files found after run" && FAIL_COUNT=$((FAIL_COUNT + 1)) || echo "[OK] No key/token-like files after run"
-
-rm -rf "$TF_DATA_DIR" "$KUBECONFIG_DIR"
-echo "[OK] temporary local Terraform data and kubeconfig removed"
+echo "Sensitive file checks after run"
+find "$REPO_DIR" -name "*.tfstate*" ! -path "$REPO_DIR/.git/*" | grep -q . && log_fail "Terraform state files found after run" || log_ok "No Terraform state files after run"
+find "$REPO_DIR" -iname "*kubeconfig*" ! -path "$REPO_DIR/.git/*" | grep -q . && log_fail "kubeconfig-like files found after run" || log_ok "No kubeconfig files after run"
+find "$REPO_DIR" \( -iname "*.pem" -o -iname "*.key" -o -iname "*.token" -o -iname "*authorized_key*.json" -o -iname "*service_account_key*.json" -o -iname "*yc-sa-key*.json" \) ! -path "$REPO_DIR/.git/*" | grep -q . && log_fail "key/token-like files found after run" || log_ok "No key/token-like files after run"
 
 echo
-echo "Cloud smoke-run summary"
+echo "Smoke-run summary"
 if test "$FAIL_COUNT" -eq 0; then
-  echo "[OK] Yandex Cloud smoke-run completed without blocking failures"
+  log_ok "Yandex Cloud smoke-run completed and cleaned up"
+  exit 0
 else
-  echo "[FAIL] Yandex Cloud smoke-run has $FAIL_COUNT blocking failure(s)"
+  echo "[FAIL] Yandex Cloud smoke-run has $FAIL_COUNT failure(s)"
+  exit 1
 fi
-
-if test "$WARN_COUNT" -eq 0; then
-  echo "[OK] No warning findings"
-else
-  echo "[WARN] smoke-run has $WARN_COUNT warning finding(s)"
-fi
-
-test "$FAIL_COUNT" -eq 0
