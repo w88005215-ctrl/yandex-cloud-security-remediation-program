@@ -1,0 +1,43 @@
+Phase 9C — Local Kubernetes Runtime Validation Evidence Cleanup
+Date: 2026-05-13T09:42:50+00:00
+Qube: cloud-dev-workbench
+Project: yandex-cloud-security-remediation-program
+
+Reason:
+[OK] Phase 9 runtime validation was successful
+[OK] previous control evidence included a pre-commit git status snapshot
+[OK] embedded git status was removed to avoid self-referential dirty evidence
+
+Runtime validation evidence:
+[OK] runtime validation evidence exists
+[OK] runtime validation has no blocking failures
+[OK] runtime validation has no warning findings
+
+Documentation checks:
+[OK] docs/ru/kubernetes-runtime-validation.md
+[OK] docs/en/kubernetes-runtime-validation.md
+[OK] docs/evidence-index.md
+[OK] evidence/before-after-metrics.md
+
+Script checks:
+[OK] scripts/run-local-kubernetes-runtime-validation.sh executable
+
+Runtime validation decisions:
+[OK] local kind cluster used for Kubernetes API validation
+[OK] temporary kubeconfig kept outside repository
+[OK] Pod Security Admission rejection checked with server-side dry-run
+[OK] temporary local cluster cleanup evidence captured
+
+Sensitive file checks:
+[OK] No Terraform state files
+[OK] No kubeconfig files in repository
+[OK] No key/token-like files
+
+Cloud boundary checks:
+[OK] No Yandex Cloud resources created in this phase
+[OK] No terraform apply executed in this phase
+[OK] No Managed Kubernetes used in this phase
+
+Repository state note:
+[OK] git status is intentionally not embedded in this tracked evidence file
+[OK] use external git status command for current repository state

@@ -1,0 +1,186 @@
+YCSEC Phase 9R — Local Kubernetes Runtime Validation
+Date: 2026-05-13T09:40:13+00:00
+Qube: cloud-dev-workbench
+
+Tool checks
+[OK] kind -> /home/user/.local/bin/kind
+[OK] podman -> /usr/bin/podman
+[OK] kubectl -> /home/user/.local/bin/kubectl
+[OK] gitleaks -> /usr/bin/gitleaks
+
+Runtime safety
+[OK] temporary cluster name: ycsec-runtime-1778665213
+[OK] temporary kubeconfig is outside repository: /tmp/tmp.1GSfnMxnoi/kubeconfig
+[OK] global kubeconfig is not used for validation
+
+Create temporary local kind cluster
+using podman due to KIND_EXPERIMENTAL_PROVIDER
+enabling experimental podman provider
+Creating cluster "ycsec-runtime-1778665213" ...
+ • Ensuring node image (kindest/node:v1.35.0) 🖼  ...
+ ✓ Ensuring node image (kindest/node:v1.35.0) 🖼
+ • Preparing nodes 📦   ...
+ ✓ Preparing nodes 📦 
+ • Writing configuration 📜  ...
+ ✓ Writing configuration 📜
+ • Starting control-plane 🕹️  ...
+ ✓ Starting control-plane 🕹️
+ • Installing CNI 🔌  ...
+ ✓ Installing CNI 🔌
+ • Installing StorageClass 💾  ...
+ ✓ Installing StorageClass 💾
+ • Waiting ≤ 3m0s for control-plane = Ready ⏳  ...
+ ✓ Waiting ≤ 3m0s for control-plane = Ready ⏳
+ • Ready after 17s 💚
+Set kubectl context to "kind-ycsec-runtime-1778665213"
+You can now use your cluster with:
+
+kubectl cluster-info --context kind-ycsec-runtime-1778665213 --kubeconfig /tmp/tmp.1GSfnMxnoi/kubeconfig
+
+Have a question, bug, or feature request? Let us know! https://kind.sigs.k8s.io/#community 🙂
+[OK] temporary kind cluster created
+
+Cluster API checks
+Kubernetes control plane is running at https://127.0.0.1:46079
+CoreDNS is running at https://127.0.0.1:46079/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+[OK] kubectl cluster-info
+Client Version: v1.36.0
+Kustomize Version: v5.8.1
+[OK] kubectl client version
+NAME                                     STATUS   ROLES           AGE   VERSION
+ycsec-runtime-1778665213-control-plane   Ready    control-plane   24s   v1.35.0
+[OK] cluster nodes are visible
+
+Apply namespaces
+
+Apply: insecure namespace
+namespace/ycsec-insecure created
+[OK] insecure namespace applied
+
+Apply: hardened namespace
+namespace/ycsec-hardened created
+[OK] hardened namespace applied
+
+Apply workloads and policies
+
+Apply: insecure baseline
+Warning: would violate PodSecurity "baseline:latest": privileged (container "web" must not set securityContext.privileged=true)
+deployment.apps/ycsec-demo-insecure created
+service/ycsec-demo-insecure created
+[OK] insecure baseline applied
+
+Apply: hardened workload
+serviceaccount/ycsec-demo-sa created
+deployment.apps/ycsec-demo-hardened created
+service/ycsec-demo-hardened created
+[OK] hardened workload applied
+
+Apply: RBAC
+serviceaccount/ycsec-readonly-sa created
+role.rbac.authorization.k8s.io/ycsec-readonly-role created
+rolebinding.rbac.authorization.k8s.io/ycsec-readonly-binding created
+[OK] RBAC applied
+
+Apply: default deny NetworkPolicy
+networkpolicy.networking.k8s.io/ycsec-default-deny created
+[OK] default deny NetworkPolicy applied
+
+Apply: DNS egress NetworkPolicy
+networkpolicy.networking.k8s.io/ycsec-allow-dns-egress created
+[OK] DNS egress NetworkPolicy applied
+
+Apply: same namespace web NetworkPolicy
+networkpolicy.networking.k8s.io/ycsec-allow-same-namespace-web created
+[OK] same namespace web NetworkPolicy applied
+
+Runtime object checks
+
+Verify objects from manifest: insecure namespace
+NAME             STATUS   AGE
+ycsec-insecure   Active   3s
+[OK] insecure namespace objects exist
+
+Verify objects from manifest: hardened namespace
+NAME             STATUS   AGE
+ycsec-hardened   Active   2s
+[OK] hardened namespace objects exist
+
+Verify objects from manifest: insecure baseline
+NAME                                  READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/ycsec-demo-insecure   0/1     1            0           2s
+
+NAME                          TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+service/ycsec-demo-insecure   NodePort   10.96.36.155   <none>        80:32643/TCP   2s
+[OK] insecure baseline objects exist
+
+Verify objects from manifest: hardened workload
+NAME                           AGE
+serviceaccount/ycsec-demo-sa   1s
+
+NAME                                  READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/ycsec-demo-hardened   0/1     1            0           1s
+
+NAME                          TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+service/ycsec-demo-hardened   ClusterIP   10.96.105.81   <none>        80/TCP    1s
+[OK] hardened workload objects exist
+
+Verify objects from manifest: RBAC
+NAME                               AGE
+serviceaccount/ycsec-readonly-sa   1s
+
+NAME                                                 CREATED AT
+role.rbac.authorization.k8s.io/ycsec-readonly-role   2026-05-13T09:40:53Z
+
+NAME                                                           ROLE                       AGE
+rolebinding.rbac.authorization.k8s.io/ycsec-readonly-binding   Role/ycsec-readonly-role   1s
+[OK] RBAC objects exist
+
+Verify objects from manifest: default deny NetworkPolicy
+NAME                 POD-SELECTOR   AGE
+ycsec-default-deny   <none>         1s
+[OK] default deny NetworkPolicy objects exist
+
+Verify objects from manifest: DNS egress NetworkPolicy
+NAME                     POD-SELECTOR   AGE
+ycsec-allow-dns-egress   <none>         0s
+[OK] DNS egress NetworkPolicy objects exist
+
+Verify objects from manifest: same namespace web NetworkPolicy
+NAME                             POD-SELECTOR                                                  AGE
+ycsec-allow-same-namespace-web   app.kubernetes.io/name=ycsec-demo,ycsec.io/profile=hardened   0s
+[OK] same namespace web NetworkPolicy objects exist
+
+Pod Security Admission runtime check
+Error from server (Forbidden): error when creating "/tmp/tmp.1GSfnMxnoi/bad-privileged-pod.yaml": pods "ycsec-bad-privileged-pod" is forbidden: violates PodSecurity "restricted:latest": privileged (container "pause" must not set securityContext.privileged=true), allowPrivilegeEscalation != false (container "pause" must set securityContext.allowPrivilegeEscalation=false), unrestricted capabilities (container "pause" must set securityContext.capabilities.drop=["ALL"]), runAsNonRoot != true (pod or container "pause" must set securityContext.runAsNonRoot=true), runAsUser=0 (container "pause" must not set runAsUser=0), seccompProfile (pod or container "pause" must set securityContext.seccompProfile.type to "RuntimeDefault" or "Localhost")
+[OK] restricted namespace rejected privileged Pod
+
+Secret scan
+[90m9:40AM[0m [32mINF[0m [1m8 commits scanned.[0m
+[90m9:40AM[0m [32mINF[0m [1mscanned ~208993 bytes (208.99 KB) in 196ms[0m
+[90m9:40AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks secret scan
+
+Sensitive file checks
+[OK] No Terraform state files
+[OK] No kubeconfig files in repository
+[OK] No key/token-like files
+
+Local runtime boundary
+[OK] validation used temporary local kind cluster
+[OK] validation used temporary kubeconfig outside repository
+[OK] no Yandex Cloud command is required for this phase
+[OK] no terraform apply is required for this phase
+
+Cleanup
+using podman due to KIND_EXPERIMENTAL_PROVIDER
+enabling experimental podman provider
+Deleting cluster "ycsec-runtime-1778665213" ...
+Deleted nodes: ["ycsec-runtime-1778665213-control-plane"]
+[OK] temporary kind cluster cleanup attempted: ycsec-runtime-1778665213
+[OK] temporary kubeconfig directory removed
+
+Runtime validation summary
+[OK] local Kubernetes runtime validation completed without blocking failures
+[OK] No warning findings

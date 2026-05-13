@@ -130,3 +130,11 @@ architecture -> implementation -> scan result -> remediation -> audit evidence -
 | EVID-K8S-001 | Phase 8 | evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt | Kubernetes static manifest validation output | Yes | Yes |
 | EVID-K8S-002 | Phase 8 | evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt | Final Kubernetes static baseline control evidence | Yes | Yes |
 | EVID-K8S-003 | Phase 8 | evidence/command-outputs/YCSEC_08_OUTPUT_final_git_control.txt | Git commit and tag evidence for Kubernetes static baseline | Yes | Yes |
+
+## Phase 9 evidence
+
+| Evidence ID | Phase | File | Description | Sanitized | Public |
+|---|---|---|---|---:|---:|
+| EVID-K8S-004 | Phase 9 | evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt | Local kind-based Kubernetes runtime validation | Yes | Yes |
+| EVID-K8S-005 | Phase 9 | evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt | Final Phase 9 runtime validation control evidence | Yes | Yes |
+| EVID-K8S-006 | Phase 9 | evidence/command-outputs/YCSEC_09_OUTPUT_final_git_control.txt | Git commit and tag evidence for local Kubernetes runtime validation | Yes | Yes |

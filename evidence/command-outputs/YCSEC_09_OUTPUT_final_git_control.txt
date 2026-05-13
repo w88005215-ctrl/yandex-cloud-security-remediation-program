@@ -1,0 +1,19 @@
+Phase 9C2 — Final Git Control
+
+Purpose:
+[OK] Phase 9 local Kubernetes runtime validation is committed
+[OK] tag v0.9-local-kubernetes-runtime is the Phase 9 release marker
+[OK] exact current commit hash is intentionally not embedded in this tracked file
+
+Reason:
+[OK] this file is committed through git amend
+[OK] git amend changes the commit hash
+[OK] embedding the current commit hash inside this file creates stale self-referential evidence
+
+Verification model:
+[OK] use external git log to verify current HEAD
+[OK] use external git tag --points-at HEAD to verify tag placement
+[OK] use external git status --short to verify clean working tree
+
+Expected tag:
+v0.9-local-kubernetes-runtime

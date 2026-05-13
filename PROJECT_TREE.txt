@@ -20,6 +20,7 @@
 ./docs/cost-control.md
 ./docs/en/.gitkeep
 ./docs/en/iam-oidc-saml-design.md
+./docs/en/kubernetes-runtime-validation.md
 ./docs/en/kubernetes-security-model.md
 ./docs/en/security-control-model.md
 ./docs/en/terraform-architecture.md
@@ -32,6 +33,7 @@
 ./docs/risk-register.md
 ./docs/ru/.gitkeep
 ./docs/ru/iam-oidc-saml-design.md
+./docs/ru/kubernetes-runtime-validation.md
 ./docs/ru/kubernetes-security-model.md
 ./docs/ru/security-control-model.md
 ./docs/ru/terraform-architecture.md
@@ -69,6 +71,8 @@
 ./evidence/command-outputs/YCSEC_08_OUTPUT_final_git_control.txt
 ./evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt
 ./evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt
+./evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt
+./evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt
 ./evidence/sanitized/.gitkeep
 ./evidence/screenshots/.gitkeep
 ./kubernetes/.gitkeep
@@ -102,6 +106,7 @@
 ./scripts/destroy-checklist.sh
 ./scripts/qubes-toolchain-discovery.sh
 ./scripts/redact-evidence.sh
+./scripts/run-local-kubernetes-runtime-validation.sh
 ./scripts/run-local-security-gates.sh
 ./scripts/validate-kubernetes-static-baseline.sh
 ./terraform/.gitkeep

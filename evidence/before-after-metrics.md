@@ -84,3 +84,12 @@ This table will become one of the main portfolio artifacts. It should be easy to
 | Default deny NetworkPolicy | Not documented | Documented | kubernetes/network-policies/default-deny.yaml |
 | Kyverno policy-as-code | Not documented | Documented | kubernetes/kyverno-policies/ |
 | Runtime enforcement | Not tested in Phase 8 | Deferred to Phase 9 | docs/en/kubernetes-security-model.md |
+
+## Phase 9 — local Kubernetes runtime validation
+
+| Metric | Before | After |
+|---|---:|---:|
+| Kubernetes manifests validated only statically | Yes | No |
+| Kubernetes manifests accepted by local API server | No evidence | Evidence captured |
+| Restricted namespace rejects privileged Pod | No evidence | Evidence captured |
+| Temporary local cluster cleanup | No evidence | Evidence captured |
