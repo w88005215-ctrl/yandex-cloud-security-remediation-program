@@ -1,0 +1,26 @@
+Phase 10 — Yandex Cloud Readiness Control
+Date: 2026-05-13T14:02:54+00:00
+Qube: cloud-dev-workbench
+Project: yandex-cloud-security-remediation-program
+
+Documentation checks:
+[OK] docs/ru/yandex-cloud-readiness.md
+[OK] docs/en/yandex-cloud-readiness.md
+[OK] docs/evidence-index.md
+
+Script checks:
+[OK] scripts/check-yandex-cloud-readiness.sh executable
+
+Readiness evidence:
+[OK] readiness evidence exists
+[OK] readiness gate has no blocking failures
+
+Sensitive file checks:
+[OK] No Terraform state files
+[OK] No kubeconfig files
+[OK] No key/token-like files
+
+Phase boundary:
+[OK] Phase 10 is read-only Yandex Cloud readiness validation
+[OK] terraform apply is outside this phase
+[OK] cloud resource creation is outside this phase

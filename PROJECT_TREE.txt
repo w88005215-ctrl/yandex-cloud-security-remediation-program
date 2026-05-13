@@ -25,6 +25,7 @@
 ./docs/en/security-control-model.md
 ./docs/en/terraform-architecture.md
 ./docs/en/threat-model.md
+./docs/en/yandex-cloud-readiness.md
 ./docs/evidence-index.md
 ./docs/multi-cloud-control-mapping.md
 ./docs/publication-safety-checklist.md
@@ -38,6 +39,7 @@
 ./docs/ru/security-control-model.md
 ./docs/ru/terraform-architecture.md
 ./docs/ru/threat-model.md
+./docs/ru/yandex-cloud-readiness.md
 ./docs/toolchain-installation.md
 ./docs/toolchain-model.md
 ./evidence/.gitkeep
@@ -71,8 +73,11 @@
 ./evidence/command-outputs/YCSEC_08_OUTPUT_final_git_control.txt
 ./evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt
 ./evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt
+./evidence/command-outputs/YCSEC_09_OUTPUT_final_git_control.txt
 ./evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt
 ./evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt
+./evidence/command-outputs/YCSEC_10_OUTPUT_final_control.txt
+./evidence/command-outputs/YCSEC_10_OUTPUT_yandex_cloud_readiness.txt
 ./evidence/sanitized/.gitkeep
 ./evidence/screenshots/.gitkeep
 ./kubernetes/.gitkeep
@@ -101,6 +106,7 @@
 ./reports/.gitkeep
 ./scripts/.gitkeep
 ./scripts/check-toolchain.sh
+./scripts/check-yandex-cloud-readiness.sh
 ./scripts/collect-evidence.sh
 ./scripts/cost-check.sh
 ./scripts/destroy-checklist.sh

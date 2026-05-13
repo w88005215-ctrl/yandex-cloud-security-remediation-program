@@ -1,0 +1,50 @@
+YCSEC Phase 10 — Yandex Cloud Readiness Gate
+Date: 2026-05-13T14:02:37+00:00
+Qube: cloud-dev-workbench
+
+Tool checks
+[OK] yc -> /home/user/.local/bin/yc
+Yandex Cloud CLI 1.7.0 linux/amd64
+
+YC profile read-only checks
+[OK] cloud-id is configured
+[OK] folder-id is configured
+
+Resource Manager read-only checks
+
+Cloud lookup:
+id: b1gqmitgfa2clpgugtok
+created_at: "2026-05-12T09:09:24Z"
+name: cloud-vojysobakvkino89
+organization_id: bpf6e8ahnavqc3g571mo
+
+[OK] cloud lookup succeeded
+
+Folder lookup:
+id: b1gmqa2hij6h8ank5tvr
+cloud_id: b1gqmitgfa2clpgugtok
+created_at: "2026-05-12T09:09:24Z"
+name: default
+description: Auto-created default folder
+status: ACTIVE
+
+[OK] folder lookup succeeded
+
+Terraform variable readiness
+[OK] terraform/environments/bootstrap/terraform.tfvars.example exists
+[OK] terraform/environments/dev/terraform.tfvars.example exists
+[OK] terraform/environments/prod-like/terraform.tfvars.example exists
+
+Sensitive file checks
+[OK] No Terraform state files
+[OK] No kubeconfig files
+[OK] No key/token-like files
+
+Read-only boundary
+[OK] only yc config get was used for profile values
+[OK] only yc resource-manager get operations were used
+[OK] no yc create/update/delete operation is part of this gate
+[OK] no terraform apply is part of this gate
+
+Readiness summary
+[OK] Yandex Cloud readiness gate passed
