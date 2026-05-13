@@ -1,0 +1,141 @@
+Phase 6R — Terraform/OpenTofu Skeleton Control
+Date: 2026-05-13T09:02:21+00:00
+Qube: cloud-dev-workbench
+Project: yandex-cloud-security-remediation-program
+
+Terraform documentation:
+[OK] terraform/README.md
+[OK] docs/ru/terraform-architecture.md
+[OK] docs/en/terraform-architecture.md
+[OK] ci/security-gates.md
+
+Module checks:
+[OK] terraform/modules/network/main.tf
+[OK] terraform/modules/network/variables.tf
+[OK] terraform/modules/network/outputs.tf
+[OK] terraform/modules/iam/main.tf
+[OK] terraform/modules/iam/variables.tf
+[OK] terraform/modules/iam/outputs.tf
+[OK] terraform/modules/oidc/main.tf
+[OK] terraform/modules/oidc/variables.tf
+[OK] terraform/modules/oidc/outputs.tf
+[OK] terraform/modules/audit/main.tf
+[OK] terraform/modules/audit/variables.tf
+[OK] terraform/modules/audit/outputs.tf
+[OK] terraform/modules/registry/main.tf
+[OK] terraform/modules/registry/variables.tf
+[OK] terraform/modules/registry/outputs.tf
+[OK] terraform/modules/object-storage/main.tf
+[OK] terraform/modules/object-storage/variables.tf
+[OK] terraform/modules/object-storage/outputs.tf
+[OK] terraform/modules/managed-kubernetes/main.tf
+[OK] terraform/modules/managed-kubernetes/variables.tf
+[OK] terraform/modules/managed-kubernetes/outputs.tf
+
+Environment checks:
+[OK] terraform/environments/bootstrap/versions.tf
+[OK] terraform/environments/bootstrap/providers.tf
+[OK] terraform/environments/bootstrap/main.tf
+[OK] terraform/environments/bootstrap/variables.tf
+[OK] terraform/environments/bootstrap/outputs.tf
+[OK] terraform/environments/bootstrap/terraform.tfvars.example
+[OK] terraform/environments/bootstrap/.terraform.lock.hcl
+[OK] terraform/environments/dev/versions.tf
+[OK] terraform/environments/dev/providers.tf
+[OK] terraform/environments/dev/main.tf
+[OK] terraform/environments/dev/variables.tf
+[OK] terraform/environments/dev/outputs.tf
+[OK] terraform/environments/dev/terraform.tfvars.example
+[OK] terraform/environments/dev/.terraform.lock.hcl
+[OK] terraform/environments/prod-like/versions.tf
+[OK] terraform/environments/prod-like/providers.tf
+[OK] terraform/environments/prod-like/main.tf
+[OK] terraform/environments/prod-like/variables.tf
+[OK] terraform/environments/prod-like/outputs.tf
+[OK] terraform/environments/prod-like/terraform.tfvars.example
+[OK] terraform/environments/prod-like/.terraform.lock.hcl
+
+Security gate checks:
+[OK] scripts/run-local-security-gates.sh executable
+[OK] .github/workflows/iac-security.yml
+[OK] local security gate evidence
+[OK] local security gates have no blocking failures
+
+Terraform/OpenTofu gate decision:
+[OK] OpenTofu compatibility decision documented
+[OK] Terraform runtime decision documented
+
+Sensitive file checks:
+[OK] No Terraform state files
+[OK] No kubeconfig files
+[OK] No key/token-like files
+
+Cloud cost control:
+[OK] No Yandex Cloud resources created in this phase
+[OK] No promo code activation in this phase
+[OK] No terraform apply executed in this phase
+[OK] No Managed Kubernetes created in this phase
+[OK] No Compute nodes created in this phase
+[OK] No LoadBalancer created in this phase
+[OK] No public IP created in this phase
+
+Git status:
+ M PROJECT_TREE.txt
+ M docs/evidence-index.md
+?? .github/workflows/iac-security.yml
+?? ci/security-gates.md
+?? docs/en/terraform-architecture.md
+?? docs/ru/terraform-architecture.md
+?? evidence/command-outputs/YCSEC_06_OUTPUT_iac_skeleton_control.txt
+?? evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt
+?? scripts/run-local-security-gates.sh
+?? terraform/README.md
+?? terraform/environments/bootstrap/.terraform.lock.hcl
+?? terraform/environments/bootstrap/main.tf
+?? terraform/environments/bootstrap/outputs.tf
+?? terraform/environments/bootstrap/providers.tf
+?? terraform/environments/bootstrap/terraform.tfvars.example
+?? terraform/environments/bootstrap/variables.tf
+?? terraform/environments/bootstrap/versions.tf
+?? terraform/environments/dev/.terraform.lock.hcl
+?? terraform/environments/dev/main.tf
+?? terraform/environments/dev/outputs.tf
+?? terraform/environments/dev/providers.tf
+?? terraform/environments/dev/terraform.tfvars.example
+?? terraform/environments/dev/variables.tf
+?? terraform/environments/dev/versions.tf
+?? terraform/environments/prod-like/.terraform.lock.hcl
+?? terraform/environments/prod-like/main.tf
+?? terraform/environments/prod-like/outputs.tf
+?? terraform/environments/prod-like/providers.tf
+?? terraform/environments/prod-like/terraform.tfvars.example
+?? terraform/environments/prod-like/variables.tf
+?? terraform/environments/prod-like/versions.tf
+?? terraform/modules/audit/README.md
+?? terraform/modules/audit/main.tf
+?? terraform/modules/audit/outputs.tf
+?? terraform/modules/audit/variables.tf
+?? terraform/modules/iam/README.md
+?? terraform/modules/iam/main.tf
+?? terraform/modules/iam/outputs.tf
+?? terraform/modules/iam/variables.tf
+?? terraform/modules/managed-kubernetes/README.md
+?? terraform/modules/managed-kubernetes/main.tf
+?? terraform/modules/managed-kubernetes/outputs.tf
+?? terraform/modules/managed-kubernetes/variables.tf
+?? terraform/modules/network/README.md
+?? terraform/modules/network/main.tf
+?? terraform/modules/network/outputs.tf
+?? terraform/modules/network/variables.tf
+?? terraform/modules/object-storage/README.md
+?? terraform/modules/object-storage/main.tf
+?? terraform/modules/object-storage/outputs.tf
+?? terraform/modules/object-storage/variables.tf
+?? terraform/modules/oidc/README.md
+?? terraform/modules/oidc/main.tf
+?? terraform/modules/oidc/outputs.tf
+?? terraform/modules/oidc/variables.tf
+?? terraform/modules/registry/README.md
+?? terraform/modules/registry/main.tf
+?? terraform/modules/registry/outputs.tf
+?? terraform/modules/registry/variables.tf

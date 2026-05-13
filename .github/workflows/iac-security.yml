@@ -1,0 +1,46 @@
+name: IaC Security
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  terraform-security:
+    name: Terraform and IaC security gates
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform fmt
+        run: terraform fmt -recursive -check
+
+      - name: Terraform init and validate environments
+        run: |
+          for env_dir in terraform/environments/bootstrap terraform/environments/dev terraform/environments/prod-like; do
+            tmp_dir="$(mktemp -d)"
+            TF_DATA_DIR="$tmp_dir" terraform -chdir="$env_dir" init -backend=false -input=false -no-color
+            TF_DATA_DIR="$tmp_dir" terraform -chdir="$env_dir" validate -no-color
+            rm -rf "$tmp_dir"
+          done
+
+      - name: Install Checkov
+        run: pipx install checkov
+
+      - name: Checkov scan
+        run: checkov -d terraform --framework terraform --quiet
+
+      - name: Gitleaks scan
+        uses: gitleaks/gitleaks-action@v2

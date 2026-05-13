@@ -1,0 +1,24 @@
+Phase 6R — Final Git Control
+Date: 2026-05-13T09:02:21+00:00
+
+Latest commits:
+21d6156 feat: add Terraform IaC skeleton and local security gates
+580c656 chore: complete full local security toolchain
+0d805ba docs: add Qubes-aware toolchain discovery
+4346f6c docs: add evidence and cost control model
+d6ca698 docs: add root portfolio documentation
+a13fd21 chore: initialize repository skeleton
+
+Tags:
+v0.1-skeleton
+v0.2-root-docs
+v0.3-evidence-cost-control
+v0.4-toolchain-discovery
+v0.5-full-toolchain
+v0.6-iac-skeleton
+
+Tag on HEAD:
+v0.6-iac-skeleton
+
+Git status:
+?? evidence/command-outputs/YCSEC_06_OUTPUT_final_git_control.txt

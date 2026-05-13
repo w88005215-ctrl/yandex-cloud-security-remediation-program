@@ -1,0 +1,5 @@
+cloud_id  = "REDACTED_CLOUD_ID"
+folder_id = "REDACTED_FOLDER_ID"
+
+# Do not commit real cloud_id or folder_id.
+# Use local untracked terraform.tfvars only during controlled cloud-runs.

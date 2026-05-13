@@ -97,3 +97,12 @@ architecture -> implementation -> scan result -> remediation -> audit evidence -
 | EVID-LOCAL-013 | Phase 5 | evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_check.txt | Clean final local toolchain validation | Yes | Yes |
 | EVID-LOCAL-014 | Phase 5 | evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_control.txt | Final clean toolchain control evidence | Yes | Yes |
 | EVID-LOCAL-015 | Phase 5 | evidence/command-outputs/YCSEC_05_OUTPUT_final_git_control.txt | Git commit and tag evidence for toolchain baseline | Yes | Yes |
+
+
+## Phase 6 evidence
+
+| Evidence ID | Phase | File | Description | Sanitized | Public |
+|---|---|---|---|---:|---:|
+| EVID-IAC-001 | Phase 6 | evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt | Clean local Terraform/OpenTofu and security gate output | Yes | Yes |
+| EVID-IAC-002 | Phase 6 | evidence/command-outputs/YCSEC_06_OUTPUT_iac_skeleton_control.txt | IaC skeleton final control evidence | Yes | Yes |
+| EVID-IAC-003 | Phase 6 | evidence/command-outputs/YCSEC_06_OUTPUT_final_git_control.txt | Git commit and tag evidence for IaC skeleton | Yes | Yes |
