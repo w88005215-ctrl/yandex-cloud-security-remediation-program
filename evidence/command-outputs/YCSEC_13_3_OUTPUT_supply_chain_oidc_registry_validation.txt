@@ -1,0 +1,479 @@
+Phase 13.3-REPAIR2 — Supply Chain OIDC Registry build/push validation
+Date: 2026-05-14T13:22:52+00:00
+Qube: cloud-dev-workbech
+
+Step 1 — collect failed build log from previous GitHub Actions run
+[OK] raw failed workflow log saved privately
+[OK] sanitized failed build-log analysis written: evidence/command-outputs/YCSEC_13_3_OUTPUT_failed_build_log_analysis.txt
+
+Step 2 — verify roadmap baseline
+66daf02 (HEAD -> main, origin/main, origin/HEAD) ci: repair supply chain registry OIDC workflow
+c396086 (tag: v0.13.2-supply-chain-implementation-package) feat: add supply chain security validation package
+1ba3a92 (tag: v0.13.1-supply-chain-roadmap-extension) docs: extend roadmap with supply chain security validation
+61bff33 (tag: v0.13.0-managed-kubernetes-baseline-remediation-cloud-run) docs: close Managed Kubernetes cloud run evidence package
+17045b7 test: validate Managed Kubernetes baseline remediation cloud run
+99b9e11 (tag: v0.13.0a-managed-kubernetes-cloud-run-implementation) feat: prepare Managed Kubernetes cloud remediation run
+690425b (tag: v0.12.9-managed-kubernetes-cloud-run-plan) docs: plan Managed Kubernetes baseline remediation cloud run
+3f670fe (tag: v0.12.8f-registry-evidence-storage-validation) test: validate registry and evidence storage resources
+d172951 (tag: v0.12.8e-audit-trails-evidence-validation) test: validate Audit Trails evidence delivery
+664c3ff (tag: v0.12.8d-github-actions-oidc-validation) ci: validate GitHub Actions OIDC token exchange
+
+[OK] current HEAD contains Phase 13.2 implementation baseline
+[OK] current branch is main
+[OK] local HEAD is published on origin/main
+
+Step 3 — verify required tools and retained cloud resources
+[OK] git available
+[OK] gh available
+[OK] yc available
+[OK] jq available
+[OK] gitleaks available
+[OK] grep available
+[OK] sed available
+[OK] awk available
+[OK] find available
+[OK] curl available
+[OK] docker available
+[OK] gh CLI authenticated
+[OK] folder-id available
+[OK] GitHub Actions service account detected
+[OK] Container Registry detected
+
+Step 4 — set GitHub repository variables
+[OK] GitHub variable YCSEC_YC_SA_ID set
+[OK] GitHub variable YCSEC_YC_FOLDER_ID set
+[OK] GitHub variable YCSEC_YCR_REGISTRY_ID set
+
+Step 5 — stabilize demo application dependencies and Dockerfiles
+[OK] demo application and Dockerfiles stabilized
+
+Step 6 — rewrite workflow with plain Docker build logs and explicit markers
+[OK] workflow rewritten: .github/workflows/supply-chain-oidc-registry-validation.yml
+
+Step 7 — rewrite supply-chain package validator
+[OK] validator rewritten: scripts/validate-supply-chain-package.sh
+
+Step 8 — validate repaired package
+[OK] validator syntax valid
+YCSEC supply-chain package validator
+Date: 2026-05-14T13:23:10+00:00
+
+[OK] supply-chain/demo-app/app.py exists
+[OK] supply-chain/demo-app/requirements-vulnerable.txt exists
+[OK] supply-chain/demo-app/requirements-remediated.txt exists
+[OK] supply-chain/demo-app/Dockerfile.insecure exists
+[OK] supply-chain/demo-app/Dockerfile.hardened exists
+[OK] policies/kyverno/supply-chain/registry-and-image-policy.yaml exists
+[OK] .github/workflows/supply-chain-oidc-registry-validation.yml exists
+[OK] scripts/run-supply-chain-local-evidence.sh exists
+[OK] local evidence script syntax valid
+[OK] controlled vulnerable requests baseline present
+[OK] controlled vulnerable urllib3 baseline present
+[OK] remediated requests target present
+[OK] remediated urllib3 target present
+[OK] insecure baseline image present
+[OK] insecure Dockerfile intentionally runs as default root user
+[OK] hardened base image target present
+[OK] hardened non-root user target present
+[OK] workflow_dispatch trigger present
+[OK] GitHub OIDC permission present
+[OK] direct Yandex Cloud token exchange endpoint present
+[OK] Yandex Container Registry IAM docker login present
+[OK] docker push step present
+[OK] image push marker present
+[OK] Kyverno enforce policy present
+[OK] Yandex Container Registry admission control present
+[OK] mutable latest tag policy present
+[OK] workflow avoids rejected credential/action patterns
+
+FAIL_COUNT=0
+[OK] supply-chain package validation passed
+[OK] supply-chain package validator passed
+
+Step 9 — repository safety checks before repair commit
+[OK] no Terraform state files in repository
+[OK] no kubeconfig files in repository
+[OK] no key/token-like files in repository
+[90m1:23PM[0m [32mINF[0m [1m40 commits scanned.[0m
+[90m1:23PM[0m [32mINF[0m [1mscanned ~928282 bytes (928.28 KB) in 867ms[0m
+[90m1:23PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed before repair commit
+
+Step 10 — commit and push build repair
+[main 579fac9] fix: stabilize supply chain demo image builds
+ 7 files changed, 99 insertions(+), 107 deletions(-)
+To https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program.git
+   66daf02..579fac9  main -> main
+[OK] build repair committed and pushed
+
+Step 11 — dispatch repaired GitHub Actions registry workflow
+[OK] workflow is visible to GitHub
+https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program/actions/runs/25862457082
+[OK] workflow dispatch requested
+[OK] workflow run detected: 25862457082
+https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program/actions/runs/25862457082
+
+Step 12 — watch GitHub Actions registry workflow
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch less than a minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch less than a minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch less than a minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch less than a minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+  ✓ Set up job
+  ✓ Checkout repository
+  ✓ Validate required variables
+  ✓ Validate runner tooling
+  ✓ Request GitHub OIDC assertion
+  ✓ Exchange OIDC assertion for Yandex Cloud IAM token
+  * Validate Yandex Cloud API access
+  * Authenticate Docker to Yandex Container Registry
+  * Build and push controlled demo images
+  * Confirm no durable cloud credential file was used
+  * Post Checkout repository
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch less than a minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+  ✓ Set up job
+  ✓ Checkout repository
+  ✓ Validate required variables
+  ✓ Validate runner tooling
+  ✓ Request GitHub OIDC assertion
+  ✓ Exchange OIDC assertion for Yandex Cloud IAM token
+  ✓ Validate Yandex Cloud API access
+  ✓ Authenticate Docker to Yandex Container Registry
+  * Build and push controlled demo images
+  * Confirm no durable cloud credential file was used
+  * Post Checkout repository
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch less than a minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+  ✓ Set up job
+  ✓ Checkout repository
+  ✓ Validate required variables
+  ✓ Validate runner tooling
+  ✓ Request GitHub OIDC assertion
+  ✓ Exchange OIDC assertion for Yandex Cloud IAM token
+  ✓ Validate Yandex Cloud API access
+  ✓ Authenticate Docker to Yandex Container Registry
+  * Build and push controlled demo images
+  * Confirm no durable cloud credential file was used
+  * Post Checkout repository
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch less than a minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+  ✓ Set up job
+  ✓ Checkout repository
+  ✓ Validate required variables
+  ✓ Validate runner tooling
+  ✓ Request GitHub OIDC assertion
+  ✓ Exchange OIDC assertion for Yandex Cloud IAM token
+  ✓ Validate Yandex Cloud API access
+  ✓ Authenticate Docker to Yandex Container Registry
+  * Build and push controlled demo images
+  * Confirm no durable cloud credential file was used
+  * Post Checkout repository
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch less than a minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+  ✓ Set up job
+  ✓ Checkout repository
+  ✓ Validate required variables
+  ✓ Validate runner tooling
+  ✓ Request GitHub OIDC assertion
+  ✓ Exchange OIDC assertion for Yandex Cloud IAM token
+  ✓ Validate Yandex Cloud API access
+  ✓ Authenticate Docker to Yandex Container Registry
+  * Build and push controlled demo images
+  * Confirm no durable cloud credential file was used
+  * Post Checkout repository
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch less than a minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+  ✓ Set up job
+  ✓ Checkout repository
+  ✓ Validate required variables
+  ✓ Validate runner tooling
+  ✓ Request GitHub OIDC assertion
+  ✓ Exchange OIDC assertion for Yandex Cloud IAM token
+  ✓ Validate Yandex Cloud API access
+  ✓ Authenticate Docker to Yandex Container Registry
+  * Build and push controlled demo images
+  * Confirm no durable cloud credential file was used
+  * Post Checkout repository
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch less than a minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+  ✓ Set up job
+  ✓ Checkout repository
+  ✓ Validate required variables
+  ✓ Validate runner tooling
+  ✓ Request GitHub OIDC assertion
+  ✓ Exchange OIDC assertion for Yandex Cloud IAM token
+  ✓ Validate Yandex Cloud API access
+  ✓ Authenticate Docker to Yandex Container Registry
+  * Build and push controlled demo images
+  * Confirm no durable cloud credential file was used
+  * Post Checkout repository
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch less than a minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+  ✓ Set up job
+  ✓ Checkout repository
+  ✓ Validate required variables
+  ✓ Validate runner tooling
+  ✓ Request GitHub OIDC assertion
+  ✓ Exchange OIDC assertion for Yandex Cloud IAM token
+  ✓ Validate Yandex Cloud API access
+  ✓ Authenticate Docker to Yandex Container Registry
+  * Build and push controlled demo images
+  * Confirm no durable cloud credential file was used
+  * Post Checkout repository
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch less than a minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+  ✓ Set up job
+  ✓ Checkout repository
+  ✓ Validate required variables
+  ✓ Validate runner tooling
+  ✓ Request GitHub OIDC assertion
+  ✓ Exchange OIDC assertion for Yandex Cloud IAM token
+  ✓ Validate Yandex Cloud API access
+  ✓ Authenticate Docker to Yandex Container Registry
+  * Build and push controlled demo images
+  * Confirm no durable cloud credential file was used
+  * Post Checkout repository
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch less than a minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+  ✓ Set up job
+  ✓ Checkout repository
+  ✓ Validate required variables
+  ✓ Validate runner tooling
+  ✓ Request GitHub OIDC assertion
+  ✓ Exchange OIDC assertion for Yandex Cloud IAM token
+  ✓ Validate Yandex Cloud API access
+  ✓ Authenticate Docker to Yandex Container Registry
+  * Build and push controlled demo images
+  * Confirm no durable cloud credential file was used
+  * Post Checkout repository
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch about 1 minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+  ✓ Set up job
+  ✓ Checkout repository
+  ✓ Validate required variables
+  ✓ Validate runner tooling
+  ✓ Request GitHub OIDC assertion
+  ✓ Exchange OIDC assertion for Yandex Cloud IAM token
+  ✓ Validate Yandex Cloud API access
+  ✓ Authenticate Docker to Yandex Container Registry
+  * Build and push controlled demo images
+  * Confirm no durable cloud credential file was used
+  * Post Checkout repository
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch about 1 minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+  ✓ Set up job
+  ✓ Checkout repository
+  ✓ Validate required variables
+  ✓ Validate runner tooling
+  ✓ Request GitHub OIDC assertion
+  ✓ Exchange OIDC assertion for Yandex Cloud IAM token
+  ✓ Validate Yandex Cloud API access
+  ✓ Authenticate Docker to Yandex Container Registry
+  * Build and push controlled demo images
+  * Confirm no durable cloud credential file was used
+  * Post Checkout repository
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch about 1 minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+  ✓ Set up job
+  ✓ Checkout repository
+  ✓ Validate required variables
+  ✓ Validate runner tooling
+  ✓ Request GitHub OIDC assertion
+  ✓ Exchange OIDC assertion for Yandex Cloud IAM token
+  ✓ Validate Yandex Cloud API access
+  ✓ Authenticate Docker to Yandex Container Registry
+  * Build and push controlled demo images
+  * Confirm no durable cloud credential file was used
+  * Post Checkout repository
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch about 1 minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+  ✓ Set up job
+  ✓ Checkout repository
+  ✓ Validate required variables
+  ✓ Validate runner tooling
+  ✓ Request GitHub OIDC assertion
+  ✓ Exchange OIDC assertion for Yandex Cloud IAM token
+  ✓ Validate Yandex Cloud API access
+  ✓ Authenticate Docker to Yandex Container Registry
+  * Build and push controlled demo images
+  * Confirm no durable cloud credential file was used
+  * Post Checkout repository
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch about 1 minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+  ✓ Set up job
+  ✓ Checkout repository
+  ✓ Validate required variables
+  ✓ Validate runner tooling
+  ✓ Request GitHub OIDC assertion
+  ✓ Exchange OIDC assertion for Yandex Cloud IAM token
+  ✓ Validate Yandex Cloud API access
+  ✓ Authenticate Docker to Yandex Container Registry
+  * Build and push controlled demo images
+  * Confirm no durable cloud credential file was used
+  * Post Checkout repository
+Refreshing run status every 3 seconds. Press Ctrl+C to quit.
+
+* main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch about 1 minute ago
+
+JOBS
+* validate-registry-push (ID 75995626980)
+  ✓ Set up job
+  ✓ Checkout repository
+  ✓ Validate required variables
+  ✓ Validate runner tooling
+  ✓ Request GitHub OIDC assertion
+  ✓ Exchange OIDC assertion for Yandex Cloud IAM token
+  ✓ Validate Yandex Cloud API access
+  ✓ Authenticate Docker to Yandex Container Registry
+  * Build and push controlled demo images
+  * Confirm no durable cloud credential file was used
+  * Post Checkout repository
+✓ main YCSEC Supply Chain OIDC Registry Validation · 25862457082
+Triggered via workflow_dispatch about 1 minute ago
+
+JOBS
+✓ validate-registry-push in 1m12s (ID 75995626980)
+  ✓ Set up job
+  ✓ Checkout repository
+  ✓ Validate required variables
+  ✓ Validate runner tooling
+  ✓ Request GitHub OIDC assertion
+  ✓ Exchange OIDC assertion for Yandex Cloud IAM token
+  ✓ Validate Yandex Cloud API access
+  ✓ Authenticate Docker to Yandex Container Registry
+  ✓ Build and push controlled demo images
+  ✓ Confirm no durable cloud credential file was used
+  ✓ Post Checkout repository
+  ✓ Complete job
+[OK] GitHub Actions registry workflow succeeded
+
+Step 13 — collect workflow logs and create sanitized evidence
+[OK] sanitized workflow evidence written: evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation_success.txt
+
+Step 14 — validate workflow evidence markers
+[OK] OIDC assertion marker present
+[OK] IAM token exchange marker present
+[OK] cloud API validation marker present
+[OK] registry authentication marker present
+[OK] image push marker present
+[OK] no durable credential file marker present
+
+Step 15 — collect registry inventory evidence
+[OK] registry inventory evidence written
+
+Step 16 — write validation document
+[OK] validation document written: docs/supply-chain-oidc-registry-validation.md
+
+Step 17 — update evidence index and cloud evidence gap register
+[OK] evidence index updated
+[OK] cloud evidence gap register updated
+
+Step 18 — final repository safety checks
+[OK] no Terraform state files before commit
+[OK] no kubeconfig files before commit
+[OK] no key/token-like files before commit
+[90m1:25PM[0m [32mINF[0m [1m41 commits scanned.[0m
+[90m1:25PM[0m [32mINF[0m [1mscanned ~933205 bytes (933.21 KB) in 782ms[0m
+[90m1:25PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed before commit
+
+Step 19 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 13.3 Supply Chain OIDC Registry validation completed
+[OK] project is ready for Phase 13.4 SBOM and vulnerability validation

@@ -254,3 +254,22 @@ Still open after this phase:
 - SBOM evidence generated from the controlled image/workload.
 - Vulnerability before/after metrics.
 - Admission policy enforcement evidence in Kubernetes.
+
+## Phase 13.3 — Supply Chain OIDC Registry validation
+
+Status: completed.
+
+Closed evidence:
+
+- GitHub Actions OIDC assertion request.
+- Direct Yandex Cloud IAM token exchange.
+- Yandex Cloud API validation using federated identity.
+- Docker authentication to Yandex Container Registry.
+- Controlled insecure and hardened demo image build/push.
+
+Still open:
+
+- Registry vulnerability scan evidence.
+- SBOM evidence.
+- Kyverno admission policy enforcement evidence.
+- Final supply-chain before/after metrics.

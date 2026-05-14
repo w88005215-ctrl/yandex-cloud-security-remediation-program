@@ -1,0 +1,41 @@
+Phase 13.3 Supply Chain OIDC Registry validation
+Date: 2026-05-14T13:24:50+00:00
+Workflow run: 25862457082
+Workflow URL: https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program/actions/runs/25862457082
+
+Run metadata:
+{"conclusion":"success","databaseId":25862457082,"event":"workflow_dispatch","headSha":"579fac92e70b941f8bea35ea37f3d6fdb4dc6953","status":"completed","url":"https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program/actions/runs/25862457082","workflowName":"YCSEC Supply Chain OIDC Registry Validation"}
+
+Validated public markers:
+validate-registry-push	Checkout repository	2026-05-14T13:23:31.8960008Z   YCSEC_IMAGE_NAME: ycsec-supply-chain-demo
+validate-registry-push	Validate required variables	2026-05-14T13:23:33.1261718Z [36;1mecho "YCSEC_MARKER_INPUT_VARIABLES_OK"[0m
+validate-registry-push	Validate required variables	2026-05-14T13:23:33.1293714Z   YCSEC_IMAGE_NAME: ycsec-supply-chain-demo
+validate-registry-push	Validate required variables	2026-05-14T13:23:33.1382128Z YCSEC_MARKER_INPUT_VARIABLES_OK
+validate-registry-push	Validate runner tooling	2026-05-14T13:23:33.1463405Z [36;1mecho "YCSEC_MARKER_RUNNER_TOOLING_OK"[0m
+validate-registry-push	Validate runner tooling	2026-05-14T13:23:33.1489512Z   YCSEC_IMAGE_NAME: ycsec-supply-chain-demo
+validate-registry-push	Validate runner tooling	2026-05-14T13:23:33.2002528Z YCSEC_MARKER_RUNNER_TOOLING_OK
+validate-registry-push	Request GitHub OIDC assertion	2026-05-14T13:23:33.2087185Z [36;1mecho "YCSEC_MARKER_OIDC_ASSERTION_REQUESTED"[0m
+validate-registry-push	Request GitHub OIDC assertion	2026-05-14T13:23:33.2113084Z   YCSEC_IMAGE_NAME: ycsec-supply-chain-demo
+validate-registry-push	Request GitHub OIDC assertion	2026-05-14T13:23:33.4994911Z YCSEC_MARKER_OIDC_ASSERTION_REQUESTED
+validate-registry-push	Exchange OIDC assertion for Yandex Cloud IAM token	2026-05-14T13:23:33.5037147Z [36;1mecho "YCSEC_MARKER_YC_IAM_TOKEN_EXCHANGED"[0m
+validate-registry-push	Exchange OIDC assertion for Yandex Cloud IAM token	2026-05-14T13:23:33.5059548Z   YCSEC_IMAGE_NAME: ycsec-supply-chain-demo
+validate-registry-push	Exchange OIDC assertion for Yandex Cloud IAM token	2026-05-14T13:23:34.4117128Z YCSEC_MARKER_YC_IAM_TOKEN_EXCHANGED
+validate-registry-push	Validate Yandex Cloud API access	2026-05-14T13:23:34.4228226Z [36;1mecho "YCSEC_MARKER_CLOUD_API_ACCESS_OK"[0m
+validate-registry-push	Validate Yandex Cloud API access	2026-05-14T13:23:34.4250978Z   YCSEC_IMAGE_NAME: ycsec-supply-chain-demo
+validate-registry-push	Validate Yandex Cloud API access	2026-05-14T13:23:35.4785509Z YCSEC_MARKER_CLOUD_API_ACCESS_OK
+validate-registry-push	Authenticate Docker to Yandex Container Registry	2026-05-14T13:23:35.4817763Z [36;1mecho "YCSEC_MARKER_REGISTRY_AUTH_OK"[0m
+validate-registry-push	Authenticate Docker to Yandex Container Registry	2026-05-14T13:23:35.4839535Z   YCSEC_IMAGE_NAME: ycsec-supply-chain-demo
+validate-registry-push	Authenticate Docker to Yandex Container Registry	2026-05-14T13:23:37.4947949Z YCSEC_MARKER_REGISTRY_AUTH_OK
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:23:37.4980536Z [36;1mIMAGE_BASE="cr.yandex/<redacted-registry-id>/${YCSEC_IMAGE_NAME}"[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:23:37.4988107Z [36;1mecho "YCSEC_MARKER_IMAGE_PUSH_OK"[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:23:37.4988720Z [36;1mecho "YCSEC_IMAGE_INSECURE=${IMAGE_BASE}:insecure-${SHORT_SHA}"[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:23:37.4989341Z [36;1mecho "YCSEC_IMAGE_MUTABLE=${IMAGE_BASE}:latest"[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:23:37.4989723Z [36;1mecho "YCSEC_IMAGE_HARDENED=${IMAGE_BASE}:hardened-${SHORT_SHA}"[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:23:37.5011830Z   YCSEC_IMAGE_NAME: ycsec-supply-chain-demo
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:24:40.1071855Z YCSEC_MARKER_IMAGE_PUSH_OK
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:24:40.1072626Z YCSEC_IMAGE_INSECURE=cr.yandex/<redacted-registry-id>/ycsec-supply-chain-demo:insecure-579fac92e70b
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:24:40.1073309Z YCSEC_IMAGE_MUTABLE=cr.yandex/<redacted-registry-id>/ycsec-supply-chain-demo:latest
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:24:40.1074365Z YCSEC_IMAGE_HARDENED=cr.yandex/<redacted-registry-id>/ycsec-supply-chain-demo:hardened-579fac92e70b
+validate-registry-push	Confirm no durable cloud credential file was used	2026-05-14T13:24:40.1105162Z [36;1mecho "YCSEC_MARKER_NO_DURABLE_CREDENTIAL_FILE"[0m
+validate-registry-push	Confirm no durable cloud credential file was used	2026-05-14T13:24:40.1126758Z   YCSEC_IMAGE_NAME: ycsec-supply-chain-demo
+validate-registry-push	Confirm no durable cloud credential file was used	2026-05-14T13:24:40.1316801Z YCSEC_MARKER_NO_DURABLE_CREDENTIAL_FILE

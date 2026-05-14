@@ -443,3 +443,13 @@ Cloud resources created in this phase: none.
 | `policies/kyverno/supply-chain/registry-and-image-policy.yaml` | Admission policy package for registry/image controls |
 | `evidence/command-outputs/YCSEC_13_2_OUTPUT_supply_chain_implementation_package.txt` | Phase 13.2 command evidence |
 | `evidence/command-outputs/YCSEC_13_2_OUTPUT_final_git_control.txt` | Phase 13.2 final git control evidence |
+
+## Phase 13.3 — Supply Chain OIDC Registry validation
+
+| Evidence | Description |
+|---|---|
+| `docs/supply-chain-oidc-registry-validation.md` | Supply-chain OIDC registry validation result |
+| `evidence/command-outputs/YCSEC_13_3_OUTPUT_failed_build_log_analysis.txt` | Sanitized analysis of the failed build/push attempt |
+| `evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt` | Command evidence for Phase 13.3 |
+| `evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation_success.txt` | Sanitized GitHub Actions OIDC registry push evidence |
+| `evidence/command-outputs/YCSEC_13_3_OUTPUT_registry_inventory_after_push.txt` | Sanitized registry inventory after image push |

@@ -1,0 +1,168 @@
+Phase 13.3 failed workflow build-log analysis
+Date: 2026-05-14T13:22:54+00:00
+Previous run id: 25862234096
+
+Run metadata:
+{"conclusion":"failure","databaseId":25862234096,"event":"workflow_dispatch","headSha":"66daf02585c7d6181e9924a3d9f8f4a5f66f437f","status":"completed","url":"https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program/actions/runs/25862234096","workflowName":"YCSEC Supply Chain OIDC Registry Validation"}
+
+Relevant failure lines:
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5085404Z [36;1mSHORT_SHA="${GITHUB_SHA::12}"[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5085779Z [36;1mIMAGE_BASE="cr.yandex/crpom0rdegblf5au4nsu/${YCSEC_IMAGE_NAME}"[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5086359Z [36;1m[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5086616Z [36;1mdocker build \[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5087034Z [36;1m  -f "${YCSEC_REPOSITORY_DIR}/Dockerfile.insecure" \[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5087446Z [36;1m  -t "${IMAGE_BASE}:insecure-${SHORT_SHA}" \[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5087741Z [36;1m  -t "${IMAGE_BASE}:latest" \[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5088021Z [36;1m  "${YCSEC_REPOSITORY_DIR}"[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5088255Z [36;1m[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5088497Z [36;1mdocker push "${IMAGE_BASE}:insecure-${SHORT_SHA}"[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5088836Z [36;1mdocker push "${IMAGE_BASE}:latest"[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5089081Z [36;1m[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5089268Z [36;1mdocker build \[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5089533Z [36;1m  -f "${YCSEC_REPOSITORY_DIR}/Dockerfile.hardened" \[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5089903Z [36;1m  -t "${IMAGE_BASE}:hardened-${SHORT_SHA}" \[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5090429Z [36;1m  "${YCSEC_REPOSITORY_DIR}"[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5090658Z [36;1m[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5090887Z [36;1mdocker push "${IMAGE_BASE}:hardened-${SHORT_SHA}"[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5091171Z [36;1m[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5091361Z [36;1mecho "YCSEC_MARKER_IMAGE_PUSH_OK"[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5091714Z [36;1mecho "YCSEC_IMAGE_INSECURE=${IMAGE_BASE}:insecure-${SHORT_SHA}"[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5092130Z [36;1mecho "YCSEC_IMAGE_MUTABLE=${IMAGE_BASE}:latest"[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5092533Z [36;1mecho "YCSEC_IMAGE_HARDENED=${IMAGE_BASE}:hardened-${SHORT_SHA}"[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5115244Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5115608Z env:
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5115833Z   YCSEC_IMAGE_NAME: ycsec-supply-chain-demo
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5116147Z   YCSEC_REPOSITORY_DIR: supply-chain/demo-app
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5116429Z ##[endgroup]
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.9028942Z #0 building with "default" instance using docker driver
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.9029272Z 
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.9029450Z #1 [internal] load build definition from Dockerfile.insecure
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.9029856Z #1 transferring dockerfile: 454B done
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.9030350Z #1 DONE 0.0s
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.9030471Z 
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.9030665Z #2 [auth] library/python:pull token for registry-1.docker.io
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.9030995Z #2 DONE 0.0s
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.9031119Z 
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.9031311Z #3 [internal] load metadata for docker.io/library/python:3.9-slim
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.1041569Z #3 DONE 0.4s
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.2189077Z 
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.2190490Z #4 [internal] load .dockerignore
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.2191024Z #4 transferring context: 2B done
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.2191376Z #4 DONE 0.0s
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.2191539Z 
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.2191706Z #5 [internal] load build context
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.2192053Z #5 transferring context: 577B done
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.2192462Z #5 DONE 0.0s
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.2192616Z 
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.2193157Z #6 [1/5] FROM docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.2194378Z #6 resolve docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b done
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.2195467Z #6 sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b 10.36kB / 10.36kB done
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.2196474Z #6 sha256:dad5b29e3506c35e0fd222736f4d4ef25d21b219acdd73f7bb41d59996ca8e0d 1.74kB / 1.74kB done
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.2197807Z #6 sha256:085da638e1b8a449514c3fda83ff50a3bffae4418b050cfacd87e5722071f497 5.40kB / 5.40kB done
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.2198812Z #6 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 9.44MB / 29.78MB 0.1s
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.2199776Z #6 sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 0B / 1.29MB 0.1s
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.2201457Z #6 sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 0B / 13.88MB 0.1s
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.3456840Z #6 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 29.78MB / 29.78MB 0.2s done
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.3457871Z #6 sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 1.29MB / 1.29MB 0.1s done
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.3459279Z #6 sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 13.88MB / 13.88MB 0.2s done
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.3460703Z #6 sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 251B / 251B 0.2s done
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:43.3461882Z #6 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:44.3505979Z #6 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 0.9s done
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:44.3506932Z #6 extracting sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 0.1s done
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:44.5416564Z #6 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 0.1s
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:45.1528746Z #6 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 0.6s done
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:45.1529737Z #6 extracting sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:45.3435652Z #6 extracting sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 done
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:45.3436441Z #6 DONE 2.1s
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:45.3436617Z 
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:45.3436740Z #7 [2/5] WORKDIR /app
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:45.3437042Z #7 DONE 0.0s
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:45.3437206Z 
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:45.3437507Z #8 [3/5] COPY requirements-vulnerable.txt /app/requirements.txt
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:45.3438016Z #8 DONE 0.0s
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:45.3438174Z 
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:45.3438426Z #9 [4/5] RUN pip install --no-cache-dir -r /app/requirements.txt
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:46.9748520Z #9 1.782 Collecting Flask==1.0
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.0756026Z #9 1.799   Downloading Flask-1.0-py2.py3-none-any.whl (97 kB)
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.0757351Z #9 1.805      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.8/97.8 kB 33.5 MB/s eta 0:00:00
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.0759678Z #9 1.833 Collecting Jinja2==2.10
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.0760523Z #9 1.836   Downloading Jinja2-2.10-py2.py3-none-any.whl (126 kB)
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.0761425Z #9 1.840      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 126.4/126.4 kB 81.8 MB/s eta 0:00:00
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.0762030Z #9 1.882 Collecting Werkzeug==0.14.1
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.1881255Z #9 1.886   Downloading Werkzeug-0.14.1-py2.py3-none-any.whl (322 kB)
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.1882465Z #9 1.890      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 322.9/322.9 kB 167.1 MB/s eta 0:00:00
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.1883146Z #9 1.936 Collecting requests==2.19.1
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.1883677Z #9 1.939   Downloading requests-2.19.1-py2.py3-none-any.whl (91 kB)
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.1884519Z #9 1.942      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.0/92.0 kB 261.3 MB/s eta 0:00:00
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.1885080Z #9 1.995 Collecting urllib3==1.24.1
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.2886771Z #9 1.998   Downloading urllib3-1.24.1-py2.py3-none-any.whl (118 kB)
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.2887763Z #9 2.001      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 256.1 MB/s eta 0:00:00
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.2888248Z #9 2.088 Collecting PyYAML==5.3.1
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.2888570Z #9 2.092   Downloading PyYAML-5.3.1.tar.gz (269 kB)
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.4091722Z #9 2.096      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 269.4/269.4 kB 284.7 MB/s eta 0:00:00
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.4092437Z #9 2.216   Preparing metadata (setup.py): started
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:47.8085956Z #9 2.615   Preparing metadata (setup.py): finished with status 'done'
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.0288684Z #9 2.658 Collecting itsdangerous>=0.24
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.0289393Z #9 2.661   Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.0289908Z #9 2.693 Collecting click>=5.1
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.0290912Z #9 2.696   Downloading click-8.1.8-py3-none-any.whl (98 kB)
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.0292129Z #9 2.699      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.2/98.2 kB 258.0 MB/s eta 0:00:00
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.0293477Z #9 2.836 Collecting MarkupSafe>=0.23
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1394432Z #9 2.840   Downloading markupsafe-3.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1395873Z #9 2.863 INFO: pip is looking at multiple versions of werkzeug to determine which version is compatible with other requirements. This could take a while.
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1397331Z #9 2.863 INFO: pip is looking at multiple versions of jinja2 to determine which version is compatible with other requirements. This could take a while.
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1398799Z #9 2.864 INFO: pip is looking at multiple versions of flask to determine which version is compatible with other requirements. This could take a while.
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1400466Z #9 2.864 ERROR: Cannot install -r /app/requirements.txt (line 4) and urllib3==1.24.1 because these package versions have conflicting dependencies.
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1401377Z #9 2.865 
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1401639Z #9 2.865 The conflict is caused by:
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1402030Z #9 2.865     The user requested urllib3==1.24.1
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1402572Z #9 2.865     requests 2.19.1 depends on urllib3<1.24 and >=1.21.1
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1403072Z #9 2.865 
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1403350Z #9 2.865 To fix this you could try to:
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1403872Z #9 2.865 1. loosen the range of package versions you've specified
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1404637Z #9 2.865 2. remove package versions to allow pip attempt to solve the dependency conflict
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1405208Z #9 2.865 
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1406046Z #9 2.865 ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1406953Z #9 2.946 
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1407322Z #9 2.946 [notice] A new release of pip is available: 23.0.1 -> 26.0.1
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.1407878Z #9 2.946 [notice] To update, run: pip install --upgrade pip
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2829434Z #9 ERROR: process "/bin/sh -c pip install --no-cache-dir -r /app/requirements.txt" did not complete successfully: exit code: 1
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2945540Z ------
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2946427Z  > [4/5] RUN pip install --no-cache-dir -r /app/requirements.txt:
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2948461Z 2.865     requests 2.19.1 depends on urllib3<1.24 and >=1.21.1
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2949210Z 2.865 
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2949816Z 2.865 To fix this you could try to:
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2950763Z 2.865 1. loosen the range of package versions you've specified
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2951564Z 2.865 2. remove package versions to allow pip attempt to solve the dependency conflict
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2952224Z 2.865 
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2953105Z 2.865 ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2954038Z 2.946 
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2955490Z 2.946 [notice] A new release of pip is available: 23.0.1 -> 26.0.1
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2956117Z 2.946 [notice] To update, run: pip install --upgrade pip
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2956552Z ------
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2956847Z Dockerfile.insecure:9
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2957152Z --------------------
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2957423Z    7 |     
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2957816Z    8 |     COPY requirements-vulnerable.txt /app/requirements.txt
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2958407Z    9 | >>> RUN pip install --no-cache-dir -r /app/requirements.txt
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2958870Z   10 |     
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2959139Z   11 |     COPY app.py /app/app.py
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2959484Z --------------------
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.2960809Z ERROR: failed to build: failed to solve: process "/bin/sh -c pip install --no-cache-dir -r /app/requirements.txt" did not complete successfully: exit code: 1
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:48.3014393Z ##[error]Process completed with exit code 1.
+validate-registry-push	Post Checkout repository	﻿2026-05-14T13:18:48.3116651Z Post job cleanup.
+validate-registry-push	Post Checkout repository	2026-05-14T13:18:48.4105060Z [command]/usr/bin/git version
+validate-registry-push	Post Checkout repository	2026-05-14T13:18:48.4141920Z git version 2.53.0
+validate-registry-push	Post Checkout repository	2026-05-14T13:18:48.4184177Z Temporarily overriding HOME='/home/runner/work/_temp/1d6bb44a-d717-4a4b-89f1-5627622c80e9' before making global git config changes
+validate-registry-push	Post Checkout repository	2026-05-14T13:18:48.4184954Z Adding repository directory to the temporary git global config as a safe directory
+validate-registry-push	Post Checkout repository	2026-05-14T13:18:48.4197736Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/yandex-cloud-security-remediation-program/yandex-cloud-security-remediation-program
+validate-registry-push	Post Checkout repository	2026-05-14T13:18:48.4234968Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+validate-registry-push	Post Checkout repository	2026-05-14T13:18:48.4267892Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+validate-registry-push	Post Checkout repository	2026-05-14T13:18:48.4504717Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+validate-registry-push	Post Checkout repository	2026-05-14T13:18:48.4527806Z http.https://github.com/.extraheader
+validate-registry-push	Post Checkout repository	2026-05-14T13:18:48.4540702Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+validate-registry-push	Post Checkout repository	2026-05-14T13:18:48.4572274Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+validate-registry-push	Post Checkout repository	2026-05-14T13:18:48.4801621Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+validate-registry-push	Post Checkout repository	2026-05-14T13:18:48.4834490Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+validate-registry-push	Complete job	﻿2026-05-14T13:18:48.5198200Z Cleaning up orphan processes
+validate-registry-push	Complete job	2026-05-14T13:18:48.5563861Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
