@@ -1,0 +1,17 @@
+FROM python:3.9-slim
+
+LABEL org.opencontainers.image.title="ycsec-supply-chain-demo-insecure"
+LABEL org.opencontainers.image.description="Controlled insecure baseline image for supply-chain evidence"
+
+WORKDIR /app
+
+COPY requirements-vulnerable.txt /app/requirements.txt
+RUN pip install --no-cache-dir -r /app/requirements.txt
+
+COPY app.py /app/app.py
+
+USER root
+
+EXPOSE 8080
+
+CMD ["python", "/app/app.py"]

@@ -230,3 +230,27 @@ Still open:
 - Registry image inventory evidence.
 - Admission policy enforcement cloud evidence.
 - Final bootstrap resource cleanup evidence.
+
+## Phase 13.2 — Supply Chain implementation package
+
+Status: completed as local package after execution.
+
+Cloud resources created: none.
+
+Closed by this phase:
+
+- Controlled demo workload package for supply-chain validation.
+- Vulnerable dependency baseline and remediation target.
+- Insecure and hardened Dockerfile pair.
+- GitHub Actions OIDC registry build/push workflow package.
+- Local SBOM/vulnerability evidence helper.
+- Kyverno admission policy package.
+- Static validator for the supply-chain package.
+
+Still open after this phase:
+
+- Real OIDC-based image build and push to Yandex Container Registry.
+- Registry inventory evidence for pushed images.
+- SBOM evidence generated from the controlled image/workload.
+- Vulnerability before/after metrics.
+- Admission policy enforcement evidence in Kubernetes.

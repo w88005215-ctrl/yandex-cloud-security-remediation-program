@@ -429,3 +429,17 @@ Cloud resources created in this phase: none.
 | `docs/supply-chain-evidence-and-metrics-plan.md` | Evidence and metrics plan for supply-chain validation |
 | `evidence/command-outputs/YCSEC_13_1_OUTPUT_supply_chain_roadmap_extension.txt` | Command evidence for Phase 13.1 |
 | `evidence/command-outputs/YCSEC_13_1_OUTPUT_final_git_control.txt` | Final git control evidence for Phase 13.1 |
+
+## Phase 13.2 — Supply Chain implementation package
+
+| Evidence | Description |
+|---|---|
+| `docs/supply-chain-implementation-package.md` | Supply-chain implementation package summary |
+| `docs/supply-chain-operator-runbook.md` | Operator runbook for upcoming registry/SBOM/admission phases |
+| `supply-chain/demo-app/` | Controlled vulnerable/remediated demo workload |
+| `.github/workflows/supply-chain-oidc-registry-validation.yml` | GitHub OIDC registry build/push validation workflow |
+| `scripts/run-supply-chain-local-evidence.sh` | Local SBOM/vulnerability evidence helper |
+| `scripts/validate-supply-chain-package.sh` | Supply-chain package validator |
+| `policies/kyverno/supply-chain/registry-and-image-policy.yaml` | Admission policy package for registry/image controls |
+| `evidence/command-outputs/YCSEC_13_2_OUTPUT_supply_chain_implementation_package.txt` | Phase 13.2 command evidence |
+| `evidence/command-outputs/YCSEC_13_2_OUTPUT_final_git_control.txt` | Phase 13.2 final git control evidence |

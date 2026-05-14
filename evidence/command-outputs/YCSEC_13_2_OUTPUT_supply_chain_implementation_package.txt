@@ -1,0 +1,88 @@
+Phase 13.2 — Supply Chain implementation package
+Date: 2026-05-14T13:08:04+00:00
+Qube: cloud-dev-workbech
+
+Step 1 — verify roadmap baseline
+1ba3a92 (HEAD -> main, tag: v0.13.1-supply-chain-roadmap-extension, origin/main, origin/HEAD) docs: extend roadmap with supply chain security validation
+61bff33 (tag: v0.13.0-managed-kubernetes-baseline-remediation-cloud-run) docs: close Managed Kubernetes cloud run evidence package
+17045b7 test: validate Managed Kubernetes baseline remediation cloud run
+99b9e11 (tag: v0.13.0a-managed-kubernetes-cloud-run-implementation) feat: prepare Managed Kubernetes cloud remediation run
+690425b (tag: v0.12.9-managed-kubernetes-cloud-run-plan) docs: plan Managed Kubernetes baseline remediation cloud run
+3f670fe (tag: v0.12.8f-registry-evidence-storage-validation) test: validate registry and evidence storage resources
+d172951 (tag: v0.12.8e-audit-trails-evidence-validation) test: validate Audit Trails evidence delivery
+664c3ff (tag: v0.12.8d-github-actions-oidc-validation) ci: validate GitHub Actions OIDC token exchange
+9772ab6 ci: use direct Yandex Cloud OIDC token exchange validation
+483160e ci: repair GitHub Actions OIDC validation workflow
+
+[OK] current HEAD has required Phase 13.1 tag
+[OK] current branch is main
+[OK] working tree is ready for Phase 13.2
+
+Step 2 — write controlled vulnerable demo application
+[OK] controlled supply-chain demo application written
+
+Step 3 — write Kyverno supply-chain admission policy package
+[OK] Kyverno supply-chain policy written
+
+Step 4 — write GitHub Actions OIDC registry build/push workflow
+[OK] GitHub Actions OIDC registry workflow written
+
+Step 5 — write local SBOM and vulnerability evidence script
+[OK] local supply-chain evidence script written
+
+Step 6 — write package validator
+[OK] package validator written
+
+Step 7 — write supply-chain implementation documentation
+[OK] supply-chain documentation written
+
+Step 8 — update evidence index and cloud evidence gap register
+[OK] evidence index updated
+[OK] cloud evidence gap register updated
+[OK] portfolio claim policy updated if present
+
+Step 9 — run package validation
+YCSEC supply-chain package validator
+Date: 2026-05-14T13:08:04+00:00
+
+[OK] supply-chain/demo-app/app.py exists
+[OK] supply-chain/demo-app/requirements-vulnerable.txt exists
+[OK] supply-chain/demo-app/requirements-remediated.txt exists
+[OK] supply-chain/demo-app/Dockerfile.insecure exists
+[OK] supply-chain/demo-app/Dockerfile.hardened exists
+[OK] policies/kyverno/supply-chain/registry-and-image-policy.yaml exists
+[OK] .github/workflows/supply-chain-oidc-registry-validation.yml exists
+[OK] scripts/run-supply-chain-local-evidence.sh exists
+[OK] local evidence script syntax valid
+[OK] controlled vulnerable dependency baseline present
+[OK] insecure root image baseline present
+[OK] hardened non-root image target present
+[OK] workflow_dispatch trigger present
+[OK] GitHub OIDC permission present
+[OK] direct Yandex Cloud token exchange endpoint present
+[OK] Yandex Container Registry IAM docker login present
+[OK] registry id variable reference present
+[OK] Kyverno enforce policy present
+[OK] Yandex Container Registry admission control present
+[OK] mutable latest tag denial policy present
+
+FAIL_COUNT=0
+[OK] supply-chain package validation passed
+[OK] supply-chain package validator passed
+
+Step 10 — repository safety checks
+[OK] no Terraform state files in repository
+[OK] no kubeconfig files in repository
+[OK] no key/token-like files in repository
+[OK] no internal/unprofessional wording found in new public project files
+[90m1:08PM[0m [32mINF[0m [1m38 commits scanned.[0m
+[90m1:08PM[0m [32mINF[0m [1mscanned ~898587 bytes (898.59 KB) in 729ms[0m
+[90m1:08PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 11 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 13.2 Supply Chain implementation package completed
+[OK] no cloud resources were created in this phase
+[OK] project is ready for Phase 13.3 OIDC registry build/push validation
