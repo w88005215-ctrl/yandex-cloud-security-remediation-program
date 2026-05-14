@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ycsec-remediated-workload
+  namespace: ycsec-remediated
+  labels:
+    app.kubernetes.io/name: ycsec-remediated-workload
+    security.ycsec.io/control: service-clusterip-only
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: ycsec-remediated-workload
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+      protocol: TCP

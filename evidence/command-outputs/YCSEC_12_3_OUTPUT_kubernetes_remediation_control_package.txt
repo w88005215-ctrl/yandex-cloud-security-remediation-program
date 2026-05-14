@@ -1,0 +1,131 @@
+Phase 12.3 — Kubernetes remediation control package
+Date: 2026-05-14T06:14:58+00:00
+Qube: cloud-dev-workbench
+
+Step 1 — repository baseline
+2460503 (HEAD -> main, tag: v0.12.2-kubernetes-baseline-static-validation) test: validate Kubernetes baseline security posture
+6cd86d9 (tag: v0.12.1-kubernetes-baseline-validation-plan) docs: add Kubernetes baseline validation plan
+1a0b182 (tag: v0.12.0-kubernetes-remediation-readiness) test: inventory Kubernetes remediation readiness
+259ea41 (tag: v0.11.4-smoke-run-evidence-package) docs: integrate Yandex Cloud smoke-run evidence package
+1dc86dc (tag: v0.11.3-yandex-cloud-smoke-run-success) test: record successful Yandex Cloud smoke run
+e4e0e50 (tag: v0.11.2-smoke-run-auth-fix) fix: pass Yandex Cloud auth to smoke-run Terraform
+6bf5287 (tag: v0.11.1-smoke-run-safety) chore: harden Yandex Cloud smoke-run cleanup safety
+5d6e853 (tag: v0.11-yandex-cloud-smoke-run) test: add Yandex Cloud Kubernetes smoke run
+52d64d0 (tag: v0.10-yandex-cloud-readiness) test: add Yandex Cloud readiness gate
+c24edc3 (tag: v0.9-local-kubernetes-runtime) test: add local Kubernetes runtime validation
+
+Tags at HEAD:
+v0.12.2-kubernetes-baseline-static-validation
+
+[OK] current HEAD has required tag: v0.12.2-kubernetes-baseline-static-validation
+
+Step 2 — working tree guard
+[OK] working tree has no unexpected changes
+
+Step 3 — write remediation Kubernetes manifests
+[OK] remediation manifests written
+
+Step 4 — create remediation static validator
+[OK] remediation validator created: scripts/validate-kubernetes-remediation-static.sh
+
+Step 5 — run remediation static validator
+YCSEC Kubernetes Remediation Static Validator
+Date: 2026-05-14T06:14:58+00:00
+
+[OK] remediation root exists: kubernetes/remediation
+[OK] remediation root exists: policies/kyverno
+
+[OK] K8S-REM-001 — restricted namespace Pod Security labels — matches: 1
+[OK] K8S-REM-002 — non-root execution — matches: 2
+[OK] K8S-REM-003 — privilege escalation disabled — matches: 2
+[OK] K8S-REM-004 — Linux capabilities dropped — matches: 2
+[OK] K8S-REM-005 — RuntimeDefault seccomp profile — matches: 2
+[OK] K8S-REM-006 — read-only root filesystem — matches: 1
+[OK] K8S-REM-007 — resource requests and limits — matches: 2
+[OK] K8S-REM-008 — least-privilege RBAC objects — matches: 1
+[OK] K8S-REM-009 — NetworkPolicy segmentation — matches: 2
+[OK] K8S-REM-010 — ClusterIP-only Service exposure — matches: 1
+[OK] K8S-REM-011 — policy-as-code control package — matches: 1
+[OK] K8S-REM-012 — service account token automount disabled — matches: 2
+
+Risk regression checks
+[OK] no LoadBalancer exposure detected
+[OK] no privileged containers detected
+[OK] no hostNetwork usage detected
+[OK] no hostPath usage detected
+[OK] no latest image tags detected
+
+Remediation validation summary
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] remediation static validation passed
+[OK] remediation validator command completed
+
+Step 6 — collect remediation metrics
+Remediation manifests: 7
+Remediation namespaces: 1
+Remediation workloads: 1
+Remediation services: 2
+Remediation RBAC files: 1
+Remediation NetworkPolicy files: 2
+Restricted Pod Security label files: 1
+runAsNonRoot files: 2
+allowPrivilegeEscalation false files: 2
+capabilities/drop files: 2
+seccomp files: 2
+readOnlyRootFilesystem files: 1
+requests/limits files: 2
+policy-as-code files: 1
+
+Step 7 — write remediation results document
+[OK] remediation results document written: docs/kubernetes-remediation-results.md
+
+Step 8 — update evidence index and before/after metrics
+[OK] evidence index and metrics updated
+
+Step 9 — validate Phase 12.3 outputs
+[OK] kubernetes/remediation/00-namespace.yaml
+[OK] kubernetes/remediation/10-rbac.yaml
+[OK] kubernetes/remediation/20-networkpolicy-default-deny.yaml
+[OK] kubernetes/remediation/21-networkpolicy-controlled-allow.yaml
+[OK] kubernetes/remediation/30-hardened-workload.yaml
+[OK] kubernetes/remediation/40-clusterip-service.yaml
+[OK] policies/kyverno/kubernetes-baseline-controls.yaml
+[OK] scripts/validate-kubernetes-remediation-static.sh
+[OK] docs/kubernetes-remediation-results.md
+[OK] docs/evidence-index.md
+[OK] evidence/before-after-metrics.md
+[OK] restricted Pod Security labels present
+[OK] privilege escalation prevention present
+[OK] NetworkPolicy controls present
+[OK] policy-as-code controls present
+
+Step 10 — repository safety checks
+[OK] no Terraform state files
+[OK] no kubeconfig files
+[OK] no key/token-like files
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m6:14AM[0m [32mINF[0m [1mscanned ~498133 bytes (498.13 KB) in 520ms[0m
+[90m6:14AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 11 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 12.3 Kubernetes remediation control package completed
+[OK] project is ready for remediation validation and before/after comparison
+
+Final git status before commit:
+ M docs/evidence-index.md
+ M evidence/before-after-metrics.md
+?? docs/kubernetes-remediation-results.md
+?? evidence/command-outputs/YCSEC_12_3_OUTPUT_kubernetes_remediation_control_package.txt
+?? kubernetes/remediation/
+?? policies/
+?? scripts/validate-kubernetes-remediation-static.sh

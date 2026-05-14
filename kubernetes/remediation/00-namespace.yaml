@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ycsec-remediated
+  labels:
+    app.kubernetes.io/name: ycsec-remediated-workload
+    app.kubernetes.io/part-of: yandex-cloud-security-remediation-program
+    security.ycsec.io/phase: phase-12-remediation
+    pod-security.kubernetes.io/enforce: restricted
+    pod-security.kubernetes.io/audit: restricted
+    pod-security.kubernetes.io/warn: restricted

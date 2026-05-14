@@ -223,3 +223,26 @@ Phase result:
 - No cloud resources were created.
 
 <!-- YCSEC:PHASE-12-2-BASELINE-VALIDATION:END -->
+
+<!-- YCSEC:PHASE-12-3-REMEDIATION:START -->
+## Phase 12.3 — Kubernetes Remediation Control Package
+
+| Evidence ID | File | Type | Description | Publication Status |
+|---|---|---|---|---|
+| EVID-K8S-REM-001 | evidence/command-outputs/YCSEC_12_3_OUTPUT_kubernetes_remediation_control_package.txt | Command output | Remediation package generation and static validation output | Public-safe |
+| EVID-K8S-REM-002 | docs/kubernetes-remediation-results.md | Remediation summary | Kubernetes remediation control package results | Public-safe |
+| EVID-K8S-REM-003 | scripts/validate-kubernetes-remediation-static.sh | Validation script | Reusable remediation static validator | Public-safe |
+| EVID-K8S-REM-004 | kubernetes/remediation | Kubernetes manifests | Remediated namespace, RBAC, NetworkPolicy, workload and Service manifests | Public-safe |
+| EVID-K8S-REM-005 | policies/kyverno/kubernetes-baseline-controls.yaml | Policy-as-code | Kyverno policy package for baseline control validation | Public-safe |
+
+Phase result:
+
+- Remediation Kubernetes manifest package was created.
+- Runtime hardening controls were implemented.
+- Network segmentation controls were implemented.
+- Least-privilege RBAC controls were implemented.
+- Policy-as-code guardrails were added.
+- Local remediation static validation passed.
+- No cloud resources were created.
+
+<!-- YCSEC:PHASE-12-3-REMEDIATION:END -->

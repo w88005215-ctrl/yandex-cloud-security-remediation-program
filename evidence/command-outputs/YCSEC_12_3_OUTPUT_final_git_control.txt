@@ -1,0 +1,33 @@
+Phase 12.3 — commit and final git control
+Date: 2026-05-14T06:14:59+00:00
+Qube: cloud-dev-workbench
+
+[OK] remediation control package passed; committing Phase 12.3 evidence
+[main f9e64d2] feat: add Kubernetes remediation control package
+ 12 files changed, 635 insertions(+)
+ create mode 100644 docs/kubernetes-remediation-results.md
+ create mode 100644 evidence/command-outputs/YCSEC_12_3_OUTPUT_kubernetes_remediation_control_package.txt
+ create mode 100644 kubernetes/remediation/00-namespace.yaml
+ create mode 100644 kubernetes/remediation/10-rbac.yaml
+ create mode 100644 kubernetes/remediation/20-networkpolicy-default-deny.yaml
+ create mode 100644 kubernetes/remediation/21-networkpolicy-controlled-allow.yaml
+ create mode 100644 kubernetes/remediation/30-hardened-workload.yaml
+ create mode 100644 kubernetes/remediation/40-clusterip-service.yaml
+ create mode 100644 policies/kyverno/kubernetes-baseline-controls.yaml
+ create mode 100755 scripts/validate-kubernetes-remediation-static.sh
+[OK] tag created: v0.12.3-kubernetes-remediation-control-package
+[OK] Phase 12.3 committed
+
+Final verification
+?? evidence/command-outputs/YCSEC_12_3_OUTPUT_final_git_control.txt
+f9e64d2 (HEAD -> main, tag: v0.12.3-kubernetes-remediation-control-package) feat: add Kubernetes remediation control package
+2460503 (tag: v0.12.2-kubernetes-baseline-static-validation) test: validate Kubernetes baseline security posture
+6cd86d9 (tag: v0.12.1-kubernetes-baseline-validation-plan) docs: add Kubernetes baseline validation plan
+1a0b182 (tag: v0.12.0-kubernetes-remediation-readiness) test: inventory Kubernetes remediation readiness
+259ea41 (tag: v0.11.4-smoke-run-evidence-package) docs: integrate Yandex Cloud smoke-run evidence package
+1dc86dc (tag: v0.11.3-yandex-cloud-smoke-run-success) test: record successful Yandex Cloud smoke run
+e4e0e50 (tag: v0.11.2-smoke-run-auth-fix) fix: pass Yandex Cloud auth to smoke-run Terraform
+6bf5287 (tag: v0.11.1-smoke-run-safety) chore: harden Yandex Cloud smoke-run cleanup safety
+5d6e853 (tag: v0.11-yandex-cloud-smoke-run) test: add Yandex Cloud Kubernetes smoke run
+52d64d0 (tag: v0.10-yandex-cloud-readiness) test: add Yandex Cloud readiness gate
+v0.12.3-kubernetes-remediation-control-package

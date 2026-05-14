@@ -150,3 +150,25 @@ This table will become one of the main portfolio artifacts. It should be easy to
 | policy-as-code references | 12 | Add repeatable validation gate |
 
 <!-- YCSEC:PHASE-12-2-BASELINE-VALIDATION:END -->
+
+<!-- YCSEC:PHASE-12-3-REMEDIATION:START -->
+## Phase 12.3 — Kubernetes Remediation Metrics
+
+| Metric Area | Remediation Count | Result |
+|---|---:|---|
+| Remediation YAML manifests | 7 | Remediation package created |
+| Namespace files | 1 | Dedicated remediated namespace added |
+| Workload files | 1 | Hardened workload added |
+| Service files | 2 | ClusterIP-only exposure added |
+| RBAC files | 1 | Least-privilege RBAC added |
+| NetworkPolicy files | 2 | Segmentation controls added |
+| Restricted Pod Security label files | 1 | Restricted Pod Security posture added |
+| runAsNonRoot files | 2 | Non-root execution control added |
+| allowPrivilegeEscalation false files | 2 | Privilege escalation prevention added |
+| capabilities/drop files | 2 | Linux capability reduction added |
+| seccomp profile files | 2 | RuntimeDefault syscall profile added |
+| readOnlyRootFilesystem files | 1 | Read-only root filesystem control added |
+| requests/limits files | 2 | Resource governance added |
+| policy-as-code files | 1 | Policy-as-code validation package added |
+
+<!-- YCSEC:PHASE-12-3-REMEDIATION:END -->
