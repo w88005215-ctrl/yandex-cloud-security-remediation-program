@@ -246,3 +246,22 @@ Phase result:
 - No cloud resources were created.
 
 <!-- YCSEC:PHASE-12-3-REMEDIATION:END -->
+
+<!-- YCSEC:PHASE-12-4-COMPARISON:START -->
+## Phase 12.4 — Kubernetes Before/After Remediation Comparison
+
+| Evidence ID | File | Type | Description | Publication Status |
+|---|---|---|---|---|
+| EVID-K8S-COMP-001 | evidence/command-outputs/YCSEC_12_4_OUTPUT_kubernetes_before_after_comparison.txt | Command output | Local before/after remediation comparison output | Public-safe |
+| EVID-K8S-COMP-002 | docs/kubernetes-before-after-remediation-comparison.md | Comparison summary | Portfolio-ready baseline/remediation improvement summary | Public-safe |
+| EVID-K8S-COMP-003 | scripts/compare-kubernetes-baseline-remediation.sh | Comparison script | Reusable local comparison script | Public-safe |
+
+Phase result:
+
+- Baseline and remediation posture were compared locally.
+- Before/after metrics were recorded.
+- Remediation regression checks passed.
+- Portfolio-ready remediation outcome was documented.
+- No cloud resources were created.
+
+<!-- YCSEC:PHASE-12-4-COMPARISON:END -->

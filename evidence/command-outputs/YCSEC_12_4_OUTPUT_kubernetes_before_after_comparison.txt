@@ -1,0 +1,103 @@
+Phase 12.4 — Kubernetes before/after remediation comparison
+Date: 2026-05-14T06:16:49+00:00
+Qube: cloud-dev-workbench
+
+Step 1 — repository baseline
+8d90b5e (HEAD -> main, tag: v0.12.3-kubernetes-remediation-control-package) feat: add Kubernetes remediation control package
+2460503 (tag: v0.12.2-kubernetes-baseline-static-validation) test: validate Kubernetes baseline security posture
+6cd86d9 (tag: v0.12.1-kubernetes-baseline-validation-plan) docs: add Kubernetes baseline validation plan
+1a0b182 (tag: v0.12.0-kubernetes-remediation-readiness) test: inventory Kubernetes remediation readiness
+259ea41 (tag: v0.11.4-smoke-run-evidence-package) docs: integrate Yandex Cloud smoke-run evidence package
+1dc86dc (tag: v0.11.3-yandex-cloud-smoke-run-success) test: record successful Yandex Cloud smoke run
+e4e0e50 (tag: v0.11.2-smoke-run-auth-fix) fix: pass Yandex Cloud auth to smoke-run Terraform
+6bf5287 (tag: v0.11.1-smoke-run-safety) chore: harden Yandex Cloud smoke-run cleanup safety
+5d6e853 (tag: v0.11-yandex-cloud-smoke-run) test: add Yandex Cloud Kubernetes smoke run
+52d64d0 (tag: v0.10-yandex-cloud-readiness) test: add Yandex Cloud readiness gate
+
+Tags at HEAD:
+v0.12.3-kubernetes-remediation-control-package
+
+[OK] current HEAD has required tag: v0.12.3-kubernetes-remediation-control-package
+
+Step 2 — working tree guard
+[OK] working tree has no unexpected changes
+
+Step 3 — create before/after comparison script
+[OK] comparison script created: scripts/compare-kubernetes-baseline-remediation.sh
+
+Step 4 — run before/after comparison
+YCSEC Kubernetes Before/After Remediation Comparison
+Date: 2026-05-14T06:16:49+00:00
+
+Before/after metrics
+Metric|Baseline|Remediation|Delta
+Kubernetes manifests|18|7|-11
+Restricted Pod Security labels|2|1|-1
+runAsNonRoot|3|2|-1
+allowPrivilegeEscalation false|2|2|0
+Capabilities/drop ALL|2|2|0
+RuntimeDefault seccomp|2|2|0
+readOnlyRootFilesystem|3|1|-2
+RBAC objects|3|1|-2
+NetworkPolicy objects|5|2|-3
+ClusterIP Service exposure|2|1|-1
+Resource requests/limits|3|2|-1
+Policy-as-code controls|4|1|-3
+
+Risk regression check
+[OK] no LoadBalancer exposure after remediation
+[OK] no privileged containers after remediation
+[OK] no hostNetwork after remediation
+[OK] no hostPath after remediation
+[OK] no latest image tags after remediation
+
+Comparison summary
+REGRESSION_COUNT=0
+[OK] before/after comparison completed without remediation regressions
+[OK] before/after comparison command completed
+
+Step 5 — collect comparison metrics for documentation
+[OK] comparison metrics collected
+
+Step 6 — write before/after comparison document
+[OK] comparison document written: docs/kubernetes-before-after-remediation-comparison.md
+
+Step 7 — update evidence index and before/after metrics
+[OK] evidence index and metrics updated
+
+Step 8 — validate Phase 12.4 outputs
+[OK] scripts/compare-kubernetes-baseline-remediation.sh
+[OK] docs/kubernetes-before-after-remediation-comparison.md
+[OK] docs/evidence-index.md
+[OK] evidence/before-after-metrics.md
+[OK] evidence index references Phase 12.4 evidence
+[OK] metrics file contains before/after comparison
+[OK] cloud boundary documented
+
+Step 9 — current phase safety checks
+[OK] no Terraform state files
+[OK] no kubeconfig files
+[OK] no key/token-like files
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m6:16AM[0m [32mINF[0m [1mscanned ~515471 bytes (515.47 KB) in 566ms[0m
+[90m6:16AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 10 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 12.4 Kubernetes before/after remediation comparison completed
+[OK] project is ready for final Kubernetes security remediation narrative
+
+Final git status before commit:
+ M docs/evidence-index.md
+ M evidence/before-after-metrics.md
+?? docs/kubernetes-before-after-remediation-comparison.md
+?? evidence/command-outputs/YCSEC_12_4_OUTPUT_kubernetes_before_after_comparison.txt
+?? scripts/compare-kubernetes-baseline-remediation.sh

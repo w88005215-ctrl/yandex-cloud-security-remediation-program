@@ -172,3 +172,29 @@ This table will become one of the main portfolio artifacts. It should be easy to
 | policy-as-code files | 1 | Policy-as-code validation package added |
 
 <!-- YCSEC:PHASE-12-3-REMEDIATION:END -->
+
+<!-- YCSEC:PHASE-12-4-COMPARISON:START -->
+## Phase 12.4 — Kubernetes Before/After Remediation Comparison
+
+| Control Area | Baseline Count | Remediation Count | Delta |
+|---|---:|---:|---:|
+| Kubernetes manifests | 18 | 7 | -11 |
+| Restricted Pod Security labels | 2 | 1 | -1 |
+| runAsNonRoot | 3 | 2 | -1 |
+| allowPrivilegeEscalation false | 2 | 2 | 0 |
+| Capabilities/drop ALL | 2 | 2 | 0 |
+| RuntimeDefault seccomp | 2 | 2 | 0 |
+| readOnlyRootFilesystem | 3 | 1 | -2 |
+| RBAC objects | 3 | 1 | -2 |
+| NetworkPolicy objects | 5 | 2 | -3 |
+| ClusterIP Service exposure | 2 | 1 | -1 |
+| Resource requests/limits | 3 | 2 | -1 |
+| Policy-as-code controls | 4 | 1 | -3 |
+
+Result:
+
+- Remediation controls were added and validated.
+- No remediation regression indicators were detected.
+- The Kubernetes remediation loop now has measurable before/after evidence.
+
+<!-- YCSEC:PHASE-12-4-COMPARISON:END -->
