@@ -49,3 +49,20 @@ The next cloud run should not be Kubernetes remediation yet. First, the project 
 The remaining cloud evidence must be collected through short, controlled runs.
 
 Persistent resources should be avoided unless they are explicitly required for the next step and documented as low-cost or no-cost.
+
+<!-- YCSEC:PHASE-12-7-PLANNING-STATUS:START -->
+## Phase 12.7 Planning Status
+
+The following gaps are now covered by a dedicated cloud-run plan, but remain open until Phase 12.8 produces real cloud evidence:
+
+| Gap ID | Planning Status | Evidence Status |
+|---|---|---|
+| GAP-CLOUD-001 | Planned in docs/bootstrap-oidc-audit-cloud-run-plan.md | Open |
+| GAP-IAM-001 | Planned in docs/iam-oidc-audit-control-design.md | Open |
+| GAP-OIDC-001 | Planned in docs/iam-oidc-audit-control-design.md | Open |
+| GAP-AUD-001 | Planned in docs/bootstrap-evidence-collection-plan.md | Open |
+| GAP-REG-001 | Planned in docs/bootstrap-oidc-audit-cloud-run-plan.md | Open |
+| GAP-PUB-001 | Planned in docs/bootstrap-evidence-collection-plan.md | Open |
+
+<!-- YCSEC:PHASE-12-7-PLANNING-STATUS:END -->
+

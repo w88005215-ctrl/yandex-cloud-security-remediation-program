@@ -304,3 +304,24 @@ Phase result:
 
 <!-- YCSEC:PHASE-12-6-ROADMAP-RECONCILIATION:END -->
 
+<!-- YCSEC:PHASE-12-7-BOOTSTRAP-OIDC-AUDIT-PLAN:START -->
+## Phase 12.7 — Bootstrap/OIDC/Audit Cloud-Run Plan
+
+| Evidence ID | File | Type | Description | Publication Status |
+|---|---|---|---|---|
+| EVID-BOOTPLAN-001 | docs/bootstrap-oidc-audit-cloud-run-plan.md | Cloud-run plan | Controlled bootstrap/OIDC/audit cloud-run plan | Public-safe |
+| EVID-BOOTPLAN-002 | docs/iam-oidc-audit-control-design.md | Control design | IAM, OIDC/WIF and audit control design | Public-safe |
+| EVID-BOOTPLAN-003 | docs/bootstrap-cloud-run-checklist.md | Checklist | Pre-run, during-run and post-run checklist | Public-safe |
+| EVID-BOOTPLAN-004 | docs/bootstrap-evidence-collection-plan.md | Evidence plan | Bootstrap evidence collection and redaction plan | Public-safe |
+| EVID-BOOTPLAN-005 | evidence/command-outputs/YCSEC_12_7_OUTPUT_bootstrap_oidc_audit_cloud_run_plan.txt | Command output | Phase 12.7 generation and validation evidence | Public-safe |
+
+Phase result:
+
+- Bootstrap/OIDC/Audit cloud-run was planned.
+- IAM/OIDC/Audit control design was defined.
+- Bootstrap cloud-run checklist was created.
+- Evidence collection and redaction plan was created.
+- No cloud resources were created.
+
+<!-- YCSEC:PHASE-12-7-BOOTSTRAP-OIDC-AUDIT-PLAN:END -->
+
