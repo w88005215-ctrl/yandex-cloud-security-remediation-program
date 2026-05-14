@@ -1,0 +1,135 @@
+{
+  "generated_at": "2026-05-14T17:27:34.635115+00:00",
+  "phase": "13.9",
+  "status": "local_only_mapping",
+  "control_count": 12,
+  "validated_cloud": "Yandex Cloud",
+  "mapped_clouds": [
+    "AWS",
+    "GCP",
+    "Azure"
+  ],
+  "note": "AWS/GCP/Azure entries are architectural equivalence mappings, not claims of live implementation in those providers.",
+  "controls": [
+    {
+      "control_id": "YCSEC-IAM-01",
+      "domain": "Identity federation",
+      "yandex_cloud": "GitHub Actions OIDC federation with Yandex Cloud IAM token exchange and no static cloud key committed to CI.",
+      "aws": "IAM OIDC provider for GitHub Actions with role trust policy scoped by repository, branch, audience, and least-privilege role permissions.",
+      "gcp": "Workload Identity Federation provider for GitHub Actions mapped to a service account with least-privilege IAM roles.",
+      "azure": "Microsoft Entra workload identity federation using federated credentials on an app registration or managed identity.",
+      "portfolio_status": "Validated in Yandex Cloud; mapped to AWS/GCP/Azure equivalent patterns.",
+      "evidence": "docs/github-actions-oidc-validation.md; docs/supply-chain-oidc-registry-validation.md"
+    },
+    {
+      "control_id": "YCSEC-AUD-01",
+      "domain": "Audit logging",
+      "yandex_cloud": "Audit Trails retained as the cloud audit evidence source for bootstrap and supply-chain activity.",
+      "aws": "CloudTrail with S3/KMS retention, optional CloudWatch Logs integration, and organization trail for multi-account environments.",
+      "gcp": "Cloud Audit Logs with log sinks to Cloud Storage or BigQuery for retention and investigation workflows.",
+      "azure": "Azure Activity Log and Diagnostic Settings routed to Log Analytics, Storage Account, or Event Hub.",
+      "portfolio_status": "Validated as retained Yandex Cloud audit control; cleanup deferred until final evidence export.",
+      "evidence": "docs/cloud-evidence-gap-register.md; docs/evidence-index.md"
+    },
+    {
+      "control_id": "YCSEC-IAC-01",
+      "domain": "Infrastructure as Code",
+      "yandex_cloud": "Terraform environments and controlled run scripts create, validate, evidence, and destroy short-lived resources.",
+      "aws": "Terraform modules for IAM, EKS, ECR, CloudTrail, S3 evidence storage, and security baseline resources.",
+      "gcp": "Terraform modules for IAM, GKE, Artifact Registry, Cloud Audit Logs sinks, and storage-based evidence retention.",
+      "azure": "Terraform modules for AKS, ACR, Monitor/Activity Logs, Storage Account, RBAC, and federated identity.",
+      "portfolio_status": "Validated with short-lived Yandex Cloud runs and zero-resource cleanup discipline.",
+      "evidence": "terraform/environments; scripts; evidence/command-outputs"
+    },
+    {
+      "control_id": "YCSEC-K8S-01",
+      "domain": "Managed Kubernetes lifecycle",
+      "yandex_cloud": "Short-lived Managed Kubernetes clusters used for baseline/remediation and admission evidence runs.",
+      "aws": "Amazon EKS cluster lifecycle with managed node groups, IRSA, private endpoint options, and short-lived test environments.",
+      "gcp": "GKE standard or autopilot lifecycle with Workload Identity, private clusters, and controlled node pools.",
+      "azure": "AKS lifecycle with Azure CNI, managed identities, workload identity, and controlled node pools.",
+      "portfolio_status": "Validated in Yandex Managed Kubernetes with destroy verification.",
+      "evidence": "docs/managed-kubernetes-cloud-run-plan.md; evidence/after/kyverno_mks_nodes_ready.txt"
+    },
+    {
+      "control_id": "YCSEC-K8S-02",
+      "domain": "Kubernetes hardening",
+      "yandex_cloud": "Baseline and hardened Kubernetes manifests demonstrate securityContext, read-only root filesystem, non-root execution, and restricted runtime posture.",
+      "aws": "Equivalent hardening for EKS workloads using Pod Security Admission, Kyverno/Gatekeeper, and securityContext standards.",
+      "gcp": "Equivalent hardening for GKE workloads using Policy Controller, Pod Security Admission, and hardened workload specs.",
+      "azure": "Equivalent hardening for AKS using Azure Policy for Kubernetes, Gatekeeper/Kyverno, and secure workload specs.",
+      "portfolio_status": "Validated through before/after package and final metrics.",
+      "evidence": "docs/final-remediation-metrics.md; kubernetes/remediation; kubernetes/cloud-run/hardened"
+    },
+    {
+      "control_id": "YCSEC-K8S-03",
+      "domain": "Admission policy enforcement",
+      "yandex_cloud": "Kyverno admission controller denies insecure workload and allows hardened workload on Managed Kubernetes.",
+      "aws": "Kyverno or Gatekeeper enforcement on EKS with repository/image, privilege, seccomp, and runtime policy gates.",
+      "gcp": "Policy Controller/Gatekeeper or Kyverno enforcement on GKE with equivalent workload admission controls.",
+      "azure": "Azure Policy for Kubernetes, Gatekeeper, or Kyverno enforcement on AKS with equivalent workload admission controls.",
+      "portfolio_status": "Validated in Yandex Managed Kubernetes with Kyverno-specific denial evidence.",
+      "evidence": "docs/kyverno-admission-policy-enforcement-validation.md; evidence/after/kyverno_insecure_workload_denied.txt; evidence/after/kyverno_hardened_workload_allowed.txt"
+    },
+    {
+      "control_id": "YCSEC-SC-01",
+      "domain": "Container registry",
+      "yandex_cloud": "Yandex Container Registry receives demo images pushed through GitHub Actions OIDC without durable cloud credentials.",
+      "aws": "Amazon ECR repository with GitHub OIDC role-based push and repository policy controls.",
+      "gcp": "Artifact Registry repository with Workload Identity Federation-based push and IAM-scoped writer role.",
+      "azure": "Azure Container Registry with federated identity-based login and scoped AcrPush/AcrPull permissions.",
+      "portfolio_status": "Validated in Yandex Container Registry.",
+      "evidence": "docs/supply-chain-oidc-registry-validation.md; evidence/command-outputs/YCSEC_13_3_OUTPUT_registry_inventory_after_push.txt"
+    },
+    {
+      "control_id": "YCSEC-SC-02",
+      "domain": "SBOM and vulnerability validation",
+      "yandex_cloud": "Registry-pushed insecure and hardened images scanned with Syft, Trivy, and Grype; measurable vulnerability reduction documented.",
+      "aws": "ECR image scanning, Inspector, third-party scanners, SBOM generation, and CI/CD vulnerability gates.",
+      "gcp": "Artifact Analysis, Container Analysis notes/occurrences, third-party scanners, and CI/CD vulnerability gates.",
+      "azure": "Microsoft Defender for Cloud container image scanning, ACR integration, third-party scanners, and CI/CD gates.",
+      "portfolio_status": "Validated through generated SBOM and vulnerability reports.",
+      "evidence": "docs/sbom-vulnerability-validation.md; docs/supply-chain-vulnerability-metrics.md"
+    },
+    {
+      "control_id": "YCSEC-SC-03",
+      "domain": "Supply-chain policy gate",
+      "yandex_cloud": "Admission policy requires hardened Yandex Container Registry image path and secure runtime posture.",
+      "aws": "EKS admission policies requiring ECR image sources and hardened runtime controls.",
+      "gcp": "GKE admission policies requiring Artifact Registry image sources and hardened runtime controls.",
+      "azure": "AKS admission policies requiring ACR image sources and hardened runtime controls.",
+      "portfolio_status": "Validated through Kyverno admission allow/deny evidence.",
+      "evidence": "kubernetes/admission-validation; docs/kyverno-admission-policy-enforcement-validation.md"
+    },
+    {
+      "control_id": "YCSEC-EVD-01",
+      "domain": "Evidence management",
+      "yandex_cloud": "Sanitized public evidence is separated from private runtime evidence, state files, kubeconfigs, and token-bearing material.",
+      "aws": "S3 evidence bucket with KMS encryption, lifecycle policy, object lock where required, and sanitized public report extraction.",
+      "gcp": "Cloud Storage evidence bucket with retention policy, CMEK where required, and sanitized public report extraction.",
+      "azure": "Storage Account evidence container with immutability/retention, encryption, and sanitized public report extraction.",
+      "portfolio_status": "Validated through public/private evidence separation and repository safety checks.",
+      "evidence": "docs/evidence-index.md; evidence/sanitized"
+    },
+    {
+      "control_id": "YCSEC-OPS-01",
+      "domain": "Cost and cleanup control",
+      "yandex_cloud": "Paid cloud resources are created only during controlled runs and destroyed with post-destroy verification.",
+      "aws": "Ephemeral AWS test accounts/environments with Terraform destroy, budgets, and post-destroy inventory checks.",
+      "gcp": "Ephemeral GCP projects or folders with Terraform destroy, budgets, and post-destroy inventory checks.",
+      "azure": "Ephemeral Azure resource groups with Terraform destroy, budgets, and post-destroy inventory checks.",
+      "portfolio_status": "Validated repeatedly through short-lived MKS and bootstrap resource boundaries.",
+      "evidence": "docs/cloud-evidence-gap-register.md; evidence/command-outputs/*post_destroy*"
+    },
+    {
+      "control_id": "YCSEC-GOV-01",
+      "domain": "Governance and risk",
+      "yandex_cloud": "Final control matrix, risk register, remediation metrics, and publication boundaries define validated and non-validated claims.",
+      "aws": "Equivalent governance package maps cloud controls to AWS IAM, CloudTrail, EKS, ECR, Inspector, Security Hub, and Terraform controls.",
+      "gcp": "Equivalent governance package maps controls to IAM, Cloud Audit Logs, GKE, Artifact Registry, Security Command Center, and Terraform controls.",
+      "azure": "Equivalent governance package maps controls to Entra ID, Activity Logs, AKS, ACR, Defender for Cloud, Azure Policy, and Terraform controls.",
+      "portfolio_status": "Validated as final governance artifact.",
+      "evidence": "docs/final-control-matrix.md; docs/final-risk-register.md; docs/final-remediation-metrics.md"
+    }
+  ]
+}

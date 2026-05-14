@@ -1,0 +1,103 @@
+Phase 13.9 — Cross-cloud mapping and publication readiness
+Date: 2026-05-14T17:27:32+00:00
+Qube: cloud-dev-workbech
+
+--- Step 1 — verify current baseline
+From https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program
+ * branch            main       -> FETCH_HEAD
+90759e4 (HEAD -> main, tag: v0.13.8-final-risk-register, origin/main, origin/HEAD) docs: add final risk register
+24b0ba7 (tag: v0.13.7-final-control-matrix) docs: add final control matrix
+d75cebd (tag: v0.13.6-final-remediation-metrics) docs: consolidate final remediation metrics
+2d686fd (tag: v0.13.5-kyverno-admission-policy-enforcement) test: validate Kyverno admission policy enforcement
+11c4767 (tag: v0.13.5a2-kyverno-runner-hardening) fix: harden Kyverno admission MKS runner
+6b7f94a (tag: v0.13.5a1-kyverno-denial-attribution-fix) fix: require Kyverno-specific admission denial evidence
+e238df2 (tag: v0.13.5a-kyverno-mks-repair-package) fix: prepare Kyverno admission MKS rerun
+5c00f76 (tag: v0.13.4a-gitleaks-generated-evidence-handling) test: handle generated evidence gitleaks findings
+195efa4 (tag: v0.13.4-sbom-vulnerability-validation) test: validate SBOM and supply chain vulnerability evidence
+961ab7a (tag: v0.13.3-supply-chain-oidc-registry-validation) test: validate supply chain OIDC registry push
+579fac9 fix: stabilize supply chain demo image builds
+66daf02 ci: repair supply chain registry OIDC workflow
+
+[OK] current branch is main
+[OK] current HEAD has required Phase 13.8 tag
+[OK] local main and origin/main are aligned
+
+--- Step 2 — cleanup leftover untracked Phase 13.8 closeout output if present
+[OK] no Phase 13.8 closeout leftover found
+
+--- Step 3 — expected clean workspace before generation
+
+[OK] working tree is clean except current Phase 13.9 output
+
+--- Step 4 — required tool checks
+[OK] git available: /usr/bin/git
+[OK] python3 available: /usr/bin/python3
+[OK] jq available: /usr/bin/jq
+[OK] gitleaks available: /usr/bin/gitleaks
+[OK] grep available: alias grep='grep --color=auto'
+[OK] sed available: /usr/bin/sed
+[OK] awk available: /usr/bin/awk
+[OK] find available: /usr/bin/find
+
+--- Step 5 — verify required evidence baseline
+[OK] required evidence exists: docs/final-remediation-metrics.md
+[OK] required evidence exists: docs/final-control-matrix.md
+[OK] required evidence exists: docs/final-risk-register.md
+[OK] required evidence exists: docs/sbom-vulnerability-validation.md
+[OK] required evidence exists: docs/supply-chain-vulnerability-metrics.md
+[OK] required evidence exists: docs/supply-chain-oidc-registry-validation.md
+[OK] required evidence exists: docs/kyverno-admission-policy-enforcement-validation.md
+[OK] required evidence exists: docs/kyverno-admission-policy-enforcement-metrics.md
+[OK] required evidence exists: docs/evidence-index.md
+[OK] required evidence exists: docs/cloud-evidence-gap-register.md
+[OK] required evidence exists: evidence/metrics/final_remediation_metrics.json
+[OK] required evidence exists: evidence/metrics/final_control_matrix.json
+[OK] required evidence exists: evidence/metrics/final_risk_register.json
+[OK] required evidence exists: evidence/after/kyverno_insecure_workload_denied.txt
+[OK] required evidence exists: evidence/after/kyverno_hardened_workload_allowed.txt
+[OK] required evidence exists: evidence/sanitized/kyverno_admission_policy_enforcement_redacted.txt
+
+--- Step 6 — generate cross-cloud control mapping and publication readiness artifacts
+[OK] cross-cloud mapping and publication readiness artifacts generated
+
+--- Step 7 — validate generated artifacts
+[OK] generated artifact exists: docs/final-cross-cloud-control-mapping.md
+[OK] generated artifact exists: docs/final-publication-readiness.md
+[OK] generated artifact exists: docs/retained-bootstrap-cleanup-plan.md
+[OK] generated artifact exists: evidence/metrics/final_cross_cloud_control_mapping.json
+[OK] generated artifact exists: evidence/metrics/final_cross_cloud_control_mapping.csv
+[OK] generated artifact exists: evidence/metrics/final_cross_cloud_control_mapping.txt
+[OK] cross-cloud control count is sufficient: 12
+[OK] mapping marker present: YCSEC-IAM-01
+[OK] mapping marker present: YCSEC-AUD-01
+[OK] mapping marker present: YCSEC-K8S-03
+[OK] mapping marker present: YCSEC-SC-03
+[OK] mapping marker present: YCSEC-GOV-01
+[OK] AWS/GCP/Azure non-claim boundary present
+[OK] publication readiness boundary present
+[OK] cleanup plan is non-destructive
+
+--- Step 8 — public artifact wording safety checks
+[OK] no internal or unprofessional wording found in README/docs
+
+--- Step 9 — repository artifact safety checks
+[OK] no Terraform state, kubeconfig, PEM, or key files found
+[90m5:27PM[0m [32mINF[0m [1m51 commits scanned.[0m
+[90m5:27PM[0m [32mINF[0m [1mscanned ~9107401 bytes (9.11 MB) in 684ms[0m
+[90m5:27PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+--- Step 10 — write final git control evidence
+[OK] final git control evidence written: evidence/command-outputs/YCSEC_13_9_OUTPUT_final_git_control.txt
+
+--- Step 11 — final pre-commit safety checks
+[OK] no forbidden artifacts before commit
+[90m5:27PM[0m [32mINF[0m [1m51 commits scanned.[0m
+[90m5:27PM[0m [32mINF[0m [1mscanned ~9107401 bytes (9.11 MB) in 718ms[0m
+[90m5:27PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] final gitleaks scan passed
+
+--- Step 12 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 13.9 cross-cloud mapping and publication readiness passed

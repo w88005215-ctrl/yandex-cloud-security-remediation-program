@@ -628,3 +628,14 @@ Validation result:
 - Publication boundary is stated.
 - No cloud resources were created in this phase.
 <!-- YCSEC_PHASE_13_8_EVIDENCE_INDEX:END -->
+
+## Phase 13.9 — Cross-cloud mapping and publication readiness
+
+- `docs/final-cross-cloud-control-mapping.md` — AWS/GCP/Azure equivalent control mapping for validated Yandex Cloud controls.
+- `docs/final-publication-readiness.md` — final publication boundary and remaining release tasks.
+- `docs/retained-bootstrap-cleanup-plan.md` — cleanup order for retained bootstrap resources.
+- `evidence/metrics/final_cross_cloud_control_mapping.json` — machine-readable cross-cloud mapping.
+- `evidence/metrics/final_cross_cloud_control_mapping.csv` — tabular cross-cloud mapping.
+- `evidence/metrics/final_cross_cloud_control_mapping.txt` — summary metrics for cross-cloud mapping.
+- `evidence/command-outputs/YCSEC_13_9_OUTPUT_cross_cloud_publication_readiness.txt` — command evidence for this phase.
+- `evidence/command-outputs/YCSEC_13_9_OUTPUT_final_git_control.txt` — final git control evidence for this phase.

@@ -1,0 +1,20 @@
+YCSEC Final Cross-Cloud Control Mapping Metrics
+Generated at: 2026-05-14T17:27:34.635115+00:00
+Control count: 12
+Validated cloud: Yandex Cloud
+Mapped clouds: AWS, GCP, Azure
+Boundary: AWS/GCP/Azure are equivalent implementation mappings, not live implementation claims.
+
+Mapped control IDs:
+- YCSEC-IAM-01: Identity federation
+- YCSEC-AUD-01: Audit logging
+- YCSEC-IAC-01: Infrastructure as Code
+- YCSEC-K8S-01: Managed Kubernetes lifecycle
+- YCSEC-K8S-02: Kubernetes hardening
+- YCSEC-K8S-03: Admission policy enforcement
+- YCSEC-SC-01: Container registry
+- YCSEC-SC-02: SBOM and vulnerability validation
+- YCSEC-SC-03: Supply-chain policy gate
+- YCSEC-EVD-01: Evidence management
+- YCSEC-OPS-01: Cost and cleanup control
+- YCSEC-GOV-01: Governance and risk

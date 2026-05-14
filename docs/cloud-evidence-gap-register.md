@@ -442,3 +442,22 @@ Remaining forward-looking items:
 - Final publication readiness review.
 - Optional multi-cloud mapping and final portfolio packaging.
 <!-- YCSEC_PHASE_13_8_CLOUD_GAP_REGISTER:END -->
+
+## Phase 13.9 status — Cross-cloud mapping and publication readiness
+
+Status: local-only publication readiness phase completed.
+
+Closed or clarified:
+
+- AWS/GCP/Azure mapping is documented as equivalent architecture mapping, not live provider implementation.
+- Public claim boundaries are documented.
+- Retained bootstrap cleanup order is documented.
+- No new cloud resources were created in this phase.
+
+Still pending after Phase 13.9:
+
+- final RU/EN reports;
+- final README/publication polish;
+- final public artifact safety review;
+- retained bootstrap resource cleanup after evidence/export decision;
+- final release tag.
