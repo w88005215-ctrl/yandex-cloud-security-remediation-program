@@ -467,3 +467,9 @@ Still pending after Phase 13.9:
 Final RU/EN reports and README publication summary were generated from already validated repository evidence. This phase is local-only and does not create cloud resources.
 
 Publication boundary remains explicit: Yandex Cloud implementation evidence is real; AWS/GCP/Azure mapping is conceptual unless separately evidenced.
+
+## Phase 13.11 retained bootstrap cleanup
+
+- Status: closed.
+- Retained bootstrap resources were removed after evidence validation.
+- Final read-only verification confirms that retained registry, audit bucket, Audit Trail, bootstrap service accounts, temporary Managed Kubernetes, compute, and Network Load Balancer resources are absent.

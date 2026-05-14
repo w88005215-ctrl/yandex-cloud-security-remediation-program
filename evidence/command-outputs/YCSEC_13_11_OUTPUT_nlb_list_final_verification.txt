@@ -1,0 +1,10 @@
+Phase 13.11 final Network Load Balancer verification
+Date: 2026-05-14T18:27:01+00:00
+
++----+------+-----------+------+----------------+------------------------+--------+
+| ID | NAME | REGION ID | TYPE | LISTENER COUNT | ATTACHED TARGET GROUPS | STATUS |
++----+------+-----------+------+----------------+------------------------+--------+
++----+------+-----------+------+----------------+------------------------+--------+
+
+
+[OK] no temporary Network Load Balancer visible

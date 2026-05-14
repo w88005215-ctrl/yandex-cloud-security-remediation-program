@@ -1,0 +1,139 @@
+Phase 13.11C — retained registry image cleanup, NO COMMIT / NO PUSH
+Date: 2026-05-14T18:05:49+00:00
+Qube: cloud-dev-workbech
+
+--- Step 1 — verify baseline and workspace
+From https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program
+ * branch            main       -> FETCH_HEAD
+4233e3c (HEAD -> main, tag: v0.13.10-final-reports-publication-summary, origin/main, origin/HEAD) docs: add final technical reports and publication summary
+10f1fdd (tag: v0.13.9-cross-cloud-publication-readiness) docs: add cross-cloud mapping and publication readiness
+90759e4 (tag: v0.13.8-final-risk-register) docs: add final risk register
+24b0ba7 (tag: v0.13.7-final-control-matrix) docs: add final control matrix
+d75cebd (tag: v0.13.6-final-remediation-metrics) docs: consolidate final remediation metrics
+2d686fd (tag: v0.13.5-kyverno-admission-policy-enforcement) test: validate Kyverno admission policy enforcement
+11c4767 (tag: v0.13.5a2-kyverno-runner-hardening) fix: harden Kyverno admission MKS runner
+6b7f94a (tag: v0.13.5a1-kyverno-denial-attribution-fix) fix: require Kyverno-specific admission denial evidence
+
+?? evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_final_cleanup.txt
+
+[OK] current branch is main
+[OK] current HEAD is Phase 13.10 baseline
+origin/main...HEAD: 0	0
+[OK] local main and origin/main are aligned
+
+--- Step 2 — detect remaining bootstrap registry
+[OK] bootstrap registry detected
+Registry: <registry-id>
+
+--- Step 3 — list current registry images
+[
+  {
+    "id": "<resource-id>",
+    "name": "<resource-id>/ycsec-supply-chain-demo",
+    "digest": "sha256:<resource-id><resource-id><resource-id>76b3",
+    "compressed_size": "55201651",
+    "tags": [
+      "hardened-579fac92e70b"
+    ],
+    "created_at": "2026-05-14T13:24:39.646Z"
+  },
+  {
+    "id": "<resource-id>",
+    "name": "<resource-id>/ycsec-supply-chain-demo",
+    "digest": "sha256:<resource-id><resource-id><resource-id>edec",
+    "compressed_size": "55685953",
+    "tags": [
+      "insecure-579fac92e70b",
+      "latest"
+    ],
+    "created_at": "2026-05-14T13:24:07.107Z"
+  }
+]
+
+
+Image count before cleanup: 2
+[OK] registry contains images that must be deleted first
+
+--- Step 4 — delete registry images using supported CLI syntax
+[INFO] deleting image id: <image-id>
+[OK] image delete command accepted
+[INFO] deleting image id: <image-id>
+[OK] image delete command accepted
+Command: yc container image delete <image-id>
+...1s...done (5s)
+Command: yc container image delete <image-id>
+...1s...6s...11s...done (12s)
+
+--- Step 5 — verify registry images after deletion
+[]
+
+
+Image count after cleanup: 0
+[OK] registry images removed
+
+--- Step 6 — delete empty bootstrap registry
+Command: yc container registry delete <registry-id>
+...1s...6s...12s...17s...23s...28s...33s...39s...done (44s)
+[OK] registry delete command accepted
+
+--- Step 7 — final cloud cleanup verification
+[]
+
+[OK] bootstrap registry removed
++------+-----------+----------+-----------------------+------------+
+| NAME | FOLDER ID | MAX SIZE | DEFAULT STORAGE CLASS | CREATED AT |
++------+-----------+----------+-----------------------+------------+
++------+-----------+----------+-----------------------+------------+
+
+[OK] YCSEC audit bucket removed
++----+------+--------+---------+
+| ID | NAME | STATUS | FILTERS |
++----+------+--------+---------+
++----+------+--------+---------+
+
+[OK] bootstrap Audit Trail removed
++----+------+--------+------------+-----------------------+
+| ID | NAME | LABELS | CREATED AT | LAST AUTHENTICATED AT |
++----+------+--------+------------+-----------------------+
++----+------+--------+------------+-----------------------+
+
+[OK] bootstrap and temporary service accounts removed
++----+------+------------+--------+--------+-------------------+-------------------+
+| ID | NAME | CREATED AT | HEALTH | STATUS | EXTERNAL ENDPOINT | INTERNAL ENDPOINT |
++----+------+------------+--------+--------+-------------------+-------------------+
++----+------+------------+--------+--------+-------------------+-------------------+
+
+[OK] no temporary MKS cluster visible
+[OK] no temporary compute instance visible
+[OK] no temporary Network Load Balancer visible
+
+--- Step 8 — repository safety
+[OK] no Terraform state, kubeconfig, PEM, or key files found
+[90m6:09PM[0m [32mINF[0m [1m53 commits scanned.[0m
+[90m6:09PM[0m [32mINF[0m [1mscanned ~9163194 bytes (9.16 MB) in 699ms[0m
+[90m6:09PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks passed
+
+--- Step 9 — final git state, NO COMMIT / NO PUSH
+?? evidence/command-outputs/YCSEC_13_11C_OUTPUT_audit_trail_list_after_cleanup.txt
+?? evidence/command-outputs/YCSEC_13_11C_OUTPUT_bucket_list_after_cleanup.txt
+?? evidence/command-outputs/YCSEC_13_11C_OUTPUT_compute_instance_list_after_cleanup.txt
+?? evidence/command-outputs/YCSEC_13_11C_OUTPUT_mks_cluster_list_after_cleanup.txt
+?? evidence/command-outputs/YCSEC_13_11C_OUTPUT_nlb_list_after_cleanup.txt
+?? evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_delete.txt
+?? evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_final_cleanup.txt
+?? evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_image_delete.txt
+?? evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_images_after_cleanup.txt
+?? evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_images_before_cleanup.txt
+?? evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_list_after_cleanup.txt
+?? evidence/command-outputs/YCSEC_13_11C_OUTPUT_service_account_list_after_cleanup.txt
+
+--- Decision
+FAIL_COUNT=0
+[OK] Phase 13.11C cleanup verification passed
+[OK] all retained bootstrap cloud resources are removed
+[OK] NO COMMIT / NO TAG / NO PUSH performed
+
+Next: send this output. Then we close Phase 13.11 evidence in one clean commit, and only after that fix Checkov.
+
+Private evidence: /home/user/ycsec-private-evidence/phase-13.11c-registry-final-cleanup-20260514T180549

@@ -1,0 +1,4 @@
+Command: yc container image delete <image-id>
+...1s...done (5s)
+Command: yc container image delete <image-id>
+...1s...6s...11s...done (12s)

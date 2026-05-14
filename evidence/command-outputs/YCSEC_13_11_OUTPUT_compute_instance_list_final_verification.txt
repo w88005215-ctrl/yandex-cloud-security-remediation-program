@@ -1,0 +1,10 @@
+Phase 13.11 final compute verification
+Date: 2026-05-14T18:26:49+00:00
+
++----+------+---------+--------+-------------+-------------+
+| ID | NAME | ZONE ID | STATUS | EXTERNAL IP | INTERNAL IP |
++----+------+---------+--------+-------------+-------------+
++----+------+---------+--------+-------------+-------------+
+
+
+[OK] no temporary compute instance visible

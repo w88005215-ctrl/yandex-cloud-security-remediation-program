@@ -1,0 +1,2 @@
+Command: yc container registry delete <registry-id>
+...1s...6s...12s...17s...23s...28s...33s...39s...done (44s)

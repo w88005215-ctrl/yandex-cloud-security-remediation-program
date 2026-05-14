@@ -649,3 +649,11 @@ Validation result:
 - `evidence/metrics/final_publication_summary.txt` — text final publication summary.
 - `evidence/command-outputs/YCSEC_13_10_OUTPUT_final_reports_readme.txt` — command evidence for this phase.
 - `evidence/command-outputs/YCSEC_13_10_OUTPUT_final_git_control.txt` — final git control evidence.
+
+## Phase 13.11 — retained bootstrap cleanup
+
+Status: completed.
+
+Evidence added:
+- docs/retained-bootstrap-cleanup-evidence.md
+- final registry, bucket, Audit Trails, service account, Managed Kubernetes, compute, and Network Load Balancer cleanup verification outputs

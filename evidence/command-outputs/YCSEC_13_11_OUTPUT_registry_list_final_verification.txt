@@ -1,0 +1,10 @@
+Phase 13.11 final registry verification
+Date: 2026-05-14T18:25:33+00:00
+
++----+------+-----------+
+| ID | NAME | FOLDER ID |
++----+------+-----------+
++----+------+-----------+
+
+
+[OK] bootstrap registry absent
