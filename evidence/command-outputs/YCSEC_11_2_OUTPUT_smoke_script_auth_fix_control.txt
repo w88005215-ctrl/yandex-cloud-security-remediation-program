@@ -1,0 +1,15 @@
+Phase 11.2 — Smoke-run Script Auth Fix Control
+
+Result:
+[OK] smoke-run script exports Terraform provider authentication from YC CLI profile
+[OK] smoke-run script enables pipefail for Terraform plan pipeline handling
+[OK] fix is static-only and does not create cloud resources
+
+Safety:
+[OK] no Terraform state files are expected in repository
+[OK] no kubeconfig files are expected in repository
+[OK] no Terraform runtime artifacts are expected in repository
+
+Verification:
+[OK] use external git status to verify clean repository state
+[OK] use external cloud inventory commands to verify zero smoke resources

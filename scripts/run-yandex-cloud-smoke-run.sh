@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -o pipefail
 
 set -u
 
@@ -30,7 +31,44 @@ log_fail() {
 
 run_readonly_zero_check() {
   echo
-  echo "Read-only zero-resource precheck"
+  echo
+echo "Terraform provider authentication"
+YC_CLOUD_ID_VALUE="$(yc config get cloud-id 2>/dev/null || true)"
+YC_FOLDER_ID_VALUE="$(yc config get folder-id 2>/dev/null || true)"
+YC_TOKEN_VALUE="$(yc iam create-token 2>/dev/null || true)"
+
+if test -z "$YC_CLOUD_ID_VALUE"; then
+  echo "[FAIL] cloud-id is not configured"
+  FAIL_COUNT=$((FAIL_COUNT + 1))
+else
+  export YC_CLOUD_ID="$YC_CLOUD_ID_VALUE"
+  export TF_VAR_cloud_id="$YC_CLOUD_ID_VALUE"
+  echo "[OK] YC_CLOUD_ID exported for Terraform provider"
+fi
+
+if test -z "$YC_FOLDER_ID_VALUE"; then
+  echo "[FAIL] folder-id is not configured"
+  FAIL_COUNT=$((FAIL_COUNT + 1))
+else
+  export YC_FOLDER_ID="$YC_FOLDER_ID_VALUE"
+  export TF_VAR_folder_id="$YC_FOLDER_ID_VALUE"
+  echo "[OK] YC_FOLDER_ID exported for Terraform provider"
+fi
+
+if test -z "$YC_TOKEN_VALUE"; then
+  echo "[FAIL] IAM token was not created for Terraform provider"
+  FAIL_COUNT=$((FAIL_COUNT + 1))
+else
+  export YC_TOKEN="$YC_TOKEN_VALUE"
+  echo "[OK] YC_TOKEN exported for Terraform provider"
+fi
+
+if test "$FAIL_COUNT" -ne 0; then
+  echo "[FAIL] Terraform provider authentication prerequisites failed"
+  exit 1
+fi
+
+echo "Read-only zero-resource precheck"
 
   local found=0
 
