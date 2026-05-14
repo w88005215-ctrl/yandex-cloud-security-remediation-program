@@ -5,7 +5,7 @@ Project: yandex-cloud-security-remediation-program
 
 Git identity:
 user.name=w88005215-ctrl
-user.email=w88005215@gmail.com.com
+user.email=<redacted-email>
 
 Branch:
 main

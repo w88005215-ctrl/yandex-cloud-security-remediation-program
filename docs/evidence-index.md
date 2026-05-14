@@ -686,3 +686,14 @@ Purpose: normalize redacted scanner image metadata that triggered GitHub Actions
 - `evidence/metrics/final_sanitization_changed_files.json` — files changed by the final sanitization pass.
 - `evidence/command-outputs/YCSEC_13_14_OUTPUT_gitleaks_final_audit.txt` — final Gitleaks audit evidence.
 - `evidence/command-outputs/YCSEC_13_14_OUTPUT_checkov_final_audit.txt` — final Checkov audit evidence.
+
+## Phase 13.15 — Final Project Completion Report
+
+Final bilingual completion reports and summary metrics were added:
+
+- `docs/final-project-completion-report-en.md`
+- `docs/final-project-completion-report-ru.md`
+- `evidence/metrics/final_project_completion_summary.json`
+- `evidence/metrics/final_project_completion_summary.txt`
+
+The reports summarize the completed remediation program, evidence domains, sensitive-data status, claim boundaries, and portfolio value.

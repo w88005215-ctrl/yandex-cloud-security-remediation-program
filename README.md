@@ -169,3 +169,12 @@ Final public audit artifacts:
 - [Отчёт по публикационной очистке RU](docs/publication-sanitization-report-ru.md)
 
 Publication boundary: repository evidence is sanitized for public portfolio use. It does not contain live cloud credentials, Terraform state, kubeconfig files, PEM keys, or retained cloud runtime artifacts.
+
+## Final Project Completion Report
+
+The project includes final bilingual completion reports summarizing the implemented cloud security remediation workflow, validated evidence domains, sensitive-data/publication-safety status, and claim boundaries:
+
+- [Final Project Completion Report — EN](docs/final-project-completion-report-en.md)
+- [Финальный отчёт о завершении проекта — RU](docs/final-project-completion-report-ru.md)
+
+These reports complement the final technical reports, repository audit, sanitization reports, control matrix, risk register, remediation metrics, and evidence index.

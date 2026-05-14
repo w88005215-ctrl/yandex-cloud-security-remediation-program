@@ -1,0 +1,35 @@
+Final project completion summary
+
+Project: Yandex Cloud Security Remediation Program
+Status: completed
+Cloud actions during this phase: none
+
+Generated reports:
+- docs/final-project-completion-report-ru.md
+- docs/final-project-completion-report-en.md
+
+Validated project domains:
+- Terraform/IaC
+- IAM/OIDC
+- Audit evidence
+- Managed Kubernetes hardening
+- Kyverno policy-as-code
+- Supply-chain security
+- SBOM
+- Vulnerability validation
+- Checkov
+- Gitleaks
+- Risk register
+- Control matrix
+- Cross-cloud control mapping
+- Publication sanitization
+
+Sensitive-data status:
+- Gitleaks: passed
+- Checkov: passed
+- Forbidden runtime artifacts: not found
+- Blocking sensitive/private markers: not found
+
+Boundary:
+The project demonstrates validated cloud security implementation and evidence in the selected cloud environment.
+AWS/GCP/Azure references are control-equivalence mappings, not claims of actual AWS/GCP/Azure deployment.

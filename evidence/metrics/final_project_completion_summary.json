@@ -1,0 +1,34 @@
+{
+  "project": "Yandex Cloud Security Remediation Program",
+  "phase": "13.15",
+  "status": "completed",
+  "cloud_actions": "none",
+  "baseline_tag": "v0.13.14a-final-audit-append-closeout",
+  "generated_reports": [
+    "docs/final-project-completion-report-en.md",
+    "docs/final-project-completion-report-ru.md"
+  ],
+  "validated_domains": [
+    "Terraform/IaC",
+    "IAM/OIDC",
+    "audit evidence",
+    "Managed Kubernetes hardening",
+    "Kyverno policy-as-code",
+    "supply-chain security",
+    "SBOM",
+    "vulnerability validation",
+    "Checkov",
+    "Gitleaks",
+    "risk register",
+    "control matrix",
+    "cross-cloud mapping",
+    "publication sanitization"
+  ],
+  "sensitive_data_status": {
+    "gitleaks": "passed",
+    "checkov": "passed",
+    "forbidden_runtime_artifacts": "not_found",
+    "blocking_sensitive_markers": "not_found"
+  },
+  "claim_boundary": "The project demonstrates validated cloud security implementation in the selected cloud environment and maps equivalent controls to AWS/GCP/Azure without claiming actual AWS/GCP/Azure deployment."
+}

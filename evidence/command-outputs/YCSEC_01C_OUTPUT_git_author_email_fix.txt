@@ -4,15 +4,15 @@ Qube: cloud-dev-workbench
 
 Expected identity:
 user.name=w88005215-ctrl
-user.email=w88005215@gmail.com
+user.email=<redacted-email>
 
 Local Git config:
 user.name=w88005215-ctrl
-user.email=w88005215@gmail.com
+user.email=<redacted-email>
 
 Latest commit identity:
-Author: w88005215-ctrl <w88005215@gmail.com>
-Committer: w88005215-ctrl <w88005215@gmail.com>
+Author: w88005215-ctrl <<redacted-email>>
+Committer: w88005215-ctrl <<redacted-email>>
 Commit: 7494c09 chore: initialize repository skeleton
 
 Validation:

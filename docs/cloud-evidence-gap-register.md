@@ -495,3 +495,11 @@ Status: closed.
 The final repository audit verified the public working tree for secret exposure, private runtime artifacts, Terraform state, kubeconfig files, key material, internal wording, private evidence paths, and provider-specific resource identifiers. Bilingual audit and sanitization reports were added under `docs/`, with machine-readable metrics under `evidence/metrics/`.
 
 Publication boundary remains explicit: the repository contains sanitized evidence and public portfolio artifacts only.
+
+## Phase 13.15 — Completion Status
+
+The project is considered complete for portfolio/publication purposes after final audit, sanitization, cleanup evidence, Checkov/Gitleaks stabilization, and bilingual completion reporting.
+
+Remaining gaps: none blocking for the declared portfolio scope.
+
+Boundary: AWS/GCP/Azure references remain control-equivalence mappings only. The repository does not claim actual AWS/GCP/Azure deployment evidence.
