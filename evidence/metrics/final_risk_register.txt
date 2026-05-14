@@ -1,0 +1,23 @@
+Final Risk Register Metrics
+Generated: 2026-05-14T17:15:25.663673+00:00
+Risk count: 8
+
+Residual risk distribution:
+- Low: 5
+- Medium: 3
+
+Status distribution:
+- Mitigated: 5
+- Mitigated with future signing/attestation enhancement: 1
+- Mitigated with residual dependency lifecycle tracking: 1
+- Mitigated with retained residual monitoring requirement: 1
+
+Risk IDs:
+- YCSEC-RISK-01: IAM / Federation — Low residual risk — Mitigated
+- YCSEC-RISK-02: Audit / Governance — Medium residual risk — Mitigated with retained residual monitoring requirement
+- YCSEC-RISK-03: Infrastructure as Code — Low residual risk — Mitigated
+- YCSEC-RISK-04: Managed Kubernetes — Low residual risk — Mitigated
+- YCSEC-RISK-05: Supply Chain Security — Medium residual risk — Mitigated with future signing/attestation enhancement
+- YCSEC-RISK-06: Vulnerability Management — Medium residual risk — Mitigated with residual dependency lifecycle tracking
+- YCSEC-RISK-07: Evidence Handling — Low residual risk — Mitigated
+- YCSEC-RISK-08: Publication Boundary — Low residual risk — Mitigated

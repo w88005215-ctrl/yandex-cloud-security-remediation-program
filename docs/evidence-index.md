@@ -583,3 +583,48 @@ Purpose:
 - Define portfolio-safe claims based on committed evidence.
 - Prepare the repository for final risk register and cloud-provider mapping phases.
 <!-- YCSEC:PHASE-13.7-FINAL-CONTROL-MATRIX:END -->
+
+<!-- YCSEC_PHASE_13_8_RISK_REGISTER_START -->
+
+## Phase 13.8 — Final Risk Register
+
+Status: completed.
+
+Public artifacts:
+- `docs/final-risk-register.md`
+- `evidence/metrics/final_risk_register.json`
+- `evidence/metrics/final_risk_register.csv`
+- `evidence/metrics/final_risk_register.txt`
+- `evidence/command-outputs/YCSEC_13_8_OUTPUT_final_risk_register.txt`
+- `evidence/command-outputs/YCSEC_13_8_OUTPUT_final_git_control.txt`
+
+Evidence value:
+- consolidates final project risks;
+- maps risks to validated controls and evidence;
+- records residual risk and publication boundaries;
+- separates validated claims from accepted design-level boundaries.
+<!-- YCSEC_PHASE_13_8_RISK_REGISTER_END -->
+
+<!-- YCSEC_PHASE_13_8_EVIDENCE_INDEX:START -->
+
+## Phase 13.8 — Final Risk Register
+
+Status: Completed.
+
+Artifacts:
+
+- `docs/final-risk-register.md`
+- `evidence/metrics/final_risk_register.json`
+- `evidence/metrics/final_risk_register.csv`
+- `evidence/metrics/final_risk_register.txt`
+- `evidence/command-outputs/YCSEC_13_8_OUTPUT_final_risk_register.txt`
+- `evidence/command-outputs/YCSEC_13_8_OUTPUT_final_git_control.txt`
+
+Validation result:
+
+- Final risks are mapped to validated controls.
+- Risk treatment is tied to evidence paths.
+- Residual risk is explicitly recorded.
+- Publication boundary is stated.
+- No cloud resources were created in this phase.
+<!-- YCSEC_PHASE_13_8_EVIDENCE_INDEX:END -->

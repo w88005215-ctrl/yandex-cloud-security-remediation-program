@@ -1,0 +1,196 @@
+{
+  "phase": "13.8",
+  "title": "Final Risk Register",
+  "generated_at": "2026-05-14T17:15:25.663673+00:00",
+  "risk_count": 8,
+  "residual_risk_distribution": {
+    "Low": 5,
+    "Medium": 3
+  },
+  "status_distribution": {
+    "Mitigated": 5,
+    "Mitigated with retained residual monitoring requirement": 1,
+    "Mitigated with future signing/attestation enhancement": 1,
+    "Mitigated with residual dependency lifecycle tracking": 1
+  },
+  "validated_risk_register": true,
+  "cloud_resources_created": false,
+  "publication_boundary": "Claims are limited to controls and evidence represented in repository documentation and sanitized evidence files.",
+  "risks": [
+    {
+      "risk_id": "YCSEC-RISK-01",
+      "domain": "IAM / Federation",
+      "risk": "Long-lived cloud credentials in CI/CD or operator workflows",
+      "baseline_exposure": "High",
+      "current_residual_risk": "Low",
+      "business_impact": "Credential leakage could allow unauthorized cloud access, registry access, or infrastructure modification.",
+      "validated_controls": [
+        "YCSEC-IAM-01",
+        "YCSEC-IAM-02",
+        "YCSEC-SC-02"
+      ],
+      "evidence": [
+        "docs/github-actions-oidc-validation.md",
+        "docs/supply-chain-oidc-registry-validation.md",
+        "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+        "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation_success.txt"
+      ],
+      "treatment": "Mitigated through GitHub Actions OIDC token exchange, short-lived IAM tokens, and repository secret scanning.",
+      "owner": "Cloud Security / DevSecOps",
+      "status": "Mitigated"
+    },
+    {
+      "risk_id": "YCSEC-RISK-02",
+      "domain": "Audit / Governance",
+      "risk": "Insufficient cloud audit evidence for security-relevant actions",
+      "baseline_exposure": "High",
+      "current_residual_risk": "Medium",
+      "business_impact": "Weak auditability would reduce incident reconstruction, accountability, and compliance confidence.",
+      "validated_controls": [
+        "YCSEC-AUD-01",
+        "YCSEC-GOV-01"
+      ],
+      "evidence": [
+        "docs/audit-trails-evidence-validation.md",
+        "docs/cloud-evidence-gap-register.md",
+        "docs/evidence-index.md"
+      ],
+      "treatment": "Mitigated through retained Audit Trails, evidence index discipline, and explicit cloud evidence gap tracking.",
+      "owner": "Cloud Security / Governance",
+      "status": "Mitigated with retained residual monitoring requirement"
+    },
+    {
+      "risk_id": "YCSEC-RISK-03",
+      "domain": "Infrastructure as Code",
+      "risk": "Uncontrolled cloud resource creation and cost drift",
+      "baseline_exposure": "High",
+      "current_residual_risk": "Low",
+      "business_impact": "Unexpected managed infrastructure could consume budget and leave exposed resources behind.",
+      "validated_controls": [
+        "YCSEC-IAC-01",
+        "YCSEC-OPS-01",
+        "YCSEC-OPS-02"
+      ],
+      "evidence": [
+        "docs/managed-kubernetes-destroy-and-retention-plan.md",
+        "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_destroy_sanitized.txt",
+        "evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_mks_cluster_list.txt",
+        "evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_compute_instance_list.txt",
+        "evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_nlb_list.txt"
+      ],
+      "treatment": "Mitigated through short-lived cloud runs, Terraform destroy evidence, and post-destroy zero-resource verification.",
+      "owner": "Cloud Engineering",
+      "status": "Mitigated"
+    },
+    {
+      "risk_id": "YCSEC-RISK-04",
+      "domain": "Managed Kubernetes",
+      "risk": "Insecure workloads admitted into the cluster",
+      "baseline_exposure": "High",
+      "current_residual_risk": "Low",
+      "business_impact": "Privileged, root, mutable-image, or weakly constrained workloads could increase cluster compromise impact.",
+      "validated_controls": [
+        "YCSEC-K8S-01",
+        "YCSEC-K8S-02",
+        "YCSEC-K8S-03",
+        "YCSEC-K8S-04"
+      ],
+      "evidence": [
+        "docs/kyverno-admission-policy-enforcement-validation.md",
+        "docs/kyverno-admission-policy-enforcement-metrics.md",
+        "evidence/after/kyverno_insecure_workload_denied.txt",
+        "evidence/after/kyverno_hardened_workload_allowed.txt",
+        "evidence/sanitized/kyverno_admission_policy_enforcement_redacted.txt"
+      ],
+      "treatment": "Mitigated through Kyverno admission policy enforcement and explicit deny/allow evidence on Managed Kubernetes.",
+      "owner": "Platform Security",
+      "status": "Mitigated"
+    },
+    {
+      "risk_id": "YCSEC-RISK-05",
+      "domain": "Supply Chain Security",
+      "risk": "Unvalidated image provenance and registry push path",
+      "baseline_exposure": "High",
+      "current_residual_risk": "Medium",
+      "business_impact": "Untrusted images could enter the runtime path without adequate identity, registry, or policy validation.",
+      "validated_controls": [
+        "YCSEC-SC-01",
+        "YCSEC-SC-02",
+        "YCSEC-SC-03"
+      ],
+      "evidence": [
+        "docs/supply-chain-oidc-registry-validation.md",
+        "docs/sbom-vulnerability-validation.md",
+        "docs/supply-chain-vulnerability-metrics.md",
+        "evidence/metrics/supply_chain_vulnerability_metrics.json"
+      ],
+      "treatment": "Mitigated through OIDC-based registry push, SBOM generation, vulnerability scanning, and admission policy requiring Yandex Container Registry images.",
+      "owner": "DevSecOps / Supply Chain Security",
+      "status": "Mitigated with future signing/attestation enhancement"
+    },
+    {
+      "risk_id": "YCSEC-RISK-06",
+      "domain": "Vulnerability Management",
+      "risk": "Known vulnerabilities remain unmeasured across baseline and hardened artifacts",
+      "baseline_exposure": "High",
+      "current_residual_risk": "Medium",
+      "business_impact": "Unmeasured vulnerable dependencies or packages could persist without remediation evidence.",
+      "validated_controls": [
+        "YCSEC-SC-03",
+        "YCSEC-GOV-01"
+      ],
+      "evidence": [
+        "docs/sbom-vulnerability-validation.md",
+        "docs/supply-chain-vulnerability-metrics.md",
+        "docs/final-remediation-metrics.md",
+        "evidence/vulnerability/trivy_insecure_image.txt",
+        "evidence/vulnerability/trivy_hardened_image.txt",
+        "evidence/vulnerability/grype_insecure_image.txt",
+        "evidence/vulnerability/grype_hardened_image.txt"
+      ],
+      "treatment": "Mitigated through SBOM, Trivy/Grype scanning, and measurable before/after vulnerability reduction.",
+      "owner": "DevSecOps / AppSec",
+      "status": "Mitigated with residual dependency lifecycle tracking"
+    },
+    {
+      "risk_id": "YCSEC-RISK-07",
+      "domain": "Evidence Handling",
+      "risk": "Sensitive artifacts accidentally committed to public repository",
+      "baseline_exposure": "High",
+      "current_residual_risk": "Low",
+      "business_impact": "Public leakage of state, kubeconfig, keys, or tokens could compromise infrastructure or invalidate publication safety.",
+      "validated_controls": [
+        "YCSEC-OPS-02",
+        "YCSEC-GOV-01"
+      ],
+      "evidence": [
+        "docs/generated-evidence-gitleaks-handling.md",
+        "docs/evidence-index.md",
+        "evidence/command-outputs/YCSEC_13_4A_OUTPUT_gitleaks_generated_evidence_handling.txt",
+        "evidence/command-outputs/YCSEC_13_5_OUTPUT_final_git_control.txt"
+      ],
+      "treatment": "Mitigated through sanitized evidence, private runtime storage, gitleaks scanning, and explicit forbidden-artifact checks.",
+      "owner": "Security Engineering",
+      "status": "Mitigated"
+    },
+    {
+      "risk_id": "YCSEC-RISK-08",
+      "domain": "Publication Boundary",
+      "risk": "Portfolio claims exceed validated evidence",
+      "baseline_exposure": "Medium",
+      "current_residual_risk": "Low",
+      "business_impact": "Overstated claims would reduce credibility under technical review.",
+      "validated_controls": [
+        "YCSEC-GOV-01"
+      ],
+      "evidence": [
+        "docs/cloud-evidence-gap-register.md",
+        "docs/final-control-matrix.md",
+        "docs/final-remediation-metrics.md"
+      ],
+      "treatment": "Mitigated through evidence-bound claims, control matrix, risk register, and explicit publication boundaries.",
+      "owner": "Project Owner / Security Governance",
+      "status": "Mitigated"
+    }
+  ]
+}

@@ -402,3 +402,43 @@ Remaining finalization items:
 - Publication safety review.
 - Final retained bootstrap resource cleanup decision.
 <!-- YCSEC:PHASE-13.7-FINAL-CONTROL-MATRIX:END -->
+
+<!-- YCSEC_PHASE_13_8_RISK_REGISTER_START -->
+
+## Phase 13.8 — Final Risk Register Update
+
+Status: final risk register completed.
+
+Closed or reduced gaps:
+- IAM/OIDC risk mapped to GitHub Actions OIDC validation evidence.
+- Audit accountability risk mapped to retained Audit Trails/bootstrap evidence.
+- Kubernetes admission risk mapped to Kyverno denial/allow evidence.
+- Supply-chain image risk mapped to SBOM and vulnerability metrics.
+- Evidence integrity and publication safety risk mapped to sanitized evidence controls.
+
+Remaining bounded items:
+- final AWS/GCP/Azure mapping document;
+- final cloud cleanup/destroy plan for retained bootstrap resources;
+- final README/report/publication safety pass;
+- SAML/SSO claims must remain design-level unless separately validated.
+<!-- YCSEC_PHASE_13_8_RISK_REGISTER_END -->
+
+<!-- YCSEC_PHASE_13_8_CLOUD_GAP_REGISTER:START -->
+
+## Phase 13.8 — Final Risk Register Closure
+
+Status: Closed.
+
+Result:
+
+- Final risk register created.
+- IAM/OIDC, audit, IaC, Managed Kubernetes, supply chain, vulnerability management, evidence handling, and publication boundary risks are documented.
+- Residual risks are explicitly separated from validated mitigations.
+- No additional cloud evidence gap is opened by this phase.
+
+Remaining forward-looking items:
+
+- Final cleanup plan for retained bootstrap resources.
+- Final publication readiness review.
+- Optional multi-cloud mapping and final portfolio packaging.
+<!-- YCSEC_PHASE_13_8_CLOUD_GAP_REGISTER:END -->
