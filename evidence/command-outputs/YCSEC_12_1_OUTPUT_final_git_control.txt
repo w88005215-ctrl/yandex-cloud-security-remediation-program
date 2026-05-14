@@ -1,0 +1,26 @@
+Phase 12.1 — commit and final git control
+Date: 2026-05-14T06:08:45+00:00
+Qube: cloud-dev-workbench
+
+[OK] baseline validation plan passed; committing Phase 12.1 evidence
+[main 4d2c3d4] docs: add Kubernetes baseline validation plan
+ 5 files changed, 322 insertions(+)
+ create mode 100644 docs/kubernetes-baseline-control-matrix.md
+ create mode 100644 docs/kubernetes-baseline-validation-plan.md
+ create mode 100644 evidence/command-outputs/YCSEC_12_1_OUTPUT_kubernetes_baseline_validation_plan.txt
+[OK] tag created: v0.12.1-kubernetes-baseline-validation-plan
+[OK] Phase 12.1 committed
+
+Final verification
+?? evidence/command-outputs/YCSEC_12_1_OUTPUT_final_git_control.txt
+4d2c3d4 (HEAD -> main, tag: v0.12.1-kubernetes-baseline-validation-plan) docs: add Kubernetes baseline validation plan
+1a0b182 (tag: v0.12.0-kubernetes-remediation-readiness) test: inventory Kubernetes remediation readiness
+259ea41 (tag: v0.11.4-smoke-run-evidence-package) docs: integrate Yandex Cloud smoke-run evidence package
+1dc86dc (tag: v0.11.3-yandex-cloud-smoke-run-success) test: record successful Yandex Cloud smoke run
+e4e0e50 (tag: v0.11.2-smoke-run-auth-fix) fix: pass Yandex Cloud auth to smoke-run Terraform
+6bf5287 (tag: v0.11.1-smoke-run-safety) chore: harden Yandex Cloud smoke-run cleanup safety
+5d6e853 (tag: v0.11-yandex-cloud-smoke-run) test: add Yandex Cloud Kubernetes smoke run
+52d64d0 (tag: v0.10-yandex-cloud-readiness) test: add Yandex Cloud readiness gate
+c24edc3 (tag: v0.9-local-kubernetes-runtime) test: add local Kubernetes runtime validation
+70558b0 (tag: v0.8-kubernetes-baseline) feat: add Kubernetes security baseline manifests
+v0.12.1-kubernetes-baseline-validation-plan

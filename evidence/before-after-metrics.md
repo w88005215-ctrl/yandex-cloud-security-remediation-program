@@ -110,3 +110,21 @@ This table will become one of the main portfolio artifacts. It should be easy to
 | Publication-safe evidence | Raw output not suitable for publication | Sanitized evidence committed | EVID-YC-SMOKE-001 |
 
 <!-- YCSEC:PHASE-11-SMOKE-RUN:END -->
+
+<!-- YCSEC:PHASE-12-1-BASELINE-PLAN:START -->
+## Phase 12.1 — Planned Kubernetes Baseline/Remediation Metrics
+
+| Metric Area | Baseline Measurement | Remediation Measurement | Target Direction |
+|---|---|---|---|
+| Namespace Pod Security labels | Count missing labels | Count labels added or corrected | Increase control coverage |
+| Workload securityContext | Count missing securityContext fields | Count hardened workload specs | Increase hardened workload coverage |
+| Non-root execution | Count workloads without runAsNonRoot | Count workloads with runAsNonRoot true | Increase non-root coverage |
+| Privilege escalation | Count containers without allowPrivilegeEscalation false | Count containers hardened | Reduce privilege escalation exposure |
+| Capabilities | Count containers without capabilities.drop | Count containers dropping capabilities | Reduce Linux capability exposure |
+| Seccomp | Count workloads without RuntimeDefault | Count workloads with RuntimeDefault | Increase runtime syscall hardening |
+| NetworkPolicy | Count namespaces without policy | Count namespaces with default-deny or allow-list policy | Increase segmentation coverage |
+| RBAC | Count broad or unclear bindings | Count least-privilege namespace bindings | Reduce permission scope |
+| Resource governance | Count containers without requests/limits | Count containers with explicit requests/limits | Increase operational guardrail coverage |
+| Policy-as-code | Count controls without automated validation | Count controls with validation path | Increase repeatability |
+
+<!-- YCSEC:PHASE-12-1-BASELINE-PLAN:END -->

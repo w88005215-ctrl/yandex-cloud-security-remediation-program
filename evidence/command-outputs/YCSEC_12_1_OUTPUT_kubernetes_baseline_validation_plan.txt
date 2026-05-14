@@ -1,0 +1,83 @@
+Phase 12.1 — Kubernetes baseline validation plan
+Date: 2026-05-14T06:08:44+00:00
+Qube: cloud-dev-workbench
+
+Step 1 — repository baseline
+1a0b182 (HEAD -> main, tag: v0.12.0-kubernetes-remediation-readiness) test: inventory Kubernetes remediation readiness
+259ea41 (tag: v0.11.4-smoke-run-evidence-package) docs: integrate Yandex Cloud smoke-run evidence package
+1dc86dc (tag: v0.11.3-yandex-cloud-smoke-run-success) test: record successful Yandex Cloud smoke run
+e4e0e50 (tag: v0.11.2-smoke-run-auth-fix) fix: pass Yandex Cloud auth to smoke-run Terraform
+6bf5287 (tag: v0.11.1-smoke-run-safety) chore: harden Yandex Cloud smoke-run cleanup safety
+5d6e853 (tag: v0.11-yandex-cloud-smoke-run) test: add Yandex Cloud Kubernetes smoke run
+52d64d0 (tag: v0.10-yandex-cloud-readiness) test: add Yandex Cloud readiness gate
+c24edc3 (tag: v0.9-local-kubernetes-runtime) test: add local Kubernetes runtime validation
+70558b0 (tag: v0.8-kubernetes-baseline) feat: add Kubernetes security baseline manifests
+2aca601 (tag: v0.7-security-control-model) docs: add security control model and threat model
+
+Tags at HEAD:
+v0.12.0-kubernetes-remediation-readiness
+
+[OK] current HEAD has required tag: v0.12.0-kubernetes-remediation-readiness
+
+Step 2 — working tree guard
+[OK] working tree has no unexpected changes
+
+Step 3 — collect Kubernetes inventory summary
+[OK] inventory root: kubernetes
+Kubernetes YAML manifests: 12
+Namespace files: 2
+Workload files: 2
+Service files: 3
+RBAC files: 2
+NetworkPolicy files: 3
+SecurityContext files: 5
+Pod Security files: 2
+Policy-as-code references: 11
+[OK] Kubernetes manifests available for baseline planning
+
+Step 4 — write portfolio-grade baseline validation plan
+[OK] baseline validation plan written: docs/kubernetes-baseline-validation-plan.md
+
+Step 5 — write Kubernetes baseline control matrix
+[OK] baseline control matrix written: docs/kubernetes-baseline-control-matrix.md
+
+Step 6 — update evidence index and metrics
+[OK] evidence index and metrics updated
+
+Step 7 — validate generated phase files
+[OK] docs/kubernetes-baseline-validation-plan.md
+[OK] docs/kubernetes-baseline-control-matrix.md
+[OK] docs/evidence-index.md
+[OK] evidence/before-after-metrics.md
+[OK] validation plan contains control IDs
+[OK] control matrix contains full baseline control range
+[OK] evidence index references Phase 12.1 plan evidence
+[OK] metrics file contains planned Kubernetes metrics
+
+Step 8 — repository safety checks
+[OK] no Terraform state files
+[OK] no kubeconfig files
+[OK] no key/token-like files
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m6:08AM[0m [32mINF[0m [1mscanned ~457593 bytes (457.59 KB) in 416ms[0m
+[90m6:08AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 9 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 12.1 baseline validation plan completed
+[OK] project is ready for local Kubernetes baseline validation
+
+Final git status before commit:
+ M docs/evidence-index.md
+ M evidence/before-after-metrics.md
+?? docs/kubernetes-baseline-control-matrix.md
+?? docs/kubernetes-baseline-validation-plan.md
+?? evidence/command-outputs/YCSEC_12_1_OUTPUT_kubernetes_baseline_validation_plan.txt

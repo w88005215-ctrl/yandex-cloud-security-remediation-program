@@ -184,3 +184,23 @@ Validation summary:
 - Sanitized evidence was committed for portfolio publication.
 
 <!-- YCSEC:PHASE-11-SMOKE-RUN:END -->
+
+<!-- YCSEC:PHASE-12-1-BASELINE-PLAN:START -->
+## Phase 12.1 — Kubernetes Baseline Validation Plan
+
+| Evidence ID | File | Type | Description | Publication Status |
+|---|---|---|---|---|
+| EVID-K8S-PLAN-001 | docs/kubernetes-baseline-validation-plan.md | Technical plan | Kubernetes baseline validation and remediation plan | Public-safe |
+| EVID-K8S-PLAN-002 | docs/kubernetes-baseline-control-matrix.md | Control matrix | Baseline control mapping, remediation direction and evidence expectations | Public-safe |
+| EVID-K8S-PLAN-003 | evidence/command-outputs/YCSEC_12_1_OUTPUT_kubernetes_baseline_validation_plan.txt | Command output | Phase 12.1 plan generation and validation evidence | Public-safe |
+
+Phase result:
+
+- Baseline validation scope defined.
+- Kubernetes control areas mapped.
+- Expected findings defined.
+- Remediation directions defined.
+- Evidence model defined for baseline and remediation phases.
+- Portfolio-facing remediation narrative prepared.
+
+<!-- YCSEC:PHASE-12-1-BASELINE-PLAN:END -->
