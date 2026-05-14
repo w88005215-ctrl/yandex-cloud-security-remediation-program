@@ -8,15 +8,11 @@ permissions:
   id-token: write
 
 jobs:
-  build-push-validate:
-    name: Build and push demo images to Yandex Container Registry
+  validate-registry-push:
     runs-on: ubuntu-latest
-
     env:
-      YCSEC_YC_SA_ID: ${{ vars.YCSEC_YC_SA_ID }}
-      YCSEC_YC_FOLDER_ID: ${{ vars.YCSEC_YC_FOLDER_ID }}
-      YCSEC_YCR_REGISTRY_ID: ${{ vars.YCSEC_YCR_REGISTRY_ID }}
-      IMAGE_REPOSITORY: ycsec-supply-chain-demo
+      YCSEC_IMAGE_NAME: ycsec-supply-chain-demo
+      YCSEC_REPOSITORY_DIR: supply-chain/demo-app
 
     steps:
       - name: Checkout repository
@@ -26,95 +22,113 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test -n "${YCSEC_YC_SA_ID}"
-          test -n "${YCSEC_YC_FOLDER_ID}"
-          test -n "${YCSEC_YCR_REGISTRY_ID}"
-          echo "[OK] required GitHub repository variables are present"
+          test -n "${{ vars.YCSEC_YC_SA_ID }}"
+          test -n "${{ vars.YCSEC_YC_FOLDER_ID }}"
+          test -n "${{ vars.YCSEC_YCR_REGISTRY_ID }}"
+          echo "YCSEC_MARKER_INPUT_VARIABLES_OK"
 
-      - name: Request GitHub OIDC ID token
-        id: github_oidc
+      - name: Validate runner tooling
         shell: bash
         run: |
           set -euo pipefail
-          OIDC_RESPONSE="$(curl -sSf \
-            -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
-            "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=https://github.com/${GITHUB_REPOSITORY_OWNER}")"
-          ID_TOKEN="$(echo "${OIDC_RESPONSE}" | jq -r '.value')"
-          test -n "${ID_TOKEN}"
-          echo "::add-mask::${ID_TOKEN}"
-          echo "id_token=${ID_TOKEN}" >> "${GITHUB_OUTPUT}"
-          echo "[OK] GitHub OIDC ID token received"
+          command -v curl
+          command -v jq
+          command -v docker
+          docker version
+          echo "YCSEC_MARKER_RUNNER_TOOLING_OK"
 
-      - name: Exchange GitHub OIDC token for Yandex Cloud IAM token
-        id: yc_token
+      - name: Request GitHub OIDC assertion
         shell: bash
         run: |
           set -euo pipefail
-          TOKEN_RESPONSE="$(curl -sSf -X POST "https://auth.yandex.cloud/oauth/token" \
-            -H "Content-Type: application/x-www-form-urlencoded" \
-            --data-urlencode "grant_type=urn:ietf:params:oauth:grant-type:token-exchange" \
-            --data-urlencode "requested_token_type=urn:ietf:params:oauth:token-type:access_token" \
-            --data-urlencode "audience=${YCSEC_YC_SA_ID}" \
-            --data-urlencode "subject_token=${{ steps.github_oidc.outputs.id_token }}" \
-            --data-urlencode "subject_token_type=urn:ietf:params:oauth:token-type:id_token")"
-          IAM_TOKEN="$(echo "${TOKEN_RESPONSE}" | jq -r '.access_token')"
-          test -n "${IAM_TOKEN}"
-          echo "::add-mask::${IAM_TOKEN}"
-          echo "iam_token=${IAM_TOKEN}" >> "${GITHUB_OUTPUT}"
-          echo "[OK] Yandex Cloud IAM token received via OIDC token exchange"
+          AUDIENCE="https://github.com/${{ github.repository_owner }}"
+          RESPONSE="$(
+            curl -fsSL \
+              -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
+              "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=${AUDIENCE}"
+          )"
+          ASSERTION="$(printf '%s' "$RESPONSE" | jq -r '.value')"
+          test -n "$ASSERTION"
+          test "$ASSERTION" != "null"
+          printf 'GITHUB_OIDC_ASSERTION=%s\n' "$ASSERTION" > "$RUNNER_TEMP/github-oidc.env"
+          echo "YCSEC_MARKER_OIDC_ASSERTION_REQUESTED"
 
-      - name: Validate Yandex Cloud folder API access
+      - name: Exchange OIDC assertion for Yandex Cloud IAM token
         shell: bash
         run: |
           set -euo pipefail
-          FOLDER_ID="$(curl -sSf \
-            -H "Authorization: Bearer ${{ steps.yc_token.outputs.iam_token }}" \
-            "https://resource-manager.api.cloud.yandex.net/resource-manager/v1/folders/${YCSEC_YC_FOLDER_ID}" \
-            | jq -r '.id')"
-          test "${FOLDER_ID}" = "${YCSEC_YC_FOLDER_ID}"
-          echo "[OK] federated IAM token can access Yandex Cloud Resource Manager API"
+          . "$RUNNER_TEMP/github-oidc.env"
+          EXCHANGE_RESPONSE="$(
+            curl -fsSL \
+              -X POST "https://auth.yandex.cloud/oauth/token" \
+              -H "Content-Type: application/x-www-form-urlencoded" \
+              --data-urlencode "grant_type=urn:ietf:params:oauth:grant-type:token-exchange" \
+              --data-urlencode "requested_token_type=urn:ietf:params:oauth:token-type:access_token" \
+              --data-urlencode "audience=${{ vars.YCSEC_YC_SA_ID }}" \
+              --data-urlencode "subject_token=${GITHUB_OIDC_ASSERTION}" \
+              --data-urlencode "subject_token_type=urn:ietf:params:oauth:token-type:id_token"
+          )"
+          YC_IAM_TOKEN="$(printf '%s' "$EXCHANGE_RESPONSE" | jq -r '.access_token // .iam_token // empty')"
+          test -n "$YC_IAM_TOKEN"
+          printf 'YC_IAM_TOKEN=%s\n' "$YC_IAM_TOKEN" > "$RUNNER_TEMP/yc-iam.env"
+          echo "YCSEC_MARKER_YC_IAM_TOKEN_EXCHANGED"
 
-      - name: Login to Yandex Container Registry
+      - name: Validate Yandex Cloud API access
         shell: bash
         run: |
           set -euo pipefail
-          echo "${{ steps.yc_token.outputs.iam_token }}" | docker login --username iam --password-stdin cr.yandex
-          echo "[OK] docker login to Yandex Container Registry completed with federated IAM token"
+          . "$RUNNER_TEMP/yc-iam.env"
+          curl -fsSL \
+            -H "Authorization: Bearer ${YC_IAM_TOKEN}" \
+            "https://resource-manager.api.cloud.yandex.net/resource-manager/v1/folders/${{ vars.YCSEC_YC_FOLDER_ID }}" \
+            | jq -e '.id' >/dev/null
+          echo "YCSEC_MARKER_CLOUD_API_ACCESS_OK"
 
-      - name: Build controlled demo images
+      - name: Authenticate Docker to Yandex Container Registry
         shell: bash
         run: |
           set -euo pipefail
-          INSECURE_IMAGE="cr.yandex/${YCSEC_YCR_REGISTRY_ID}/${IMAGE_REPOSITORY}:insecure-${GITHUB_SHA}"
-          HARDENED_IMAGE="cr.yandex/${YCSEC_YCR_REGISTRY_ID}/${IMAGE_REPOSITORY}:hardened-${GITHUB_SHA}"
+          . "$RUNNER_TEMP/yc-iam.env"
+          printf '%s' "$YC_IAM_TOKEN" | docker login --username iam --password-stdin cr.yandex >/dev/null
+          echo "YCSEC_MARKER_REGISTRY_AUTH_OK"
+
+      - name: Build and push controlled demo images
+        shell: bash
+        run: |
+          set -euo pipefail
+          SHORT_SHA="${GITHUB_SHA::12}"
+          IMAGE_BASE="cr.yandex/${{ vars.YCSEC_YCR_REGISTRY_ID }}/${YCSEC_IMAGE_NAME}"
 
           docker build \
-            -f supply-chain/demo-app/Dockerfile.insecure \
-            -t "${INSECURE_IMAGE}" \
-            supply-chain/demo-app
+            -f "${YCSEC_REPOSITORY_DIR}/Dockerfile.insecure" \
+            -t "${IMAGE_BASE}:insecure-${SHORT_SHA}" \
+            -t "${IMAGE_BASE}:latest" \
+            "${YCSEC_REPOSITORY_DIR}"
+
+          docker push "${IMAGE_BASE}:insecure-${SHORT_SHA}"
+          docker push "${IMAGE_BASE}:latest"
 
           docker build \
-            -f supply-chain/demo-app/Dockerfile.hardened \
-            -t "${HARDENED_IMAGE}" \
-            supply-chain/demo-app
+            -f "${YCSEC_REPOSITORY_DIR}/Dockerfile.hardened" \
+            -t "${IMAGE_BASE}:hardened-${SHORT_SHA}" \
+            "${YCSEC_REPOSITORY_DIR}"
 
-          echo "INSECURE_IMAGE=${INSECURE_IMAGE}" >> "${GITHUB_ENV}"
-          echo "HARDENED_IMAGE=${HARDENED_IMAGE}" >> "${GITHUB_ENV}"
-          echo "[OK] controlled demo images built"
+          docker push "${IMAGE_BASE}:hardened-${SHORT_SHA}"
 
-      - name: Push controlled demo images
+          echo "YCSEC_MARKER_IMAGE_PUSH_OK"
+          echo "YCSEC_IMAGE_INSECURE=${IMAGE_BASE}:insecure-${SHORT_SHA}"
+          echo "YCSEC_IMAGE_MUTABLE=${IMAGE_BASE}:latest"
+          echo "YCSEC_IMAGE_HARDENED=${IMAGE_BASE}:hardened-${SHORT_SHA}"
+
+      - name: Confirm no durable cloud credential file was used
         shell: bash
         run: |
           set -euo pipefail
-          docker push "${INSECURE_IMAGE}"
-          docker push "${HARDENED_IMAGE}"
-          echo "[OK] controlled demo images pushed to Yandex Container Registry"
-
-      - name: Confirm no long-lived cloud key material was used
-        shell: bash
-        run: |
-          set -euo pipefail
-          test ! -f authorized_key.json
-          test ! -f service_account_key.json
-          test ! -f key.json
-          echo "[OK] no long-lived cloud key material was used"
+          FOUND="$(
+            find "$GITHUB_WORKSPACE" -maxdepth 5 \
+              \( -name "*.pem" -o -name "*authorized*.json" -o -name "*account*.json" \) \
+              -print
+          )"
+          test -z "$FOUND"
+          docker logout cr.yandex >/dev/null 2>&1 || true
+          echo "YCSEC_MARKER_NO_DURABLE_CREDENTIAL_FILE"
