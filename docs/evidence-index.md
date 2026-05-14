@@ -162,3 +162,25 @@ architecture -> implementation -> scan result -> remediation -> audit evidence -
 | EVID-YC-001 | Phase 10 | evidence/command-outputs/YCSEC_10_OUTPUT_yandex_cloud_readiness.txt | Read-only Yandex Cloud readiness gate output | Yes | Yes |
 | EVID-YC-002 | Phase 10 | evidence/command-outputs/YCSEC_10_OUTPUT_final_control.txt | Final Phase 10 control evidence | Yes | Yes |
 | EVID-YC-003 | Phase 10 | evidence/command-outputs/YCSEC_10_OUTPUT_final_git_control.txt | Git tag evidence for Yandex Cloud readiness gate | Yes | Yes |
+
+<!-- YCSEC:PHASE-11-SMOKE-RUN:START -->
+## Phase 11.2 — Yandex Cloud Managed Kubernetes Smoke-Run
+
+| Evidence ID | File | Type | Description | Publication Status |
+|---|---|---|---|---|
+| EVID-YC-SMOKE-001 | evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt | Command output | Sanitized successful Yandex Cloud Managed Kubernetes smoke-run output | Public-safe |
+| EVID-YC-SMOKE-002 | evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt | Closeout control | Final smoke-run closeout with zero-resource verification | Public-safe |
+| EVID-YC-SMOKE-003 | docs/cloud-smoke-run-validation.md | Technical summary | Project-level validation summary for the successful smoke-run | Public-safe |
+
+Validation summary:
+
+- Terraform provider authentication passed through runtime Yandex Cloud values.
+- Terraform plan created the expected temporary cloud infrastructure.
+- Terraform apply created real Yandex Cloud Managed Kubernetes resources.
+- kubectl confirmed Kubernetes API access and worker node readiness.
+- Gitleaks completed with no leaks detected.
+- Terraform destroy removed all temporary resources.
+- Post-destroy inventory checks confirmed zero remaining smoke resources.
+- Sanitized evidence was committed for portfolio publication.
+
+<!-- YCSEC:PHASE-11-SMOKE-RUN:END -->

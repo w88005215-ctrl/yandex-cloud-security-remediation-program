@@ -93,3 +93,20 @@ This table will become one of the main portfolio artifacts. It should be easy to
 | Kubernetes manifests accepted by local API server | No evidence | Evidence captured |
 | Restricted namespace rejects privileged Pod | No evidence | Evidence captured |
 | Temporary local cluster cleanup | No evidence | Evidence captured |
+
+<!-- YCSEC:PHASE-11-SMOKE-RUN:START -->
+## Phase 11.2 — Managed Kubernetes Smoke-Run Metrics
+
+| Control Area | Before | After | Evidence |
+|---|---|---|---|
+| Terraform provider authentication | Not validated against real cloud apply | Validated through runtime Yandex Cloud values | EVID-YC-SMOKE-001 |
+| Managed Kubernetes provisioning | Not validated in real cloud | Real Yandex Cloud Managed Kubernetes cluster created successfully | EVID-YC-SMOKE-001 |
+| Kubernetes API access | Not validated in real cloud | kubectl confirmed API reachability | EVID-YC-SMOKE-001 |
+| Worker node readiness | Not validated in real cloud | kubectl confirmed Ready worker node | EVID-YC-SMOKE-001 |
+| Static cloud keys in repository | Not allowed | 0 committed keys | EVID-YC-SMOKE-001 |
+| Terraform runtime artifacts in repository | Not allowed | 0 Terraform state/runtime files committed | EVID-YC-SMOKE-002 |
+| Kubeconfig in repository | Not allowed | 0 kubeconfig files committed | EVID-YC-SMOKE-002 |
+| Temporary cloud resources after run | Unknown before verification | 0 smoke resources remaining | EVID-YC-SMOKE-002 |
+| Publication-safe evidence | Raw output not suitable for publication | Sanitized evidence committed | EVID-YC-SMOKE-001 |
+
+<!-- YCSEC:PHASE-11-SMOKE-RUN:END -->

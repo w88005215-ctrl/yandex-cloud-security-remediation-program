@@ -67,7 +67,7 @@ Before any terraform apply or cloud action:
 
 ## Before terraform apply
 
-The assistant must stop before paid cloud actions and require explicit confirmation.
+The execution workflow must stop before paid cloud actions and require explicit operator confirmation.
 
 Required information before apply:
 
