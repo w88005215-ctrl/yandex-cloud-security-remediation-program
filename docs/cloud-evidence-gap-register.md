@@ -131,3 +131,23 @@ Closed evidence gap:
 - Audit Trails remains active.
 - GitHub Actions OIDC identity resources remain available.
 - Managed registry vulnerability scanning is not claimed as closed in this phase; it remains assigned to the later container security evidence stage.
+
+## Phase 12.9 — Managed Kubernetes baseline/remediation cloud-run plan
+
+Status: planned.
+
+Next cloud evidence target:
+
+- Real Managed Kubernetes baseline/remediation cloud-run.
+- Insecure baseline evidence.
+- Hardened/remediated state evidence.
+- Before/after metrics.
+- Audit Trails evidence for cloud control-plane activity.
+- Destroy and zero-resource verification for Managed Kubernetes resources.
+
+Still open:
+
+- Real Managed Kubernetes insecure baseline cloud evidence.
+- Real Managed Kubernetes remediation cloud evidence.
+- Container/image vulnerability scan evidence.
+- Final cloud before/after remediation metrics.

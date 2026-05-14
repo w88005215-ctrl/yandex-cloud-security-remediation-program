@@ -373,3 +373,15 @@ Result:
 |---|---|
 | `docs/registry-evidence-storage-validation.md` | Registry and evidence storage validation result |
 | `evidence/command-outputs/YCSEC_12_8F_OUTPUT_registry_evidence_storage_validation.txt` | Command evidence for retained registry and evidence storage validation |
+
+## Phase 12.9 — Managed Kubernetes baseline/remediation cloud-run plan
+
+| Evidence | Description |
+|---|---|
+| docs/managed-kubernetes-cloud-run-plan.md | Managed Kubernetes baseline/remediation cloud-run plan |
+| docs/managed-kubernetes-cloud-run-checklist.md | Execution checklist for the next controlled cloud-run |
+| docs/managed-kubernetes-evidence-collection-plan.md | Evidence collection plan for before/after Kubernetes cloud validation |
+| docs/managed-kubernetes-vulnerability-demonstration-plan.md | Controlled vulnerability demonstration plan |
+| docs/managed-kubernetes-destroy-and-retention-plan.md | Destroy and retention policy for Kubernetes cloud-run resources |
+| evidence/command-outputs/YCSEC_12_9_OUTPUT_managed_kubernetes_cloud_run_plan.txt | Command evidence for Phase 12.9 |
+| evidence/command-outputs/YCSEC_12_9_OUTPUT_final_git_control.txt | Final git control evidence for Phase 12.9 |
