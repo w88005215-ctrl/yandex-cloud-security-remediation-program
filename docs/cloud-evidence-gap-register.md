@@ -381,3 +381,24 @@ Remaining non-cloud documentation work:
 - AWS/GCP/Azure mapping;
 - final README/publication review;
 - final retained bootstrap resource cleanup decision.
+
+<!-- YCSEC:PHASE-13.7-FINAL-CONTROL-MATRIX:START -->
+
+## Phase 13.7 — Final Control Matrix
+
+Status: completed.
+
+Cloud activity: none. This was a local-only consolidation phase.
+
+Closed evidence item:
+
+- Final control matrix created and mapped to existing committed evidence.
+
+Remaining finalization items:
+
+- Final risk register.
+- AWS/GCP/Azure control mapping.
+- Final RU/EN portfolio reports.
+- Publication safety review.
+- Final retained bootstrap resource cleanup decision.
+<!-- YCSEC:PHASE-13.7-FINAL-CONTROL-MATRIX:END -->

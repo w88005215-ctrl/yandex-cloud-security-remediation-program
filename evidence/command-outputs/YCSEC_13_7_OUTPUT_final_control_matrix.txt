@@ -1,0 +1,79 @@
+Phase 13.7 — Final Control Matrix closeout repair
+Date: 2026-05-14T17:06:08+00:00
+Qube: cloud-dev-workbech
+
+--- Step 1 — verify baseline
+From https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program
+ * branch            main       -> FETCH_HEAD
+d75cebd (HEAD -> main, tag: v0.13.6-final-remediation-metrics, origin/main, origin/HEAD) docs: consolidate final remediation metrics
+2d686fd (tag: v0.13.5-kyverno-admission-policy-enforcement) test: validate Kyverno admission policy enforcement
+11c4767 (tag: v0.13.5a2-kyverno-runner-hardening) fix: harden Kyverno admission MKS runner
+6b7f94a (tag: v0.13.5a1-kyverno-denial-attribution-fix) fix: require Kyverno-specific admission denial evidence
+e238df2 (tag: v0.13.5a-kyverno-mks-repair-package) fix: prepare Kyverno admission MKS rerun
+5c00f76 (tag: v0.13.4a-gitleaks-generated-evidence-handling) test: handle generated evidence gitleaks findings
+195efa4 (tag: v0.13.4-sbom-vulnerability-validation) test: validate SBOM and supply chain vulnerability evidence
+961ab7a (tag: v0.13.3-supply-chain-oidc-registry-validation) test: validate supply chain OIDC registry push
+579fac9 fix: stabilize supply chain demo image builds
+66daf02 ci: repair supply chain registry OIDC workflow
+c396086 (tag: v0.13.2-supply-chain-implementation-package) feat: add supply chain security validation package
+1ba3a92 (tag: v0.13.1-supply-chain-roadmap-extension) docs: extend roadmap with supply chain security validation
+
+[OK] current branch is main
+[OK] current HEAD has required Phase 13.6 tag
+[OK] no local commits ahead of origin/main
+
+--- Step 2 — verify expected Phase 13.7 workspace
+ M docs/cloud-evidence-gap-register.md
+ M docs/evidence-index.md
+?? docs/final-control-matrix.md
+?? evidence/command-outputs/YCSEC_13_7_OUTPUT_final_control_matrix.txt
+?? evidence/command-outputs/YCSEC_13_7_OUTPUT_final_git_control.txt
+?? evidence/metrics/final_control_matrix.csv
+?? evidence/metrics/final_control_matrix.json
+?? evidence/metrics/final_control_matrix.txt
+
+[OK] workspace contains only expected Phase 13.7 artifacts
+
+--- Step 3 — patch Kyverno portfolio claim in generated artifacts
+[OK] Kyverno portfolio claim patched
+
+--- Step 4 — validate final control matrix
+[OK] final control matrix exists
+[OK] control matrix JSON exists
+[OK] control matrix CSV exists
+[OK] control matrix TXT exists
+[OK] control count is sufficient: 13
+[OK] all controls are validated
+[OK] IAM control marker present
+[OK] Audit control marker present
+[OK] IaC control marker present
+[OK] Kyverno control marker present
+[OK] Supply-chain vulnerability control marker present
+[OK] cleanup/cost control marker present
+[OK] governance control marker present
+[OK] Kyverno portfolio claim is present
+[OK] Kyverno portfolio claim is present in JSON
+[OK] Kyverno portfolio claim is present in CSV
+[OK] publication boundary is present
+
+--- Step 5 — repository safety checks
+[OK] no Terraform state, kubeconfig, PEM, or key files found in repository
+[OK] no internal/unprofessional wording found in Phase 13.7 public artifacts
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m5:06PM[0m [32mINF[0m [1mscanned ~1141800 bytes (1.14 MB) in 611ms[0m
+[90m5:06PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+--- Step 6 — write final git control evidence
+[OK] final git control evidence written: evidence/command-outputs/YCSEC_13_7_OUTPUT_final_git_control.txt
+
+--- Step 7 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 13.7 final control matrix closeout passed

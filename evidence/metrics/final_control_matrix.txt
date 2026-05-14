@@ -1,0 +1,19 @@
+Final Control Matrix Metrics
+Generated: 2026-05-14T17:02:24.710374+00:00
+Control count: 13
+Validated controls: 13
+
+Control IDs:
+- YCSEC-IAM-01: Identity and Federation — Validated
+- YCSEC-IAM-02: Identity and Access Management — Validated
+- YCSEC-AUD-01: Audit and Evidence — Validated
+- YCSEC-IAC-01: Infrastructure as Code — Validated
+- YCSEC-K8S-01: Managed Kubernetes — Validated
+- YCSEC-K8S-02: Kubernetes Workload Hardening — Validated
+- YCSEC-K8S-03: Policy as Code — Validated
+- YCSEC-SC-01: Supply Chain Security — Validated
+- YCSEC-SC-02: SBOM — Validated
+- YCSEC-SC-03: Vulnerability Management — Validated
+- YCSEC-OPS-01: Evidence Hygiene — Validated
+- YCSEC-OPS-02: Cost and Cleanup Control — Validated
+- YCSEC-GOV-01: Governance and Portfolio Claims — Validated

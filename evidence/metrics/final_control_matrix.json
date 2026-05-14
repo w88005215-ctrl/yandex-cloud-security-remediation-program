@@ -1,0 +1,229 @@
+{
+  "generated_at": "2026-05-14T17:02:24.710374+00:00",
+  "phase": "13.7",
+  "title": "Final Control Matrix",
+  "control_count": 13,
+  "validated_control_count": 13,
+  "controls": [
+    {
+      "id": "YCSEC-IAM-01",
+      "domain": "Identity and Federation",
+      "control_objective": "Replace long-lived cloud keys with GitHub Actions OIDC federation and short-lived token exchange.",
+      "implementation": "GitHub Actions OIDC federation validates access to Yandex Cloud without static cloud keys.",
+      "primary_evidence": [
+        "docs/github-actions-oidc-validation.md",
+        "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt"
+      ],
+      "status": "Validated",
+      "portfolio_claim": "OIDC-based CI/CD authentication was validated without long-lived cloud key material.",
+      "framework_mapping": [
+        "NIST SSDF PW.6",
+        "SLSA Build L2/L3 pattern",
+        "CIS IAM least privilege principle"
+      ]
+    },
+    {
+      "id": "YCSEC-IAM-02",
+      "domain": "Identity and Access Management",
+      "control_objective": "Use scoped service accounts for bootstrap, registry, audit, and short-lived Managed Kubernetes workloads.",
+      "implementation": "Bootstrap service accounts were retained separately from temporary MKS runtime service accounts; temporary MKS identities were destroyed after cloud evidence runs.",
+      "primary_evidence": [
+        "docs/cloud-evidence-gap-register.md",
+        "evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_mks_cluster_list.txt",
+        "evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_compute_instance_list.txt"
+      ],
+      "status": "Validated",
+      "portfolio_claim": "Temporary runtime identities were separated from retained bootstrap identities and removed after validation.",
+      "framework_mapping": [
+        "CIS IAM least privilege",
+        "NIST CSF 2.0 PR.AA"
+      ]
+    },
+    {
+      "id": "YCSEC-AUD-01",
+      "domain": "Audit and Evidence",
+      "control_objective": "Enable audit trail collection and preserve sanitized public evidence for cloud actions.",
+      "implementation": "Audit Trails resource was retained and validated as part of the bootstrap evidence track.",
+      "primary_evidence": [
+        "docs/cloud-evidence-gap-register.md",
+        "docs/evidence-index.md"
+      ],
+      "status": "Validated",
+      "portfolio_claim": "Cloud audit evidence was integrated into the evidence register and gap register.",
+      "framework_mapping": [
+        "NIST CSF 2.0 DE.CM",
+        "ISO 27001 logging/audit control pattern"
+      ]
+    },
+    {
+      "id": "YCSEC-IAC-01",
+      "domain": "Infrastructure as Code",
+      "control_objective": "Provision and destroy cloud infrastructure through controlled Terraform runs.",
+      "implementation": "Managed Kubernetes, network, service accounts, node group, and cleanup paths were executed with Terraform and verified after destroy.",
+      "primary_evidence": [
+        "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_plan_sanitized.txt",
+        "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_apply_sanitized.txt",
+        "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_destroy_sanitized.txt"
+      ],
+      "status": "Validated",
+      "portfolio_claim": "Cloud resources were created and destroyed through IaC with post-destroy verification.",
+      "framework_mapping": [
+        "NIST SSDF PO.5",
+        "CIS IaC governance pattern"
+      ]
+    },
+    {
+      "id": "YCSEC-K8S-01",
+      "domain": "Managed Kubernetes",
+      "control_objective": "Demonstrate real Managed Kubernetes lifecycle evidence in Yandex Cloud.",
+      "implementation": "Short-lived MKS clusters were created for baseline/remediation and Kyverno validation, then destroyed.",
+      "primary_evidence": [
+        "docs/managed-kubernetes-cloud-run-plan.md",
+        "docs/kyverno-admission-policy-enforcement-validation.md",
+        "evidence/after/kyverno_mks_nodes_ready.txt"
+      ],
+      "status": "Validated",
+      "portfolio_claim": "Managed Kubernetes was validated using real cloud infrastructure, not only local manifests.",
+      "framework_mapping": [
+        "CIS Kubernetes",
+        "NIST CSF 2.0 PR.PS"
+      ]
+    },
+    {
+      "id": "YCSEC-K8S-02",
+      "domain": "Kubernetes Workload Hardening",
+      "control_objective": "Move from insecure workload patterns to hardened runtime controls.",
+      "implementation": "Hardened workload requirements include non-root execution, privilege escalation denial, read-only root filesystem, dropped capabilities, RuntimeDefault seccomp, and registry-controlled image source.",
+      "primary_evidence": [
+        "kubernetes/admission-validation/hardened-workload-allowed.yaml",
+        "evidence/after/kyverno_hardened_workload_allowed.txt"
+      ],
+      "status": "Validated",
+      "portfolio_claim": "Hardened workload controls were validated through server-side admission.",
+      "framework_mapping": [
+        "CIS Kubernetes Pod Security",
+        "NSA/CISA Kubernetes Hardening pattern"
+      ]
+    },
+    {
+      "id": "YCSEC-K8S-03",
+      "domain": "Policy as Code",
+      "control_objective": "Enforce workload security requirements at admission time.",
+      "implementation": "Kyverno admission policy denied the insecure workload and allowed the hardened workload.",
+      "primary_evidence": [
+        "kubernetes/admission-validation/kyverno-supply-chain-policy.yaml",
+        "evidence/after/kyverno_policy_status.txt",
+        "evidence/after/kyverno_insecure_workload_denied.txt",
+        "evidence/after/kyverno_hardened_workload_allowed.txt"
+      ],
+      "status": "Validated",
+      "portfolio_claim": "Kyverno admission policy enforcement was proven on Yandex Managed Kubernetes.",
+      "framework_mapping": [
+        "CIS Kubernetes Admission Control",
+        "NIST SSDF PW.8"
+      ]
+    },
+    {
+      "id": "YCSEC-SC-01",
+      "domain": "Supply Chain Security",
+      "control_objective": "Build and push container images through OIDC-authenticated CI/CD into Yandex Container Registry.",
+      "implementation": "GitHub Actions exchanged an OIDC assertion for a Yandex Cloud IAM token and pushed controlled demo images to YCR.",
+      "primary_evidence": [
+        "docs/supply-chain-oidc-registry-validation.md",
+        "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation_success.txt"
+      ],
+      "status": "Validated",
+      "portfolio_claim": "CI/CD image publishing was validated through OIDC and Yandex Container Registry.",
+      "framework_mapping": [
+        "SLSA build provenance pattern",
+        "NIST SSDF PS.3"
+      ]
+    },
+    {
+      "id": "YCSEC-SC-02",
+      "domain": "SBOM",
+      "control_objective": "Generate SBOM evidence for insecure and hardened container images.",
+      "implementation": "Syft generated CycloneDX SBOMs for registry-pushed insecure and hardened images.",
+      "primary_evidence": [
+        "docs/sbom-vulnerability-validation.md",
+        "evidence/sbom/ycsec_supply_chain_insecure_sbom_cyclonedx.json",
+        "evidence/sbom/ycsec_supply_chain_hardened_sbom_cyclonedx.json"
+      ],
+      "status": "Validated",
+      "portfolio_claim": "SBOM evidence exists for both vulnerable baseline and hardened image.",
+      "framework_mapping": [
+        "NIST SSDF PS.3",
+        "SLSA dependency visibility"
+      ]
+    },
+    {
+      "id": "YCSEC-SC-03",
+      "domain": "Vulnerability Management",
+      "control_objective": "Measure vulnerability reduction between insecure and hardened images.",
+      "implementation": "Trivy and Grype scans were executed against registry-pushed images, and final remediation metrics were consolidated.",
+      "primary_evidence": [
+        "docs/supply-chain-vulnerability-metrics.md",
+        "docs/final-remediation-metrics.md",
+        "evidence/metrics/final_remediation_metrics.json"
+      ],
+      "status": "Validated",
+      "portfolio_claim": "The hardened image showed measurable vulnerability reduction compared with the insecure baseline.",
+      "framework_mapping": [
+        "NIST SSDF RV.1",
+        "NIST CSF 2.0 ID.RA"
+      ]
+    },
+    {
+      "id": "YCSEC-OPS-01",
+      "domain": "Evidence Hygiene",
+      "control_objective": "Keep public evidence sanitized and prevent accidental publication of secrets, kubeconfigs, or Terraform state.",
+      "implementation": "Evidence files were sanitized and repository safety checks used gitleaks plus explicit artifact guards.",
+      "primary_evidence": [
+        ".gitleaks.toml",
+        "docs/generated-evidence-gitleaks-handling.md",
+        "docs/evidence-index.md"
+      ],
+      "status": "Validated",
+      "portfolio_claim": "Evidence publication controls were implemented and validated before commits.",
+      "framework_mapping": [
+        "NIST CSF 2.0 PR.DS",
+        "Secure evidence handling pattern"
+      ]
+    },
+    {
+      "id": "YCSEC-OPS-02",
+      "domain": "Cost and Cleanup Control",
+      "control_objective": "Avoid uncontrolled paid cloud resource retention after validation runs.",
+      "implementation": "Temporary MKS resources were destroyed after evidence collection; bootstrap resources remain intentionally retained until final cleanup decision.",
+      "primary_evidence": [
+        "evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_mks_cluster_list.txt",
+        "evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_compute_instance_list.txt",
+        "evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_nlb_list.txt",
+        "docs/cloud-evidence-gap-register.md"
+      ],
+      "status": "Validated",
+      "portfolio_claim": "Temporary paid MKS resources were removed and verified after the cloud evidence run.",
+      "framework_mapping": [
+        "Cloud cost governance",
+        "Operational resilience"
+      ]
+    },
+    {
+      "id": "YCSEC-GOV-01",
+      "domain": "Governance and Portfolio Claims",
+      "control_objective": "Keep public claims aligned with validated evidence and avoid overstating unproven capabilities.",
+      "implementation": "Cloud evidence gap register, evidence index, and final remediation metrics constrain the final portfolio narrative.",
+      "primary_evidence": [
+        "docs/cloud-evidence-gap-register.md",
+        "docs/evidence-index.md",
+        "docs/final-remediation-metrics.md"
+      ],
+      "status": "Validated",
+      "portfolio_claim": "Validated claims are tied to committed evidence paths.",
+      "framework_mapping": [
+        "Audit readiness",
+        "Security governance"
+      ]
+    }
+  ]
+}

@@ -561,3 +561,25 @@ Validation scope:
 - Registry, SBOM, and vulnerability validation evidence.
 - Kyverno admission policy enforcement evidence.
 - Temporary resource cleanup evidence.
+
+<!-- YCSEC:PHASE-13.7-FINAL-CONTROL-MATRIX:START -->
+
+## Phase 13.7 — Final Control Matrix
+
+Status: completed.
+
+Artifacts:
+
+- `docs/final-control-matrix.md`
+- `evidence/metrics/final_control_matrix.json`
+- `evidence/metrics/final_control_matrix.csv`
+- `evidence/metrics/final_control_matrix.txt`
+- `evidence/command-outputs/YCSEC_13_7_OUTPUT_final_control_matrix.txt`
+- `evidence/command-outputs/YCSEC_13_7_OUTPUT_final_git_control.txt`
+
+Purpose:
+
+- Map validated IAM, OIDC, audit, Terraform, Managed Kubernetes, Kyverno, registry, SBOM, vulnerability, evidence hygiene, cleanup, and governance controls to public evidence.
+- Define portfolio-safe claims based on committed evidence.
+- Prepare the repository for final risk register and cloud-provider mapping phases.
+<!-- YCSEC:PHASE-13.7-FINAL-CONTROL-MATRIX:END -->
