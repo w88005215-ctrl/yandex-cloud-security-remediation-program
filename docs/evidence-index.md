@@ -336,3 +336,15 @@ Phase result:
 | YCSEC-12.8A-003 | `.github/workflows/cloud-deploy-oidc.yml` | GitHub Actions OIDC token smoke workflow template | Prepared |
 | YCSEC-12.8A-004 | `docs/bootstrap-cloud-run-implementation.md` | Operator-facing implementation scope and evidence policy | Prepared |
 | YCSEC-12.8A-005 | `evidence/command-outputs/YCSEC_12_8A_OUTPUT_bootstrap_cloud_run_implementation_package.txt` | Command evidence for local implementation package creation | Pending commit |
+
+## EVID-YC-BOOTSTRAP-REPAIR-001 — Bootstrap/OIDC/Audit provisioning repair
+
+Evidence:
+- `evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_repair_apply_sanitized.txt`
+- `docs/bootstrap-oidc-audit-cloud-run-results.md`
+
+Result:
+- Bootstrap identity, registry, Object Storage, and Audit Trails resources were provisioned.
+- Bucket-name generation was corrected to use lowercase timestamps.
+- Terraform runtime and state remained outside the public repository.
+- Bootstrap resources were retained temporarily for OIDC, Audit Trails, and registry validation.

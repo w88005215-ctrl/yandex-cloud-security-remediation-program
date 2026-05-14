@@ -111,6 +111,7 @@ ok "Terraform state must not be stored in repository"
 echo
 echo "Prepare temporary Terraform runtime outside repository"
 RUN_ID="$(date -u +%Y%m%dT%H%M%S)"
+RUN_ID_LOWER="$(printf "%s" "$RUN_ID" | tr '[:upper:]' '[:lower:]')"
 SAFE_FOLDER_ID="$(printf '%s' "$YC_FOLDER_ID_VALUE" | tr '[:upper:]' '[:lower:]' | tr -cd 'a-z0-9-')"
 AUDIT_BUCKET_NAME="${YCSEC_BOOTSTRAP_BUCKET_NAME:-ycsec-audit-${SAFE_FOLDER_ID}-${RUN_ID}}"
 DESTROY_AFTER_RUN="${YCSEC_BOOTSTRAP_DESTROY_AFTER_RUN:-YES}"
@@ -255,8 +256,19 @@ find . \( -iname "*token*" -o -iname "*.key" -o -iname "*.pem" -o -iname "*autho
 
 echo
 echo "Cleanup"
-rm -rf "$RUNTIME_ROOT"
-ok "temporary runtime directory removed"
+if test "${YCSEC_BOOTSTRAP_DESTROY_AFTER_RUN:-}" = "YES" || test "${YCSEC_DESTROY_AFTER_RUN:-}" = "YES"; then
+  rm -rf "$RUNTIME_ROOT"
+  ok "temporary runtime directory removed"
+else
+  PRIVATE_STATE_DIR_BASE="${YCSEC_PRIVATE_STATE_ROOT:-$HOME/ycsec-private-evidence/phase-12.8b}"
+  PRIVATE_STATE_DIR="$PRIVATE_STATE_DIR_BASE/bootstrap-terraform-runtime-${RUN_ID}"
+  mkdir -p "$PRIVATE_STATE_DIR_BASE"
+  rm -rf "$PRIVATE_STATE_DIR"
+  mv "$RUNTIME_ROOT" "$PRIVATE_STATE_DIR"
+  chmod -R go-rwx "$PRIVATE_STATE_DIR"
+  printf "%s\n" "$PRIVATE_STATE_DIR" > "$PRIVATE_STATE_DIR_BASE/bootstrap-runtime-path.txt"
+  ok "temporary runtime preserved outside repository for controlled cleanup: $PRIVATE_STATE_DIR"
+fi
 
 echo
 echo "Bootstrap run summary"

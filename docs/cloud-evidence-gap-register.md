@@ -85,3 +85,21 @@ Remaining gap:
 - Capture OIDC token smoke evidence from GitHub Actions.
 - Capture Audit Trails/Object Storage evidence.
 - Record retention or destroy decision.
+
+## Phase 12.8B Bootstrap/OIDC/Audit repair status
+
+Status: completed infrastructure provisioning, validation pending.
+
+Completed:
+- GitHub Actions service account.
+- Workload Identity OIDC federation.
+- Federated credential scoped to the GitHub repository and branch.
+- Container Registry.
+- Object Storage bucket for Audit Trails delivery.
+- Audit Trails trail.
+
+Still pending:
+- GitHub Actions OIDC token exchange validation.
+- Audit Trails event export validation.
+- Registry image/security workflow validation.
+- Controlled cleanup after evidence collection.

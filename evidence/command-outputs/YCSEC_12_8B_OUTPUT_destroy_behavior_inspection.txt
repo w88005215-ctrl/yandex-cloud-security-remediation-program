@@ -1,0 +1,118 @@
+Phase 12.8B-DESTROY-CHECK — inspect bootstrap cloud-run cleanup behavior
+Date: 2026-05-14T07:07:16+00:00
+Qube: cloud-dev-workbech
+
+Step 1 — verify current project baseline
+?? evidence/command-outputs/YCSEC_12_8B_OUTPUT_destroy_behavior_inspection.txt
+6e8b863 (HEAD -> main, tag: v0.12.8a-github-remote-scope) docs: record GitHub OIDC repository scope
+c508ce3 (tag: v0.12.8a-bootstrap-oidc-audit-implementation) feat: prepare bootstrap OIDC audit cloud run
+0311102 (tag: v0.12.7-bootstrap-oidc-audit-plan) docs: plan bootstrap OIDC audit cloud run
+20c8e2c (tag: v0.12.6-roadmap-reconciliation) docs: reconcile roadmap and cloud evidence gaps
+29f2613 (tag: v0.12.5-kubernetes-remediation-case-study) docs: add Kubernetes remediation case study
+v0.12.8a-github-remote-scope
+
+Step 2 — inspect destroy/cleanup logic in bootstrap script
+3:echo "YCSEC Phase 12.8 — Bootstrap/OIDC/Audit controlled cloud-run"
+34:if test "${YCSEC_CONFIRM_BOOTSTRAP_CLOUD_RUN:-}" = "YES"; then
+35:  ok "explicit bootstrap cloud-run approval provided"
+37:  fail "set YCSEC_CONFIRM_BOOTSTRAP_CLOUD_RUN=YES to allow paid cloud actions"
+97:  echo "[FAIL] bootstrap prerequisites failed"
+103:echo "Bootstrap boundary"
+108:ok "Terraform runtime is created outside repository"
+112:echo "Prepare temporary Terraform runtime outside repository"
+118:RUNTIME_ROOT="$(mktemp -d "/tmp/ycsec-bootstrap-${RUN_ID}.XXXXXX")"
+119:RUNTIME_DIR="$RUNTIME_ROOT/bootstrap-oidc-audit"
+122:cp terraform/environments/bootstrap-oidc-audit/*.tf "$RUNTIME_DIR/"
+136:ok "temporary Terraform runtime prepared: $RUNTIME_DIR"
+137:ok "terraform.tfvars written only inside temporary runtime directory"
+171:  ok "terraform plan saved in temporary runtime directory"
+186:  rm -rf "$RUNTIME_ROOT"
+202:echo "Bootstrap outputs"
+212:yc iam service-account list | grep -E "ycsec-bootstrap|ID|\\+" || true
+213:yc iam workload-identity oidc federation list | grep -E "ycsec-bootstrap|ID|\\+" || true
+214:yc container registry list | grep -E "ycsec-bootstrap|ID|\\+" || true
+216:yc audit-trails trail list | grep -E "ycsec-bootstrap|ID|\\+" || true
+230:  ok "destroy after run is enabled"
+231:  terraform -chdir="$RUNTIME_DIR" destroy -input=false -auto-approve
+233:    ok "terraform destroy completed"
+235:    fail "terraform destroy failed"
+239:  echo "Post-destroy read-only bootstrap resource check"
+240:  yc iam service-account list | grep -E "ycsec-bootstrap|ID|\\+" || true
+241:  yc iam workload-identity oidc federation list | grep -E "ycsec-bootstrap|ID|\\+" || true
+242:  yc container registry list | grep -E "ycsec-bootstrap|ID|\\+" || true
+244:  yc audit-trails trail list | grep -E "ycsec-bootstrap|ID|\\+" || true
+246:  warn "bootstrap resources retained by explicit configuration"
+247:  echo "[ACTION] run terraform destroy from temporary runtime or documented cleanup path when evidence collection is complete"
+258:rm -rf "$RUNTIME_ROOT"
+259:ok "temporary runtime directory removed"
+262:echo "Bootstrap run summary"
+267:  ok "Bootstrap/OIDC/Audit cloud-run completed"
+269:  fail "Bootstrap/OIDC/Audit cloud-run completed with failures"
+
+Step 3 — inspect Terraform runtime strategy
+108:ok "Terraform runtime is created outside repository"
+112:echo "Prepare temporary Terraform runtime outside repository"
+118:RUNTIME_ROOT="$(mktemp -d "/tmp/ycsec-bootstrap-${RUN_ID}.XXXXXX")"
+124:cat > "$RUNTIME_DIR/terraform.tfvars" <<TFVARS
+136:ok "temporary Terraform runtime prepared: $RUNTIME_DIR"
+137:ok "terraform.tfvars written only inside temporary runtime directory"
+142:terraform -chdir="$RUNTIME_DIR" fmt -check -recursive
+151:terraform -chdir="$RUNTIME_DIR" init -input=false
+153:  ok "terraform init"
+155:  fail "terraform init failed"
+160:terraform -chdir="$RUNTIME_DIR" validate
+169:terraform -chdir="$RUNTIME_DIR" plan -input=false -out="$RUNTIME_ROOT/tfplan"
+171:  ok "terraform plan saved in temporary runtime directory"
+173:  fail "terraform plan failed"
+193:terraform -chdir="$RUNTIME_DIR" apply -input=false -auto-approve "$RUNTIME_ROOT/tfplan"
+196:  ok "terraform apply completed"
+198:  fail "terraform apply failed"
+204:  terraform -chdir="$RUNTIME_DIR" output -json | jq .
+231:  terraform -chdir="$RUNTIME_DIR" destroy -input=false -auto-approve
+233:    ok "terraform destroy completed"
+235:    fail "terraform destroy failed"
+247:  echo "[ACTION] run terraform destroy from temporary runtime or documented cleanup path when evidence collection is complete"
+259:ok "temporary runtime directory removed"
+
+Step 4 — inspect expected resources
+16:  token     = var.iam_token
+25:  registry_name          = "${local.prefix}-registry"
+27:  audit_trail_sa_name    = "${local.prefix}-audit-sa"
+28:  audit_trail_name       = "${local.prefix}-audit-trail"
+29:  audit_object_prefix    = "audit-trails/bootstrap"
+32:resource "yandex_iam_service_account" "github_actions" {
+38:resource "yandex_iam_service_account" "audit_trail" {
+40:  name        = local.audit_trail_sa_name
+44:resource "yandex_resourcemanager_folder_iam_member" "github_actions_viewer" {
+47:  member    = "serviceAccount:${yandex_iam_service_account.github_actions.id}"
+50:resource "yandex_resourcemanager_folder_iam_member" "github_actions_registry_pusher" {
+52:  role      = "container-registry.images.pusher"
+53:  member    = "serviceAccount:${yandex_iam_service_account.github_actions.id}"
+56:resource "yandex_resourcemanager_folder_iam_member" "audit_trail_storage_uploader" {
+58:  role      = "storage.uploader"
+59:  member    = "serviceAccount:${yandex_iam_service_account.audit_trail.id}"
+62:resource "yandex_resourcemanager_folder_iam_member" "audit_trail_admin" {
+64:  role      = "audit-trails.admin"
+65:  member    = "serviceAccount:${yandex_iam_service_account.audit_trail.id}"
+68:resource "yandex_iam_workload_identity_oidc_federation" "github" {
+76:resource "yandex_iam_workload_identity_federated_credential" "github_main_branch" {
+77:  service_account_id  = yandex_iam_service_account.github_actions.id
+78:  federation_id       = yandex_iam_workload_identity_oidc_federation.github.id
+82:resource "yandex_container_registry" "bootstrap" {
+84:  name      = local.registry_name
+87:resource "yandex_storage_bucket" "audit_evidence" {
+89:  bucket                = var.audit_bucket_name
+90:  default_storage_class = "STANDARD"
+91:  max_size              = var.audit_bucket_max_size
+100:resource "yandex_audit_trails_trail" "bootstrap" {
+102:    yandex_storage_bucket.audit_evidence,
+103:    yandex_resourcemanager_folder_iam_member.audit_trail_storage_uploader,
+104:    yandex_resourcemanager_folder_iam_member.audit_trail_admin
+108:  name               = local.audit_trail_name
+109:  service_account_id = yandex_iam_service_account.audit_trail.id
+111:  storage_destination {
+112:    bucket_name   = yandex_storage_bucket.audit_evidence.bucket
+113:    object_prefix = local.audit_object_prefix
+
+Step 5 — decision
+[OK] bootstrap script contains terraform destroy logic

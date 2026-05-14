@@ -1,0 +1,414 @@
+Phase 12.8B — controlled Bootstrap/OIDC/Audit cloud-run with retained validation resources
+Date: 2026-05-14T07:13:48+00:00
+Qube: cloud-dev-workbech
+
+Step 1 — verify expected repository baseline
+?? evidence/command-outputs/<LONG_IDENTIFIER_REDACTED>.txt
+
+[OK] working tree contains only expected Phase 12.8B evidence files
+[OK] current HEAD has required tag: v0.12.8a-github-remote-scope
+
+Step 2 — patch bootstrap script to preserve Terraform runtime when resources are retained
+[OK] bootstrap script syntax valid after retention patch
+[OK] private Terraform runtime retention path is implemented
+
+Step 3 — confirm roadmap phase boundary
+[OK] executing Bootstrap/OIDC/Audit cloud-run
+[OK] resources will be retained temporarily for OIDC/Audit validation
+[OK] Terraform runtime/state will be preserved outside repository
+[OK] GitHub owner: w88005215-ctrl
+[OK] GitHub repo: <LONG_IDENTIFIER_REDACTED>
+[OK] GitHub branch: main
+[OK] OIDC subject: repo:w88005215-ctrl/<LONG_IDENTIFIER_REDACTED>:ref:refs/heads/main
+[OK] GitHub push is not part of this phase
+
+Step 4 — execute controlled bootstrap cloud-run
+YCSEC Phase 12.8 — Bootstrap/OIDC/Audit controlled cloud-run
+Date: 2026-05-14T07:13:48+00:00
+Qube: cloud-dev-workbech
+
+Explicit approval check
+[OK] explicit bootstrap cloud-run approval provided
+
+Required GitHub OIDC scope variables
+[OK] YCSEC_GITHUB_OWNER provided
+[OK] YCSEC_GITHUB_REPO provided
+[OK] GitHub branch scope: main
+
+Tool checks
+[OK] yc -> /home/user/.local/bin/yc
+[OK] terraform -> /usr/bin/terraform
+[OK] jq -> /usr/bin/jq
+[OK] gitleaks -> /usr/bin/gitleaks
+[OK] tar -> /usr/bin/tar
+[OK] grep -> /usr/bin/grep
+[OK] find -> /usr/bin/find
+[OK] sed -> /usr/bin/sed
+[OK] awk -> /usr/bin/awk
+
+YC profile checks
+[OK] cloud-id configured
+[OK] folder-id configured
+[WARN] default zone missing, using ru-central1-a
+[OK] short-lived IAM token created for Terraform provider
+
+Bootstrap boundary
+[OK] expected resources: service accounts, GitHub OIDC federation, federated credential, Container Registry, Object Storage bucket, Audit Trails trail
+[OK] no Kubernetes cluster is created in this phase
+[OK] no Compute instance is created in this phase
+[OK] no Network Load Balancer is created in this phase
+[OK] Terraform runtime is created outside repository
+[OK] Terraform state must not be stored in repository
+
+Prepare temporary Terraform runtime outside repository
+[OK] temporary Terraform runtime prepared: /tmp/ycsec-bootstrap-20260514T071353.xMjXIf/bootstrap-oidc-audit
+[OK] terraform.tfvars written only inside temporary runtime directory
+[OK] audit bucket name selected: <LONG_IDENTIFIER_REDACTED>
+
+Terraform formatting
+[OK] terraform fmt
+
+Terraform init
+[0m[1mInitializing provider plugins found in the configuration...[0m
+- Finding yandex-cloud/yandex versions matching ">= 0.202.0"...
+- Installing yandex-cloud/yandex v0.202.0...
+- Installed yandex-cloud/yandex v0.202.0 (self-signed, key ID [0m[1mE40F590B50BB8E40[0m[0m)
+Partner and community providers are signed by their developers.
+If you'd like to know more about provider signing, you can read about it here:
+https://developer.hashicorp.com/terraform/cli/plugins/signing
+
+[0m[1mInitializing the backend...[0m
+
+
+Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.[0m
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
+[OK] terraform init
+
+Terraform validate
+[32m[1mSuccess![0m The configuration is valid.
+[0m
+[OK] terraform validate
+
+Terraform plan
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # yandex_audit_trails_trail.bootstrap[0m will be created
+[0m  [32m+[0m[0m resource "yandex_audit_trails_trail" "bootstrap" {
+      [32m+[0m[0m folder_id          = "<YC_RESOURCE_ID_REDACTED>"
+      [32m+[0m[0m id                 = (known after apply)
+      [32m+[0m[0m name               = "ycsec-bootstrap-audit-trail"
+      [32m+[0m[0m service_account_id = (known after apply)
+      [32m+[0m[0m status             = (known after apply)
+      [32m+[0m[0m trail_id           = (known after apply)
+
+      [32m+[0m[0m filtering_policy {
+          [32m+[0m[0m management_events_filter {
+              [32m+[0m[0m resource_scope {
+                  [32m+[0m[0m resource_id   = "<YC_RESOURCE_ID_REDACTED>"
+                  [32m+[0m[0m resource_type = "resource-manager.folder"
+                }
+            }
+        }
+
+      [32m+[0m[0m storage_destination {
+          [32m+[0m[0m bucket_name   = "<LONG_IDENTIFIER_REDACTED>"
+          [32m+[0m[0m object_prefix = "audit-trails/bootstrap"
+        }
+    }
+
+[1m  # yandex_container_registry.bootstrap[0m will be created
+[0m  [32m+[0m[0m resource "yandex_container_registry" "bootstrap" {
+      [32m+[0m[0m created_at  = (known after apply)
+      [32m+[0m[0m folder_id   = "<YC_RESOURCE_ID_REDACTED>"
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m labels      = (known after apply)
+      [32m+[0m[0m name        = "ycsec-bootstrap-registry"
+      [32m+[0m[0m registry_id = (known after apply)
+      [32m+[0m[0m status      = (known after apply)
+    }
+
+[1m  # yandex_iam_service_account.audit_trail[0m will be created
+[0m  [32m+[0m[0m resource "yandex_iam_service_account" "audit_trail" {
+      [32m+[0m[0m created_at         = (known after apply)
+      [32m+[0m[0m description        = "YCSEC Audit Trails service account for controlled evidence run"
+      [32m+[0m[0m folder_id          = "<YC_RESOURCE_ID_REDACTED>"
+      [32m+[0m[0m id                 = (known after apply)
+      [32m+[0m[0m labels             = (known after apply)
+      [32m+[0m[0m name               = "ycsec-bootstrap-audit-sa"
+      [32m+[0m[0m service_account_id = (known after apply)
+    }
+
+[1m  # yandex_iam_service_account.github_actions[0m will be created
+[0m  [32m+[0m[0m resource "yandex_iam_service_account" "github_actions" {
+      [32m+[0m[0m created_at         = (known after apply)
+      [32m+[0m[0m description        = "YCSEC GitHub Actions OIDC service account for controlled evidence run"
+      [32m+[0m[0m folder_id          = "<YC_RESOURCE_ID_REDACTED>"
+      [32m+[0m[0m id                 = (known after apply)
+      [32m+[0m[0m labels             = (known after apply)
+      [32m+[0m[0m name               = "ycsec-bootstrap-gha-sa"
+      [32m+[0m[0m service_account_id = (known after apply)
+    }
+
+[1m  # <LONG_IDENTIFIER_REDACTED>.github_main_branch[0m will be created
+[0m  [32m+[0m[0m resource "<LONG_IDENTIFIER_REDACTED>" "github_main_branch" {
+      [32m+[0m[0m created_at              = (known after apply)
+      [32m+[0m[0m external_subject_id     = "repo:w88005215-ctrl/<LONG_IDENTIFIER_REDACTED>:ref:refs/heads/main"
+      [32m+[0m[0m federated_credential_id = (known after apply)
+      [32m+[0m[0m federation_id           = (known after apply)
+      [32m+[0m[0m id                      = (known after apply)
+      [32m+[0m[0m service_account_id      = (known after apply)
+    }
+
+[1m  # <LONG_IDENTIFIER_REDACTED>.github[0m will be created
+[0m  [32m+[0m[0m resource "<LONG_IDENTIFIER_REDACTED>" "github" {
+      [32m+[0m[0m audiences     = [
+          [32m+[0m[0m "https://github.com/w88005215-ctrl",
+        ]
+      [32m+[0m[0m created_at    = (known after apply)
+      [32m+[0m[0m description   = (known after apply)
+      [32m+[0m[0m enabled       = (known after apply)
+      [32m+[0m[0m federation_id = (known after apply)
+      [32m+[0m[0m folder_id     = "<YC_RESOURCE_ID_REDACTED>"
+      [32m+[0m[0m id            = (known after apply)
+      [32m+[0m[0m issuer        = "https://token.actions.githubusercontent.com"
+      [32m+[0m[0m jwks_url      = "https://token.actions.githubusercontent.com/.well-known/jwks"
+      [32m+[0m[0m labels        = (known after apply)
+      [32m+[0m[0m name          = "ycsec-bootstrap-github-oidc"
+    }
+
+[1m  # <LONG_IDENTIFIER_REDACTED>.audit_trail_admin[0m will be created
+[0m  [32m+[0m[0m resource "<LONG_IDENTIFIER_REDACTED>" "audit_trail_admin" {
+      [32m+[0m[0m folder_id = "<YC_RESOURCE_ID_REDACTED>"
+      [32m+[0m[0m id        = (known after apply)
+      [32m+[0m[0m member    = (known after apply)
+      [32m+[0m[0m role      = "audit-trails.admin"
+    }
+
+[1m  # <LONG_IDENTIFIER_REDACTED>.audit_trail_storage_uploader[0m will be created
+[0m  [32m+[0m[0m resource "<LONG_IDENTIFIER_REDACTED>" "audit_trail_storage_uploader" {
+      [32m+[0m[0m folder_id = "<YC_RESOURCE_ID_REDACTED>"
+      [32m+[0m[0m id        = (known after apply)
+      [32m+[0m[0m member    = (known after apply)
+      [32m+[0m[0m role      = "storage.uploader"
+    }
+
+[1m  # <LONG_IDENTIFIER_REDACTED>.github_actions_registry_pusher[0m will be created
+[0m  [32m+[0m[0m resource "<LONG_IDENTIFIER_REDACTED>" "github_actions_registry_pusher" {
+      [32m+[0m[0m folder_id = "<YC_RESOURCE_ID_REDACTED>"
+      [32m+[0m[0m id        = (known after apply)
+      [32m+[0m[0m member    = (known after apply)
+      [32m+[0m[0m role      = "container-registry.images.pusher"
+    }
+
+[1m  # <LONG_IDENTIFIER_REDACTED>.github_actions_viewer[0m will be created
+[0m  [32m+[0m[0m resource "<LONG_IDENTIFIER_REDACTED>" "github_actions_viewer" {
+      [32m+[0m[0m folder_id = "<YC_RESOURCE_ID_REDACTED>"
+      [32m+[0m[0m id        = (known after apply)
+      [32m+[0m[0m member    = (known after apply)
+      [32m+[0m[0m role      = "viewer"
+    }
+
+[1m  # yandex_storage_bucket.audit_evidence[0m will be created
+[0m  [32m+[0m[0m resource "yandex_storage_bucket" "audit_evidence" {
+      [32m+[0m[0m acl                   = (known after apply)
+      [32m+[0m[0m bucket                = "<LONG_IDENTIFIER_REDACTED>"
+      [32m+[0m[0m bucket_domain_name    = (known after apply)
+      [32m+[0m[0m default_storage_class = "STANDARD"
+      [32m+[0m[0m folder_id             = "<YC_RESOURCE_ID_REDACTED>"
+      [32m+[0m[0m force_destroy         = false
+      [32m+[0m[0m id                    = (known after apply)
+      [32m+[0m[0m max_size              = 104857600
+      [32m+[0m[0m policy                = (known after apply)
+      [32m+[0m[0m website_domain        = (known after apply)
+      [32m+[0m[0m website_endpoint      = (known after apply)
+
+      [32m+[0m[0m anonymous_access_flags {
+          [32m+[0m[0m config_read = false
+          [32m+[0m[0m list        = false
+          [32m+[0m[0m read        = false
+        }
+
+      [32m+[0m[0m grant (known after apply)
+
+      [32m+[0m[0m versioning (known after apply)
+    }
+
+[1mPlan:[0m [0m11 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  [32m+[0m[0m audit_bucket_name                 = "<LONG_IDENTIFIER_REDACTED>"
+  [32m+[0m[0m audit_trail_id                    = (known after apply)
+  [32m+[0m[0m container_registry_id             = (known after apply)
+  [32m+[0m[0m <LONG_IDENTIFIER_REDACTED> = (known after apply)
+  [32m+[0m[0m github_oidc_subject               = "repo:w88005215-ctrl/<LONG_IDENTIFIER_REDACTED>:ref:refs/heads/main"
+  [32m+[0m[0m workload_identity_federation_id   = (known after apply)
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Saved the plan to: /tmp/ycsec-bootstrap-20260514T071353.xMjXIf/tfplan
+
+To perform exactly these actions, run the following command to apply:
+    terraform apply "/tmp/ycsec-bootstrap-20260514T071353.xMjXIf/tfplan"
+[OK] terraform plan saved in temporary runtime directory
+
+Sensitive file checks before apply
+[OK] No Terraform state files in repository
+[OK] No kubeconfig files in repository
+[OK] No key/token-like files in repository
+
+Terraform apply
+[0m[1myandex_container_registry.bootstrap: Creating...[0m[0m
+[0m[1myandex_iam_service_account.github_actions: Creating...[0m[0m
+[0m[<LONG_IDENTIFIER_REDACTED>.github: Creating...[0m[0m
+[0m[1myandex_iam_service_account.audit_trail: Creating...[0m[0m
+[0m[1myandex_storage_bucket.audit_evidence: Creating...[0m[0m
+[0m[1myandex_iam_service_account.audit_trail: Creation complete after 4s [id=<YC_RESOURCE_ID_REDACTED>][0m
+[0m[<LONG_IDENTIFIER_REDACTED>.audit_trail_storage_uploader: Creating...[0m[0m
+[0m[<LONG_IDENTIFIER_REDACTED>.audit_trail_admin: Creating...[0m[0m
+[0m[1myandex_container_registry.bootstrap: Creation complete after 4s [id=crpom0rdegblf5au4nsu][0m
+[0m[<LONG_IDENTIFIER_REDACTED>.github: Creation complete after 4s [id=<YC_RESOURCE_ID_REDACTED>][0m
+[0m[1myandex_iam_service_account.github_actions: Creation complete after 5s [id=<YC_RESOURCE_ID_REDACTED>][0m
+[0m[<LONG_IDENTIFIER_REDACTED>.github_main_branch: Creating...[0m[0m
+[0m[<LONG_IDENTIFIER_REDACTED>.github_actions_registry_pusher: Creating...[0m[0m
+[0m[<LONG_IDENTIFIER_REDACTED>.github_actions_viewer: Creating...[0m[0m
+[0m[<LONG_IDENTIFIER_REDACTED>.github_main_branch: Creation complete after 1s [id=<YC_RESOURCE_ID_REDACTED>][0m
+[0m[<LONG_IDENTIFIER_REDACTED>.audit_trail_admin: Creation complete after 5s [id=<YC_RESOURCE_ID_REDACTED>/audit-trails.admin/serviceAccount:<YC_RESOURCE_ID_REDACTED>][0m
+[0m[<LONG_IDENTIFIER_REDACTED>.audit_trail_storage_uploader: Creation complete after 9s [id=<YC_RESOURCE_ID_REDACTED>/storage.uploader/serviceAccount:<YC_RESOURCE_ID_REDACTED>][0m
+[0m[<LONG_IDENTIFIER_REDACTED>.github_actions_registry_pusher: Still creating... [00m10s elapsed][0m[0m
+[0m[<LONG_IDENTIFIER_REDACTED>.github_actions_viewer: Still creating... [00m10s elapsed][0m[0m
+[0m[<LONG_IDENTIFIER_REDACTED>.github_actions_registry_pusher: Creation complete after 11s [id=<YC_RESOURCE_ID_REDACTED>/container-registry.images.pusher/serviceAccount:<YC_RESOURCE_ID_REDACTED>][0m
+[0m[<LONG_IDENTIFIER_REDACTED>.github_actions_viewer: Creation complete after 15s [id=<YC_RESOURCE_ID_REDACTED>/viewer/serviceAccount:<YC_RESOURCE_ID_REDACTED>][0m
+[31m╷[0m[0m
+[31m│[0m [0m[1m[31mError: [0m[0m[1merror creating Storage S3 Bucket: client-request-id = <LONG_IDENTIFIER_REDACTED> client-trace-id = <LONG_IDENTIFIER_REDACTED> rpc error: code = InvalidArgument desc = {"name":"bucket names can contain lowercase letters, numbers, and hyphens"}[0m
+[31m│[0m [0m
+[31m│[0m [0m[0m  with yandex_storage_bucket.audit_evidence,
+[31m│[0m [0m  on main.tf line 87, in resource "yandex_storage_bucket" "audit_evidence":
+[31m│[0m [0m  87: resource "yandex_storage_bucket" "audit_evidence" [4m{[0m[0m
+[31m│[0m [0m
+[31m╵[0m[0m
+[FAIL] terraform apply failed
+
+Bootstrap outputs
+[WARN] outputs skipped because apply did not complete
+
+Read-only cloud inventory after apply
++----------------------+--------------------------+--------+---------------------+-----------------------+
+|          ID          |           NAME           | LABELS |     CREATED AT      | LAST AUTHENTICATED AT |
++----------------------+--------------------------+--------+---------------------+-----------------------+
+| <YC_RESOURCE_ID_REDACTED> | ycsec-bootstrap-audit-sa |        | 2026-05-14 07:14:36 |                       |
+| <YC_RESOURCE_ID_REDACTED> | ycsec-bootstrap-gha-sa   |        | 2026-05-14 07:14:37 |                       |
++----------------------+--------------------------+--------+---------------------+-----------------------+
++----------------------+-----------------------------+-------------+---------+-----------------------------------+---------------------------------------------+--------------------------------------------------------------+--------+---------------------+
+|          ID          |            NAME             | DESCRIPTION | ENABLED |             AUDIENCES             |                   ISSUER                    |                           JWKS URL                           | LABELS |     CREATED AT      |
++----------------------+-----------------------------+-------------+---------+-----------------------------------+---------------------------------------------+--------------------------------------------------------------+--------+---------------------+
+| <YC_RESOURCE_ID_REDACTED> | ycsec-bootstrap-github-oidc |             | true    | https://github.com/w88005215-ctrl | https://token.actions.githubusercontent.com | https://token.actions.githubusercontent.com/.well-known/jwks |        | 2026-05-14 07:14:36 |
++----------------------+-----------------------------+-------------+---------+-----------------------------------+---------------------------------------------+--------------------------------------------------------------+--------+---------------------+
++----------------------+--------------------------+----------------------+
+|          ID          |           NAME           |      FOLDER ID       |
++----------------------+--------------------------+----------------------+
+| crpom0rdegblf5au4nsu | ycsec-bootstrap-registry | <YC_RESOURCE_ID_REDACTED> |
++----------------------+--------------------------+----------------------+
++------+-----------+----------+-----------------------+------------+
+| NAME | FOLDER ID | MAX SIZE | DEFAULT STORAGE CLASS | CREATED AT |
++------+-----------+----------+-----------------------+------------+
++------+-----------+----------+-----------------------+------------+
++----+------+--------+---------+
+| ID | NAME | STATUS | FILTERS |
++----+------+--------+---------+
++----+------+--------+---------+
+
+Secret scan
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m7:15AM[0m [32mINF[0m [1mscanned ~618560 bytes (618.56 KB) in 613ms[0m
+[90m7:15AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks secret scan
+
+Destroy decision
+[WARN] bootstrap resources retained by explicit configuration
+[ACTION] run terraform destroy from temporary runtime or documented cleanup path when evidence collection is complete
+
+Sensitive file checks after run
+[OK] No Terraform state files after run
+[OK] No kubeconfig files after run
+[OK] No key/token-like files after run
+
+Cleanup
+[OK] temporary runtime preserved outside repository for controlled cleanup: <PRIVATE_TERRAFORM_RUNTIME_PATH_REDACTED>
+
+Bootstrap run summary
+Warnings: 3
+Failures: 1
+[FAIL] Bootstrap/OIDC/Audit cloud-run completed with failures
+[OK] bootstrap cloud-run script completed
+
+Step 5 — verify retained-resource evidence
+[OK] retained bootstrap resources confirmed in evidence
+[OK] private Terraform runtime preservation confirmed
+[OK] private cleanup runtime path recorded outside repository
+<PRIVATE_TERRAFORM_RUNTIME_PATH_REDACTED>
+
+Step 6 — post-run bootstrap resource inventory
+Service accounts:
++----------------------+--------------------------+--------+---------------------+-----------------------+
+|          ID          |           NAME           | LABELS |     CREATED AT      | LAST AUTHENTICATED AT |
++----------------------+--------------------------+--------+---------------------+-----------------------+
+| <YC_RESOURCE_ID_REDACTED> | ycsec-bootstrap-audit-sa |        | 2026-05-14 07:14:36 |                       |
+| <YC_RESOURCE_ID_REDACTED> | ycsec-bootstrap-gha-sa   |        | 2026-05-14 07:14:37 |                       |
++----------------------+--------------------------+--------+---------------------+-----------------------+
+
+Workload Identity Federations:
++----------------------+-----------------------------+-------------+---------+-----------------------------------+---------------------------------------------+--------------------------------------------------------------+--------+---------------------+
+|          ID          |            NAME             | DESCRIPTION | ENABLED |             AUDIENCES             |                   ISSUER                    |                           JWKS URL                           | LABELS |     CREATED AT      |
++----------------------+-----------------------------+-------------+---------+-----------------------------------+---------------------------------------------+--------------------------------------------------------------+--------+---------------------+
+| <YC_RESOURCE_ID_REDACTED> | ycsec-bootstrap-github-oidc |             | true    | https://github.com/w88005215-ctrl | https://token.actions.githubusercontent.com | https://token.actions.githubusercontent.com/.well-known/jwks |        | 2026-05-14 07:14:36 |
++----------------------+-----------------------------+-------------+---------+-----------------------------------+---------------------------------------------+--------------------------------------------------------------+--------+---------------------+
+
+Container registries:
++----------------------+--------------------------+----------------------+
+|          ID          |           NAME           |      FOLDER ID       |
++----------------------+--------------------------+----------------------+
+| crpom0rdegblf5au4nsu | ycsec-bootstrap-registry | <YC_RESOURCE_ID_REDACTED> |
++----------------------+--------------------------+----------------------+
+
+Object Storage buckets:
++------+-----------+----------+-----------------------+------------+
+| NAME | FOLDER ID | MAX SIZE | DEFAULT STORAGE CLASS | CREATED AT |
++------+-----------+----------+-----------------------+------------+
++------+-----------+----------+-----------------------+------------+
+
+Audit Trails:
++----+------+--------+---------+
+| ID | NAME | STATUS | FILTERS |
++----+------+--------+---------+
++----+------+--------+---------+
+
+Step 7 — repository runtime artifact safety checks
+[OK] no Terraform state files in repository
+[OK] no kubeconfig files in repository
+[OK] no key/token-like files in repository
+[OK] no Terraform runtime artifacts in repository environment
+
+Step 8 — create public sanitized evidence
