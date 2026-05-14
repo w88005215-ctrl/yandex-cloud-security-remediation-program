@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ycsec-insecure-workload-denied
+  namespace: ycsec-admission-validation
+  labels:
+    app.kubernetes.io/name: ycsec-insecure-workload-denied
+spec:
+  containers:
+    - name: insecure
+      image: nginx:latest
+      securityContext:
+        privileged: true
+        runAsUser: 0
+        runAsNonRoot: false
+        allowPrivilegeEscalation: true
+        readOnlyRootFilesystem: false

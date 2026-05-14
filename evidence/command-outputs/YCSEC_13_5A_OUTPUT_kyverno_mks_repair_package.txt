@@ -1,0 +1,77 @@
+Phase 13.5A — Kyverno MKS repair package
+Date: 2026-05-14T15:11:26+00:00
+Qube: cloud-dev-workbech
+
+Step 1 — verify repair baseline
+5c00f76 (HEAD -> main, tag: v0.13.4a-gitleaks-generated-evidence-handling, origin/main, origin/HEAD) test: handle generated evidence gitleaks findings
+195efa4 (tag: v0.13.4-sbom-vulnerability-validation) test: validate SBOM and supply chain vulnerability evidence
+961ab7a (tag: v0.13.3-supply-chain-oidc-registry-validation) test: validate supply chain OIDC registry push
+579fac9 fix: stabilize supply chain demo image builds
+66daf02 ci: repair supply chain registry OIDC workflow
+c396086 (tag: v0.13.2-supply-chain-implementation-package) feat: add supply chain security validation package
+1ba3a92 (tag: v0.13.1-supply-chain-roadmap-extension) docs: extend roadmap with supply chain security validation
+61bff33 (tag: v0.13.0-managed-kubernetes-baseline-remediation-cloud-run) docs: close Managed Kubernetes cloud run evidence package
+17045b7 test: validate Managed Kubernetes baseline remediation cloud run
+99b9e11 (tag: v0.13.0a-managed-kubernetes-cloud-run-implementation) feat: prepare Managed Kubernetes cloud remediation run
+
+[OK] current HEAD has required Phase 13.4A tag
+[OK] current branch is main
+[OK] working tree is clean for Phase 13.5A
+
+Step 2 — write public admission validation namespace
+[OK] namespace manifest written: kubernetes/admission-validation/namespace.yaml
+
+Step 3 — write Kyverno admission policy
+[OK] Kyverno policy written: kubernetes/admission-validation/kyverno-supply-chain-policy.yaml
+
+Step 4 — write denied insecure workload
+[OK] insecure denied workload written: kubernetes/admission-validation/insecure-workload-denied.yaml
+
+Step 5 — write allowed hardened workload template
+[OK] hardened allowed workload template written: kubernetes/admission-validation/hardened-workload-allowed.yaml
+
+Step 6 — write corrected Kyverno MKS validation script
+[OK] corrected Kyverno MKS validation script written: scripts/run-kyverno-admission-policy-mks-validation.sh
+
+Step 7 — write documentation
+[OK] documentation written
+
+Step 8 — local static validation
+[OK] Kyverno MKS validation script syntax valid
+[OK] private kube home is defined
+[OK] private kubeconfig path is defined
+[OK] yc get-credentials uses isolated HOME
+[OK] kubectl uses explicit kubeconfig
+[OK] Terraform tfvars includes cloud_id
+[OK] Terraform tfvars includes folder_id
+[OK] Terraform tfvars includes iam_token
+[OK] script does not write known undeclared Terraform variables
+[OK] sanitizer uses sed -E correctly
+[OK] cleanup trap is present
+[OK] Terraform destroy path is present
+[OK] manifest exists: kubernetes/admission-validation/namespace.yaml
+[OK] manifest exists: kubernetes/admission-validation/kyverno-supply-chain-policy.yaml
+[OK] manifest exists: kubernetes/admission-validation/insecure-workload-denied.yaml
+[OK] manifest exists: kubernetes/admission-validation/hardened-workload-allowed.yaml
+[OK] Kyverno policy is enforce mode
+[OK] insecure workload uses mutable non-registry baseline image
+[OK] hardened workload uses registry image placeholder
+
+Step 9 — update evidence index and cloud evidence gap register
+[OK] evidence index updated
+[OK] cloud evidence gap register updated
+
+Step 10 — repository safety checks
+[OK] no Terraform state files in repository
+[OK] no kubeconfig files in repository
+[OK] no key/token-like files in repository
+[90m3:11PM[0m [32mINF[0m [1m44 commits scanned.[0m
+[90m3:11PM[0m [32mINF[0m [1mscanned ~8904176 bytes (8.90 MB) in 647ms[0m
+[90m3:11PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 11 — phase decision
+FAIL_COUNT=0
+[OK] Phase 13.5A local repair package completed
+[OK] no cloud resources were created in this phase
+[OK] project is ready for corrected Phase 13.5B paid Kyverno MKS rerun

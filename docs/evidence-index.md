@@ -478,3 +478,14 @@ Cloud resources created in this phase: none.
 | `evidence/command-outputs/YCSEC_13_4A_OUTPUT_gitleaks_generated_evidence_handling.txt` | Command evidence for Phase 13.4A |
 | `evidence/command-outputs/YCSEC_13_4A_OUTPUT_gitleaks_findings_sanitized.txt` | Sanitized finding classification without secret/match values |
 | `evidence/command-outputs/YCSEC_13_4A_OUTPUT_final_git_control.txt` | Final git control evidence |
+
+## Phase 13.5A — Kyverno MKS repair package
+
+| Evidence | Description |
+|---|---|
+| `scripts/run-kyverno-admission-policy-mks-validation.sh` | Corrected controlled Kyverno admission validation runner |
+| `kubernetes/admission-validation/` | Public admission validation manifests |
+| `docs/kyverno-admission-policy-enforcement-validation.md` | Kyverno admission validation documentation |
+| `docs/kyverno-admission-policy-enforcement-metrics.md` | Planned admission enforcement metrics |
+| `evidence/command-outputs/YCSEC_13_5A_OUTPUT_kyverno_mks_repair_package.txt` | Command evidence for local repair package |
+| `evidence/command-outputs/YCSEC_13_5A_OUTPUT_final_git_control.txt` | Final git control evidence |

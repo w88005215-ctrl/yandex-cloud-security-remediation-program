@@ -1,0 +1,108 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: ycsec-supply-chain-admission-controls
+  annotations:
+    policies.kyverno.io/title: YCSEC Supply Chain Admission Controls
+    policies.kyverno.io/category: Supply Chain Security
+    policies.kyverno.io/severity: high
+spec:
+  validationFailureAction: Enforce
+  background: false
+  rules:
+    - name: require-yandex-container-registry
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+              namespaces:
+                - ycsec-admission-validation
+      validate:
+        message: "Container images must be pulled from Yandex Container Registry."
+        pattern:
+          spec:
+            containers:
+              - image: "cr.yandex/*"
+
+    - name: require-non-root-container
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+              namespaces:
+                - ycsec-admission-validation
+      validate:
+        message: "Containers must run as non-root."
+        pattern:
+          spec:
+            containers:
+              - securityContext:
+                  runAsNonRoot: true
+
+    - name: deny-privilege-escalation
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+              namespaces:
+                - ycsec-admission-validation
+      validate:
+        message: "Privilege escalation must be disabled."
+        pattern:
+          spec:
+            containers:
+              - securityContext:
+                  allowPrivilegeEscalation: false
+
+    - name: require-read-only-root-filesystem
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+              namespaces:
+                - ycsec-admission-validation
+      validate:
+        message: "Root filesystem must be read-only."
+        pattern:
+          spec:
+            containers:
+              - securityContext:
+                  readOnlyRootFilesystem: true
+
+    - name: require-capabilities-drop-all
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+              namespaces:
+                - ycsec-admission-validation
+      validate:
+        message: "All Linux capabilities must be dropped."
+        pattern:
+          spec:
+            containers:
+              - securityContext:
+                  capabilities:
+                    drop:
+                      - ALL
+
+    - name: require-runtime-default-seccomp
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+              namespaces:
+                - ycsec-admission-validation
+      validate:
+        message: "RuntimeDefault seccomp profile is required."
+        pattern:
+          spec:
+            securityContext:
+              seccompProfile:
+                type: RuntimeDefault

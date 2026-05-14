@@ -289,3 +289,20 @@ Closed evidence:
 Remaining supply-chain evidence target:
 
 - Admission policy enforcement validation in Kubernetes.
+
+## Phase 13.5A — Kyverno MKS repair package
+
+Status: completed locally after commit.
+
+Purpose:
+
+- Repair kubeconfig handling for the Kyverno Managed Kubernetes validation run.
+- Remove undeclared Terraform variable usage from the rerun path.
+- Preserve the admission enforcement evidence target for the next paid cloud-run.
+
+Still open:
+
+- Successful short-lived Managed Kubernetes Kyverno admission enforcement rerun.
+- Public evidence proving insecure workload denial.
+- Public evidence proving hardened workload admission allow.
+- Post-destroy evidence for the Kyverno MKS rerun.
