@@ -265,3 +265,22 @@ Phase result:
 - No cloud resources were created.
 
 <!-- YCSEC:PHASE-12-4-COMPARISON:END -->
+
+<!-- YCSEC:PHASE-12-5-CASE-STUDY:START -->
+## Phase 12.5 — Kubernetes Remediation Case Study
+
+| Evidence ID | File | Type | Description | Publication Status |
+|---|---|---|---|---|
+| EVID-K8S-CASE-001 | docs/kubernetes-security-remediation-case-study.md | Case study | Portfolio-ready Kubernetes remediation case study | Public-safe |
+| EVID-K8S-CASE-002 | evidence/command-outputs/YCSEC_12_5_OUTPUT_kubernetes_remediation_case_study.txt | Command output | Case study generation and validation evidence | Public-safe |
+
+Phase result:
+
+- Kubernetes remediation track was packaged as a portfolio-ready case study.
+- Engineering workflow was documented from readiness to before/after comparison.
+- Security outcomes were summarized.
+- Evidence references were consolidated.
+- No cloud resources were created.
+
+<!-- YCSEC:PHASE-12-5-CASE-STUDY:END -->
+

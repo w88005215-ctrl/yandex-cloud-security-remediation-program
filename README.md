@@ -109,3 +109,21 @@ This project is prepared for:
 - cloud security / DevSecOps demonstration
 - academic or training project defense
 - security engineering review
+
+<!-- YCSEC:K8S-REMEDIATION-CASE:START -->
+## Kubernetes Security Remediation Case
+
+This repository includes a Kubernetes security remediation track that demonstrates a complete evidence-driven workflow:
+
+readiness inventory -> baseline validation -> remediation controls -> before/after comparison -> portfolio case study.
+
+Key documents:
+
+- docs/kubernetes-security-remediation-case-study.md
+- docs/kubernetes-baseline-validation-plan.md
+- docs/kubernetes-baseline-findings.md
+- docs/kubernetes-remediation-results.md
+- docs/kubernetes-before-after-remediation-comparison.md
+
+<!-- YCSEC:K8S-REMEDIATION-CASE:END -->
+

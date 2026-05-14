@@ -1,0 +1,76 @@
+Phase 12.5-FIX — finalize Kubernetes remediation portfolio case study
+Date: 2026-05-14T06:19:47+00:00
+Qube: cloud-dev-workbench
+
+Step 1 — confirm current milestone baseline
+449ac2c (HEAD -> main, tag: v0.12.4-kubernetes-before-after-comparison) test: compare Kubernetes baseline and remediation posture
+8d90b5e (tag: v0.12.3-kubernetes-remediation-control-package) feat: add Kubernetes remediation control package
+2460503 (tag: v0.12.2-kubernetes-baseline-static-validation) test: validate Kubernetes baseline security posture
+6cd86d9 (tag: v0.12.1-kubernetes-baseline-validation-plan) docs: add Kubernetes baseline validation plan
+1a0b182 (tag: v0.12.0-kubernetes-remediation-readiness) test: inventory Kubernetes remediation readiness
+259ea41 (tag: v0.11.4-smoke-run-evidence-package) docs: integrate Yandex Cloud smoke-run evidence package
+1dc86dc (tag: v0.11.3-yandex-cloud-smoke-run-success) test: record successful Yandex Cloud smoke run
+e4e0e50 (tag: v0.11.2-smoke-run-auth-fix) fix: pass Yandex Cloud auth to smoke-run Terraform
+
+[OK] current HEAD has required tag: v0.12.4-kubernetes-before-after-comparison
+
+Step 2 — inspect previous Phase 12.5 failure markers
+60:[FAIL] remediation workflow narrative missing
+82:[FAIL] Phase 12.5 Kubernetes remediation case study failed
+[OK] previous Phase 12.5 output inspected
+
+Step 3 — verify expected Phase 12.5 workspace files
+[OK] exists: docs/kubernetes-security-remediation-case-study.md
+[OK] exists: docs/evidence-index.md
+[OK] exists: evidence/command-outputs/YCSEC_12_5_OUTPUT_kubernetes_remediation_case_study.txt
+[OK] exists: evidence/command-outputs/YCSEC_12_5_OUTPUT_final_git_control.txt
+
+Step 4 — strengthen case study narrative
+[OK] case study narrative strengthened
+
+Step 5 — validate current Phase 12.5 content
+[OK] case study exists
+[OK] evidence index exists
+[OK] case study title present
+[OK] remediation workflow narrative present
+[OK] reviewer-facing value section present
+[OK] evidence index references Phase 12.5 case study
+
+Step 6 — validate README pointers
+[OK] README pointer present: README.md
+[OK] README pointer present: README_RU.md
+[OK] README pointer present: README_EN.md
+README files checked: 3
+
+Step 7 — publication wording check for current changed files
+[OK] no internal workflow wording found in current Phase 12.5 files
+
+Step 8 — current phase repository safety check
+[OK] no Terraform state files
+[OK] no kubeconfig files
+[OK] no key/token-like files
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m6:19AM[0m [32mINF[0m [1mscanned ~535842 bytes (535.84 KB) in 538ms[0m
+[90m6:19AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 9 — phase decision
+FAIL_COUNT=0
+[OK] Phase 12.5 case study fix completed
+[OK] Kubernetes remediation track is ready for commit
+
+Final git status before commit:
+ M README.md
+ M README_EN.md
+ M README_RU.md
+ M docs/evidence-index.md
+?? docs/kubernetes-security-remediation-case-study.md
+?? evidence/command-outputs/YCSEC_12_5_OUTPUT_case_study_fix.txt
+?? evidence/command-outputs/YCSEC_12_5_OUTPUT_final_git_control.txt
+?? evidence/command-outputs/YCSEC_12_5_OUTPUT_kubernetes_remediation_case_study.txt

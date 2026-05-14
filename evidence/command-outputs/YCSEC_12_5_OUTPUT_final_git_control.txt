@@ -1,0 +1,26 @@
+Phase 12.5-FIX — commit and final git control
+Date: 2026-05-14T06:19:48+00:00
+Qube: cloud-dev-workbench
+
+[OK] case study fix passed; committing Phase 12.5
+[main 4aae5ae] docs: add Kubernetes remediation case study
+ 7 files changed, 442 insertions(+)
+ create mode 100644 docs/kubernetes-security-remediation-case-study.md
+ create mode 100644 evidence/command-outputs/YCSEC_12_5_OUTPUT_case_study_fix.txt
+ create mode 100644 evidence/command-outputs/YCSEC_12_5_OUTPUT_kubernetes_remediation_case_study.txt
+[OK] tag created: v0.12.5-kubernetes-remediation-case-study
+[OK] Phase 12.5 committed
+
+Final verification
+?? evidence/command-outputs/YCSEC_12_5_OUTPUT_final_git_control.txt
+4aae5ae (HEAD -> main, tag: v0.12.5-kubernetes-remediation-case-study) docs: add Kubernetes remediation case study
+449ac2c (tag: v0.12.4-kubernetes-before-after-comparison) test: compare Kubernetes baseline and remediation posture
+8d90b5e (tag: v0.12.3-kubernetes-remediation-control-package) feat: add Kubernetes remediation control package
+2460503 (tag: v0.12.2-kubernetes-baseline-static-validation) test: validate Kubernetes baseline security posture
+6cd86d9 (tag: v0.12.1-kubernetes-baseline-validation-plan) docs: add Kubernetes baseline validation plan
+1a0b182 (tag: v0.12.0-kubernetes-remediation-readiness) test: inventory Kubernetes remediation readiness
+259ea41 (tag: v0.11.4-smoke-run-evidence-package) docs: integrate Yandex Cloud smoke-run evidence package
+1dc86dc (tag: v0.11.3-yandex-cloud-smoke-run-success) test: record successful Yandex Cloud smoke run
+e4e0e50 (tag: v0.11.2-smoke-run-auth-fix) fix: pass Yandex Cloud auth to smoke-run Terraform
+6bf5287 (tag: v0.11.1-smoke-run-safety) chore: harden Yandex Cloud smoke-run cleanup safety
+v0.12.5-kubernetes-remediation-case-study

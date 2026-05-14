@@ -1,0 +1,90 @@
+Phase 12.5 — Kubernetes remediation portfolio case study
+Date: 2026-05-14T06:18:23+00:00
+Qube: cloud-dev-workbench
+
+Step 1 — repository baseline
+449ac2c (HEAD -> main, tag: v0.12.4-kubernetes-before-after-comparison) test: compare Kubernetes baseline and remediation posture
+8d90b5e (tag: v0.12.3-kubernetes-remediation-control-package) feat: add Kubernetes remediation control package
+2460503 (tag: v0.12.2-kubernetes-baseline-static-validation) test: validate Kubernetes baseline security posture
+6cd86d9 (tag: v0.12.1-kubernetes-baseline-validation-plan) docs: add Kubernetes baseline validation plan
+1a0b182 (tag: v0.12.0-kubernetes-remediation-readiness) test: inventory Kubernetes remediation readiness
+259ea41 (tag: v0.11.4-smoke-run-evidence-package) docs: integrate Yandex Cloud smoke-run evidence package
+1dc86dc (tag: v0.11.3-yandex-cloud-smoke-run-success) test: record successful Yandex Cloud smoke run
+e4e0e50 (tag: v0.11.2-smoke-run-auth-fix) fix: pass Yandex Cloud auth to smoke-run Terraform
+6bf5287 (tag: v0.11.1-smoke-run-safety) chore: harden Yandex Cloud smoke-run cleanup safety
+5d6e853 (tag: v0.11-yandex-cloud-smoke-run) test: add Yandex Cloud Kubernetes smoke run
+
+Tags at HEAD:
+v0.12.4-kubernetes-before-after-comparison
+
+[OK] current HEAD has required tag: v0.12.4-kubernetes-before-after-comparison
+
+Step 2 — working tree guard
+[OK] working tree has no unexpected changes
+
+Step 3 — verify required Phase 12 documents
+[OK] docs/kubernetes-remediation-readiness.md
+[OK] docs/kubernetes-baseline-validation-plan.md
+[OK] docs/kubernetes-baseline-control-matrix.md
+[OK] docs/kubernetes-baseline-findings.md
+[OK] docs/kubernetes-remediation-results.md
+[OK] docs/kubernetes-before-after-remediation-comparison.md
+[OK] scripts/validate-kubernetes-baseline-static.sh
+[OK] scripts/validate-kubernetes-remediation-static.sh
+[OK] scripts/compare-kubernetes-baseline-remediation.sh
+
+Step 4 — collect case study metrics
+Remediation manifests: 7
+NetworkPolicy files: 2
+RBAC files: 1
+Restricted Pod Security label files: 1
+Runtime hardening files: 2
+Policy-as-code files: 1
+
+Step 5 — write portfolio case study document
+[OK] case study document written: docs/kubernetes-security-remediation-case-study.md
+
+Step 6 — update evidence index
+[OK] evidence index updated
+
+Step 7 — update README pointer if README exists
+[OK] README pointer updated: README.md
+[OK] README pointer updated: README_RU.md
+[OK] README pointer updated: README_EN.md
+README files updated: 3
+
+Step 8 — validate Phase 12.5 outputs
+[OK] docs/kubernetes-security-remediation-case-study.md
+[OK] docs/evidence-index.md
+[OK] case study title present
+[FAIL] remediation workflow narrative missing
+[OK] evidence index references Phase 12.5 case study
+
+Step 9 — publication wording and current phase safety checks
+[OK] no internal workflow wording found
+[OK] no Terraform state files
+[OK] no kubeconfig files
+[OK] no key/token-like files
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m6:18AM[0m [32mINF[0m [1mscanned ~530104 bytes (530.10 KB) in 479ms[0m
+[90m6:18AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 10 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=1
+[FAIL] Phase 12.5 Kubernetes remediation case study failed
+
+Final git status before commit:
+ M README.md
+ M README_EN.md
+ M README_RU.md
+ M docs/evidence-index.md
+?? docs/kubernetes-security-remediation-case-study.md
+?? evidence/command-outputs/YCSEC_12_5_OUTPUT_kubernetes_remediation_case_study.txt
