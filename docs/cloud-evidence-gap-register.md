@@ -473,3 +473,9 @@ Publication boundary remains explicit: Yandex Cloud implementation evidence is r
 - Status: closed.
 - Retained bootstrap resources were removed after evidence validation.
 - Final read-only verification confirms that retained registry, audit bucket, Audit Trail, bootstrap service accounts, temporary Managed Kubernetes, compute, and Network Load Balancer resources are absent.
+
+## Phase 13.12 — IaC Security Workflow Stabilization
+
+Status: closed.
+
+The GitHub IaC Security workflow was stabilized by adding explicit resource-scoped Checkov suppressions for controlled short-lived evidence environments. The exceptions are documented in `docs/iac-security-exceptions.md` and do not alter the project publication boundary.

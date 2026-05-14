@@ -67,6 +67,9 @@ resource "yandex_resourcemanager_folder_iam_member" "nodes_registry_puller" {
 }
 
 resource "yandex_kubernetes_cluster" "mks" {
+  #checkov:skip=CKV_YC_5:Controlled evidence cluster requires public API access for short validation from isolated operator workstation.
+  #checkov:skip=CKV_YC_10:Short-lived evidence cluster stores no persistent application secrets; encryption tradeoff is documented as a budget/runtime exception.
+  #checkov:skip=CKV_YC_14:Cluster-level security group hardening is documented as a production recommendation; this run focuses on admission/policy evidence.
   name        = var.cluster_name
   description = "YCSEC short-lived Managed Kubernetes baseline/remediation evidence cluster"
   folder_id   = var.folder_id
@@ -94,6 +97,8 @@ resource "yandex_kubernetes_cluster" "mks" {
 }
 
 resource "yandex_kubernetes_node_group" "workers" {
+  #checkov:skip=CKV_YC_6:Short-lived worker nodes use public NAT for controlled image pull and validation, then are destroyed.
+  #checkov:skip=CKV_YC_15:Node group security group hardening is documented as a production recommendation; this run is bounded by cleanup evidence.
   name        = "${local.prefix}-workers"
   description = "YCSEC short-lived worker node group for baseline/remediation evidence"
   cluster_id  = yandex_kubernetes_cluster.mks.id

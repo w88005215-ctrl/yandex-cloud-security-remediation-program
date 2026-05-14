@@ -1,0 +1,32 @@
+Phase 13.12 final git control
+Date: 2026-05-14T18:39:23+00:00
+
+HEAD:
+a18df35 (HEAD -> main, tag: v0.13.11-retained-bootstrap-cleanup, origin/main, origin/HEAD) docs: record retained bootstrap cleanup
+4233e3c (tag: v0.13.10-final-reports-publication-summary) docs: add final technical reports and publication summary
+10f1fdd (tag: v0.13.9-cross-cloud-publication-readiness) docs: add cross-cloud mapping and publication readiness
+90759e4 (tag: v0.13.8-final-risk-register) docs: add final risk register
+24b0ba7 (tag: v0.13.7-final-control-matrix) docs: add final control matrix
+d75cebd (tag: v0.13.6-final-remediation-metrics) docs: consolidate final remediation metrics
+2d686fd (tag: v0.13.5-kyverno-admission-policy-enforcement) test: validate Kyverno admission policy enforcement
+11c4767 (tag: v0.13.5a2-kyverno-runner-hardening) fix: harden Kyverno admission MKS runner
+6b7f94a (tag: v0.13.5a1-kyverno-denial-attribution-fix) fix: require Kyverno-specific admission denial evidence
+e238df2 (tag: v0.13.5a-kyverno-mks-repair-package) fix: prepare Kyverno admission MKS rerun
+5c00f76 (tag: v0.13.4a-gitleaks-generated-evidence-handling) test: handle generated evidence gitleaks findings
+195efa4 (tag: v0.13.4-sbom-vulnerability-validation) test: validate SBOM and supply chain vulnerability evidence
+
+Status:
+ M docs/cloud-evidence-gap-register.md
+ M docs/evidence-index.md
+ M terraform/environments/bootstrap-oidc-audit/main.tf
+ M terraform/environments/cloud-smoke/main.tf
+ M terraform/environments/managed-kubernetes-cloud-run/main.tf
+?? docs/iac-security-exceptions.md
+?? evidence/command-outputs/YCSEC_13_12_OUTPUT_checkov_after_exceptions.txt
+?? evidence/command-outputs/YCSEC_13_12_OUTPUT_final_git_control.txt
+
+Checkov result:
+Passed checks: 27, Failed checks: 0, Skipped checks: 11
+
+Expected tag:
+v0.13.12-checkov-stabilization

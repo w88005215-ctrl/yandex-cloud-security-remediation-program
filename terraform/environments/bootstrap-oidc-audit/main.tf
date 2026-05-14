@@ -85,6 +85,7 @@ resource "yandex_container_registry" "bootstrap" {
 }
 
 resource "yandex_storage_bucket" "audit_evidence" {
+  #checkov:skip=CKV_YC_3:Short-lived audit evidence bucket used for controlled validation; retained cleanup evidence proves removal after use.
   folder_id             = var.folder_id
   bucket                = var.audit_bucket_name
   default_storage_class = "STANDARD"

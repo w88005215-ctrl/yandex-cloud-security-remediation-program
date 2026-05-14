@@ -657,3 +657,9 @@ Status: completed.
 Evidence added:
 - docs/retained-bootstrap-cleanup-evidence.md
 - final registry, bucket, Audit Trails, service account, Managed Kubernetes, compute, and Network Load Balancer cleanup verification outputs
+
+## Phase 13.12 — Checkov workflow stabilization
+
+- `docs/iac-security-exceptions.md` — IaC security exception register for controlled evidence-run tradeoffs.
+- `evidence/command-outputs/YCSEC_13_12_OUTPUT_checkov_after_exceptions.txt` — Checkov result after resource-scoped exception stabilization.
+- `evidence/command-outputs/YCSEC_13_12_OUTPUT_final_git_control.txt` — final git control evidence for Phase 13.12.

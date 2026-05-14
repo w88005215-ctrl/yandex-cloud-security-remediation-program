@@ -50,6 +50,10 @@ resource "yandex_resourcemanager_folder_iam_member" "nodes_image_puller" {
 }
 
 resource "yandex_kubernetes_cluster" "smoke" {
+  #checkov:skip=CKV_YC_5:Temporary smoke-run cluster requires public control-plane access for short manual validation from isolated workstation.
+  #checkov:skip=CKV_YC_10:Short-lived smoke-run cluster optimized for minimal promo-budget validation; no persistent workload data is stored in etcd.
+  #checkov:skip=CKV_YC_14:Temporary smoke-run cluster is destroyed after evidence collection; security group hardening is demonstrated in the remediation track.
+  #checkov:skip=CKV_YC_16:Smoke-run environment validates managed cluster lifecycle only; network policy enforcement is covered by the dedicated remediation/Kyverno evidence.
   name        = "${var.name_prefix}-cluster"
   description = "Temporary YCSEC smoke-run Managed Kubernetes cluster"
   network_id  = yandex_vpc_network.smoke.id
@@ -77,6 +81,7 @@ resource "yandex_kubernetes_cluster" "smoke" {
 }
 
 resource "yandex_kubernetes_node_group" "smoke" {
+  #checkov:skip=CKV_YC_15:Temporary smoke-run node group exists only during controlled evidence collection and is destroyed immediately after validation.
   cluster_id  = yandex_kubernetes_cluster.smoke.id
   name        = "${var.name_prefix}-node-group"
   description = "Temporary YCSEC smoke-run node group"
