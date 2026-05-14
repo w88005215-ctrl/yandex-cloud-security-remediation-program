@@ -1,0 +1,12 @@
+title = "YCSEC gitleaks configuration"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Generated SBOM and vulnerability scanner evidence from controlled public demo images"
+paths = [
+  '''^evidence/sbom/.*\.json$''',
+  '''^evidence/vulnerability/.*\.(json|txt)$''',
+  '''^evidence/metrics/supply_chain_vulnerability_metrics\.(json|txt)$''',
+]

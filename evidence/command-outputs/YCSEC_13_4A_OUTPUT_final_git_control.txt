@@ -1,0 +1,14 @@
+Phase 13.4A — final git control
+Date: 2026-05-14T13:54:12+00:00
+Qube: cloud-dev-workbech
+
+Decision:
+[OK] gitleaks findings were classified
+[OK] findings were limited to generated SBOM/vulnerability/metrics evidence
+[OK] strict generated-evidence allowlist was added
+[OK] default gitleaks rules remain enabled
+[OK] source code, Terraform, workflows, Kubernetes manifests, kubeconfigs, keys and tokens are not allowlisted
+[OK] repository safety checks passed
+
+Next roadmap stage:
+Phase 13.5 — Kyverno admission policy enforcement validation on Managed Kubernetes.

@@ -1,0 +1,67 @@
+Phase 13.4A — gitleaks generated evidence handling
+Date: 2026-05-14T13:54:01+00:00
+Qube: cloud-dev-workbech
+
+Step 1 — preserve failed Phase 13.5 preflight artifact privately
+[OK] failed Phase 13.5 preflight artifact moved to private evidence
+
+Step 2 — verify roadmap baseline
+195efa4 (HEAD -> main, tag: v0.13.4-sbom-vulnerability-validation, origin/main, origin/HEAD) test: validate SBOM and supply chain vulnerability evidence
+961ab7a (tag: v0.13.3-supply-chain-oidc-registry-validation) test: validate supply chain OIDC registry push
+579fac9 fix: stabilize supply chain demo image builds
+66daf02 ci: repair supply chain registry OIDC workflow
+c396086 (tag: v0.13.2-supply-chain-implementation-package) feat: add supply chain security validation package
+1ba3a92 (tag: v0.13.1-supply-chain-roadmap-extension) docs: extend roadmap with supply chain security validation
+61bff33 (tag: v0.13.0-managed-kubernetes-baseline-remediation-cloud-run) docs: close Managed Kubernetes cloud run evidence package
+17045b7 test: validate Managed Kubernetes baseline remediation cloud run
+99b9e11 (tag: v0.13.0a-managed-kubernetes-cloud-run-implementation) feat: prepare Managed Kubernetes cloud remediation run
+690425b (tag: v0.12.9-managed-kubernetes-cloud-run-plan) docs: plan Managed Kubernetes baseline remediation cloud run
+
+[OK] current HEAD has required Phase 13.4 tag
+[OK] current branch is main
+[OK] working tree is ready for Phase 13.4A
+
+Step 3 — run raw gitleaks report privately
+[OK] gitleaks available: /usr/bin/gitleaks
+[OK] jq available: /usr/bin/jq
+GITLEAKS_RC=1
+LEAK_COUNT=4
+[OK] gitleaks findings reproduced for classification
+
+Step 4 — create sanitized public finding summary without secret values
+[OK] sanitized gitleaks finding summary written
+
+Step 5 — classify finding paths
+evidence/vulnerability/trivy_hardened_image.json
+evidence/vulnerability/trivy_insecure_image.json
+[OK] all gitleaks findings are limited to generated SBOM/vulnerability/metrics evidence
+
+Step 6 — write strict gitleaks allowlist for generated evidence only
+[OK] strict generated-evidence allowlist written: .gitleaks.toml
+
+Step 7 — validate gitleaks with explicit project config
+[90m1:54PM[0m [32mINF[0m [1m43 commits scanned.[0m
+[90m1:54PM[0m [32mINF[0m [1mscanned ~8896851 bytes (8.90 MB) in 558ms[0m
+[90m1:54PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed with strict generated-evidence allowlist
+
+Step 8 — write handling documentation
+[OK] generated evidence gitleaks handling documentation written
+
+Step 9 — update evidence index
+[OK] evidence index updated
+
+Step 10 — repository artifact safety checks
+[OK] no Terraform state files in repository
+[OK] no kubeconfig files in repository
+[OK] no key/token-like files in repository
+[90m1:54PM[0m [32mINF[0m [1m43 commits scanned.[0m
+[90m1:54PM[0m [32mINF[0m [1mscanned ~8896851 bytes (8.90 MB) in 621ms[0m
+[90m1:54PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] final gitleaks scan passed
+
+Step 11 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 13.4A gitleaks generated evidence handling completed
+[OK] project is ready to retry Phase 13.5 from the new baseline tag

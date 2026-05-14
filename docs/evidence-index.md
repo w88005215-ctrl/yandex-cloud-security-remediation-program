@@ -468,3 +468,13 @@ Cloud resources created in this phase: none.
 | `evidence/vulnerability/grype_hardened_image.json` | Grype hardened image scan |
 | `evidence/metrics/supply_chain_vulnerability_metrics.json` | Machine-readable vulnerability metrics |
 | `evidence/command-outputs/YCSEC_13_4_OUTPUT_sbom_vulnerability_validation.txt` | Phase 13.4 command evidence |
+
+## Phase 13.4A — gitleaks generated evidence handling
+
+| Evidence | Description |
+|---|---|
+| `.gitleaks.toml` | Strict generated-evidence allowlist while extending default gitleaks rules |
+| `docs/generated-evidence-gitleaks-handling.md` | Rationale and security boundary for generated scanner evidence handling |
+| `evidence/command-outputs/YCSEC_13_4A_OUTPUT_gitleaks_generated_evidence_handling.txt` | Command evidence for Phase 13.4A |
+| `evidence/command-outputs/YCSEC_13_4A_OUTPUT_gitleaks_findings_sanitized.txt` | Sanitized finding classification without secret/match values |
+| `evidence/command-outputs/YCSEC_13_4A_OUTPUT_final_git_control.txt` | Final git control evidence |

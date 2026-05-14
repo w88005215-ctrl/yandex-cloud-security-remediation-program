@@ -1,0 +1,12 @@
+Phase 13.4A gitleaks finding summary
+Date: 2026-05-14T13:54:11+00:00
+
+Purpose: classify gitleaks findings introduced by generated SBOM/vulnerability evidence.
+
+Important: raw secret/match values are intentionally not published.
+
+Findings:
+- RuleID: generic-api-key | File: evidence/vulnerability/trivy_hardened_image.json | Line: 64 | Commit: 195efa42e560 | Description: Detected a Generic API Key, potentially exposing access to various services and sensitive operations.
+- RuleID: generic-api-key | File: evidence/vulnerability/trivy_hardened_image.json | Line: 175 | Commit: 195efa42e560 | Description: Detected a Generic API Key, potentially exposing access to various services and sensitive operations.
+- RuleID: generic-api-key | File: evidence/vulnerability/trivy_insecure_image.json | Line: 63 | Commit: 195efa42e560 | Description: Detected a Generic API Key, potentially exposing access to various services and sensitive operations.
+- RuleID: generic-api-key | File: evidence/vulnerability/trivy_insecure_image.json | Line: 156 | Commit: 195efa42e560 | Description: Detected a Generic API Key, potentially exposing access to various services and sensitive operations.
