@@ -1,0 +1,18 @@
+Phase 12.8A-GITHUB-SCOPE — GitHub Remote and OIDC Scope
+
+Result:
+[OK] GitHub remote configured locally
+[OK] GitHub owner/repo/branch scope prepared for Workload Identity Federation
+[OK] OIDC subject is constrained to repository and branch
+[OK] push is intentionally deferred to manual operator action
+
+GitHub scope:
+YCSEC_GITHUB_OWNER=w88005215-ctrl
+YCSEC_GITHUB_REPO=yandex-cloud-security-remediation-program
+YCSEC_GITHUB_BRANCH=main
+OIDC_SUBJECT=repo:w88005215-ctrl/yandex-cloud-security-remediation-program:ref:refs/heads/main
+
+Security:
+[OK] public project artifacts do not require user email
+[OK] no static Yandex Cloud credentials are configured for GitHub
+[OK] cloud execution remains gated by explicit approval

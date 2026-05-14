@@ -1,0 +1,52 @@
+Phase 12.8A-GITHUB-SCOPE-FIX — record GitHub remote and OIDC repository scope
+Date: 2026-05-14T06:59:18+00:00
+Qube: cloud-dev-workbech
+
+Step 1 — verify repository baseline
+?? evidence/command-outputs/YCSEC_12_8A_OUTPUT_github_remote_scope.txt
+
+[OK] working tree contains only current GitHub scope evidence output
+[OK] current HEAD has required tag: v0.12.8a-bootstrap-oidc-audit-implementation
+
+Step 2 — verify GitHub remote
+[OK] origin remote configured correctly
+
+Step 3 — parse GitHub owner/repo safely
+Remote origin: https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program.git
+[OK] GitHub owner detected correctly: w88005215-ctrl
+[OK] GitHub repo detected correctly: yandex-cloud-security-remediation-program
+[OK] current branch is main
+[OK] expected OIDC subject: repo:w88005215-ctrl/yandex-cloud-security-remediation-program:ref:refs/heads/main
+[OK] Terraform OIDC subject template matches repository/branch scope model
+
+Step 4 — confirm push is intentionally deferred
+[OK] no git push will be executed in this phase
+[OK] GitHub publication/authentication will be handled manually by operator
+
+Step 5 — repository safety checks
+[OK] no Terraform state files
+[OK] no kubeconfig files
+[OK] no key/token-like files
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m6:59AM[0m [32mINF[0m [1mscanned ~607012 bytes (607.01 KB) in 711ms[0m
+[90m6:59AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 6 — write GitHub scope summary
+[OK] GitHub scope summary written: evidence/command-outputs/YCSEC_12_8A_OUTPUT_github_remote_scope_summary.txt
+
+Step 7 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 12.8A-GITHUB-SCOPE-FIX completed
+[OK] project has GitHub OIDC scope needed for Phase 12.8B
+
+Final git status before commit:
+?? evidence/command-outputs/YCSEC_12_8A_OUTPUT_github_remote_scope.txt
+?? evidence/command-outputs/YCSEC_12_8A_OUTPUT_github_remote_scope_summary.txt

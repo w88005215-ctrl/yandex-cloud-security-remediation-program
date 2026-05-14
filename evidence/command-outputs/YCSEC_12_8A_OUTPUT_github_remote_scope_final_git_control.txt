@@ -1,0 +1,42 @@
+Phase 12.8A-GITHUB-SCOPE — Final Git Control
+Date: 2026-05-14T06:59:19+00:00
+Qube: cloud-dev-workbech
+
+Result:
+[OK] GitHub remote configured locally
+[OK] OIDC owner/repo/branch scope recorded
+[OK] Terraform OIDC subject model validated
+[OK] push intentionally deferred to manual operator action
+
+Scope:
+[OK] no cloud resources were created
+[OK] no GitHub push was required for this phase
+[OK] Phase 12.8B can use the recorded owner/repo/branch values
+
+Next:
+[OK] run Phase 12.8B-PRECHECK before any cloud apply
+[OK] final git control evidence written: evidence/command-outputs/YCSEC_12_8A_OUTPUT_github_remote_scope_final_git_control.txt
+[main 0329c1c] docs: record GitHub OIDC repository scope
+ 3 files changed, 88 insertions(+)
+ create mode 100644 evidence/command-outputs/YCSEC_12_8A_OUTPUT_github_remote_scope.txt
+ create mode 100644 evidence/command-outputs/YCSEC_12_8A_OUTPUT_github_remote_scope_final_git_control.txt
+ create mode 100644 evidence/command-outputs/YCSEC_12_8A_OUTPUT_github_remote_scope_summary.txt
+[OK] GitHub OIDC scope evidence committed
+
+Final verification
+ M evidence/command-outputs/YCSEC_12_8A_OUTPUT_github_remote_scope_final_git_control.txt
+origin	https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program.git (fetch)
+origin	https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program.git (push)
+0329c1c (HEAD -> main, tag: v0.12.8a-github-remote-scope) docs: record GitHub OIDC repository scope
+c508ce3 (tag: v0.12.8a-bootstrap-oidc-audit-implementation) feat: prepare bootstrap OIDC audit cloud run
+0311102 (tag: v0.12.7-bootstrap-oidc-audit-plan) docs: plan bootstrap OIDC audit cloud run
+20c8e2c (tag: v0.12.6-roadmap-reconciliation) docs: reconcile roadmap and cloud evidence gaps
+29f2613 (tag: v0.12.5-kubernetes-remediation-case-study) docs: add Kubernetes remediation case study
+449ac2c (tag: v0.12.4-kubernetes-before-after-comparison) test: compare Kubernetes baseline and remediation posture
+8d90b5e (tag: v0.12.3-kubernetes-remediation-control-package) feat: add Kubernetes remediation control package
+2460503 (tag: v0.12.2-kubernetes-baseline-static-validation) test: validate Kubernetes baseline security posture
+6cd86d9 (tag: v0.12.1-kubernetes-baseline-validation-plan) docs: add Kubernetes baseline validation plan
+1a0b182 (tag: v0.12.0-kubernetes-remediation-readiness) test: inventory Kubernetes remediation readiness
+259ea41 (tag: v0.11.4-smoke-run-evidence-package) docs: integrate Yandex Cloud smoke-run evidence package
+1dc86dc (tag: v0.11.3-yandex-cloud-smoke-run-success) test: record successful Yandex Cloud smoke run
+v0.12.8a-github-remote-scope
