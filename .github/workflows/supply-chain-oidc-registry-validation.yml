@@ -99,20 +99,22 @@ jobs:
           SHORT_SHA="${GITHUB_SHA::12}"
           IMAGE_BASE="cr.yandex/${{ vars.YCSEC_YCR_REGISTRY_ID }}/${YCSEC_IMAGE_NAME}"
 
-          docker build \
+          docker build --pull --progress=plain \
             -f "${YCSEC_REPOSITORY_DIR}/Dockerfile.insecure" \
             -t "${IMAGE_BASE}:insecure-${SHORT_SHA}" \
             -t "${IMAGE_BASE}:latest" \
             "${YCSEC_REPOSITORY_DIR}"
 
+          docker image inspect "${IMAGE_BASE}:insecure-${SHORT_SHA}" >/dev/null
           docker push "${IMAGE_BASE}:insecure-${SHORT_SHA}"
           docker push "${IMAGE_BASE}:latest"
 
-          docker build \
+          docker build --pull --progress=plain \
             -f "${YCSEC_REPOSITORY_DIR}/Dockerfile.hardened" \
             -t "${IMAGE_BASE}:hardened-${SHORT_SHA}" \
             "${YCSEC_REPOSITORY_DIR}"
 
+          docker image inspect "${IMAGE_BASE}:hardened-${SHORT_SHA}" >/dev/null
           docker push "${IMAGE_BASE}:hardened-${SHORT_SHA}"
 
           echo "YCSEC_MARKER_IMAGE_PUSH_OK"

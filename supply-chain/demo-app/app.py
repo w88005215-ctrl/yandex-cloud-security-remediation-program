@@ -2,17 +2,17 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.get("/")
 def index():
-    return jsonify({
-        "service": "ycsec-supply-chain-demo",
-        "purpose": "controlled vulnerable/remediated image evidence",
-        "status": "demo"
-    })
+    return jsonify(
+        status="ok",
+        component="ycsec-supply-chain-demo",
+        purpose="controlled supply-chain validation"
+    )
 
-@app.route("/healthz")
+@app.get("/healthz")
 def healthz():
-    return jsonify({"status": "ok"})
+    return jsonify(status="healthy")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
