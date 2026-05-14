@@ -663,3 +663,12 @@ Evidence added:
 - `docs/iac-security-exceptions.md` — IaC security exception register for controlled evidence-run tradeoffs.
 - `evidence/command-outputs/YCSEC_13_12_OUTPUT_checkov_after_exceptions.txt` — Checkov result after resource-scoped exception stabilization.
 - `evidence/command-outputs/YCSEC_13_12_OUTPUT_final_git_control.txt` — final git control evidence for Phase 13.12.
+
+## Phase 13.13A — Gitleaks evidence metadata stabilization
+
+- `docs/evidence-redaction-notes.md`
+- `.gitleaksignore`
+- `evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_worktree_after_sanitization.txt`
+- `evidence/command-outputs/YCSEC_13_13A_OUTPUT_final_git_control.txt`
+
+Purpose: normalize redacted scanner image metadata that triggered GitHub Actions Gitleaks false positives while preserving vulnerability evidence semantics.

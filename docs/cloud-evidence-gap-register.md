@@ -479,3 +479,11 @@ Publication boundary remains explicit: Yandex Cloud implementation evidence is r
 Status: closed.
 
 The GitHub IaC Security workflow was stabilized by adding explicit resource-scoped Checkov suppressions for controlled short-lived evidence environments. The exceptions are documented in `docs/iac-security-exceptions.md` and do not alter the project publication boundary.
+
+## Phase 13.13A — Gitleaks evidence metadata stabilization
+
+Status: CLOSED.
+
+Cloud actions: NONE.
+
+Result: GitHub Actions Gitleaks false positives caused by redacted Trivy image metadata were normalized. No cloud resources were created or modified.
