@@ -1,0 +1,55 @@
+Phase 11.2-CLOSEOUT — Successful Yandex Cloud Managed Kubernetes Smoke-Run
+
+Scope:
+Short-lived Yandex Cloud Managed Kubernetes smoke-run for validating Terraform-based infrastructure creation, provider authentication, Kubernetes API access, node readiness, cleanup discipline and publication-safe evidence handling.
+
+Result:
+[OK] Terraform provider authentication was passed through YC CLI-derived runtime environment values.
+[OK] Terraform initialized successfully.
+[OK] Terraform configuration validation passed.
+[OK] Terraform plan produced the expected short-lived smoke infrastructure.
+[OK] Terraform apply created the expected temporary Yandex Cloud resources.
+[OK] Managed Kubernetes control plane became reachable.
+[OK] Kubernetes node group became available.
+[OK] kubectl confirmed Kubernetes API access.
+[OK] kubectl confirmed a Ready worker node.
+[OK] secret scan completed with no leaks detected.
+[OK] Terraform destroy removed the temporary smoke infrastructure.
+[OK] post-destroy inventory checks confirmed no remaining smoke resources.
+[OK] runtime Terraform artifacts were kept outside the repository.
+[OK] temporary kubeconfig was kept outside the repository.
+[OK] raw cloud output was excluded from public repository evidence.
+[OK] sanitized smoke-run evidence was prepared for repository publication.
+
+Cloud resources created during smoke-run:
+- 1 VPC network.
+- 1 subnet.
+- 2 service accounts.
+- 3 IAM role bindings.
+- 1 zonal Managed Kubernetes cluster.
+- 1 Managed Kubernetes node group.
+
+Cloud resources after cleanup:
+[OK] no smoke Managed Kubernetes clusters remain.
+[OK] no smoke node groups remain.
+[OK] no smoke compute instances remain.
+[OK] no smoke network load balancers remain.
+[OK] no smoke VPC networks remain.
+[OK] no smoke subnets remain.
+[OK] no smoke service accounts remain.
+
+Security and publication controls:
+[OK] no Terraform state files are stored in the repository.
+[OK] no kubeconfig files are stored in the repository.
+[OK] no service account keys are stored in the repository.
+[OK] no token files are stored in the repository.
+[OK] sanitized evidence redacts cloud identifiers, IP addresses, CIDRs, temporary runtime paths and certificate material.
+[OK] sanitized evidence preserves technical proof of plan, apply, Kubernetes validation, secret scan, destroy and zero-resource verification.
+
+Warning classification:
+[OK] default zone fallback to ru-central1-a was accepted for this smoke-run.
+[OK] the warning does not indicate authentication failure, resource leakage, cleanup failure or cost-control failure.
+
+Milestone:
+[OK] Phase 11.2 confirmed successful real-cloud Managed Kubernetes provisioning and cleanup.
+[OK] Evidence is suitable for public portfolio repository after sanitization.
