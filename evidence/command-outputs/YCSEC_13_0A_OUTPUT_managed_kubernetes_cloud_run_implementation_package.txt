@@ -1,0 +1,131 @@
+Phase 13.0A-CLOSEOUT — Managed Kubernetes implementation package
+Date: 2026-05-14T10:12:51+00:00
+Qube: cloud-dev-workbech
+
+Step 1 — verify current workspace contains expected Phase 13.0A package
+ M docs/cloud-evidence-gap-register.md
+ M docs/evidence-index.md
+?? docs/managed-kubernetes-cloud-run-implementation.md
+?? docs/managed-kubernetes-cloud-run-operator-runbook.md
+?? evidence/command-outputs/YCSEC_13_0A_OUTPUT_managed_kubernetes_cloud_run_implementation_package.txt
+?? kubernetes/cloud-run/
+?? policies/kyverno/cloud-run/
+?? scripts/run-managed-kubernetes-baseline-remediation-cloud-run.sh
+?? scripts/validate-managed-kubernetes-cloud-run-package.sh
+?? terraform/environments/managed-kubernetes-cloud-run/
+[OK] terraform/environments/managed-kubernetes-cloud-run/main.tf exists
+[OK] terraform/environments/managed-kubernetes-cloud-run/variables.tf exists
+[OK] terraform/environments/managed-kubernetes-cloud-run/outputs.tf exists
+[OK] scripts/run-managed-kubernetes-baseline-remediation-cloud-run.sh exists
+[OK] scripts/validate-managed-kubernetes-cloud-run-package.sh exists
+[OK] docs/managed-kubernetes-cloud-run-implementation.md exists
+[OK] docs/managed-kubernetes-cloud-run-operator-runbook.md exists
+[OK] kubernetes/cloud-run/insecure-baseline/namespace.yaml exists
+[OK] kubernetes/cloud-run/insecure-baseline/rbac-overpermissive.yaml exists
+[OK] kubernetes/cloud-run/insecure-baseline/workload-insecure.yaml exists
+[OK] kubernetes/cloud-run/hardened/namespace.yaml exists
+[OK] kubernetes/cloud-run/hardened/rbac-least-privilege.yaml exists
+[OK] kubernetes/cloud-run/hardened/workload-hardened.yaml exists
+[OK] kubernetes/cloud-run/hardened/network-policies.yaml exists
+[OK] policies/kyverno/cloud-run/baseline-remediation-controls.yaml exists
+
+Step 2 — syntax validation
+[OK] cloud-run script syntax valid
+[OK] validator syntax valid
+
+Step 3 — package validator
+YCSEC Managed Kubernetes cloud-run package validator
+Date: 2026-05-14T10:12:51+00:00
+
+[OK] terraform/environments/managed-kubernetes-cloud-run/main.tf exists
+[OK] terraform/environments/managed-kubernetes-cloud-run/variables.tf exists
+[OK] terraform/environments/managed-kubernetes-cloud-run/outputs.tf exists
+[OK] scripts/run-managed-kubernetes-baseline-remediation-cloud-run.sh exists
+[OK] kubernetes/cloud-run/insecure-baseline/namespace.yaml exists
+[OK] kubernetes/cloud-run/insecure-baseline/rbac-overpermissive.yaml exists
+[OK] kubernetes/cloud-run/insecure-baseline/workload-insecure.yaml exists
+[OK] kubernetes/cloud-run/hardened/namespace.yaml exists
+[OK] kubernetes/cloud-run/hardened/rbac-least-privilege.yaml exists
+[OK] kubernetes/cloud-run/hardened/workload-hardened.yaml exists
+[OK] kubernetes/cloud-run/hardened/network-policies.yaml exists
+[OK] policies/kyverno/cloud-run/baseline-remediation-controls.yaml exists
+[OK] cloud-run script syntax valid
+[OK] explicit cloud approval gate present
+[OK] terraform destroy path present
+[OK] private evidence path present
+[OK] privileged baseline present
+[OK] root execution baseline present
+[OK] privilege escalation baseline present
+[OK] mutable image tag baseline present
+[OK] non-root remediation present
+[OK] privilege escalation remediation present
+[OK] read-only root filesystem remediation present
+[OK] capability drop remediation present
+[OK] NetworkPolicy remediation present
+[OK] Kyverno enforce policy present
+[OK] node group does not contain unsupported folder_id argument
+[OK] terraform fmt check passed
+
+FAIL_COUNT=0
+[OK] package validator passed
+
+Step 4 — Terraform provider validation in temporary runtime
+[0m[1mInitializing provider plugins found in the configuration...[0m
+- Finding yandex-cloud/yandex versions matching ">= 0.202.0"...
+- Installing yandex-cloud/yandex v0.202.0...
+- Installed yandex-cloud/yandex v0.202.0 (self-signed, key ID [0m[1mE40F590B50BB8E40[0m[0m)
+Partner and community providers are signed by their developers.
+If you'd like to know more about provider signing, you can read about it here:
+https://developer.hashicorp.com/terraform/cli/plugins/signing
+
+
+
+Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.[0m
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
+[OK] terraform init passed
+[32m[1mSuccess![0m The configuration is valid.
+[0m
+[OK] terraform validate passed
+[OK] temporary Terraform runtime removed
+
+Step 5 — verify Terraform node_group provider compatibility fix
+[OK] unsupported node_group folder_id argument is absent
+
+Step 6 — verify insecure baseline and remediation controls
+[OK] privileged baseline present
+[OK] root execution baseline present
+[OK] privilege escalation baseline present
+[OK] mutable image baseline present
+[OK] non-root remediation present
+[OK] privilege escalation remediation present
+[OK] read-only root filesystem remediation present
+[OK] capability drop remediation present
+[OK] NetworkPolicy remediation present
+[OK] Kyverno enforce policy present
+
+Step 7 — repository safety checks
+[OK] no Terraform state files in repository
+[OK] no kubeconfig files in repository
+[OK] no key/token-like files in repository
+[90m10:13AM[0m [32mINF[0m [1m34 commits scanned.[0m
+[90m10:13AM[0m [32mINF[0m [1mscanned ~759187 bytes (759.19 KB) in 575ms[0m
+[90m10:13AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 8 — phase decision
+FAIL_COUNT=0
+[OK] Phase 13.0A Managed Kubernetes implementation package completed
+[OK] no cloud resources were created in this phase
+[OK] project is ready for controlled Phase 13.0 Managed Kubernetes cloud-run

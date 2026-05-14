@@ -151,3 +151,30 @@ Still open:
 - Real Managed Kubernetes remediation cloud evidence.
 - Container/image vulnerability scan evidence.
 - Final cloud before/after remediation metrics.
+
+## Phase 13.0A — Managed Kubernetes cloud-run implementation package
+
+Status: implementation package prepared.
+
+Closed by this phase:
+
+- Terraform package for real Managed Kubernetes cloud-run prepared.
+- Insecure baseline manifests prepared for cloud validation.
+- Hardened remediation manifests prepared for cloud validation.
+- Kyverno policy-as-code package prepared.
+- Controlled cloud-run script prepared with explicit approval gate.
+- Destroy-after-run behavior prepared.
+- Private evidence handling prepared.
+- Static validation package prepared.
+
+Still open:
+
+- Real Managed Kubernetes cluster creation evidence.
+- Real node readiness evidence.
+- Real insecure baseline cloud evidence.
+- Real remediation cloud evidence.
+- Scanner before and after outputs from cloud context.
+- Audit Trails evidence for Managed Kubernetes lifecycle.
+- Terraform destroy evidence for Managed Kubernetes resources.
+- Zero-resource verification after Managed Kubernetes destroy.
+- Final cloud before/after metrics.

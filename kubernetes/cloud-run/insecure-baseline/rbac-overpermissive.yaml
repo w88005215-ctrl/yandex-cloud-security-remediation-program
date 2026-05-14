@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: baseline-overprivileged-sa
+  namespace: ycsec-insecure-baseline
+automountServiceAccountToken: true
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: baseline-overpermissive-role
+  namespace: ycsec-insecure-baseline
+rules:
+  - apiGroups: [""]
+    resources: ["pods", "services", "configmaps", "secrets"]
+    verbs: ["*"]
+  - apiGroups: ["apps"]
+    resources: ["deployments", "replicasets"]
+    verbs: ["*"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: baseline-overpermissive-binding
+  namespace: ycsec-insecure-baseline
+subjects:
+  - kind: ServiceAccount
+    name: baseline-overprivileged-sa
+    namespace: ycsec-insecure-baseline
+roleRef:
+  kind: Role
+  name: baseline-overpermissive-role
+  apiGroup: rbac.authorization.k8s.io

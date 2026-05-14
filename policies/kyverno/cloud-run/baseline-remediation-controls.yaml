@@ -1,0 +1,85 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: ycsec-cloud-run-baseline-controls
+  annotations:
+    policies.kyverno.io/title: YCSEC Cloud-Run Baseline Controls
+    policies.kyverno.io/category: Pod Security
+    policies.kyverno.io/severity: high
+spec:
+  validationFailureAction: Enforce
+  background: true
+  rules:
+    - name: disallow-privileged-containers
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+      validate:
+        message: Privileged containers are not allowed.
+        pattern:
+          spec:
+            containers:
+              - =(securityContext):
+                  X(privileged): false
+
+    - name: require-non-root
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+      validate:
+        message: Workloads must run as non-root.
+        pattern:
+          spec:
+            securityContext:
+              runAsNonRoot: true
+
+    - name: disallow-privilege-escalation
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+      validate:
+        message: Privilege escalation must be disabled.
+        pattern:
+          spec:
+            containers:
+              - securityContext:
+                  allowPrivilegeEscalation: false
+
+    - name: require-read-only-root-filesystem
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+      validate:
+        message: Root filesystem must be read-only.
+        pattern:
+          spec:
+            containers:
+              - securityContext:
+                  readOnlyRootFilesystem: true
+
+    - name: require-resource-limits
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+      validate:
+        message: CPU and memory requests and limits are required.
+        pattern:
+          spec:
+            containers:
+              - resources:
+                  requests:
+                    cpu: "?*"
+                    memory: "?*"
+                  limits:
+                    cpu: "?*"
+                    memory: "?*"

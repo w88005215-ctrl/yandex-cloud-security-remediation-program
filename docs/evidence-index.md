@@ -385,3 +385,20 @@ Result:
 | docs/managed-kubernetes-destroy-and-retention-plan.md | Destroy and retention policy for Kubernetes cloud-run resources |
 | evidence/command-outputs/YCSEC_12_9_OUTPUT_managed_kubernetes_cloud_run_plan.txt | Command evidence for Phase 12.9 |
 | evidence/command-outputs/YCSEC_12_9_OUTPUT_final_git_control.txt | Final git control evidence for Phase 12.9 |
+
+## Phase 13.0A — Managed Kubernetes cloud-run implementation package
+
+Evidence:
+
+- docs/managed-kubernetes-cloud-run-implementation.md — implementation package description.
+- docs/managed-kubernetes-cloud-run-operator-runbook.md — operator runbook for the real cloud-run.
+- terraform/environments/managed-kubernetes-cloud-run — Terraform package for short-lived Managed Kubernetes resources.
+- scripts/run-managed-kubernetes-baseline-remediation-cloud-run.sh — controlled cloud-run script.
+- scripts/validate-managed-kubernetes-cloud-run-package.sh — static implementation package validator.
+- kubernetes/cloud-run/insecure-baseline — controlled insecure baseline manifests.
+- kubernetes/cloud-run/hardened — hardened remediation manifests.
+- policies/kyverno/cloud-run — policy-as-code controls.
+- evidence/command-outputs/YCSEC_13_0A_OUTPUT_managed_kubernetes_cloud_run_implementation_package.txt — command evidence for this phase.
+- evidence/command-outputs/YCSEC_13_0A_OUTPUT_final_git_control.txt — final git control evidence.
+
+Cloud resources created in this phase: none.

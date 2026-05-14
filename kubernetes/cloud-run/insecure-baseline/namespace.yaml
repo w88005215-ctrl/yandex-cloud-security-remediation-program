@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ycsec-insecure-baseline
+  labels:
+    ycsec.phase: cloud-baseline
+    ycsec.security-state: insecure
