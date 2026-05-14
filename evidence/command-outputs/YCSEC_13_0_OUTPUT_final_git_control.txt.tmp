@@ -1,0 +1,22 @@
+Phase 13.0 — final git control
+Date: 2026-05-14T10:31:56+00:00
+Qube: cloud-dev-workbech
+
+Step 1 — verify cloud-run result
+[OK] cloud-run command completed successfully
+[OK] phase output confirms Managed Kubernetes cloud-run completion
+[OK] phase output contains destroy or zero-resource evidence markers
+
+Step 2 — verify repository safety before commit
+[OK] no Terraform state files
+[OK] no kubeconfig files
+[OK] no private/key/token-like artifacts
+[90m10:31AM[0m [32mINF[0m [1m35 commits scanned.[0m
+[90m10:31AM[0m [32mINF[0m [1mscanned ~797230 bytes (797.23 KB) in 584ms[0m
+[90m10:31AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 3 — write final git control evidence
+[OK] final git control evidence written: evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt
+
+Step 4 — commit, tag and push

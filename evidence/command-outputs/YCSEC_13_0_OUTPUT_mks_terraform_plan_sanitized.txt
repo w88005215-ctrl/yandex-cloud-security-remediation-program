@@ -1,0 +1,212 @@
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # yandex_iam_service_account.cluster[0m will be created
+[0m  [32m+[0m[0m resource "yandex_iam_service_account" "cluster" {
+      [32m+[0m[0m created_at         = (known after apply)
+      [32m+[0m[0m description        = "YCSEC Managed Kubernetes cluster service account for controlled baseline/remediation run"
+      [32m+[0m[0m folder_id          = "b1gmqa2hij6h8ank5tvr"
+      [32m+[0m[0m id                 = (known after apply)
+      [32m+[0m[0m labels             = (known after apply)
+      [32m+[0m[0m name               = "ycsec-mks-cloud-run-cluster-sa"
+      [32m+[0m[0m service_account_id = (known after apply)
+    }
+
+[1m  # yandex_iam_service_account.nodes[0m will be created
+[0m  [32m+[0m[0m resource "yandex_iam_service_account" "nodes" {
+      [32m+[0m[0m created_at         = (known after apply)
+      [32m+[0m[0m description        = "YCSEC Managed Kubernetes node service account for controlled baseline/remediation run"
+      [32m+[0m[0m folder_id          = "b1gmqa2hij6h8ank5tvr"
+      [32m+[0m[0m id                 = (known after apply)
+      [32m+[0m[0m labels             = (known after apply)
+      [32m+[0m[0m name               = "ycsec-mks-cloud-run-nodes-sa"
+      [32m+[0m[0m service_account_id = (known after apply)
+    }
+
+[1m  # yandex_kubernetes_cluster.mks[0m will be created
+[0m  [32m+[0m[0m resource "yandex_kubernetes_cluster" "mks" {
+      [32m+[0m[0m cluster_ipv4_range       = (known after apply)
+      [32m+[0m[0m cluster_ipv6_range       = (known after apply)
+      [32m+[0m[0m created_at               = (known after apply)
+      [32m+[0m[0m description              = "YCSEC short-lived Managed Kubernetes baseline/remediation evidence cluster"
+      [32m+[0m[0m folder_id                = "b1gmqa2hij6h8ank5tvr"
+      [32m+[0m[0m health                   = (known after apply)
+      [32m+[0m[0m id                       = (known after apply)
+      [32m+[0m[0m labels                   = (known after apply)
+      [32m+[0m[0m log_group_id             = (known after apply)
+      [32m+[0m[0m name                     = "ycsec-mks-cloud-run"
+      [32m+[0m[0m network_id               = (known after apply)
+      [32m+[0m[0m network_policy_provider  = "CALICO"
+      [32m+[0m[0m node_ipv4_cidr_mask_size = 24
+      [32m+[0m[0m node_service_account_id  = (known after apply)
+      [32m+[0m[0m release_channel          = "REGULAR"
+      [32m+[0m[0m service_account_id       = (known after apply)
+      [32m+[0m[0m service_ipv4_range       = (known after apply)
+      [32m+[0m[0m service_ipv6_range       = (known after apply)
+      [32m+[0m[0m status                   = (known after apply)
+
+      [32m+[0m[0m master {
+          [32m+[0m[0m cluster_ca_certificate = (known after apply)
+          [32m+[0m[0m etcd_cluster_size      = (known after apply)
+          [32m+[0m[0m external_v4_address    = (known after apply)
+          [32m+[0m[0m external_v4_endpoint   = (known after apply)
+          [32m+[0m[0m external_v6_endpoint   = (known after apply)
+          [32m+[0m[0m internal_v4_address    = (known after apply)
+          [32m+[0m[0m internal_v4_endpoint   = (known after apply)
+          [32m+[0m[0m public_ip              = true
+          [32m+[0m[0m version                = (known after apply)
+          [32m+[0m[0m version_info           = (known after apply)
+
+          [32m+[0m[0m maintenance_policy (known after apply)
+
+          [32m+[0m[0m master_location (known after apply)
+
+          [32m+[0m[0m regional (known after apply)
+
+          [32m+[0m[0m scale_policy (known after apply)
+
+          [32m+[0m[0m zonal {
+              [32m+[0m[0m subnet_id = (known after apply)
+              [32m+[0m[0m zone      = "ru-central1-a"
+            }
+        }
+    }
+
+[1m  # yandex_kubernetes_node_group.workers[0m will be created
+[0m  [32m+[0m[0m resource "yandex_kubernetes_node_group" "workers" {
+      [32m+[0m[0m cluster_id        = (known after apply)
+      [32m+[0m[0m created_at        = (known after apply)
+      [32m+[0m[0m description       = "YCSEC short-lived worker node group for baseline/remediation evidence"
+      [32m+[0m[0m id                = (known after apply)
+      [32m+[0m[0m instance_group_id = (known after apply)
+      [32m+[0m[0m labels            = (known after apply)
+      [32m+[0m[0m name              = "ycsec-mks-cloud-run-workers"
+      [32m+[0m[0m status            = (known after apply)
+      [32m+[0m[0m version           = (known after apply)
+      [32m+[0m[0m version_info      = (known after apply)
+
+      [32m+[0m[0m allocation_policy {
+          [32m+[0m[0m location {
+              [32m+[0m[0m subnet_id = (known after apply)
+              [32m+[0m[0m zone      = "ru-central1-a"
+            }
+        }
+
+      [32m+[0m[0m deploy_policy (known after apply)
+
+      [32m+[0m[0m instance_template {
+          [32m+[0m[0m metadata                  = (known after apply)
+          [32m+[0m[0m nat                       = (known after apply)
+          [32m+[0m[0m network_acceleration_type = (known after apply)
+          [32m+[0m[0m platform_id               = "standard-v3"
+
+          [32m+[0m[0m boot_disk {
+              [32m+[0m[0m size = 32
+              [32m+[0m[0m type = "network-hdd"
+            }
+
+          [32m+[0m[0m container_network (known after apply)
+
+          [32m+[0m[0m container_runtime (known after apply)
+
+          [32m+[0m[0m gpu_settings (known after apply)
+
+          [32m+[0m[0m network_interface {
+              [32m+[0m[0m ipv4       = true
+              [32m+[0m[0m ipv6       = (known after apply)
+              [32m+[0m[0m nat        = true
+              [32m+[0m[0m subnet_ids = (known after apply)
+            }
+
+          [32m+[0m[0m resources {
+              [32m+[0m[0m core_fraction = (known after apply)
+              [32m+[0m[0m cores         = 2
+              [32m+[0m[0m gpus          = 0
+              [32m+[0m[0m memory        = 4
+            }
+
+          [32m+[0m[0m scheduling_policy {
+              [32m+[0m[0m preemptible = true
+            }
+        }
+
+      [32m+[0m[0m maintenance_policy (known after apply)
+
+      [32m+[0m[0m scale_policy {
+          [32m+[0m[0m fixed_scale {
+              [32m+[0m[0m size = 1
+            }
+        }
+    }
+
+[1m  # yandex_resourcemanager_folder_iam_member.cluster_agent[0m will be created
+[0m  [32m+[0m[0m resource "yandex_resourcemanager_folder_iam_member" "cluster_agent" {
+      [32m+[0m[0m folder_id = "b1gmqa2hij6h8ank5tvr"
+      [32m+[0m[0m id        = (known after apply)
+      [32m+[0m[0m member    = (known after apply)
+      [32m+[0m[0m role      = "k8s.clusters.agent"
+    }
+
+[1m  # yandex_resourcemanager_folder_iam_member.cluster_vpc_admin[0m will be created
+[0m  [32m+[0m[0m resource "yandex_resourcemanager_folder_iam_member" "cluster_vpc_admin" {
+      [32m+[0m[0m folder_id = "b1gmqa2hij6h8ank5tvr"
+      [32m+[0m[0m id        = (known after apply)
+      [32m+[0m[0m member    = (known after apply)
+      [32m+[0m[0m role      = "vpc.publicAdmin"
+    }
+
+[1m  # yandex_resourcemanager_folder_iam_member.nodes_registry_puller[0m will be created
+[0m  [32m+[0m[0m resource "yandex_resourcemanager_folder_iam_member" "nodes_registry_puller" {
+      [32m+[0m[0m folder_id = "b1gmqa2hij6h8ank5tvr"
+      [32m+[0m[0m id        = (known after apply)
+      [32m+[0m[0m member    = (known after apply)
+      [32m+[0m[0m role      = "container-registry.images.puller"
+    }
+
+[1m  # yandex_vpc_network.mks[0m will be created
+[0m  [32m+[0m[0m resource "yandex_vpc_network" "mks" {
+      [32m+[0m[0m created_at                = (known after apply)
+      [32m+[0m[0m default_security_group_id = (known after apply)
+      [32m+[0m[0m description               = "YCSEC Managed Kubernetes controlled cloud-run network"
+      [32m+[0m[0m folder_id                 = "b1gmqa2hij6h8ank5tvr"
+      [32m+[0m[0m id                        = (known after apply)
+      [32m+[0m[0m labels                    = (known after apply)
+      [32m+[0m[0m name                      = "ycsec-mks-cloud-run-network"
+      [32m+[0m[0m subnet_ids                = (known after apply)
+    }
+
+[1m  # yandex_vpc_subnet.mks[0m will be created
+[0m  [32m+[0m[0m resource "yandex_vpc_subnet" "mks" {
+      [32m+[0m[0m created_at     = (known after apply)
+      [32m+[0m[0m description    = "YCSEC Managed Kubernetes controlled cloud-run subnet"
+      [32m+[0m[0m folder_id      = "b1gmqa2hij6h8ank5tvr"
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m labels         = (known after apply)
+      [32m+[0m[0m name           = "ycsec-mks-cloud-run-subnet"
+      [32m+[0m[0m network_id     = (known after apply)
+      [32m+[0m[0m v4_cidr_blocks = [
+          [32m+[0m[0m "<redacted-ip>/24",
+        ]
+      [32m+[0m[0m v6_cidr_blocks = (known after apply)
+      [32m+[0m[0m zone           = "ru-central1-a"
+    }
+
+[1mPlan:[0m [0m9 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  [32m+[0m[0m cluster_id    = (known after apply)
+  [32m+[0m[0m cluster_name  = "ycsec-mks-cloud-run"
+  [32m+[0m[0m network_id    = (known after apply)
+  [32m+[0m[0m node_group_id = (known after apply)
+  [32m+[0m[0m subnet_id     = (known after apply)
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Saved the plan to: /tmp/ycsec-mks-20260514T101851.eWsNf6/tfplan
+
+To perform exactly these actions, run the following command to apply:
+    terraform apply "/tmp/ycsec-mks-20260514T101851.eWsNf6/tfplan"

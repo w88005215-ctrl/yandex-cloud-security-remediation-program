@@ -1,0 +1,142 @@
+Phase 13.0 — controlled Managed Kubernetes baseline/remediation cloud-run
+Date: 2026-05-14T10:18:45+00:00
+Qube: cloud-dev-workbech
+
+Step 1 — verify roadmap baseline
+99b9e11 (HEAD -> main, tag: v0.13.0a-managed-kubernetes-cloud-run-implementation, origin/main, origin/HEAD) feat: prepare Managed Kubernetes cloud remediation run
+690425b (tag: v0.12.9-managed-kubernetes-cloud-run-plan) docs: plan Managed Kubernetes baseline remediation cloud run
+3f670fe (tag: v0.12.8f-registry-evidence-storage-validation) test: validate registry and evidence storage resources
+d172951 (tag: v0.12.8e-audit-trails-evidence-validation) test: validate Audit Trails evidence delivery
+664c3ff (tag: v0.12.8d-github-actions-oidc-validation) ci: validate GitHub Actions OIDC token exchange
+9772ab6 ci: use direct Yandex Cloud OIDC token exchange validation
+483160e ci: repair GitHub Actions OIDC validation workflow
+f58270b ci: validate GitHub Actions OIDC federation
+cba7dd7 (tag: v0.12.8c-github-publication) docs: record GitHub publication evidence
+068a549 (tag: v0.12.8b-bootstrap-oidc-audit-cloud-run) test: run bootstrap OIDC audit cloud provisioning
+[OK] current HEAD has required Phase 13.0A tag
+[OK] current branch is main
+[OK] working tree is clean for Phase 13.0 cloud-run
+
+Step 2 — verify controlled cloud-run script
+[OK] cloud-run script exists and is executable: scripts/run-managed-kubernetes-baseline-remediation-cloud-run.sh
+[OK] cloud-run script syntax valid
+
+Step 3 — set explicit cloud-run boundary
+[OK] approval variable set: YCSEC_CONFIRM_MKS_CLOUD_RUN=YES
+[OK] Managed Kubernetes resources will be destroyed after evidence collection
+[OK] Bootstrap/OIDC/Audit resources will remain retained
+[OK] GitHub owner/repo scope exported
+[OK] minimum node count boundary exported
+
+Step 4 — tool availability checks
+[OK] git -> /usr/bin/git
+[OK] yc -> /home/user/.local/bin/yc
+[OK] terraform -> /usr/bin/terraform
+[OK] kubectl -> /home/user/.local/bin/kubectl
+[OK] jq -> /usr/bin/jq
+[OK] gitleaks -> /usr/bin/gitleaks
+[OK] bash -> /usr/bin/bash
+[OK] grep -> alias grep='grep --color=auto'
+[OK] find -> /usr/bin/find
+[OK] sed -> /usr/bin/sed
+[OK] awk -> /usr/bin/awk
+[OK] tar -> /usr/bin/tar
+[OK] optional scanner available: trivy
+[OK] optional scanner available: kube-score
+[OK] optional scanner available: kubescape
+[OK] optional scanner available: syft
+[OK] optional scanner available: grype
+[OK] optional scanner available: kyverno
+
+Step 5 — repository safety checks before paid cloud action
+[OK] no Terraform state files in repository
+[OK] no kubeconfig files in repository
+[OK] no key/token-like files in repository
+[90m10:18AM[0m [32mINF[0m [1m35 commits scanned.[0m
+[90m10:18AM[0m [32mINF[0m [1mscanned ~797230 bytes (797.23 KB) in 769ms[0m
+[90m10:18AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed before cloud-run
+
+Step 6 — execute controlled Managed Kubernetes cloud-run
+YCSEC Phase 13.0 — Managed Kubernetes baseline/remediation controlled cloud-run
+Date: 2026-05-14T10:18:46+00:00
+Qube: cloud-dev-workbech
+
+[OK] explicit Managed Kubernetes cloud-run approval provided
+[OK] Managed Kubernetes resources will be destroyed after evidence collection
+[OK] yc available
+[OK] terraform available
+[OK] kubectl available
+[OK] jq available
+[OK] gitleaks available
+[OK] tar available
+[OK] grep available
+[OK] find available
+[OK] sed available
+[OK] awk available
+[OK] cloud-id configured
+[OK] folder-id configured
+[OK] short-lived IAM token created
+[OK] temporary Terraform runtime prepared outside repository
+[0m[1mInitializing provider plugins found in the configuration...[0m
+- Finding yandex-cloud/yandex versions matching ">= 0.202.0"...
+- Installing yandex-cloud/yandex v0.202.0...
+- Installed yandex-cloud/yandex v0.202.0 (self-signed, key ID [0m[1mE40F590B50BB8E40[0m[0m)
+Partner and community providers are signed by their developers.
+If you'd like to know more about provider signing, you can read about it here:
+https://developer.hashicorp.com/terraform/cli/plugins/signing
+
+[0m[1mInitializing the backend...[0m
+
+
+Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.[0m
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
+[32m[1mSuccess![0m The configuration is valid.
+[0m
+[OK] terraform plan saved
+[OK] terraform apply completed
+[WARN] trivy before scan returned non-zero
+[WARN] kube-score before scan returned non-zero
+[WARN] trivy after scan returned non-zero
+[WARN] kube-score after scan returned non-zero
+[OK] terraform destroy completed
+[OK] no Terraform state files in repository
+[OK] no kubeconfig files in repository
+[OK] no key/token-like files in repository
+[90m10:31AM[0m [32mINF[0m [1m35 commits scanned.[0m
+[90m10:31AM[0m [32mINF[0m [1mscanned ~797230 bytes (797.23 KB) in 660ms[0m
+[90m10:31AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks final scan passed
+
+Cloud-run summary
+Warnings: 4
+Failures: 0
+Private evidence: /home/user/ycsec-private-evidence/phase-13.0/managed-kubernetes-20260514T101851
+[OK] Managed Kubernetes cloud-run script completed successfully
+
+Step 7 — post-run repository safety checks
+[OK] no Terraform state files in repository after run
+[OK] no kubeconfig files in repository after run
+[OK] no private/key/token-like artifacts in repository after run
+[90m10:31AM[0m [32mINF[0m [1m35 commits scanned.[0m
+[90m10:31AM[0m [32mINF[0m [1mscanned ~797230 bytes (797.23 KB) in 733ms[0m
+[90m10:31AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed after cloud-run
+
+Step 8 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 13.0 Managed Kubernetes baseline/remediation cloud-run completed
+[OK] sanitized evidence is ready for final git control

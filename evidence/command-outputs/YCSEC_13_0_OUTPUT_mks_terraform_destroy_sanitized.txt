@@ -1,0 +1,321 @@
+[0m[1myandex_iam_service_account.nodes: Refreshing state... [id=ajerdm1srd5l9ck5vo9v][0m
+[0m[1myandex_iam_service_account.cluster: Refreshing state... [id=aje02gj1e23h3s156vh8][0m
+[0m[1myandex_vpc_network.mks: Refreshing state... [id=enpao31e8ng402mugna7][0m
+[0m[1myandex_resourcemanager_folder_iam_member.cluster_vpc_admin: Refreshing state... [id=b1gmqa2hij6h8ank5tvr/vpc.publicAdmin/serviceAccount:aje02gj1e23h3s156vh8][0m
+[0m[1myandex_resourcemanager_folder_iam_member.cluster_agent: Refreshing state... [id=b1gmqa2hij6h8ank5tvr/k8s.clusters.agent/serviceAccount:aje02gj1e23h3s156vh8][0m
+[0m[1myandex_resourcemanager_folder_iam_member.nodes_registry_puller: Refreshing state... [id=b1gmqa2hij6h8ank5tvr/container-registry.images.puller/serviceAccount:ajerdm1srd5l9ck5vo9v][0m
+[0m[1myandex_vpc_subnet.mks: Refreshing state... [id=e9bquivoa3m3ldomfcdi][0m
+[0m[1myandex_kubernetes_cluster.mks: Refreshing state... [id=cat9d2or3mjf09vcvrv1][0m
+[0m[1myandex_kubernetes_node_group.workers: Refreshing state... [id=cat9vkrsefa9bphe216f][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy[0m
+
+Terraform will perform the following actions:
+
+[1m  # yandex_iam_service_account.cluster[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "yandex_iam_service_account" "cluster" {
+      [31m-[0m[0m created_at         = "2026-05-14T10:19:16Z" [90m-> null[0m[0m
+      [31m-[0m[0m description        = "YCSEC Managed Kubernetes cluster service account for controlled baseline/remediation run" [90m-> null[0m[0m
+      [31m-[0m[0m folder_id          = "b1gmqa2hij6h8ank5tvr" [90m-> null[0m[0m
+      [31m-[0m[0m id                 = "aje02gj1e23h3s156vh8" [90m-> null[0m[0m
+      [31m-[0m[0m name               = "ycsec-mks-cloud-run-cluster-sa" [90m-> null[0m[0m
+      [31m-[0m[0m service_account_id = "aje02gj1e23h3s156vh8" [90m-> null[0m[0m
+    }
+
+[1m  # yandex_iam_service_account.nodes[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "yandex_iam_service_account" "nodes" {
+      [31m-[0m[0m created_at         = "2026-05-14T10:19:16Z" [90m-> null[0m[0m
+      [31m-[0m[0m description        = "YCSEC Managed Kubernetes node service account for controlled baseline/remediation run" [90m-> null[0m[0m
+      [31m-[0m[0m folder_id          = "b1gmqa2hij6h8ank5tvr" [90m-> null[0m[0m
+      [31m-[0m[0m id                 = "ajerdm1srd5l9ck5vo9v" [90m-> null[0m[0m
+      [31m-[0m[0m name               = "ycsec-mks-cloud-run-nodes-sa" [90m-> null[0m[0m
+      [31m-[0m[0m service_account_id = "ajerdm1srd5l9ck5vo9v" [90m-> null[0m[0m
+    }
+
+[1m  # yandex_kubernetes_cluster.mks[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "yandex_kubernetes_cluster" "mks" {
+      [31m-[0m[0m cluster_ipv4_range       = "<redacted-ip>/16" [90m-> null[0m[0m
+      [31m-[0m[0m created_at               = "2026-05-14T10:19:32Z" [90m-> null[0m[0m
+      [31m-[0m[0m description              = "YCSEC short-lived Managed Kubernetes baseline/remediation evidence cluster" [90m-> null[0m[0m
+      [31m-[0m[0m folder_id                = "b1gmqa2hij6h8ank5tvr" [90m-> null[0m[0m
+      [31m-[0m[0m health                   = "healthy" [90m-> null[0m[0m
+      [31m-[0m[0m id                       = "cat9d2or3mjf09vcvrv1" [90m-> null[0m[0m
+      [31m-[0m[0m labels                   = {} [90m-> null[0m[0m
+      [31m-[0m[0m name                     = "ycsec-mks-cloud-run" [90m-> null[0m[0m
+      [31m-[0m[0m network_id               = "enpao31e8ng402mugna7" [90m-> null[0m[0m
+      [31m-[0m[0m network_policy_provider  = "CALICO" [90m-> null[0m[0m
+      [31m-[0m[0m node_ipv4_cidr_mask_size = 24 [90m-> null[0m[0m
+      [31m-[0m[0m node_service_account_id  = "ajerdm1srd5l9ck5vo9v" [90m-> null[0m[0m
+      [31m-[0m[0m release_channel          = "REGULAR" [90m-> null[0m[0m
+      [31m-[0m[0m service_account_id       = "aje02gj1e23h3s156vh8" [90m-> null[0m[0m
+      [31m-[0m[0m service_ipv4_range       = "<redacted-ip>/16" [90m-> null[0m[0m
+      [31m-[0m[0m status                   = "running" [90m-> null[0m[0m
+        [90m# (3 unchanged attributes hidden)[0m[0m
+
+      [31m-[0m[0m master {
+          [31m-[0m[0m cluster_ca_certificate = <<-EOT
+                -----BEGIN CERTIFICATE-----
+                MIIC5zCCAc+gAwIBAgIBADANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDEwprdWJl
+                cm5ldGVzMB4XDTI2MDUxNDEwMTkzNVoXDTM2MDUxMTEwMTkzNVowFTETMBEGA1UE
+                AxMKa3ViZXJuZXRlczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMpk
+                mPCFuXShQzv2whwME2DUo1isoiR6dJmTTrb+A6TmB1dEh3vdDgGd+nGv6eMXs1CQ
+                lzA99jM9vG5YgnKM/Yt73wLtW4Qfozoss7oNm4ipP8YlrN706gg9Syp3nPp8/b/9
+                8DgWNfHOdILj36ZxLDWfQw2mXYplER4lNenRvjNEYCyYW2i0tT/dS9jWQCCZLrpW
+                gVYpiaKfea4zHzq97SGKj0HBik4hJZFZ9MFTM92I6EDrFfUMp/mrs0m7jbeQw8rJ
+                CIrZj+on0rOfiei9MLbJJgGl/p/ouCM+RAXmNntfaQ7aZcH8kl4taH2rGk7RCwU4
+                JyfQwaP4AYvHCevJh3UCAwEAAaNCMEAwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB
+                /wQFMAMBAf8wHQYDVR0OBBYEFCe6QDJ6jPtk70LtQrc6hy0MF73zMA0GCSqGSIb3
+                DQEBCwUAA4IBAQAD3riEXloIu8TnFEvQGRL9Q0+HOgYqAm+za2NyzfNHOWO4tNpu
+                9ABais6yqU//G17OiShhfiH9oo9BJL6omBQwpEu4R75A15i0t7SZVfiXQL77yIu6
+                PB+Znx4+ZvWRrgIaZ854hOVQOrooHmzxW0uys1sEwGxA4bwInseBbR6GFHbvGcke
+                TN9ByMtRarfVskIZieZSbu258yLqx9IIA8kkMDvSF8pb6DD0Qe7fPKr++8JTBgt4
+                mutkOx0MK4wRZx9FVc1/XpWZ42WU1JWDE87kK9qakbfbv3Yv2I869ega98TyfVCP
+                wQ0Z0ABJmn1tFoacnLB2ds3Y3y/b+4YNeWs5
+                -----END CERTIFICATE-----
+            EOT [90m-> null[0m[0m
+          [31m-[0m[0m etcd_cluster_size      = 1 [90m-> null[0m[0m
+          [31m-[0m[0m external_v4_address    = "<redacted-ip>" [90m-> null[0m[0m
+          [31m-[0m[0m external_v4_endpoint   = "https://<redacted-ip>" [90m-> null[0m[0m
+          [31m-[0m[0m internal_v4_address    = "<redacted-ip>" [90m-> null[0m[0m
+          [31m-[0m[0m internal_v4_endpoint   = "https://<redacted-ip>" [90m-> null[0m[0m
+          [31m-[0m[0m public_ip              = true [90m-> null[0m[0m
+          [31m-[0m[0m security_group_ids     = [] [90m-> null[0m[0m
+          [31m-[0m[0m version                = "1.33" [90m-> null[0m[0m
+          [31m-[0m[0m version_info           = [
+              [31m-[0m[0m {
+                  [31m-[0m[0m current_version        = "1.33"
+                  [31m-[0m[0m new_revision_available = false
+                  [31m-[0m[0m version_deprecated     = false
+                    [90m# (1 unchanged attribute hidden)[0m[0m
+                },
+            ] [90m-> null[0m[0m
+            [90m# (2 unchanged attributes hidden)[0m[0m
+
+          [31m-[0m[0m maintenance_policy {
+              [31m-[0m[0m auto_upgrade = true [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m master_location {
+              [31m-[0m[0m subnet_id = "e9bquivoa3m3ldomfcdi" [90m-> null[0m[0m
+              [31m-[0m[0m zone      = "ru-central1-a" [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m scale_policy {
+              [31m-[0m[0m auto_scale {
+                  [31m-[0m[0m min_resource_preset_id = "s-c2-m8" [90m-> null[0m[0m
+                }
+            }
+
+          [31m-[0m[0m zonal {
+              [31m-[0m[0m subnet_id = "e9bquivoa3m3ldomfcdi" [90m-> null[0m[0m
+              [31m-[0m[0m zone      = "ru-central1-a" [90m-> null[0m[0m
+            }
+        }
+    }
+
+[1m  # yandex_kubernetes_node_group.workers[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "yandex_kubernetes_node_group" "workers" {
+      [31m-[0m[0m allowed_unsafe_sysctls = [] [90m-> null[0m[0m
+      [31m-[0m[0m cluster_id             = "cat9d2or3mjf09vcvrv1" [90m-> null[0m[0m
+      [31m-[0m[0m created_at             = "2026-05-14T10:27:09Z" [90m-> null[0m[0m
+      [31m-[0m[0m description            = "YCSEC short-lived worker node group for baseline/remediation evidence" [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "cat9vkrsefa9bphe216f" [90m-> null[0m[0m
+      [31m-[0m[0m instance_group_id      = "cl14rsr53mj3f2atermh" [90m-> null[0m[0m
+      [31m-[0m[0m labels                 = {} [90m-> null[0m[0m
+      [31m-[0m[0m name                   = "ycsec-mks-cloud-run-workers" [90m-> null[0m[0m
+      [31m-[0m[0m node_labels            = {} [90m-> null[0m[0m
+      [31m-[0m[0m node_taints            = [] [90m-> null[0m[0m
+      [31m-[0m[0m status                 = "running" [90m-> null[0m[0m
+      [31m-[0m[0m variables              = {} [90m-> null[0m[0m
+      [31m-[0m[0m version                = "1.33" [90m-> null[0m[0m
+      [31m-[0m[0m version_info           = [
+          [31m-[0m[0m {
+              [31m-[0m[0m current_version        = "1.33"
+              [31m-[0m[0m new_revision_available = false
+              [31m-[0m[0m version_deprecated     = false
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+
+      [31m-[0m[0m allocation_policy {
+          [31m-[0m[0m location {
+              [31m-[0m[0m subnet_id = "e9bquivoa3m3ldomfcdi" [90m-> null[0m[0m
+              [31m-[0m[0m zone      = "ru-central1-a" [90m-> null[0m[0m
+            }
+        }
+
+      [31m-[0m[0m deploy_policy {
+          [31m-[0m[0m max_expansion   = 3 [90m-> null[0m[0m
+          [31m-[0m[0m max_unavailable = 0 [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m instance_template {
+          [31m-[0m[0m labels                    = {} [90m-> null[0m[0m
+          [31m-[0m[0m metadata                  = {} [90m-> null[0m[0m
+            name                      = [90mnull[0m[0m
+          [31m-[0m[0m nat                       = true [90m-> null[0m[0m
+          [31m-[0m[0m network_acceleration_type = "type_unspecified" [90m-> null[0m[0m
+          [31m-[0m[0m platform_id               = "standard-v3" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+
+          [31m-[0m[0m boot_disk {
+              [31m-[0m[0m size = 32 [90m-> null[0m[0m
+              [31m-[0m[0m type = "network-hdd" [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m container_network {
+              [31m-[0m[0m pod_mtu = 0 [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m network_interface {
+              [31m-[0m[0m ipv4               = true [90m-> null[0m[0m
+              [31m-[0m[0m ipv6               = false [90m-> null[0m[0m
+              [31m-[0m[0m nat                = true [90m-> null[0m[0m
+              [31m-[0m[0m security_group_ids = [] [90m-> null[0m[0m
+              [31m-[0m[0m subnet_ids         = [
+                  [31m-[0m[0m "e9bquivoa3m3ldomfcdi",
+                ] [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m resources {
+              [31m-[0m[0m core_fraction = 100 [90m-> null[0m[0m
+              [31m-[0m[0m cores         = 2 [90m-> null[0m[0m
+              [31m-[0m[0m gpus          = 0 [90m-> null[0m[0m
+              [31m-[0m[0m memory        = 4 [90m-> null[0m[0m
+            }
+
+          [31m-[0m[0m scheduling_policy {
+              [31m-[0m[0m preemptible = true [90m-> null[0m[0m
+            }
+        }
+
+      [31m-[0m[0m maintenance_policy {
+          [31m-[0m[0m auto_repair  = true [90m-> null[0m[0m
+          [31m-[0m[0m auto_upgrade = true [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m scale_policy {
+          [31m-[0m[0m fixed_scale {
+              [31m-[0m[0m size = 1 [90m-> null[0m[0m
+            }
+        }
+    }
+
+[1m  # yandex_resourcemanager_folder_iam_member.cluster_agent[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "yandex_resourcemanager_folder_iam_member" "cluster_agent" {
+      [31m-[0m[0m folder_id = "b1gmqa2hij6h8ank5tvr" [90m-> null[0m[0m
+      [31m-[0m[0m id        = "b1gmqa2hij6h8ank5tvr/k8s.clusters.agent/serviceAccount:aje02gj1e23h3s156vh8" [90m-> null[0m[0m
+      [31m-[0m[0m member    = "serviceAccount:aje02gj1e23h3s156vh8" [90m-> null[0m[0m
+      [31m-[0m[0m role      = "k8s.clusters.agent" [90m-> null[0m[0m
+    }
+
+[1m  # yandex_resourcemanager_folder_iam_member.cluster_vpc_admin[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "yandex_resourcemanager_folder_iam_member" "cluster_vpc_admin" {
+      [31m-[0m[0m folder_id = "b1gmqa2hij6h8ank5tvr" [90m-> null[0m[0m
+      [31m-[0m[0m id        = "b1gmqa2hij6h8ank5tvr/vpc.publicAdmin/serviceAccount:aje02gj1e23h3s156vh8" [90m-> null[0m[0m
+      [31m-[0m[0m member    = "serviceAccount:aje02gj1e23h3s156vh8" [90m-> null[0m[0m
+      [31m-[0m[0m role      = "vpc.publicAdmin" [90m-> null[0m[0m
+    }
+
+[1m  # yandex_resourcemanager_folder_iam_member.nodes_registry_puller[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "yandex_resourcemanager_folder_iam_member" "nodes_registry_puller" {
+      [31m-[0m[0m folder_id = "b1gmqa2hij6h8ank5tvr" [90m-> null[0m[0m
+      [31m-[0m[0m id        = "b1gmqa2hij6h8ank5tvr/container-registry.images.puller/serviceAccount:ajerdm1srd5l9ck5vo9v" [90m-> null[0m[0m
+      [31m-[0m[0m member    = "serviceAccount:ajerdm1srd5l9ck5vo9v" [90m-> null[0m[0m
+      [31m-[0m[0m role      = "container-registry.images.puller" [90m-> null[0m[0m
+    }
+
+[1m  # yandex_vpc_network.mks[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "yandex_vpc_network" "mks" {
+      [31m-[0m[0m created_at                = "2026-05-14T10:19:16Z" [90m-> null[0m[0m
+      [31m-[0m[0m default_security_group_id = "enp1b20nhlov1o4brfp8" [90m-> null[0m[0m
+      [31m-[0m[0m description               = "YCSEC Managed Kubernetes controlled cloud-run network" [90m-> null[0m[0m
+      [31m-[0m[0m folder_id                 = "b1gmqa2hij6h8ank5tvr" [90m-> null[0m[0m
+      [31m-[0m[0m id                        = "enpao31e8ng402mugna7" [90m-> null[0m[0m
+      [31m-[0m[0m labels                    = {} [90m-> null[0m[0m
+      [31m-[0m[0m name                      = "ycsec-mks-cloud-run-network" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_ids                = [
+          [31m-[0m[0m "e9bkassdaco4m733uo82",
+          [31m-[0m[0m "e9bquivoa3m3ldomfcdi",
+          [31m-[0m[0m "e9brqv2n3kthnimbvpg6",
+        ] [90m-> null[0m[0m
+    }
+
+[1m  # yandex_vpc_subnet.mks[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "yandex_vpc_subnet" "mks" {
+      [31m-[0m[0m created_at     = "2026-05-14T10:19:19Z" [90m-> null[0m[0m
+      [31m-[0m[0m description    = "YCSEC Managed Kubernetes controlled cloud-run subnet" [90m-> null[0m[0m
+      [31m-[0m[0m folder_id      = "b1gmqa2hij6h8ank5tvr" [90m-> null[0m[0m
+      [31m-[0m[0m id             = "e9bquivoa3m3ldomfcdi" [90m-> null[0m[0m
+      [31m-[0m[0m labels         = {} [90m-> null[0m[0m
+      [31m-[0m[0m name           = "ycsec-mks-cloud-run-subnet" [90m-> null[0m[0m
+      [31m-[0m[0m network_id     = "enpao31e8ng402mugna7" [90m-> null[0m[0m
+      [31m-[0m[0m v4_cidr_blocks = [
+          [31m-[0m[0m "<redacted-ip>/24",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m v6_cidr_blocks = [] [90m-> null[0m[0m
+      [31m-[0m[0m zone           = "ru-central1-a" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1mPlan:[0m [0m0 to add, 0 to change, 9 to destroy.
+
+Changes to Outputs:
+  [31m-[0m[0m cluster_id    = "cat9d2or3mjf09vcvrv1" [90m-> null[0m[0m
+  [31m-[0m[0m cluster_name  = "ycsec-mks-cloud-run" [90m-> null[0m[0m
+  [31m-[0m[0m network_id    = "enpao31e8ng402mugna7" [90m-> null[0m[0m
+  [31m-[0m[0m node_group_id = "cat9vkrsefa9bphe216f" [90m-> null[0m[0m
+  [31m-[0m[0m subnet_id     = "e9bquivoa3m3ldomfcdi" [90m-> null[0m[0m
+[0m[1myandex_kubernetes_node_group.workers: Destroying... [id=cat9vkrsefa9bphe216f][0m[0m
+[0m[1myandex_kubernetes_node_group.workers: Still destroying... [id=cat9vkrsefa9bphe216f, 00m10s elapsed][0m[0m
+[0m[1myandex_kubernetes_node_group.workers: Still destroying... [id=cat9vkrsefa9bphe216f, 00m20s elapsed][0m[0m
+[0m[1myandex_kubernetes_node_group.workers: Still destroying... [id=cat9vkrsefa9bphe216f, 00m30s elapsed][0m[0m
+[0m[1myandex_kubernetes_node_group.workers: Still destroying... [id=cat9vkrsefa9bphe216f, 00m40s elapsed][0m[0m
+[0m[1myandex_kubernetes_node_group.workers: Still destroying... [id=cat9vkrsefa9bphe216f, 00m50s elapsed][0m[0m
+[0m[1myandex_kubernetes_node_group.workers: Destruction complete after 59s[0m
+[0m[1myandex_kubernetes_cluster.mks: Destroying... [id=cat9d2or3mjf09vcvrv1][0m[0m
+[0m[1myandex_kubernetes_cluster.mks: Still destroying... [id=cat9d2or3mjf09vcvrv1, 00m10s elapsed][0m[0m
+[0m[1myandex_kubernetes_cluster.mks: Still destroying... [id=cat9d2or3mjf09vcvrv1, 00m20s elapsed][0m[0m
+[0m[1myandex_kubernetes_cluster.mks: Still destroying... [id=cat9d2or3mjf09vcvrv1, 00m30s elapsed][0m[0m
+[0m[1myandex_kubernetes_cluster.mks: Still destroying... [id=cat9d2or3mjf09vcvrv1, 00m40s elapsed][0m[0m
+[0m[1myandex_kubernetes_cluster.mks: Still destroying... [id=cat9d2or3mjf09vcvrv1, 00m50s elapsed][0m[0m
+[0m[1myandex_kubernetes_cluster.mks: Still destroying... [id=cat9d2or3mjf09vcvrv1, 01m00s elapsed][0m[0m
+[0m[1myandex_kubernetes_cluster.mks: Still destroying... [id=cat9d2or3mjf09vcvrv1, 01m10s elapsed][0m[0m
+[0m[1myandex_kubernetes_cluster.mks: Destruction complete after 1m13s[0m
+[0m[1myandex_resourcemanager_folder_iam_member.cluster_vpc_admin: Destroying... [id=b1gmqa2hij6h8ank5tvr/vpc.publicAdmin/serviceAccount:aje02gj1e23h3s156vh8][0m[0m
+[0m[1myandex_vpc_subnet.mks: Destroying... [id=e9bquivoa3m3ldomfcdi][0m[0m
+[0m[1myandex_resourcemanager_folder_iam_member.nodes_registry_puller: Destroying... [id=b1gmqa2hij6h8ank5tvr/container-registry.images.puller/serviceAccount:ajerdm1srd5l9ck5vo9v][0m[0m
+[0m[1myandex_resourcemanager_folder_iam_member.cluster_agent: Destroying... [id=b1gmqa2hij6h8ank5tvr/k8s.clusters.agent/serviceAccount:aje02gj1e23h3s156vh8][0m[0m
+[0m[1myandex_resourcemanager_folder_iam_member.cluster_vpc_admin: Destruction complete after 5s[0m
+[0m[1myandex_vpc_subnet.mks: Destruction complete after 7s[0m
+[0m[1myandex_vpc_network.mks: Destroying... [id=enpao31e8ng402mugna7][0m[0m
+[0m[1myandex_resourcemanager_folder_iam_member.cluster_agent: Destruction complete after 7s[0m
+[0m[1myandex_iam_service_account.cluster: Destroying... [id=aje02gj1e23h3s156vh8][0m[0m
+[0m[1myandex_vpc_network.mks: Destruction complete after 1s[0m
+[0m[1myandex_resourcemanager_folder_iam_member.nodes_registry_puller: Still destroying... [id=b1gmqa2hij6h8ank5tvr/container-registry...er/serviceAccount:ajerdm1srd5l9ck5vo9v, 00m10s elapsed][0m[0m
+[0m[1myandex_resourcemanager_folder_iam_member.nodes_registry_puller: Destruction complete after 11s[0m
+[0m[1myandex_iam_service_account.nodes: Destroying... [id=ajerdm1srd5l9ck5vo9v][0m[0m
+[0m[1myandex_iam_service_account.cluster: Destruction complete after 4s[0m
+[0m[1myandex_iam_service_account.nodes: Destruction complete after 3s[0m
+[33m╷[0m[0m
+[33m│[0m [0m[1m[33mWarning: [0m[0m[1mNo bindings found for role[0m
+[33m│[0m [0m
+[33m│[0m [0m[0mNo bindings found for role: vpc.publicAdmin. Resource will be removed from
+[33m│[0m [0mstate
+[33m╵[0m[0m
+[33m╷[0m[0m
+[33m│[0m [0m[1m[33mWarning: [0m[0m[1mNo bindings found for role[0m
+[33m│[0m [0m
+[33m│[0m [0m[0mNo bindings found for role: k8s.clusters.agent. Resource will be removed
+[33m│[0m [0mfrom state
+[33m╵[0m[0m
+[33m╷[0m[0m
+[33m│[0m [0m[1m[33mWarning: [0m[0m[1mNo bindings found for role[0m
+[33m│[0m [0m
+[33m│[0m [0m[0mNo bindings found for role: container-registry.images.puller. Resource will
+[33m│[0m [0mbe removed from state
+[33m╵[0m[0m
+[0m[1m[32m
+Destroy complete! Resources: 9 destroyed.[0m
