@@ -453,3 +453,18 @@ Cloud resources created in this phase: none.
 | `evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt` | Command evidence for Phase 13.3 |
 | `evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation_success.txt` | Sanitized GitHub Actions OIDC registry push evidence |
 | `evidence/command-outputs/YCSEC_13_3_OUTPUT_registry_inventory_after_push.txt` | Sanitized registry inventory after image push |
+
+## Phase 13.4 — SBOM and vulnerability validation
+
+| Evidence | Description |
+|---|---|
+| `docs/sbom-vulnerability-validation.md` | SBOM and vulnerability validation result document |
+| `docs/supply-chain-vulnerability-metrics.md` | Before/after supply-chain vulnerability metrics summary |
+| `evidence/sbom/ycsec_supply_chain_insecure_sbom_cyclonedx.json` | Insecure image SBOM |
+| `evidence/sbom/ycsec_supply_chain_hardened_sbom_cyclonedx.json` | Hardened image SBOM |
+| `evidence/vulnerability/trivy_insecure_image.json` | Trivy insecure image scan |
+| `evidence/vulnerability/trivy_hardened_image.json` | Trivy hardened image scan |
+| `evidence/vulnerability/grype_insecure_image.json` | Grype insecure image scan |
+| `evidence/vulnerability/grype_hardened_image.json` | Grype hardened image scan |
+| `evidence/metrics/supply_chain_vulnerability_metrics.json` | Machine-readable vulnerability metrics |
+| `evidence/command-outputs/YCSEC_13_4_OUTPUT_sbom_vulnerability_validation.txt` | Phase 13.4 command evidence |

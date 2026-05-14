@@ -273,3 +273,19 @@ Still open:
 - SBOM evidence.
 - Kyverno admission policy enforcement evidence.
 - Final supply-chain before/after metrics.
+
+## Phase 13.4 — SBOM and vulnerability validation
+
+Status: completed.
+
+Closed evidence:
+
+- SBOM evidence for registry-pushed insecure and hardened container images.
+- Trivy vulnerability scan evidence.
+- Grype vulnerability scan evidence.
+- Before/after supply-chain vulnerability metrics.
+- Registry-backed image validation without committed cloud credentials.
+
+Remaining supply-chain evidence target:
+
+- Admission policy enforcement validation in Kubernetes.
