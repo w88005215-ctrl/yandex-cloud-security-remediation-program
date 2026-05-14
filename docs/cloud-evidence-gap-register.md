@@ -335,3 +335,25 @@ Purpose:
 Next required cloud evidence:
 
 - Corrected Phase 13.5B/13.5C paid Kyverno Managed Kubernetes admission validation.
+
+<!-- phase-13-5-kyverno-admission:start -->
+## Phase 13.5 — Kyverno admission policy enforcement validation
+
+Status: closed.
+
+Closed evidence gap:
+
+- Runtime Kubernetes admission-policy enforcement.
+- Kyverno policy-as-code validation on real Yandex Managed Kubernetes.
+- Insecure workload denial evidence.
+- Hardened workload allow-path evidence.
+- Post-run cleanup evidence for short-lived Managed Kubernetes resources.
+
+Remaining follow-up:
+
+- Consolidate final remediation metrics.
+- Update final control matrix.
+- Update final risk register.
+- Prepare publication readiness review.
+- Decide whether retained bootstrap resources should remain for demonstration or be destroyed in a final cleanup phase.
+<!-- phase-13-5-kyverno-admission:end -->

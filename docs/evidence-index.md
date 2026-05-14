@@ -506,3 +506,38 @@ Cloud resources created in this phase: none.
 | `scripts/run-kyverno-admission-policy-mks-validation.sh` | Hardened Kyverno Managed Kubernetes validation runner |
 | `evidence/command-outputs/YCSEC_13_5A2_OUTPUT_kyverno_runner_hardening.txt` | Command evidence for local runner hardening |
 | `evidence/command-outputs/YCSEC_13_5A2_OUTPUT_final_git_control.txt` | Final git control evidence for runner hardening |
+
+<!-- phase-13-5-kyverno-admission:start -->
+## Phase 13.5 — Kyverno admission policy enforcement validation
+
+Status: completed.
+
+Public evidence:
+
+- `docs/kyverno-admission-policy-enforcement-validation.md`
+- `docs/kyverno-admission-policy-enforcement-metrics.md`
+- `evidence/after/kyverno_mks_nodes_ready.txt`
+- `evidence/after/kyverno_install_apply.txt`
+- `evidence/after/kyverno_controller_pods_ready.txt`
+- `evidence/after/kyverno_policy_apply.txt`
+- `evidence/after/kyverno_policy_status.txt`
+- `evidence/after/kyverno_insecure_workload_denied.txt`
+- `evidence/after/kyverno_hardened_workload_allowed.txt`
+- `evidence/sanitized/kyverno_admission_policy_enforcement_redacted.txt`
+- `evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_plan_sanitized.txt`
+- `evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_apply_sanitized.txt`
+- `evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_get_credentials_sanitized.txt`
+- `evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_destroy_sanitized.txt`
+- `evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_mks_cluster_list.txt`
+- `evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_compute_instance_list.txt`
+- `evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_nlb_list.txt`
+
+Result:
+
+- Managed Kubernetes node readiness validated.
+- Kyverno admission controller installed.
+- Kyverno ClusterPolicy applied and inspected.
+- Insecure workload denied by admission policy.
+- Hardened workload accepted by server-side admission validation.
+- Temporary MKS resources destroyed after evidence collection.
+<!-- phase-13-5-kyverno-admission:end -->

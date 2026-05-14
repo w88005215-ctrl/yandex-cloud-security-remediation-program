@@ -1,0 +1,19 @@
+Warning: would violate PodSecurity "restricted:latest": privileged (container "insecure" must not set securityContext.privileged=true), allowPrivilegeEscalation != false (container "insecure" must set securityContext.allowPrivilegeEscalation=false), unrestricted capabilities (container "insecure" must set securityContext.capabilities.drop=["ALL"]), runAsNonRoot != true (container "insecure" must not set securityContext.runAsNonRoot=false), runAsUser=0 (container "insecure" must not set runAsUser=0), seccompProfile (pod or container "insecure" must set securityContext.seccompProfile.type to "RuntimeDefault" or "Localhost")
+Error from server: error when creating "kubernetes/admission-validation/insecure-workload-denied.yaml": admission webhook "validate.kyverno.svc-fail" denied the request: 
+
+resource Pod/ycsec-admission-validation/ycsec-insecure-workload-denied was blocked due to the following policies 
+
+ycsec-supply-chain-admission-controls:
+  deny-privilege-escalation: 'validation error: Privilege escalation must be disabled.
+    rule deny-privilege-escalation failed at path /spec/containers/0/securityContext/allowPrivilegeEscalation/'
+  require-capabilities-drop-all: 'validation error: All Linux capabilities must be
+    dropped. rule require-capabilities-drop-all failed at path /spec/containers/0/securityContext/capabilities/'
+  require-non-root-container: 'validation error: Containers must run as non-root.
+    rule require-non-root-container failed at path /spec/containers/0/securityContext/runAsNonRoot/'
+  require-read-only-root-filesystem: 'validation error: Root filesystem must be read-only.
+    rule require-read-only-root-filesystem failed at path /spec/containers/0/securityContext/readOnlyRootFilesystem/'
+  require-runtime-default-seccomp: 'validation error: RuntimeDefault seccomp profile
+    is required. rule require-runtime-default-seccomp failed at path /spec/securityContext/seccompProfile/'
+  require-yandex-container-registry: 'validation error: Container images must be pulled
+    from Yandex Container Registry. rule require-yandex-container-registry failed
+    at path /spec/containers/0/image/'

@@ -1,83 +1,69 @@
-# Kyverno Admission Policy Enforcement Validation
-
-## Status
-
-Prepared for controlled rerun.
+# Kyverno Admission Policy Enforcement Validation on Yandex Managed Kubernetes
 
 ## Purpose
 
-This phase validates Kubernetes admission policy enforcement on a short-lived Yandex Managed Kubernetes cluster.
+This evidence block validates Kubernetes admission control enforcement in a real Yandex Managed Kubernetes environment.
 
-The validation proves that:
+The phase demonstrates that the project can move beyond static manifest validation and prove policy behavior at runtime:
 
-- Kyverno admission controller can be installed on a real managed Kubernetes cluster.
-- A controlled insecure workload is denied by admission policy.
-- A hardened workload using the project registry image passes server-side admission validation.
-- Managed Kubernetes resources are destroyed after evidence collection.
-- No kubeconfig, Terraform state, IAM token, key, or raw private evidence is committed.
+- a short-lived Managed Kubernetes cluster is created;
+- Kyverno is installed as an admission controller;
+- a supply-chain admission policy is applied in enforcement mode;
+- an intentionally insecure workload is rejected by admission control;
+- a hardened workload using the validated Yandex Container Registry image passes server-side admission validation;
+- all temporary Managed Kubernetes resources are destroyed after evidence collection.
 
-## Repair notes
+## Scope
 
-The previous failed attempt exposed two implementation defects:
+This phase validates admission behavior only. It does not retain the Managed Kubernetes cluster.
 
-- kubeconfig was written by the cloud CLI to the default user kubeconfig path instead of the expected private evidence path;
-- Terraform variable files included undeclared variables from a reused configuration pattern.
+Retained bootstrap resources remain outside this short-lived run:
 
-The repaired script isolates the kubeconfig workflow by using a private temporary HOME for Yandex CLI credential generation and then uses kubectl with an explicit private kubeconfig path.
+- Yandex Container Registry;
+- Audit Trails trail;
+- Object Storage audit bucket;
+- GitHub Actions OIDC federation;
+- bootstrap service accounts.
 
-The repaired Terraform runtime writes only variables declared by the Managed Kubernetes Terraform module.
+## Evidence summary
 
-## Evidence targets
+| Evidence area | Result |
+|---|---|
+| Managed Kubernetes cluster creation | Validated through Terraform apply evidence |
+| Node readiness | Validated through `kubectl get nodes` evidence |
+| Kyverno installation | Validated through install/apply evidence and controller readiness |
+| Policy deployment | Validated through Kyverno ClusterPolicy apply/status evidence |
+| Insecure workload denial | Validated through Kyverno-specific admission denial evidence |
+| Hardened workload allow path | Validated through server-side dry-run allow evidence |
+| Cleanup | Validated through Terraform destroy and post-destroy cloud inventory evidence |
+| Secret/state safety | Validated through repository safety checks and gitleaks |
 
-Public evidence is expected under:
+## Public evidence files
 
-- evidence/after/kyverno_mks_nodes_ready.txt
-- evidence/after/kyverno_install_apply.txt
-- evidence/after/kyverno_controller_pods_ready.txt
-- evidence/after/kyverno_policy_apply.txt
-- evidence/after/kyverno_policy_status.txt
-- evidence/after/kyverno_insecure_workload_denied.txt
-- evidence/after/kyverno_hardened_workload_allowed.txt
-- evidence/sanitized/kyverno_admission_policy_enforcement_redacted.txt
-- evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_plan_sanitized.txt
-- evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_apply_sanitized.txt
-- evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_get_credentials_sanitized.txt
-- evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_destroy_sanitized.txt
-- evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_mks_cluster_list.txt
-- evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_compute_instance_list.txt
-- evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_nlb_list.txt
+- `evidence/after/kyverno_mks_nodes_ready.txt`
+- `evidence/after/kyverno_install_apply.txt`
+- `evidence/after/kyverno_controller_pods_ready.txt`
+- `evidence/after/kyverno_policy_apply.txt`
+- `evidence/after/kyverno_policy_status.txt`
+- `evidence/after/kyverno_insecure_workload_denied.txt`
+- `evidence/after/kyverno_hardened_workload_allowed.txt`
+- `evidence/sanitized/kyverno_admission_policy_enforcement_redacted.txt`
+- `evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_plan_sanitized.txt`
+- `evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_apply_sanitized.txt`
+- `evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_get_credentials_sanitized.txt`
+- `evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_destroy_sanitized.txt`
+- `evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_mks_cluster_list.txt`
+- `evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_compute_instance_list.txt`
+- `evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_nlb_list.txt`
 
-## Claim boundary
+## Security interpretation
 
-Allowed after successful rerun:
+The result proves that the hardened supply-chain path is not only documented, but enforceable at Kubernetes admission time.
 
-- Kyverno admission policy enforcement was validated on real Yandex Managed Kubernetes.
-- A deliberately insecure workload was denied by admission control.
-- A hardened workload passed admission validation.
-- The managed cluster was destroyed after evidence collection.
+The insecure workload is blocked before persistence in the cluster. The hardened workload is accepted through server-side validation. This closes the policy-as-code runtime enforcement gap for the supply-chain extension.
 
-Not allowed before successful rerun:
+## Cleanup result
 
-- Final admission-policy evidence is closed.
+The short-lived Managed Kubernetes cluster, node group, temporary VPC resources, and temporary MKS service accounts were destroyed after evidence collection.
 
-## Denial attribution control
-
-The admission validation namespace intentionally does not use the `pod-security.kubernetes.io/enforce` label.
-
-This prevents Kubernetes Pod Security Admission from taking ownership of the insecure workload denial. The expected denial evidence must reference Kyverno-specific admission behavior, policy names, rule names, webhook output, or Kyverno policy messages.
-
-This makes the Phase 13.5B evidence stronger because the rejected workload is attributed to the project policy-as-code control rather than a default built-in Kubernetes restriction.
-
-## Phase 13.5A2 runner hardening
-
-The Kyverno Managed Kubernetes validation runner was hardened before the next paid rerun.
-
-Corrections:
-
-- Private evidence directory is initialized before the cleanup trap.
-- Cleanup can run safely even if the script fails before Terraform runtime creation.
-- Hardened image reference can be supplied explicitly through `YCSEC_HARDENED_IMAGE`.
-- If no explicit image is supplied, the runner detects the hardened registry image tag from committed Phase 13.3/13.4 evidence.
-- `yc managed-kubernetes cluster get-credentials` runs under isolated `HOME` and explicit `KUBECONFIG`.
-- Terraform variables are limited to the declared Managed Kubernetes module contract.
-- Kyverno denial evidence must be attributable to the Kyverno admission policy, not only to Kubernetes Pod Security Admission.
+Post-destroy evidence confirms that no temporary Managed Kubernetes resources remain visible in the Yandex Cloud inventory.

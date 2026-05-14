@@ -1,29 +1,31 @@
 # Kyverno Admission Policy Enforcement Metrics
 
-## Planned validation metrics
+## Phase
 
-| Control | Expected result |
-|---|---|
-| Managed Kubernetes cluster lifecycle | Created and destroyed |
-| Node readiness | Ready node observed |
-| Kyverno admission controller | Installed and ready |
-| Supply-chain admission policy | Applied as Enforce |
-| Insecure workload | Denied |
-| Hardened workload | Allowed by server-side admission validation |
-| Public evidence | Sanitized |
-| Private evidence | Retained outside repository |
-| Terraform state | Not committed |
-| Kubeconfig | Not committed |
-| IAM token/key material | Not committed |
+Phase 13.5 — Kyverno admission policy enforcement validation.
 
-## Final metrics
+## Runtime validation metrics
 
-Final metrics are populated only after the successful Phase 13.5 rerun.
+| Control | Before / insecure path | After / hardened path | Result |
+|---|---:|---:|---|
+| Admission policy enforcement | Insecure workload submitted | Hardened workload submitted | Enforced |
+| Registry source control | Non-approved / mutable baseline image rejected | Yandex Container Registry image accepted | Improved |
+| Non-root requirement | Violating workload rejected | Hardened workload accepted | Improved |
+| Privilege escalation control | Violating workload rejected | Hardened workload accepted | Improved |
+| Read-only root filesystem control | Violating workload rejected | Hardened workload accepted | Improved |
+| Capability drop control | Violating workload rejected | Hardened workload accepted | Improved |
+| Seccomp runtime profile control | Violating workload rejected | Hardened workload accepted | Improved |
+| Temporary cloud resource retention | Short-lived MKS resources created | Resources destroyed after evidence | Controlled |
 
-## Denial attribution
+## Evidence-backed outcome
 
-| Check | Expected evidence |
-|---|---|
-| Pod Security Admission enforce disabled for validation namespace | Namespace has audit/warn labels only |
-| Kyverno owns insecure workload denial | Denial output references Kyverno policy, rule, webhook, or policy message |
-| Hardened workload allow path | Server-side dry-run succeeds against the same Kyverno policy set |
+The admission-control phase confirms that security requirements are enforceable at runtime:
+
+- insecure deployment path: rejected by Kyverno admission policy;
+- hardened deployment path: accepted by server-side admission validation;
+- temporary cloud infrastructure: destroyed after evidence collection;
+- retained bootstrap resources: preserved for registry/audit/OIDC continuity.
+
+## Portfolio claim enabled
+
+The project may claim runtime admission-policy validation on a real Yandex Managed Kubernetes cluster, including Kyverno enforcement, supply-chain image source control, hardened workload allow path, and post-run cloud cleanup evidence.

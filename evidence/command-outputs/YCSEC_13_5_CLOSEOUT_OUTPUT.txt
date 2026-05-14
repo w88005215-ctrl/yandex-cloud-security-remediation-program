@@ -1,0 +1,153 @@
+Phase 13.5-CLOSEOUT — Kyverno admission evidence closeout
+Date: 2026-05-14T16:42:42+00:00
+Qube: cloud-dev-workbech
+
+--- Step 1 — baseline and local-only history normalization
+From https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program
+ * branch            main       -> FETCH_HEAD
+
+11c4767 (HEAD -> main, tag: v0.13.5a2-kyverno-runner-hardening, origin/main, origin/HEAD) fix: harden Kyverno admission MKS runner
+6b7f94a (tag: v0.13.5a1-kyverno-denial-attribution-fix) fix: require Kyverno-specific admission denial evidence
+e238df2 (tag: v0.13.5a-kyverno-mks-repair-package) fix: prepare Kyverno admission MKS rerun
+5c00f76 (tag: v0.13.4a-gitleaks-generated-evidence-handling) test: handle generated evidence gitleaks findings
+195efa4 (tag: v0.13.4-sbom-vulnerability-validation) test: validate SBOM and supply chain vulnerability evidence
+961ab7a (tag: v0.13.3-supply-chain-oidc-registry-validation) test: validate supply chain OIDC registry push
+579fac9 fix: stabilize supply chain demo image builds
+66daf02 ci: repair supply chain registry OIDC workflow
+c396086 (tag: v0.13.2-supply-chain-implementation-package) feat: add supply chain security validation package
+1ba3a92 (tag: v0.13.1-supply-chain-roadmap-extension) docs: extend roadmap with supply chain security validation
+
+[OK] current branch is main
+[OK] no local-only commits ahead of origin/main
+
+--- Step 2 — expected workspace state
+ M scripts/run-kyverno-admission-policy-mks-validation.sh
+?? evidence/after/kyverno_controller_pods_ready.txt
+?? evidence/after/kyverno_hardened_workload_allowed.txt
+?? evidence/after/kyverno_insecure_workload_denied.txt
+?? evidence/after/kyverno_install_apply.txt
+?? evidence/after/kyverno_mks_nodes_ready.txt
+?? evidence/after/kyverno_policy_apply.txt
+?? evidence/after/kyverno_policy_status.txt
+?? evidence/command-outputs/YCSEC_13_5_CLOSEOUT_OUTPUT.txt
+?? evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_get_credentials_sanitized.txt
+?? evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_apply_sanitized.txt
+?? evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_destroy_sanitized.txt
+?? evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_plan_sanitized.txt
+?? evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_compute_instance_list.txt
+?? evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_mks_cluster_list.txt
+?? evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_nlb_list.txt
+?? evidence/sanitized/kyverno_admission_policy_enforcement_redacted.txt
+[OK] expected workspace path: scripts/run-kyverno-admission-policy-mks-validation.sh
+[OK] expected workspace path: evidence/after/kyverno_controller_pods_ready.txt
+[OK] expected workspace path: evidence/after/kyverno_hardened_workload_allowed.txt
+[OK] expected workspace path: evidence/after/kyverno_insecure_workload_denied.txt
+[OK] expected workspace path: evidence/after/kyverno_install_apply.txt
+[OK] expected workspace path: evidence/after/kyverno_mks_nodes_ready.txt
+[OK] expected workspace path: evidence/after/kyverno_policy_apply.txt
+[OK] expected workspace path: evidence/after/kyverno_policy_status.txt
+[OK] expected workspace path: evidence/command-outputs/YCSEC_13_5_CLOSEOUT_OUTPUT.txt
+[OK] expected workspace path: evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_get_credentials_sanitized.txt
+[OK] expected workspace path: evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_apply_sanitized.txt
+[OK] expected workspace path: evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_destroy_sanitized.txt
+[OK] expected workspace path: evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_plan_sanitized.txt
+[OK] expected workspace path: evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_compute_instance_list.txt
+[OK] expected workspace path: evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_mks_cluster_list.txt
+[OK] expected workspace path: evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_nlb_list.txt
+[OK] expected workspace path: evidence/sanitized/kyverno_admission_policy_enforcement_redacted.txt
+
+--- Step 3 — validate required public evidence files
+[OK] evidence exists: evidence/after/kyverno_mks_nodes_ready.txt
+[OK] evidence exists: evidence/after/kyverno_install_apply.txt
+[OK] evidence exists: evidence/after/kyverno_controller_pods_ready.txt
+[OK] evidence exists: evidence/after/kyverno_policy_apply.txt
+[OK] evidence exists: evidence/after/kyverno_policy_status.txt
+[OK] evidence exists: evidence/after/kyverno_insecure_workload_denied.txt
+[OK] evidence exists: evidence/after/kyverno_hardened_workload_allowed.txt
+[OK] evidence exists: evidence/sanitized/kyverno_admission_policy_enforcement_redacted.txt
+[OK] evidence exists: evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_plan_sanitized.txt
+[OK] evidence exists: evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_apply_sanitized.txt
+[OK] evidence exists: evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_get_credentials_sanitized.txt
+[OK] evidence exists: evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_destroy_sanitized.txt
+[OK] evidence exists: evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_mks_cluster_list.txt
+[OK] evidence exists: evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_compute_instance_list.txt
+[OK] evidence exists: evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_nlb_list.txt
+
+--- Step 4 — validate evidence semantics
+[OK] Managed Kubernetes node readiness evidence confirmed
+[OK] Kyverno install evidence contains expected created resources
+[OK] Kyverno install evidence has no known blocking error markers
+[OK] Kyverno controller readiness evidence confirmed
+[OK] Kyverno policy apply evidence confirmed
+[OK] Kyverno policy status evidence confirmed
+[OK] Kyverno-specific insecure workload denial confirmed
+[OK] hardened workload allow path confirmed
+[OK] sanitized consolidated evidence contains success markers
+[OK] Terraform destroy evidence confirmed
+
+--- Step 5 — verify no paid temporary MKS resources remain
+WARNING: Cannot connect to YC tool initialization service. Network connectivity to the service is required for cli version control. In case you are using yc in an isolated environment, you may turn off this warning by setting env YC_CLI_INITIALIZATION_SILENCE=true
+
++----+------+------------+--------+--------+-------------------+-------------------+
+| ID | NAME | CREATED AT | HEALTH | STATUS | EXTERNAL ENDPOINT | INTERNAL ENDPOINT |
++----+------+------------+--------+--------+-------------------+-------------------+
++----+------+------------+--------+--------+-------------------+-------------------+
+[OK] no temporary YCSEC/MKS cluster visible
+
+[OK] no temporary YCSEC/MKS compute instance visible
+
+[OK] no temporary YCSEC/MKS Network Load Balancer visible
+
+[OK] no temporary YCSEC/MKS subnet visible
+
+[OK] no temporary YCSEC/MKS network visible
+
+[OK] no temporary YCSEC/MKS service account visible
+
+--- Step 6 — verify retained bootstrap resources still exist
+[OK] retained bootstrap Container Registry exists
+[OK] retained bootstrap Audit Trail exists
+[OK] retained GitHub Actions bootstrap service account exists
+[OK] retained Audit bootstrap service account exists
+
+--- Step 7 — repository artifact safety checks
+[OK] no Terraform state or kubeconfig-like files in repository
+[OK] no obvious key/token-like patterns in repository text files
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m4:44PM[0m [32mINF[0m [1m47 commits scanned.[0m
+[90m4:44PM[0m [32mINF[0m [1mscanned ~8952785 bytes (8.95 MB) in 666ms[0m
+[90m4:44PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+--- Step 8 — write final Kyverno validation documentation
+[OK] Kyverno validation documents written
+
+--- Step 9 — update evidence index and cloud evidence gap register
+[OK] evidence index and cloud evidence gap register updated
+
+--- Step 10 — write final git control evidence
+[OK] final git control evidence written: evidence/command-outputs/YCSEC_13_5_OUTPUT_final_git_control.txt
+
+--- Step 11 — final pre-commit safety checks
+[OK] no Terraform state or kubeconfig-like files before commit
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m4:44PM[0m [32mINF[0m [1m47 commits scanned.[0m
+[90m4:44PM[0m [32mINF[0m [1mscanned ~8952785 bytes (8.95 MB) in 627ms[0m
+[90m4:44PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] final gitleaks scan passed
+
+--- Step 12 — phase decision
+[OK] Phase 13.5 closeout validation passed
+[OK] creating one final clean commit/tag/push

@@ -61,7 +61,7 @@ run_and_capture() {
   return "$rc"
 }
 
-RUN_TS="$(date -u +%Y%m%dT%H%M%S)"
+RUN_TS="$(date -u +%Y%m%d%H%M%S)"
 PRIVATE_DIR="${PRIVATE_DIR:-$HOME/ycsec-private-evidence/phase-13.5/kyverno-admission-${RUN_TS}}"
 RUNTIME_DIR="${RUNTIME_DIR:-$PRIVATE_DIR/terraform-runtime}"
 KUBE_HOME="${KUBE_HOME:-$PRIVATE_DIR/kube-home}"
@@ -342,7 +342,7 @@ echo "Step E — install Kyverno admission controller"
 KYVERNO_INSTALL_URL="${YCSEC_KYVERNO_INSTALL_URL:-https://github.com/kyverno/kyverno/releases/download/v1.13.4/install.yaml}"
 
 if run_and_capture "$PRIVATE_DIR/kyverno_install_apply_RAW_PRIVATE.txt" \
-  kubectl --kubeconfig "$KUBECONFIG_PATH" apply -f "$KYVERNO_INSTALL_URL"; then
+  kubectl --kubeconfig "$KUBECONFIG_PATH" create -f "$KYVERNO_INSTALL_URL"; then
   sanitize_file "$PRIVATE_DIR/kyverno_install_apply_RAW_PRIVATE.txt" \
     "evidence/after/kyverno_install_apply.txt"
   ok "Kyverno install manifest applied"

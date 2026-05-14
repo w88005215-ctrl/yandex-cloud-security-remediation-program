@@ -1,0 +1,12 @@
+YCSEC Kyverno admission policy enforcement evidence
+Date: 2026-05-14T16:22:37+00:00
+
+[OK] short-lived Managed Kubernetes cluster created
+[OK] MKS node reached Ready
+[OK] Kyverno admission controller installed
+[OK] Kyverno admission policy applied
+[OK] insecure workload denied by Kyverno
+[OK] hardened registry workload allowed by server-side admission validation
+[OK] Terraform destroy is executed by cleanup trap
+
+Hardened image: cr.yandex/<registry-id>/ycsec-supply-chain-demo:hardened-579fac92e70b

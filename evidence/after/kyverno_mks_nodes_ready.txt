@@ -1,0 +1,2 @@
+NAME                        STATUS   ROLES    AGE   VERSION   INTERNAL-IP   EXTERNAL-IP      OS-IMAGE             KERNEL-VERSION       CONTAINER-RUNTIME
+cl13rk1u9q8cpmlr9502-apen   Ready    <none>   39s   v1.33.3   <ip-address>   <ip-address>   Ubuntu 22.04.5 LTS   5.15.0-168-generic   containerd://1.7.27
