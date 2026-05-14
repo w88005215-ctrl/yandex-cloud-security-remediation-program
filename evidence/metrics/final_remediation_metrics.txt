@@ -1,0 +1,46 @@
+YCSEC Final Remediation Metrics
+Generated UTC: 2026-05-14T16:58:56.067112+00:00
+
+Validated outcomes:
+- Cloud IAM / CI identity: validated
+  Before: Cloud deployment could require long-lived credentials.
+  After: GitHub Actions OIDC token exchange validates cloud access without committing static cloud keys.
+  Evidence: v0.12.8d-github-actions-oidc-validation, docs/github-actions-oidc-validation.md
+
+- Auditability: validated
+  Before: Cloud activity was not proven through dedicated audit evidence.
+  After: Audit Trails and evidence storage path were validated as retained bootstrap controls.
+  Evidence: v0.12.8e-audit-trails-evidence-validation, docs/cloud-evidence-gap-register.md
+
+- Managed Kubernetes hardening: validated
+  Before: Baseline Kubernetes posture allowed insecure workload patterns.
+  After: Managed Kubernetes remediation and short-lived cloud-run evidence were collected and destroyed safely.
+  Evidence: v0.13.0-managed-kubernetes-baseline-remediation-cloud-run, docs/managed-kubernetes-cloud-run-plan.md
+
+- Supply chain image security: validated
+  Before: Controlled vulnerable image baseline generated measurable findings.
+  After: Hardened image showed measurable vulnerability reduction and generated SBOM/vulnerability reports.
+  Evidence: v0.13.4-sbom-vulnerability-validation, docs/sbom-vulnerability-validation.md, docs/supply-chain-vulnerability-metrics.md, evidence/metrics/supply_chain_vulnerability_metrics.json
+
+- Admission control: validated
+  Before: Insecure Kubernetes workload could be submitted without policy enforcement evidence.
+  After: Kyverno denied the insecure workload and allowed the hardened workload on real Yandex Managed Kubernetes.
+  Evidence: v0.13.5-kyverno-admission-policy-enforcement, docs/kyverno-admission-policy-enforcement-validation.md, evidence/after/kyverno_insecure_workload_denied.txt, evidence/after/kyverno_hardened_workload_allowed.txt
+
+Evidence presence:
+- kyverno_node_ready: True
+- kyverno_install: True
+- kyverno_controller_ready: True
+- kyverno_policy_status: True
+- kyverno_denial: True
+- kyverno_allow: True
+- mks_destroy: True
+- supply_chain_metrics: True
+
+Remaining work:
+- final_control_matrix
+- final_risk_register
+- aws_gcp_azure_mapping
+- readme_publication_refresh
+- bootstrap_resource_cleanup_decision
+- final_ru_en_report

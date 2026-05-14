@@ -357,3 +357,27 @@ Remaining follow-up:
 - Prepare publication readiness review.
 - Decide whether retained bootstrap resources should remain for demonstration or be destroyed in a final cleanup phase.
 <!-- phase-13-5-kyverno-admission:end -->
+
+## Phase 13.6 — Final remediation metrics consolidation
+
+Status: Closed.
+
+Phase 13.6 consolidates validated cloud evidence into final remediation metrics.
+
+Closed evidence domains:
+
+- GitHub Actions OIDC without long-lived cloud keys.
+- Audit Trails / evidence storage validation.
+- Managed Kubernetes baseline/remediation cloud-run.
+- Supply-chain registry push validation.
+- SBOM and vulnerability validation.
+- Kyverno admission policy enforcement on Yandex Managed Kubernetes.
+- Temporary Managed Kubernetes cleanup and zero-resource verification.
+
+Remaining non-cloud documentation work:
+
+- final control matrix;
+- final risk register;
+- AWS/GCP/Azure mapping;
+- final README/publication review;
+- final retained bootstrap resource cleanup decision.

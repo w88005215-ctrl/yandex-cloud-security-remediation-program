@@ -541,3 +541,23 @@ Result:
 - Hardened workload accepted by server-side admission validation.
 - Temporary MKS resources destroyed after evidence collection.
 <!-- phase-13-5-kyverno-admission:end -->
+
+## Phase 13.6 — Final remediation metrics consolidation
+
+Final remediation metrics consolidation artifacts:
+
+- docs/final-remediation-metrics.md
+- evidence/metrics/final_remediation_metrics.json
+- evidence/metrics/final_remediation_metrics.txt
+- evidence/command-outputs/YCSEC_13_6_OUTPUT_final_remediation_metrics.txt
+- evidence/command-outputs/YCSEC_13_6_OUTPUT_final_git_control.txt
+
+Validation scope:
+
+- Terraform/IaC lifecycle evidence.
+- GitHub Actions OIDC validation evidence.
+- Audit Trails and evidence storage validation.
+- Managed Kubernetes baseline/remediation evidence.
+- Registry, SBOM, and vulnerability validation evidence.
+- Kyverno admission policy enforcement evidence.
+- Temporary resource cleanup evidence.

@@ -1,0 +1,121 @@
+Phase 13.6 — Final remediation metrics consolidation
+Date: 2026-05-14T16:58:53+00:00
+Qube: cloud-dev-workbech
+
+--- Step 1 — baseline
+From https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program
+ * branch            main       -> FETCH_HEAD
+2d686fd (HEAD -> main, tag: v0.13.5-kyverno-admission-policy-enforcement, origin/main, origin/HEAD) test: validate Kyverno admission policy enforcement
+11c4767 (tag: v0.13.5a2-kyverno-runner-hardening) fix: harden Kyverno admission MKS runner
+6b7f94a (tag: v0.13.5a1-kyverno-denial-attribution-fix) fix: require Kyverno-specific admission denial evidence
+e238df2 (tag: v0.13.5a-kyverno-mks-repair-package) fix: prepare Kyverno admission MKS rerun
+5c00f76 (tag: v0.13.4a-gitleaks-generated-evidence-handling) test: handle generated evidence gitleaks findings
+195efa4 (tag: v0.13.4-sbom-vulnerability-validation) test: validate SBOM and supply chain vulnerability evidence
+961ab7a (tag: v0.13.3-supply-chain-oidc-registry-validation) test: validate supply chain OIDC registry push
+579fac9 fix: stabilize supply chain demo image builds
+66daf02 ci: repair supply chain registry OIDC workflow
+c396086 (tag: v0.13.2-supply-chain-implementation-package) feat: add supply chain security validation package
+1ba3a92 (tag: v0.13.1-supply-chain-roadmap-extension) docs: extend roadmap with supply chain security validation
+61bff33 (tag: v0.13.0-managed-kubernetes-baseline-remediation-cloud-run) docs: close Managed Kubernetes cloud run evidence package
+
+[OK] current branch is main
+[OK] local HEAD matches origin/main
+[OK] working tree is clean for Phase 13.6
+
+--- Step 2 — required tools
+[OK] git available: /usr/bin/git
+[OK] jq available: /usr/bin/jq
+[OK] python3 available: /usr/bin/python3
+[OK] gitleaks available: /usr/bin/gitleaks
+[OK] grep available: alias grep='grep --color=auto'
+[OK] sed available: /usr/bin/sed
+[OK] awk available: /usr/bin/awk
+[OK] find available: /usr/bin/find
+
+--- Step 3 — required roadmap tags
+[OK] required tag exists: v0.12.8d-github-actions-oidc-validation
+[OK] required tag exists: v0.12.8e-audit-trails-evidence-validation
+[OK] required tag exists: v0.12.8f-registry-evidence-storage-validation
+[OK] required tag exists: v0.13.0-managed-kubernetes-baseline-remediation-cloud-run
+[OK] required tag exists: v0.13.3-supply-chain-oidc-registry-validation
+[OK] required tag exists: v0.13.4-sbom-vulnerability-validation
+[OK] required tag exists: v0.13.5-kyverno-admission-policy-enforcement
+
+--- Step 4 — required evidence and documentation inputs
+[OK] evidence/doc exists: docs/evidence-index.md
+[OK] evidence/doc exists: docs/cloud-evidence-gap-register.md
+[OK] evidence/doc exists: docs/managed-kubernetes-cloud-run-plan.md
+[OK] evidence/doc exists: docs/supply-chain-oidc-registry-validation.md
+[OK] evidence/doc exists: docs/sbom-vulnerability-validation.md
+[OK] evidence/doc exists: docs/supply-chain-vulnerability-metrics.md
+[OK] evidence/doc exists: docs/kyverno-admission-policy-enforcement-validation.md
+[OK] evidence/doc exists: docs/kyverno-admission-policy-enforcement-metrics.md
+[OK] evidence/doc exists: evidence/metrics/supply_chain_vulnerability_metrics.json
+[OK] evidence/doc exists: evidence/metrics/supply_chain_vulnerability_metrics.txt
+[OK] evidence/doc exists: evidence/after/kyverno_mks_nodes_ready.txt
+[OK] evidence/doc exists: evidence/after/kyverno_install_apply.txt
+[OK] evidence/doc exists: evidence/after/kyverno_controller_pods_ready.txt
+[OK] evidence/doc exists: evidence/after/kyverno_policy_apply.txt
+[OK] evidence/doc exists: evidence/after/kyverno_policy_status.txt
+[OK] evidence/doc exists: evidence/after/kyverno_insecure_workload_denied.txt
+[OK] evidence/doc exists: evidence/after/kyverno_hardened_workload_allowed.txt
+[OK] evidence/doc exists: evidence/sanitized/kyverno_admission_policy_enforcement_redacted.txt
+[OK] evidence/doc exists: evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_plan_sanitized.txt
+[OK] evidence/doc exists: evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_apply_sanitized.txt
+[OK] evidence/doc exists: evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_get_credentials_sanitized.txt
+[OK] evidence/doc exists: evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_destroy_sanitized.txt
+[OK] evidence/doc exists: evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_mks_cluster_list.txt
+[OK] evidence/doc exists: evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_compute_instance_list.txt
+[OK] evidence/doc exists: evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_nlb_list.txt
+
+--- Step 5 — evidence semantics validation
+[OK] Managed Kubernetes node readiness confirmed
+[OK] Kyverno install evidence confirmed
+[OK] Kyverno controller readiness confirmed
+[OK] Kyverno policy apply confirmed
+[OK] Kyverno policy status confirmed
+[OK] Kyverno-specific insecure workload denial confirmed
+[OK] hardened workload allow path confirmed
+[OK] Managed Kubernetes destroy evidence confirmed
+[OK] post-destroy MKS cluster check confirmed
+[OK] post-destroy compute check confirmed
+[OK] post-destroy NLB check confirmed
+
+--- Step 6 — repository safety checks before writing final metrics
+[OK] no Terraform state or kubeconfig-like files in repository
+[OK] no obvious key/token-like patterns in repository text files
+[90m4:58PM[0m [32mINF[0m [1m48 commits scanned.[0m
+[90m4:58PM[0m [32mINF[0m [1mscanned ~9028793 bytes (9.03 MB) in 645ms[0m
+[90m4:58PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+--- Step 7 — write final remediation metrics artifacts
+[OK] final remediation metrics JSON written
+[OK] final remediation metrics TXT written
+[OK] final remediation metrics document written
+
+--- Step 8 — update evidence index and cloud evidence gap register
+[OK] evidence index updated
+[OK] cloud evidence gap register updated
+
+--- Step 9 — validate generated metrics
+[OK] evidence/doc exists: docs/final-remediation-metrics.md
+[OK] evidence/doc exists: evidence/metrics/final_remediation_metrics.json
+[OK] evidence/doc exists: evidence/metrics/final_remediation_metrics.txt
+[OK] final remediation metrics JSON is valid
+[OK] final metrics document includes admission enforcement
+[OK] final metrics document includes vulnerability reduction
+[OK] final metrics document includes OIDC/no-static-key evidence
+[OK] final metrics document includes cleanup evidence
+
+--- Step 10 — final safety checks before commit
+[OK] no Terraform state or kubeconfig-like files before commit
+[90m4:58PM[0m [32mINF[0m [1m48 commits scanned.[0m
+[90m4:58PM[0m [32mINF[0m [1mscanned ~9028793 bytes (9.03 MB) in 680ms[0m
+[90m4:58PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] final gitleaks scan passed
+
+--- Step 11 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 13.6 final remediation metrics consolidation passed
