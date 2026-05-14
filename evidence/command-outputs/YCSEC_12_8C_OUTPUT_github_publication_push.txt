@@ -1,0 +1,81 @@
+Phase 12.8C — publish repository for GitHub OIDC validation
+Date: 2026-05-14T07:29:18+00:00
+Qube: cloud-dev-workbech
+
+Step 1 — verify current milestone
+068a549 (HEAD -> main, tag: v0.12.8b-bootstrap-oidc-audit-cloud-run) test: run bootstrap OIDC audit cloud provisioning
+6e8b863 (tag: v0.12.8a-github-remote-scope) docs: record GitHub OIDC repository scope
+c508ce3 (tag: v0.12.8a-bootstrap-oidc-audit-implementation) feat: prepare bootstrap OIDC audit cloud run
+0311102 (tag: v0.12.7-bootstrap-oidc-audit-plan) docs: plan bootstrap OIDC audit cloud run
+20c8e2c (tag: v0.12.6-roadmap-reconciliation) docs: reconcile roadmap and cloud evidence gaps
+v0.12.8b-bootstrap-oidc-audit-cloud-run
+[OK] current HEAD has required Phase 12.8B tag
+
+Step 2 — verify repository status before push
+?? evidence/command-outputs/YCSEC_12_8C_OUTPUT_github_publication_push.txt
+[WARN] working tree is not clean
+[ACTION] do not push until the listed files are reviewed
+
+Step 3 — verify GitHub remote
+origin	https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program.git (fetch)
+origin	https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program.git (push)
+https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program.git
+[OK] origin remote is correct
+
+Step 4 — safety scan before publication
+[OK] no Terraform state files in repository workspace
+[OK] no kubeconfig files in repository workspace
+[OK] no key/token-like files in repository workspace
+[90m7:29AM[0m [32mINF[0m [1m26 commits scanned.[0m
+[90m7:29AM[0m [32mINF[0m [1mscanned ~671668 bytes (671.67 KB) in 545ms[0m
+[90m7:29AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 5 — push main branch
+To https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+[OK] main branch pushed
+
+Step 6 — push tags
+To https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program.git
+ * [new tag]         v0.1-skeleton -> v0.1-skeleton
+ * [new tag]         v0.10-yandex-cloud-readiness -> v0.10-yandex-cloud-readiness
+ * [new tag]         v0.11-yandex-cloud-smoke-run -> v0.11-yandex-cloud-smoke-run
+ * [new tag]         v0.11.1-smoke-run-safety -> v0.11.1-smoke-run-safety
+ * [new tag]         v0.11.2-smoke-run-auth-fix -> v0.11.2-smoke-run-auth-fix
+ * [new tag]         v0.11.3-yandex-cloud-smoke-run-success -> v0.11.3-yandex-cloud-smoke-run-success
+ * [new tag]         v0.11.4-smoke-run-evidence-package -> v0.11.4-smoke-run-evidence-package
+ * [new tag]         v0.12.0-kubernetes-remediation-readiness -> v0.12.0-kubernetes-remediation-readiness
+ * [new tag]         v0.12.1-kubernetes-baseline-validation-plan -> v0.12.1-kubernetes-baseline-validation-plan
+ * [new tag]         v0.12.2-kubernetes-baseline-static-validation -> v0.12.2-kubernetes-baseline-static-validation
+ * [new tag]         v0.12.3-kubernetes-remediation-control-package -> v0.12.3-kubernetes-remediation-control-package
+ * [new tag]         v0.12.4-kubernetes-before-after-comparison -> v0.12.4-kubernetes-before-after-comparison
+ * [new tag]         v0.12.5-kubernetes-remediation-case-study -> v0.12.5-kubernetes-remediation-case-study
+ * [new tag]         v0.12.6-roadmap-reconciliation -> v0.12.6-roadmap-reconciliation
+ * [new tag]         v0.12.7-bootstrap-oidc-audit-plan -> v0.12.7-bootstrap-oidc-audit-plan
+ * [new tag]         v0.12.8a-bootstrap-oidc-audit-implementation -> v0.12.8a-bootstrap-oidc-audit-implementation
+ * [new tag]         v0.12.8a-github-remote-scope -> v0.12.8a-github-remote-scope
+ * [new tag]         v0.12.8b-bootstrap-oidc-audit-cloud-run -> v0.12.8b-bootstrap-oidc-audit-cloud-run
+ * [new tag]         v0.2-root-docs -> v0.2-root-docs
+ * [new tag]         v0.3-evidence-cost-control -> v0.3-evidence-cost-control
+ * [new tag]         v0.4-toolchain-discovery -> v0.4-toolchain-discovery
+ * [new tag]         v0.5-full-toolchain -> v0.5-full-toolchain
+ * [new tag]         v0.6-iac-skeleton -> v0.6-iac-skeleton
+ * [new tag]         v0.7-security-control-model -> v0.7-security-control-model
+ * [new tag]         v0.8-kubernetes-baseline -> v0.8-kubernetes-baseline
+ * [new tag]         v0.9-local-kubernetes-runtime -> v0.9-local-kubernetes-runtime
+[OK] tags pushed
+
+Step 7 — final publication status
+?? evidence/command-outputs/YCSEC_12_8C_OUTPUT_github_publication_push.txt
+origin	https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program.git (fetch)
+origin	https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program.git (push)
+068a549 (HEAD -> main, tag: v0.12.8b-bootstrap-oidc-audit-cloud-run, origin/main) test: run bootstrap OIDC audit cloud provisioning
+6e8b863 (tag: v0.12.8a-github-remote-scope) docs: record GitHub OIDC repository scope
+c508ce3 (tag: v0.12.8a-bootstrap-oidc-audit-implementation) feat: prepare bootstrap OIDC audit cloud run
+0311102 (tag: v0.12.7-bootstrap-oidc-audit-plan) docs: plan bootstrap OIDC audit cloud run
+20c8e2c (tag: v0.12.6-roadmap-reconciliation) docs: reconcile roadmap and cloud evidence gaps
+v0.12.8b-bootstrap-oidc-audit-cloud-run
+
+Phase 12.8C publication command completed

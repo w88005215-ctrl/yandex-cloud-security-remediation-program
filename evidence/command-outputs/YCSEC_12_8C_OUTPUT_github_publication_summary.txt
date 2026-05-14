@@ -1,0 +1,17 @@
+Phase 12.8C — GitHub publication summary
+
+Result:
+[OK] public GitHub repository remote is configured
+[OK] main branch was pushed to GitHub
+[OK] local main tracks origin/main
+[OK] project tags were pushed to GitHub
+[OK] repository is available for GitHub Actions OIDC validation
+
+OIDC scope:
+repo:w88005215-ctrl/yandex-cloud-security-remediation-program:ref:refs/heads/main
+
+Boundary:
+[OK] no cloud resources are created in this phase
+[OK] no Kubernetes cluster is created in this phase
+[OK] no Compute instance is created in this phase
+[OK] bootstrap resources remain retained for OIDC/Audit validation

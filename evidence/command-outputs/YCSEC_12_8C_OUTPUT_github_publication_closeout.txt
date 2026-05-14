@@ -1,0 +1,44 @@
+Phase 12.8C-CLOSEOUT — record GitHub publication evidence
+Date: 2026-05-14T07:32:47+00:00
+Qube: cloud-dev-workbech
+
+Step 1 — verify current roadmap baseline
+068a549 (HEAD -> main, tag: v0.12.8b-bootstrap-oidc-audit-cloud-run, origin/main) test: run bootstrap OIDC audit cloud provisioning
+6e8b863 (tag: v0.12.8a-github-remote-scope) docs: record GitHub OIDC repository scope
+c508ce3 (tag: v0.12.8a-bootstrap-oidc-audit-implementation) feat: prepare bootstrap OIDC audit cloud run
+0311102 (tag: v0.12.7-bootstrap-oidc-audit-plan) docs: plan bootstrap OIDC audit cloud run
+20c8e2c (tag: v0.12.6-roadmap-reconciliation) docs: reconcile roadmap and cloud evidence gaps
+v0.12.8b-bootstrap-oidc-audit-cloud-run
+[OK] current HEAD has required Phase 12.8B tag
+
+Step 2 — verify GitHub remote and upstream
+origin	https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program.git (fetch)
+origin	https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program.git (push)
+[OK] main tracks origin/main
+[OK] origin/main exists on GitHub
+[OK] Phase 12.8B tag exists on GitHub
+
+Step 3 — verify expected local evidence state
+?? evidence/command-outputs/YCSEC_12_8C_OUTPUT_github_publication_closeout.txt
+?? evidence/command-outputs/YCSEC_12_8C_OUTPUT_github_publication_push.txt
+[OK] working tree contains only expected Phase 12.8C evidence files
+[OK] publication push evidence exists
+[OK] publication evidence confirms main branch push
+[OK] publication evidence confirms tags push
+
+Step 4 — repository safety checks before evidence commit
+[OK] no Terraform state files in repository workspace
+[OK] no kubeconfig files in repository workspace
+[OK] no key/token-like files in repository workspace
+[90m7:32AM[0m [32mINF[0m [1m26 commits scanned.[0m
+[90m7:32AM[0m [32mINF[0m [1mscanned ~671668 bytes (671.67 KB) in 552ms[0m
+[90m7:32AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 5 — write publication summary
+[OK] publication summary written
+
+Step 6 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 12.8C publication evidence is ready for commit
