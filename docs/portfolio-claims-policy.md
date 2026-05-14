@@ -66,3 +66,22 @@ Final release packaging is blocked until the following are complete:
 8. AWS/GCP/Azure mapping.
 9. RU/EN final reports.
 10. Final publication safety pass.
+
+## Supply-chain claim boundary
+
+Current status:
+
+- Supply-chain validation is planned but not yet complete.
+- The project has validated GitHub Actions OIDC token exchange.
+- The project has not yet validated OIDC-based image build and push to Yandex Container Registry.
+- The project has not yet validated SBOM and container vulnerability before/after evidence in CI.
+- The project has not yet validated Kyverno admission enforcement in a real cloud Kubernetes run.
+
+Allowed wording before Phase 13.3 and Phase 13.4:
+
+- Planned supply-chain extension covering CI/OIDC, registry, SBOM, vulnerability scanning, and admission policy enforcement.
+- Existing OIDC validation will be reused as the identity foundation for supply-chain validation.
+
+Allowed wording only after Phase 13.3 and Phase 13.4:
+
+- Validated CI/CD identity, container registry delivery, SBOM generation, vulnerability scanning, and Kubernetes admission enforcement in a real cloud environment.

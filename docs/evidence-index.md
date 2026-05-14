@@ -417,3 +417,15 @@ Cloud resources created in this phase: none.
 | `evidence/command-outputs/YCSEC_13_0_OUTPUT_post_destroy_mks_cluster_list.txt` | Post-destroy Managed Kubernetes inventory |
 | `evidence/command-outputs/YCSEC_13_0_OUTPUT_post_destroy_compute_instance_list.txt` | Post-destroy Compute inventory |
 | `evidence/command-outputs/YCSEC_13_0_OUTPUT_post_destroy_nlb_list.txt` | Post-destroy Network Load Balancer inventory |
+
+## Phase 13.1 — Supply Chain Security roadmap extension
+
+| Evidence | Description |
+|---|---|
+| `docs/supply-chain-security-roadmap-extension.md` | Roadmap extension for CI/OIDC, registry, SBOM, vulnerability scanning, and admission policy enforcement |
+| `docs/container-image-vulnerability-cloud-run-plan.md` | Container image vulnerability and hardening evidence plan |
+| `docs/ci-oidc-registry-build-push-plan.md` | GitHub Actions OIDC to Yandex Container Registry build/push plan |
+| `docs/kyverno-admission-policy-enforcement-plan.md` | Kubernetes admission policy enforcement plan |
+| `docs/supply-chain-evidence-and-metrics-plan.md` | Evidence and metrics plan for supply-chain validation |
+| `evidence/command-outputs/YCSEC_13_1_OUTPUT_supply_chain_roadmap_extension.txt` | Command evidence for Phase 13.1 |
+| `evidence/command-outputs/YCSEC_13_1_OUTPUT_final_git_control.txt` | Final git control evidence for Phase 13.1 |

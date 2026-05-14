@@ -204,3 +204,29 @@ Remaining future work:
 - Final RU/EN portfolio reports.
 - Publication safety review.
 - Final cleanup of retained bootstrap resources after all cloud evidence is no longer needed.
+
+## Phase 13.1 — Supply Chain Security roadmap extension
+
+Status: planned.
+
+New evidence targets:
+
+- GitHub Actions OIDC registry build/push validation.
+- Container image SBOM generation.
+- Container vulnerability scan before/after evidence.
+- Yandex Container Registry image push and inventory evidence.
+- Kyverno admission policy enforcement evidence.
+- Insecure deployment denial evidence.
+- Hardened deployment acceptance evidence.
+- Audit Trails evidence for supply-chain and Kubernetes control-plane activity.
+- Final cleanup of retained bootstrap resources after all cloud evidence is complete.
+
+Still open:
+
+- Supply-chain implementation package.
+- CI/OIDC image build and push cloud evidence.
+- SBOM evidence.
+- Trivy and Grype before/after image scan evidence.
+- Registry image inventory evidence.
+- Admission policy enforcement cloud evidence.
+- Final bootstrap resource cleanup evidence.
