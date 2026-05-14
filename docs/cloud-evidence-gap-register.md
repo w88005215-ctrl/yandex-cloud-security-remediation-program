@@ -109,3 +109,14 @@ Still pending:
 Status: closed.
 
 Bootstrap/OIDC retained resources were used to validate GitHub Actions authentication to Yandex Cloud through Workload Identity Federation. The workflow uses GitHub OIDC token exchange and validates access through the Yandex Cloud Resource Manager API.
+
+## Phase 12.8E — Audit Trails delivery validation
+
+Status: closed for bootstrap Audit Trails delivery.
+
+Closed evidence gap:
+- Audit Trails trail is active.
+- Audit Trails Object Storage destination exists.
+- At least one Audit Trails object delivery was observed.
+- Public evidence is sanitized.
+- Raw audit metadata remains outside the repository.

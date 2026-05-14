@@ -358,3 +358,11 @@ Result:
   - `.github/workflows/cloud-deploy-oidc.yml`
   - `docs/github-actions-oidc-validation.md`
 - Control value: GitHub Actions authenticates to Yandex Cloud through OIDC token exchange without long-lived cloud key material.
+
+## Phase 12.8E — Audit Trails delivery validation
+
+| Evidence | Description |
+|---|---|
+| `docs/audit-trails-evidence-validation.md` | Audit Trails delivery validation result |
+| `evidence/sanitized/audit_trails_delivery_object_listing_redacted.txt` | Sanitized Object Storage delivery evidence |
+| `evidence/command-outputs/YCSEC_12_8E_OUTPUT_audit_trails_delivery_validation.txt` | Command evidence for Audit Trails delivery validation |

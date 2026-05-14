@@ -1,0 +1,49 @@
+Phase 12.8E — Audit Trails delivery validation
+Date: 2026-05-14T09:02:29+00:00
+Qube: cloud-dev-workbech
+
+Step 1 — roadmap position
+664c3ff (HEAD -> main, tag: v0.12.8d-github-actions-oidc-validation, origin/main) ci: validate GitHub Actions OIDC token exchange
+9772ab6 ci: use direct Yandex Cloud OIDC token exchange validation
+483160e ci: repair GitHub Actions OIDC validation workflow
+f58270b ci: validate GitHub Actions OIDC federation
+cba7dd7 (tag: v0.12.8c-github-publication) docs: record GitHub publication evidence
+068a549 (tag: v0.12.8b-bootstrap-oidc-audit-cloud-run) test: run bootstrap OIDC audit cloud provisioning
+6e8b863 (tag: v0.12.8a-github-remote-scope) docs: record GitHub OIDC repository scope
+c508ce3 (tag: v0.12.8a-bootstrap-oidc-audit-implementation) feat: prepare bootstrap OIDC audit cloud run
+v0.12.8d-github-actions-oidc-validation
+
+Step 2 — detect retained Audit Trails bucket and trail
+[OK] Audit Trails bucket detected: <redacted>
+[OK] Audit Trails trail is ACTIVE
+
+Step 3 — wait for Audit Trails object delivery using correct YC CLI flags
+[INFO] Audit object delivery check attempt 1/30
+[OK] Audit Trails object delivery confirmed
+
+Step 4 — verify first delivered object metadata without publishing raw log
+[OK] first Audit Trails object metadata is accessible
+
+Step 5 — create sanitized public evidence
+[OK] sanitized public evidence written: evidence/sanitized/audit_trails_delivery_object_listing_redacted.txt
+
+Step 6 — write Audit Trails validation document
+[OK] Audit Trails validation document written: docs/audit-trails-evidence-validation.md
+
+Step 7 — update evidence index and cloud evidence gap register
+[OK] evidence index updated
+[OK] cloud evidence gap register updated
+
+Step 8 — repository safety checks
+[OK] no Terraform state files in repository
+[OK] no kubeconfig files in repository
+[OK] no key/token-like files in repository
+[90m9:02AM[0m [32mINF[0m [1m31 commits scanned.[0m
+[90m9:02AM[0m [32mINF[0m [1mscanned ~734037 bytes (734.04 KB) in 654ms[0m
+[90m9:02AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 9 — phase decision
+FAIL_COUNT=0
+[OK] Phase 12.8E Audit Trails delivery validation completed
+[OK] project is ready for registry/evidence-storage validation or next roadmap cloud phase

@@ -1,0 +1,18 @@
+Phase 12.8E — Audit Trails delivery validation
+
+Status: implemented
+Trail: ycsec-bootstrap-audit-trail
+Trail status: ACTIVE
+Destination: Object Storage bucket
+Bucket: <audit-bucket-redacted>
+Object prefix: audit-trails/bootstrap
+Delivered object count observed: 1
+First observed object key: audit-trails/bootstrap/<yc-id-redacted>/<date-path-redacted>/073206136.json
+Raw object listing: stored outside repository
+Raw object metadata: stored outside repository
+
+Validation result:
+- Audit Trails trail exists and is ACTIVE.
+- Audit Trails delivered at least one object to Object Storage.
+- Public repository contains only sanitized delivery evidence.
+- Raw audit object listing and metadata remain outside the repository.
