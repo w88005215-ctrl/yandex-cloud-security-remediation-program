@@ -128,3 +128,25 @@ This table will become one of the main portfolio artifacts. It should be easy to
 | Policy-as-code | Count controls without automated validation | Count controls with validation path | Increase repeatability |
 
 <!-- YCSEC:PHASE-12-1-BASELINE-PLAN:END -->
+
+<!-- YCSEC:PHASE-12-2-BASELINE-VALIDATION:START -->
+## Phase 12.2 — Kubernetes Baseline Metrics
+
+| Metric Area | Baseline Count | Remediation Target |
+|---|---:|---|
+| Kubernetes YAML manifests | 12 | Preserve valid manifests and improve control coverage |
+| Namespace files | 2 | Add Pod Security labels where required |
+| Workload files | 2 | Harden workload securityContext |
+| Service files | 3 | Keep exposure controlled |
+| RBAC files | 2 | Enforce least privilege |
+| NetworkPolicy files | 3 | Add or strengthen segmentation |
+| Pod Security label files | 2 | Increase Pod Security label coverage |
+| runAsNonRoot files | 2 | Increase non-root execution coverage |
+| allowPrivilegeEscalation false files | 1 | Increase privilege escalation prevention coverage |
+| capabilities/drop files | 1 | Increase Linux capability reduction coverage |
+| seccomp profile files | 1 | Increase RuntimeDefault coverage |
+| readOnlyRootFilesystem files | 2 | Increase read-only filesystem coverage where compatible |
+| requests/limits files | 2 | Increase resource governance coverage |
+| policy-as-code references | 12 | Add repeatable validation gate |
+
+<!-- YCSEC:PHASE-12-2-BASELINE-VALIDATION:END -->

@@ -204,3 +204,22 @@ Phase result:
 - Portfolio-facing remediation narrative prepared.
 
 <!-- YCSEC:PHASE-12-1-BASELINE-PLAN:END -->
+
+<!-- YCSEC:PHASE-12-2-BASELINE-VALIDATION:START -->
+## Phase 12.2 — Kubernetes Baseline Static Validation
+
+| Evidence ID | File | Type | Description | Publication Status |
+|---|---|---|---|---|
+| EVID-K8S-BASE-001 | evidence/command-outputs/YCSEC_12_2_OUTPUT_kubernetes_baseline_static_validation.txt | Command output | Local Kubernetes baseline static validation output | Public-safe |
+| EVID-K8S-BASE-002 | docs/kubernetes-baseline-findings.md | Findings summary | Baseline findings and remediation direction | Public-safe |
+| EVID-K8S-BASE-003 | scripts/validate-kubernetes-baseline-static.sh | Validation script | Reusable local static validator for Kubernetes baseline controls | Public-safe |
+
+Phase result:
+
+- Kubernetes baseline manifests were inspected locally.
+- Baseline control coverage was measured.
+- Findings were converted into remediation targets.
+- Before-state metrics were recorded.
+- No cloud resources were created.
+
+<!-- YCSEC:PHASE-12-2-BASELINE-VALIDATION:END -->

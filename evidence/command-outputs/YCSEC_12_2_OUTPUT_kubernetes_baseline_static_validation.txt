@@ -1,0 +1,130 @@
+Phase 12.2 — local Kubernetes baseline static validation
+Date: 2026-05-14T06:11:51+00:00
+Qube: cloud-dev-workbench
+
+Step 1 — repository baseline
+6cd86d9 (HEAD -> main, tag: v0.12.1-kubernetes-baseline-validation-plan) docs: add Kubernetes baseline validation plan
+1a0b182 (tag: v0.12.0-kubernetes-remediation-readiness) test: inventory Kubernetes remediation readiness
+259ea41 (tag: v0.11.4-smoke-run-evidence-package) docs: integrate Yandex Cloud smoke-run evidence package
+1dc86dc (tag: v0.11.3-yandex-cloud-smoke-run-success) test: record successful Yandex Cloud smoke run
+e4e0e50 (tag: v0.11.2-smoke-run-auth-fix) fix: pass Yandex Cloud auth to smoke-run Terraform
+6bf5287 (tag: v0.11.1-smoke-run-safety) chore: harden Yandex Cloud smoke-run cleanup safety
+5d6e853 (tag: v0.11-yandex-cloud-smoke-run) test: add Yandex Cloud Kubernetes smoke run
+52d64d0 (tag: v0.10-yandex-cloud-readiness) test: add Yandex Cloud readiness gate
+c24edc3 (tag: v0.9-local-kubernetes-runtime) test: add local Kubernetes runtime validation
+70558b0 (tag: v0.8-kubernetes-baseline) feat: add Kubernetes security baseline manifests
+
+Tags at HEAD:
+v0.12.1-kubernetes-baseline-validation-plan
+
+[OK] current HEAD has required tag: v0.12.1-kubernetes-baseline-validation-plan
+
+Step 2 — working tree guard
+[OK] working tree has no unexpected changes
+
+Step 3 — create reusable Kubernetes baseline static validator
+[OK] validator created: scripts/validate-kubernetes-baseline-static.sh
+
+Step 4 — run Kubernetes baseline static validator
+YCSEC Kubernetes Baseline Static Validator
+Date: 2026-05-14T06:11:51+00:00
+
+Manifest roots:
+- kubernetes
+
+Manifest count: 12
+
+Object inventory
+Namespaces: 2
+Workloads: 2
+Services: 3
+ServiceAccounts/RBAC: 2
+NetworkPolicies: 3
+
+Control checks
+[OK] K8S-BASE-001 — namespace isolation objects — matches: 2
+[OK] K8S-BASE-002 — Pod Security labels — matches: 2
+[OK] K8S-BASE-003 — non-root execution — matches: 2
+[OK] K8S-BASE-004 — privilege escalation disabled — matches: 1
+[OK] K8S-BASE-005 — Linux capabilities constrained — matches: 1
+[OK] K8S-BASE-006 — RuntimeDefault seccomp profile — matches: 1
+[OK] K8S-BASE-007 — read-only root filesystem — matches: 2
+[OK] K8S-BASE-008 — RBAC objects — matches: 2
+[OK] K8S-BASE-009 — NetworkPolicy segmentation — matches: 3
+[OK] K8S-BASE-010 — service exposure objects — matches: 3
+[OK] K8S-BASE-011 — resource requests and limits — matches: 2
+[OK] K8S-BASE-012 — policy-as-code references — matches: 4
+
+Potential risk indicators
+[OK] no Service type LoadBalancer detected
+[FINDING][CRITICAL] privileged containers detected
+kubernetes/insecure-baseline/demo-app-insecure.yaml:30:            privileged: true
+[OK] no hostNetwork usage detected
+[OK] no hostPath volume usage detected
+[OK] no latest image tags detected
+
+Validation summary
+Findings: 1
+Warnings: 0
+[OK] baseline validation completed with findings
+[OK] findings are expected at baseline stage and will drive remediation
+[OK] baseline static validator completed
+
+Step 5 — collect baseline metrics
+Kubernetes manifests: 12
+Namespaces: 2
+Workloads: 2
+Services: 3
+RBAC files: 2
+NetworkPolicy files: 3
+Pod Security label files: 2
+runAsNonRoot files: 2
+allowPrivilegeEscalation false files: 1
+capabilities/drop files: 1
+seccomp files: 1
+readOnlyRootFilesystem files: 2
+requests/limits files: 2
+policy-as-code references: 12
+
+Step 6 — write baseline findings document
+[OK] baseline findings document written: docs/kubernetes-baseline-findings.md
+
+Step 7 — update evidence index and before/after metrics
+[OK] evidence index and metrics updated
+
+Step 8 — validate Phase 12.2 outputs
+[OK] scripts/validate-kubernetes-baseline-static.sh
+[OK] docs/kubernetes-baseline-findings.md
+[OK] docs/evidence-index.md
+[OK] evidence/before-after-metrics.md
+[OK] findings document contains full baseline control coverage
+[OK] evidence index references Phase 12.2 baseline evidence
+[OK] before/after metrics include baseline metrics
+
+Step 9 — repository safety checks
+[OK] no Terraform state files
+[OK] no kubeconfig files
+[OK] no key/token-like files
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m6:11AM[0m [32mINF[0m [1mscanned ~474985 bytes (474.98 KB) in 565ms[0m
+[90m6:11AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 10 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 12.2 Kubernetes baseline static validation completed
+[OK] project is ready for Kubernetes remediation implementation
+
+Final git status before commit:
+ M docs/evidence-index.md
+ M evidence/before-after-metrics.md
+?? docs/kubernetes-baseline-findings.md
+?? evidence/command-outputs/YCSEC_12_2_OUTPUT_kubernetes_baseline_static_validation.txt
+?? scripts/validate-kubernetes-baseline-static.sh
