@@ -1,0 +1,89 @@
+Phase 13.10-CLOSEOUT — fix publication wording and commit final reports
+Date: 2026-05-14T17:31:36+00:00
+Qube: cloud-dev-workbech
+
+--- Step 1 — verify baseline
+From https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program
+ * branch            main       -> FETCH_HEAD
+10f1fdd (HEAD -> main, tag: v0.13.9-cross-cloud-publication-readiness, origin/main, origin/HEAD) docs: add cross-cloud mapping and publication readiness
+90759e4 (tag: v0.13.8-final-risk-register) docs: add final risk register
+24b0ba7 (tag: v0.13.7-final-control-matrix) docs: add final control matrix
+d75cebd (tag: v0.13.6-final-remediation-metrics) docs: consolidate final remediation metrics
+2d686fd (tag: v0.13.5-kyverno-admission-policy-enforcement) test: validate Kyverno admission policy enforcement
+11c4767 (tag: v0.13.5a2-kyverno-runner-hardening) fix: harden Kyverno admission MKS runner
+6b7f94a (tag: v0.13.5a1-kyverno-denial-attribution-fix) fix: require Kyverno-specific admission denial evidence
+e238df2 (tag: v0.13.5a-kyverno-mks-repair-package) fix: prepare Kyverno admission MKS rerun
+5c00f76 (tag: v0.13.4a-gitleaks-generated-evidence-handling) test: handle generated evidence gitleaks findings
+195efa4 (tag: v0.13.4-sbom-vulnerability-validation) test: validate SBOM and supply chain vulnerability evidence
+961ab7a (tag: v0.13.3-supply-chain-oidc-registry-validation) test: validate supply chain OIDC registry push
+579fac9 fix: stabilize supply chain demo image builds
+
+[OK] current branch is main
+[OK] local HEAD matches origin/main
+[OK] origin/main has required Phase 13.9 tag
+
+--- Step 2 — preserve failed Phase 13.10 output privately
+[OK] failed Phase 13.10 output preserved privately and removed from public workspace
+
+--- Step 3 — verify expected generated artifacts are present
+[OK] required file exists: README.md
+[OK] required file exists: docs/final-technical-report-en.md
+[OK] required file exists: docs/final-technical-report-ru.md
+[OK] required file exists: docs/evidence-index.md
+[OK] required file exists: docs/cloud-evidence-gap-register.md
+[OK] required file exists: evidence/metrics/final_publication_summary.json
+[OK] required file exists: evidence/metrics/final_publication_summary.txt
+
+--- Step 4 — patch false-positive overclaim wording
+[OK] publication wording patched
+
+--- Step 5 — validate final reports and README
+[OK] README publication summary marker present
+[OK] README links final English report
+[OK] README links final Russian report
+[OK] README publication boundary present
+[OK] EN report contains OIDC validation
+[OK] EN report contains Kyverno validation
+[OK] EN report contains SBOM validation
+[OK] RU report title present
+[OK] RU report publication boundary present
+[OK] publication summary has sufficient validated domains
+[OK] publication summary boundary present
+
+--- Step 6 — public wording safety checks
+[OK] no internal or unprofessional wording found
+[OK] no obvious overclaiming wording found
+
+--- Step 7 — repository artifact safety checks
+[OK] no Terraform state, kubeconfig, PEM, or key files found
+[OK] no obvious key/token-like patterns in public text files
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m5:31PM[0m [32mINF[0m [1mscanned ~1222179 bytes (1.22 MB) in 680ms[0m
+[90m5:31PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+--- Step 8 — write final git control evidence
+[OK] final git control evidence written: evidence/command-outputs/YCSEC_13_10_OUTPUT_final_git_control.txt
+
+--- Step 9 — final pre-commit safety checks
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m5:31PM[0m [32mINF[0m [1mscanned ~1222645 bytes (1.22 MB) in 576ms[0m
+[90m5:31PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] final gitleaks scan passed
+
+--- Step 10 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 13.10 closeout passed

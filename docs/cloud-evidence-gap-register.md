@@ -461,3 +461,9 @@ Still pending after Phase 13.9:
 - final public artifact safety review;
 - retained bootstrap resource cleanup after evidence/export decision;
 - final release tag.
+
+## Phase 13.10 Status
+
+Final RU/EN reports and README publication summary were generated from already validated repository evidence. This phase is local-only and does not create cloud resources.
+
+Publication boundary remains explicit: Yandex Cloud implementation evidence is real; AWS/GCP/Azure mapping is conceptual unless separately evidenced.

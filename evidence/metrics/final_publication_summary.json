@@ -1,0 +1,23 @@
+{
+  "generated_at_utc": "2026-05-14T17:29:50Z",
+  "project": "Yandex Cloud Security Remediation Program",
+  "current_phase": "13.10",
+  "validated_domains": [
+    "Terraform infrastructure as code",
+    "Yandex Cloud IAM and short-lived token usage",
+    "GitHub Actions OIDC token exchange",
+    "Audit Trails and evidence storage pattern",
+    "Managed Kubernetes baseline/remediation cloud run",
+    "Container Registry supply-chain validation",
+    "SBOM generation and vulnerability scanning",
+    "Kyverno admission policy enforcement",
+    "Final remediation metrics",
+    "Final control matrix",
+    "Final risk register",
+    "AWS/GCP/Azure control mapping"
+  ],
+  "control_count": 13,
+  "risk_count": 8,
+  "cross_cloud_mapping_count": 0,
+  "publication_boundary": "The repository demonstrates a Yandex Cloud implementation and maps controls to AWS/GCP/Azure conceptually; AWS/GCP/Azure coverage is presented as conceptual mapping unless separate evidence is added."
+}

@@ -1,5 +1,37 @@
 # Yandex Cloud Security Remediation Program
 
+
+<!-- YCSEC_PUBLICATION_SUMMARY_START -->
+## Portfolio Publication Summary
+
+This repository is an evidence-based cloud security remediation case built on Yandex Cloud.
+
+It demonstrates:
+
+- Terraform-based cloud infrastructure delivery.
+- IAM and short-lived credential workflows.
+- GitHub Actions OIDC validation without long-lived cloud keys.
+- Managed Kubernetes baseline and remediation evidence.
+- Kyverno admission policy enforcement.
+- Container Registry supply-chain validation.
+- SBOM and vulnerability scanning.
+- Final remediation metrics, control matrix, risk register, and publication readiness artifacts.
+- Conceptual AWS/GCP/Azure control mapping with clear non-claim boundaries.
+
+Core final reports:
+
+- [Final Technical Report EN](docs/final-technical-report-en.md)
+- [Final Technical Report RU](docs/final-technical-report-ru.md)
+- [Final Remediation Metrics](docs/final-remediation-metrics.md)
+- [Final Control Matrix](docs/final-control-matrix.md)
+- [Final Risk Register](docs/final-risk-register.md)
+- [Cross-Cloud Control Mapping](docs/final-cross-cloud-control-mapping.md)
+- [Publication Readiness](docs/final-publication-readiness.md)
+- [Retained Bootstrap Cleanup Plan](docs/retained-bootstrap-cleanup-plan.md)
+
+Publication boundary: this repository demonstrates Yandex Cloud implementation evidence and maps AWS/GCP/Azure equivalents conceptually. It does not present live deployment evidence for AWS/GCP/Azure.
+<!-- YCSEC_PUBLICATION_SUMMARY_END -->
+
 Terraform + IAM/OIDC/SAML + Managed Kubernetes Hardening + Audit Evidence
 
 ## Project purpose
@@ -126,4 +158,3 @@ Key documents:
 - docs/kubernetes-before-after-remediation-comparison.md
 
 <!-- YCSEC:K8S-REMEDIATION-CASE:END -->
-

@@ -639,3 +639,13 @@ Validation result:
 - `evidence/metrics/final_cross_cloud_control_mapping.txt` — summary metrics for cross-cloud mapping.
 - `evidence/command-outputs/YCSEC_13_9_OUTPUT_cross_cloud_publication_readiness.txt` — command evidence for this phase.
 - `evidence/command-outputs/YCSEC_13_9_OUTPUT_final_git_control.txt` — final git control evidence for this phase.
+
+## Phase 13.10 — Final RU/EN Reports and README Publication Polish
+
+- `docs/final-technical-report-en.md` — final English technical report.
+- `docs/final-technical-report-ru.md` — final Russian technical report.
+- `README.md` — publication summary section updated.
+- `evidence/metrics/final_publication_summary.json` — structured final publication summary.
+- `evidence/metrics/final_publication_summary.txt` — text final publication summary.
+- `evidence/command-outputs/YCSEC_13_10_OUTPUT_final_reports_readme.txt` — command evidence for this phase.
+- `evidence/command-outputs/YCSEC_13_10_OUTPUT_final_git_control.txt` — final git control evidence.

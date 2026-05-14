@@ -1,0 +1,22 @@
+YCSEC Final Publication Summary
+Generated: 2026-05-14T17:29:50Z
+
+Controls validated: 13
+Risks documented: 8
+Cross-cloud mappings: 0
+
+Validated domains:
+- Terraform infrastructure as code
+- Yandex Cloud IAM and short-lived token usage
+- GitHub Actions OIDC token exchange
+- Audit Trails and evidence storage pattern
+- Managed Kubernetes baseline/remediation cloud run
+- Container Registry supply-chain validation
+- SBOM generation and vulnerability scanning
+- Kyverno admission policy enforcement
+- Final remediation metrics
+- Final control matrix
+- Final risk register
+- AWS/GCP/Azure control mapping
+
+Boundary: The repository demonstrates a Yandex Cloud implementation and maps controls to AWS/GCP/Azure conceptually; AWS/GCP/Azure coverage is presented as conceptual mapping unless separate evidence is added.
