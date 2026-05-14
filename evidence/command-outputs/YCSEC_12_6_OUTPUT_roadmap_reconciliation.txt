@@ -1,0 +1,103 @@
+Phase 12.6 — Roadmap reconciliation and cloud evidence gap register
+Date: 2026-05-14T06:31:18+00:00
+Qube: cloud-dev-workbench
+
+Step 1 — verify current milestone baseline
+29f2613 (HEAD -> main, tag: v0.12.5-kubernetes-remediation-case-study) docs: add Kubernetes remediation case study
+449ac2c (tag: v0.12.4-kubernetes-before-after-comparison) test: compare Kubernetes baseline and remediation posture
+8d90b5e (tag: v0.12.3-kubernetes-remediation-control-package) feat: add Kubernetes remediation control package
+2460503 (tag: v0.12.2-kubernetes-baseline-static-validation) test: validate Kubernetes baseline security posture
+6cd86d9 (tag: v0.12.1-kubernetes-baseline-validation-plan) docs: add Kubernetes baseline validation plan
+1a0b182 (tag: v0.12.0-kubernetes-remediation-readiness) test: inventory Kubernetes remediation readiness
+259ea41 (tag: v0.11.4-smoke-run-evidence-package) docs: integrate Yandex Cloud smoke-run evidence package
+1dc86dc (tag: v0.11.3-yandex-cloud-smoke-run-success) test: record successful Yandex Cloud smoke run
+e4e0e50 (tag: v0.11.2-smoke-run-auth-fix) fix: pass Yandex Cloud auth to smoke-run Terraform
+6bf5287 (tag: v0.11.1-smoke-run-safety) chore: harden Yandex Cloud smoke-run cleanup safety
+5d6e853 (tag: v0.11-yandex-cloud-smoke-run) test: add Yandex Cloud Kubernetes smoke run
+52d64d0 (tag: v0.10-yandex-cloud-readiness) test: add Yandex Cloud readiness gate
+
+Tags at HEAD:
+v0.12.5-kubernetes-remediation-case-study
+
+[OK] current HEAD has required tag: v0.12.5-kubernetes-remediation-case-study
+
+Step 2 — working tree guard
+[OK] working tree has no unexpected changes for Phase 12.6
+
+Step 3 — verify completed milestone chain
+[OK] milestone tag exists: v0.11.3-yandex-cloud-smoke-run-success
+[OK] milestone tag exists: v0.11.4-smoke-run-evidence-package
+[OK] milestone tag exists: v0.12.0-kubernetes-remediation-readiness
+[OK] milestone tag exists: v0.12.1-kubernetes-baseline-validation-plan
+[OK] milestone tag exists: v0.12.2-kubernetes-baseline-static-validation
+[OK] milestone tag exists: v0.12.3-kubernetes-remediation-control-package
+[OK] milestone tag exists: v0.12.4-kubernetes-before-after-comparison
+[OK] milestone tag exists: v0.12.5-kubernetes-remediation-case-study
+
+Step 4 — verify evidence-bearing project files
+[OK] evidence-bearing file exists: docs/cloud-smoke-run-validation.md
+[OK] evidence-bearing file exists: docs/kubernetes-remediation-readiness.md
+[OK] evidence-bearing file exists: docs/kubernetes-baseline-validation-plan.md
+[OK] evidence-bearing file exists: docs/kubernetes-baseline-control-matrix.md
+[OK] evidence-bearing file exists: docs/kubernetes-baseline-findings.md
+[OK] evidence-bearing file exists: docs/kubernetes-remediation-results.md
+[OK] evidence-bearing file exists: docs/kubernetes-before-after-remediation-comparison.md
+[OK] evidence-bearing file exists: docs/kubernetes-security-remediation-case-study.md
+[OK] evidence-bearing file exists: scripts/run-yandex-cloud-smoke-run.sh
+[OK] evidence-bearing file exists: scripts/validate-kubernetes-baseline-static.sh
+[OK] evidence-bearing file exists: scripts/validate-kubernetes-remediation-static.sh
+[OK] evidence-bearing file exists: scripts/compare-kubernetes-baseline-remediation.sh
+[OK] evidence-bearing file exists: evidence/before-after-metrics.md
+[OK] evidence-bearing file exists: docs/evidence-index.md
+
+Step 5 — write roadmap reconciliation document
+[OK] roadmap reconciliation document written: docs/roadmap-reconciliation.md
+
+Step 6 — write cloud evidence gap register
+[OK] cloud evidence gap register written: docs/cloud-evidence-gap-register.md
+
+Step 7 — write portfolio claims policy
+[OK] portfolio claims policy written: docs/portfolio-claims-policy.md
+
+Step 8 — update evidence index
+[OK] evidence index updated
+
+Step 9 — validate Phase 12.6 outputs
+[OK] docs/roadmap-reconciliation.md
+[OK] docs/cloud-evidence-gap-register.md
+[OK] docs/portfolio-claims-policy.md
+[OK] docs/evidence-index.md
+[OK] roadmap correction is explicit
+[OK] OIDC evidence gap registered
+[OK] blocked cloud remediation claim documented
+[OK] evidence index references Phase 12.6
+
+Step 10 — local-only safety and publication wording checks
+[OK] no executable cloud command additions detected in Phase 12.6 docs
+[OK] no internal workflow wording found in Phase 12.6 public docs
+[OK] no Terraform state files
+[OK] no kubeconfig files
+[OK] no key/token-like files
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m6:31AM[0m [32mINF[0m [1mscanned ~554227 bytes (554.23 KB) in 540ms[0m
+[90m6:31AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 11 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 12.6 roadmap reconciliation completed
+[OK] project is ready for Bootstrap/OIDC/Audit cloud-run planning
+
+Final git status before commit:
+ M docs/evidence-index.md
+?? docs/cloud-evidence-gap-register.md
+?? docs/portfolio-claims-policy.md
+?? docs/roadmap-reconciliation.md
+?? evidence/command-outputs/YCSEC_12_6_OUTPUT_roadmap_reconciliation.txt

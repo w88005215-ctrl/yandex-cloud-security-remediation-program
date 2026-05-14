@@ -284,3 +284,23 @@ Phase result:
 
 <!-- YCSEC:PHASE-12-5-CASE-STUDY:END -->
 
+<!-- YCSEC:PHASE-12-6-ROADMAP-RECONCILIATION:START -->
+## Phase 12.6 — Roadmap Reconciliation and Cloud Evidence Gap Register
+
+| Evidence ID | File | Type | Description | Publication Status |
+|---|---|---|---|---|
+| EVID-ROADMAP-001 | docs/roadmap-reconciliation.md | Roadmap reconciliation | Reconciles current repository state with the intended roadmap | Public-safe |
+| EVID-ROADMAP-002 | docs/cloud-evidence-gap-register.md | Gap register | Tracks remaining cloud evidence gaps | Public-safe |
+| EVID-ROADMAP-003 | docs/portfolio-claims-policy.md | Claims policy | Defines allowed and blocked portfolio claims at current maturity | Public-safe |
+| EVID-ROADMAP-004 | evidence/command-outputs/YCSEC_12_6_OUTPUT_roadmap_reconciliation.txt | Command output | Phase 12.6 generation and validation evidence | Public-safe |
+
+Phase result:
+
+- Current project state was reconciled with the original roadmap.
+- Completed evidence and missing evidence were separated.
+- Premature final-release claims were blocked.
+- Next cloud evidence sequence was defined.
+- No cloud resources were created.
+
+<!-- YCSEC:PHASE-12-6-ROADMAP-RECONCILIATION:END -->
+
