@@ -489,3 +489,12 @@ Cloud resources created in this phase: none.
 | `docs/kyverno-admission-policy-enforcement-metrics.md` | Planned admission enforcement metrics |
 | `evidence/command-outputs/YCSEC_13_5A_OUTPUT_kyverno_mks_repair_package.txt` | Command evidence for local repair package |
 | `evidence/command-outputs/YCSEC_13_5A_OUTPUT_final_git_control.txt` | Final git control evidence |
+
+## Phase 13.5A1 — Kyverno denial attribution fix
+
+| Evidence | Description |
+|---|---|
+| `kubernetes/admission-validation/namespace.yaml` | Admission validation namespace without Pod Security enforce label |
+| `scripts/run-kyverno-admission-policy-mks-validation.sh` | Corrected denial validation requiring Kyverno-specific evidence |
+| `evidence/command-outputs/YCSEC_13_5A1_OUTPUT_kyverno_denial_attribution_fix.txt` | Command evidence for attribution fix |
+| `evidence/command-outputs/YCSEC_13_5A1_OUTPUT_final_git_control.txt` | Final git control evidence |

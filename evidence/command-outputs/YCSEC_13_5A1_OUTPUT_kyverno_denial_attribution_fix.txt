@@ -1,0 +1,57 @@
+Phase 13.5A1 — Kyverno denial attribution fix
+Date: 2026-05-14T15:14:11+00:00
+Qube: cloud-dev-workbech
+
+Step 1 — verify current baseline
+e238df2 (HEAD -> main, tag: v0.13.5a-kyverno-mks-repair-package, origin/main, origin/HEAD) fix: prepare Kyverno admission MKS rerun
+5c00f76 (tag: v0.13.4a-gitleaks-generated-evidence-handling) test: handle generated evidence gitleaks findings
+195efa4 (tag: v0.13.4-sbom-vulnerability-validation) test: validate SBOM and supply chain vulnerability evidence
+961ab7a (tag: v0.13.3-supply-chain-oidc-registry-validation) test: validate supply chain OIDC registry push
+579fac9 fix: stabilize supply chain demo image builds
+66daf02 ci: repair supply chain registry OIDC workflow
+c396086 (tag: v0.13.2-supply-chain-implementation-package) feat: add supply chain security validation package
+1ba3a92 (tag: v0.13.1-supply-chain-roadmap-extension) docs: extend roadmap with supply chain security validation
+61bff33 (tag: v0.13.0-managed-kubernetes-baseline-remediation-cloud-run) docs: close Managed Kubernetes cloud run evidence package
+17045b7 test: validate Managed Kubernetes baseline remediation cloud run
+
+[OK] current HEAD has required Phase 13.5A tag
+[OK] current branch is main
+[OK] working tree is clean for Phase 13.5A1
+
+Step 2 — rewrite namespace to avoid Pod Security Admission taking denial ownership
+[OK] namespace manifest rewritten without Pod Security enforce label
+
+Step 3 — tighten script evidence validation for Kyverno-specific denial
+[OK] script now requires Kyverno-specific denial evidence
+
+Step 4 — update documentation
+[OK] documentation updated
+
+Step 5 — static validation
+[OK] Kyverno MKS validation script syntax valid
+[OK] namespace does not contain Pod Security enforce label
+[OK] Pod Security audit label retained
+[OK] Pod Security warn label retained
+[OK] script has Kyverno-specific denial success marker
+[OK] script has Kyverno-specific denial failure marker
+[OK] script checks Kyverno policy name in denial evidence
+[OK] script checks Kyverno webhook marker
+
+Step 6 — update evidence index and cloud evidence gap register
+[OK] evidence index updated
+[OK] cloud evidence gap register updated
+
+Step 7 — repository safety checks
+[OK] no Terraform state files in repository
+[OK] no kubeconfig files in repository
+[OK] no key/token-like files in repository
+[90m3:14PM[0m [32mINF[0m [1m45 commits scanned.[0m
+[90m3:14PM[0m [32mINF[0m [1mscanned ~8931322 bytes (8.93 MB) in 482ms[0m
+[90m3:14PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 8 — phase decision
+FAIL_COUNT=0
+[OK] Phase 13.5A1 Kyverno denial attribution fix completed
+[OK] no cloud resources were created in this phase
+[OK] project is ready for Phase 13.5B paid Kyverno MKS rerun

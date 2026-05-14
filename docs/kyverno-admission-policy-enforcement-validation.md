@@ -59,3 +59,11 @@ Allowed after successful rerun:
 Not allowed before successful rerun:
 
 - Final admission-policy evidence is closed.
+
+## Denial attribution control
+
+The admission validation namespace intentionally does not use the `pod-security.kubernetes.io/enforce` label.
+
+This prevents Kubernetes Pod Security Admission from taking ownership of the insecure workload denial. The expected denial evidence must reference Kyverno-specific admission behavior, policy names, rule names, webhook output, or Kyverno policy messages.
+
+This makes the Phase 13.5B evidence stronger because the rejected workload is attributed to the project policy-as-code control rather than a default built-in Kubernetes restriction.

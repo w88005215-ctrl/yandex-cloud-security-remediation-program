@@ -336,10 +336,10 @@ cat "$PRIVATE_DIR/insecure_workload_denied_RAW_PRIVATE.txt"
 sanitize_file "$PRIVATE_DIR/insecure_workload_denied_RAW_PRIVATE.txt" \
   "evidence/after/kyverno_insecure_workload_denied.txt"
 
-if [ "$INSECURE_RC" -ne 0 ] && grep -Ei 'denied|forbidden|admission|violat|policy|must|required' "$PRIVATE_DIR/insecure_workload_denied_RAW_PRIVATE.txt" >/dev/null 2>&1; then
-  ok "insecure workload was denied by admission policy"
+if [ "$INSECURE_RC" -ne 0 ] && grep -Ei 'ycsec-supply-chain-admission-controls|require-yandex-container-registry|require-non-root-container|deny-privilege-escalation|require-read-only-root-filesystem|require-capabilities-drop-all|require-runtime-default-seccomp|admission webhook.*kyverno|kyverno|Container images must be pulled from Yandex Container Registry|Containers must run as non-root|Privilege escalation must be disabled' "$PRIVATE_DIR/insecure_workload_denied_RAW_PRIVATE.txt" >/dev/null 2>&1; then
+  ok "insecure workload was denied by Kyverno admission policy"
 else
-  fail "insecure workload was not clearly denied"
+  fail "insecure workload was not clearly denied by Kyverno admission policy"
   exit 1
 fi
 

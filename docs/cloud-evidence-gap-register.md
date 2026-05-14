@@ -306,3 +306,17 @@ Still open:
 - Public evidence proving insecure workload denial.
 - Public evidence proving hardened workload admission allow.
 - Post-destroy evidence for the Kyverno MKS rerun.
+
+## Phase 13.5A1 — Kyverno denial attribution fix
+
+Status: completed locally after commit.
+
+Purpose:
+
+- Prevent Kubernetes Pod Security Admission from taking ownership of the insecure workload denial.
+- Require Kyverno-specific denial evidence in the corrected Phase 13.5B rerun.
+- Preserve the quality of the admission policy enforcement claim.
+
+Still open:
+
+- Successful Phase 13.5B paid Kyverno admission enforcement rerun on short-lived Managed Kubernetes.
