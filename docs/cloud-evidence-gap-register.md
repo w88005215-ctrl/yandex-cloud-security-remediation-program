@@ -66,3 +66,22 @@ The following gaps are now covered by a dedicated cloud-run plan, but remain ope
 
 <!-- YCSEC:PHASE-12-7-PLANNING-STATUS:END -->
 
+<!-- YCSEC-12.8A-GAP-UPDATE -->
+
+## Phase 12.8A gap update — Bootstrap/OIDC/Audit implementation prepared
+
+Current status:
+
+- Bootstrap/OIDC/Audit cloud-run plan is complete.
+- Terraform implementation package is prepared.
+- Controlled cloud-run driver is prepared.
+- GitHub Actions OIDC token smoke workflow template is prepared.
+- Real cloud evidence is not yet claimed until Phase 12.8B succeeds.
+
+Remaining gap:
+
+- Execute controlled bootstrap cloud-run.
+- Capture sanitized apply/output evidence.
+- Capture OIDC token smoke evidence from GitHub Actions.
+- Capture Audit Trails/Object Storage evidence.
+- Record retention or destroy decision.

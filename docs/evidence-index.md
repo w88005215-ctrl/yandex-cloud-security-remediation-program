@@ -325,3 +325,14 @@ Phase result:
 
 <!-- YCSEC:PHASE-12-7-BOOTSTRAP-OIDC-AUDIT-PLAN:END -->
 
+<!-- YCSEC-12.8A-BOOTSTRAP-IMPLEMENTATION -->
+
+## YCSEC-12.8A — Bootstrap/OIDC/Audit Implementation Package
+
+| Evidence ID | Artifact | Purpose | Status |
+|---|---|---|---|
+| YCSEC-12.8A-001 | `terraform/environments/bootstrap-oidc-audit/` | Terraform implementation for IAM/OIDC, registry, Object Storage and Audit Trails bootstrap | Prepared |
+| YCSEC-12.8A-002 | `scripts/run-bootstrap-oidc-audit-cloud-run.sh` | Controlled cloud-run script with explicit approval, temporary runtime and cleanup logic | Prepared |
+| YCSEC-12.8A-003 | `.github/workflows/cloud-deploy-oidc.yml` | GitHub Actions OIDC token smoke workflow template | Prepared |
+| YCSEC-12.8A-004 | `docs/bootstrap-cloud-run-implementation.md` | Operator-facing implementation scope and evidence policy | Prepared |
+| YCSEC-12.8A-005 | `evidence/command-outputs/YCSEC_12_8A_OUTPUT_bootstrap_cloud_run_implementation_package.txt` | Command evidence for local implementation package creation | Pending commit |

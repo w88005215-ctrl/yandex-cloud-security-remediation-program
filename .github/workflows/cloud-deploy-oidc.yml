@@ -1,0 +1,38 @@
+name: YCSEC OIDC Token Smoke
+
+on:
+  workflow_dispatch:
+    inputs:
+      yc_sa_id:
+        description: "Yandex Cloud service account ID linked to GitHub OIDC"
+        required: true
+        type: string
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  oidc-token-smoke:
+    name: Validate Yandex Cloud OIDC token exchange
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Request Yandex Cloud IAM token through Workload Identity Federation
+        id: get-iam-token
+        uses: docker://ghcr.io/yc-actions/yc-iam-token-fed:1.0.0
+        with:
+          yc-sa-id: ${{ inputs.yc_sa_id }}
+
+      - name: Validate token issuance without printing token
+        shell: bash
+        run: |
+          if test -n "${{ steps.get-iam-token.outputs.token }}"; then
+            echo "[OK] IAM token issued through GitHub OIDC and Yandex Cloud Workload Identity Federation"
+          else
+            echo "[FAIL] IAM token was not issued"
+            exit 1
+          fi
