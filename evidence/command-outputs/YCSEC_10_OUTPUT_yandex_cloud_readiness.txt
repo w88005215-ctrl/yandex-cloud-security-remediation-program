@@ -13,7 +13,7 @@ YC profile read-only checks
 Resource Manager read-only checks
 
 Cloud lookup:
-id: b1gqmitgfa2clpgugtok
+id: <folder-id>
 created_at: "2026-05-12T09:09:24Z"
 name: cloud-vojysobakvkino89
 organization_id: bpf6e8ahnavqc3g571mo
@@ -21,8 +21,8 @@ organization_id: bpf6e8ahnavqc3g571mo
 [OK] cloud lookup succeeded
 
 Folder lookup:
-id: b1gmqa2hij6h8ank5tvr
-cloud_id: b1gqmitgfa2clpgugtok
+id: <folder-id>
+cloud_id: <folder-id>
 created_at: "2026-05-12T09:09:24Z"
 name: default
 description: Auto-created default folder

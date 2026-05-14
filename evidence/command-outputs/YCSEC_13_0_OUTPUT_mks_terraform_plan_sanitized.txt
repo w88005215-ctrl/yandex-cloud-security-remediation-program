@@ -9,7 +9,7 @@ Terraform will perform the following actions:
 [0m  [32m+[0m[0m resource "yandex_iam_service_account" "cluster" {
       [32m+[0m[0m created_at         = (known after apply)
       [32m+[0m[0m description        = "YCSEC Managed Kubernetes cluster service account for controlled baseline/remediation run"
-      [32m+[0m[0m folder_id          = "b1gmqa2hij6h8ank5tvr"
+      [32m+[0m[0m folder_id          = "<folder-id>"
       [32m+[0m[0m id                 = (known after apply)
       [32m+[0m[0m labels             = (known after apply)
       [32m+[0m[0m name               = "ycsec-mks-cloud-run-cluster-sa"
@@ -20,7 +20,7 @@ Terraform will perform the following actions:
 [0m  [32m+[0m[0m resource "yandex_iam_service_account" "nodes" {
       [32m+[0m[0m created_at         = (known after apply)
       [32m+[0m[0m description        = "YCSEC Managed Kubernetes node service account for controlled baseline/remediation run"
-      [32m+[0m[0m folder_id          = "b1gmqa2hij6h8ank5tvr"
+      [32m+[0m[0m folder_id          = "<folder-id>"
       [32m+[0m[0m id                 = (known after apply)
       [32m+[0m[0m labels             = (known after apply)
       [32m+[0m[0m name               = "ycsec-mks-cloud-run-nodes-sa"
@@ -33,7 +33,7 @@ Terraform will perform the following actions:
       [32m+[0m[0m cluster_ipv6_range       = (known after apply)
       [32m+[0m[0m created_at               = (known after apply)
       [32m+[0m[0m description              = "YCSEC short-lived Managed Kubernetes baseline/remediation evidence cluster"
-      [32m+[0m[0m folder_id                = "b1gmqa2hij6h8ank5tvr"
+      [32m+[0m[0m folder_id                = "<folder-id>"
       [32m+[0m[0m health                   = (known after apply)
       [32m+[0m[0m id                       = (known after apply)
       [32m+[0m[0m labels                   = (known after apply)
@@ -145,7 +145,7 @@ Terraform will perform the following actions:
 
 [1m  # yandex_resourcemanager_folder_iam_member.cluster_agent[0m will be created
 [0m  [32m+[0m[0m resource "yandex_resourcemanager_folder_iam_member" "cluster_agent" {
-      [32m+[0m[0m folder_id = "b1gmqa2hij6h8ank5tvr"
+      [32m+[0m[0m folder_id = "<folder-id>"
       [32m+[0m[0m id        = (known after apply)
       [32m+[0m[0m member    = (known after apply)
       [32m+[0m[0m role      = "k8s.clusters.agent"
@@ -153,7 +153,7 @@ Terraform will perform the following actions:
 
 [1m  # yandex_resourcemanager_folder_iam_member.cluster_vpc_admin[0m will be created
 [0m  [32m+[0m[0m resource "yandex_resourcemanager_folder_iam_member" "cluster_vpc_admin" {
-      [32m+[0m[0m folder_id = "b1gmqa2hij6h8ank5tvr"
+      [32m+[0m[0m folder_id = "<folder-id>"
       [32m+[0m[0m id        = (known after apply)
       [32m+[0m[0m member    = (known after apply)
       [32m+[0m[0m role      = "vpc.publicAdmin"
@@ -161,7 +161,7 @@ Terraform will perform the following actions:
 
 [1m  # yandex_resourcemanager_folder_iam_member.nodes_registry_puller[0m will be created
 [0m  [32m+[0m[0m resource "yandex_resourcemanager_folder_iam_member" "nodes_registry_puller" {
-      [32m+[0m[0m folder_id = "b1gmqa2hij6h8ank5tvr"
+      [32m+[0m[0m folder_id = "<folder-id>"
       [32m+[0m[0m id        = (known after apply)
       [32m+[0m[0m member    = (known after apply)
       [32m+[0m[0m role      = "container-registry.images.puller"
@@ -172,7 +172,7 @@ Terraform will perform the following actions:
       [32m+[0m[0m created_at                = (known after apply)
       [32m+[0m[0m default_security_group_id = (known after apply)
       [32m+[0m[0m description               = "YCSEC Managed Kubernetes controlled cloud-run network"
-      [32m+[0m[0m folder_id                 = "b1gmqa2hij6h8ank5tvr"
+      [32m+[0m[0m folder_id                 = "<folder-id>"
       [32m+[0m[0m id                        = (known after apply)
       [32m+[0m[0m labels                    = (known after apply)
       [32m+[0m[0m name                      = "ycsec-mks-cloud-run-network"
@@ -183,7 +183,7 @@ Terraform will perform the following actions:
 [0m  [32m+[0m[0m resource "yandex_vpc_subnet" "mks" {
       [32m+[0m[0m created_at     = (known after apply)
       [32m+[0m[0m description    = "YCSEC Managed Kubernetes controlled cloud-run subnet"
-      [32m+[0m[0m folder_id      = "b1gmqa2hij6h8ank5tvr"
+      [32m+[0m[0m folder_id      = "<folder-id>"
       [32m+[0m[0m id             = (known after apply)
       [32m+[0m[0m labels         = (known after apply)
       [32m+[0m[0m name           = "ycsec-mks-cloud-run-subnet"

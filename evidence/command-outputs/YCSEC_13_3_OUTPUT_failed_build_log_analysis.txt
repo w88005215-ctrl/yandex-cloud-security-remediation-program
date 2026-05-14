@@ -7,7 +7,7 @@ Run metadata:
 
 Relevant failure lines:
 validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5085404Z [36;1mSHORT_SHA="${GITHUB_SHA::12}"[0m
-validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5085779Z [36;1mIMAGE_BASE="cr.yandex/crpom0rdegblf5au4nsu/${YCSEC_IMAGE_NAME}"[0m
+validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5085779Z [36;1mIMAGE_BASE="cr.yandex/<registry-or-image-id>/${YCSEC_IMAGE_NAME}"[0m
 validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5086359Z [36;1m[0m
 validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5086616Z [36;1mdocker build \[0m
 validate-registry-push	Build and push controlled demo images	2026-05-14T13:18:42.5087034Z [36;1m  -f "${YCSEC_REPOSITORY_DIR}/Dockerfile.insecure" \[0m

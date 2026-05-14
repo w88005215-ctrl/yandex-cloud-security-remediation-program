@@ -1,0 +1,250 @@
+Phase 13.14 — Final repository audit and public sanitization
+Date: 2026-05-14T19:20:31+00:00
+Qube: cloud-dev-workbech
+Cloud actions: NONE
+
+--- Step 1 — verify baseline
+From https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program
+ * branch            main       -> FETCH_HEAD
+370cd97 (HEAD -> main, origin/main, origin/HEAD) fix: sanitize scanner metadata for Gitleaks
+19354a0 (tag: v0.13.12-checkov-stabilization) test: stabilize Checkov IaC security workflow
+a18df35 (tag: v0.13.11-retained-bootstrap-cleanup) docs: record retained bootstrap cleanup
+4233e3c (tag: v0.13.10-final-reports-publication-summary) docs: add final technical reports and publication summary
+10f1fdd (tag: v0.13.9-cross-cloud-publication-readiness) docs: add cross-cloud mapping and publication readiness
+90759e4 (tag: v0.13.8-final-risk-register) docs: add final risk register
+24b0ba7 (tag: v0.13.7-final-control-matrix) docs: add final control matrix
+d75cebd (tag: v0.13.6-final-remediation-metrics) docs: consolidate final remediation metrics
+2d686fd (tag: v0.13.5-kyverno-admission-policy-enforcement) test: validate Kyverno admission policy enforcement
+11c4767 (tag: v0.13.5a2-kyverno-runner-hardening) fix: harden Kyverno admission MKS runner
+6b7f94a (tag: v0.13.5a1-kyverno-denial-attribution-fix) fix: require Kyverno-specific admission denial evidence
+e238df2 (tag: v0.13.5a-kyverno-mks-repair-package) fix: prepare Kyverno admission MKS rerun
+5c00f76 (tag: v0.13.4a-gitleaks-generated-evidence-handling) test: handle generated evidence gitleaks findings
+195efa4 (tag: v0.13.4-sbom-vulnerability-validation) test: validate SBOM and supply chain vulnerability evidence
+
+[OK] current branch is main
+origin/main...HEAD: behind=0 ahead=0
+[OK] local main and origin/main are aligned
+[OK] current HEAD includes Gitleaks metadata repair
+
+--- Step 2 — remove known local-only leftover output if present
+[OK] preserved privately and removed local-only leftover: evidence/command-outputs/YCSEC_13_13A_CLOSEOUT_OUTPUT.txt
+
+--- Step 3 — required tool checks
+[OK] git available: /usr/bin/git
+[OK] python3 available: /usr/bin/python3
+[OK] jq available: /usr/bin/jq
+[OK] gitleaks available: /usr/bin/gitleaks
+[OK] grep available: alias grep='grep --color=auto'
+[OK] sed available: /usr/bin/sed
+[OK] awk available: /usr/bin/awk
+[OK] find available: /usr/bin/find
+[OK] wc available: /usr/bin/wc
+[OK] sort available: /usr/bin/sort
+[OK] uniq available: /usr/bin/uniq
+[OK] checkov available: /home/user/.local/bin/checkov
+
+--- Step 4 — generate repository inventory before sanitization
+[OK] repository inventory written
+
+--- Step 5 — final public artifact sanitization
+scanned_text_files=422
+changed_files=22
+changed: evidence/sbom/ycsec_supply_chain_insecure_sbom_cyclonedx.json
+changed: evidence/sbom/ycsec_supply_chain_hardened_sbom_cyclonedx.json
+changed: evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt
+changed: evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_repair_apply_sanitized.txt
+changed: evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_destroy_sanitized.txt
+changed: evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_final_cleanup.txt
+changed: evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_apply_sanitized.txt
+changed: evidence/command-outputs/YCSEC_13_4_OUTPUT_sbom_vulnerability_validation.txt
+changed: evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_destroy_sanitized.txt
+changed: evidence/command-outputs/YCSEC_13_3_OUTPUT_failed_build_log_analysis.txt
+changed: evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_plan_sanitized.txt
+changed: evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_get_credentials_sanitized.txt
+changed: evidence/command-outputs/YCSEC_13_3_OUTPUT_registry_inventory_after_push.txt
+changed: evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt
+changed: evidence/command-outputs/YCSEC_10_OUTPUT_yandex_cloud_readiness.txt
+changed: evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_metadata_repair.txt
+changed: evidence/vulnerability/grype_hardened_image.json
+changed: evidence/vulnerability/trivy_hardened_image.json
+changed: evidence/vulnerability/trivy_insecure_image.txt
+changed: evidence/vulnerability/trivy_hardened_image.txt
+changed: evidence/vulnerability/trivy_insecure_image.json
+changed: evidence/vulnerability/grype_insecure_image.json
+[OK] public artifact sanitization pass completed
+
+--- Step 6 — full repository audit scan
+{
+  "audit_date": "",
+  "scope": "tracked and working-tree public repository files, excluding .git and local private runtime directories",
+  "total_files_seen": 476,
+  "text_files_scanned": 423,
+  "blocking_findings": 0,
+  "warning_findings": 1072,
+  "file_types": {
+    ".csv": 3,
+    ".example": 4,
+    ".hardened": 1,
+    ".hcl": 4,
+    ".insecure": 1,
+    ".json": 13,
+    ".md": 99,
+    ".mmd": 2,
+    ".py": 1,
+    ".sh": 20,
+    ".tf": 47,
+    ".tfplan": 1,
+    ".toml": 1,
+    ".txt": 203,
+    ".yaml": 32,
+    ".yml": 3,
+    "<no_ext>": 41
+  },
+  "blocking_rules": [],
+  "warning_rules": [
+    "email_like_text",
+    "literal_docker_gpg_key_variable",
+    "local_home_path",
+    "todo_fixme",
+    "token_word_context"
+  ]
+}
+[OK] repository audit has no blocking findings
+
+--- Step 7 — run Gitleaks and Checkov
+[90m7:20PM[0m [32mINF[0m [1m56 commits scanned.[0m
+[90m7:20PM[0m [32mINF[0m [1mscanned ~9200633 bytes (9.20 MB) in 692ms[0m
+[90m7:20PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] Gitleaks final audit passed
+terraform scan results:
+
+Passed checks: 27, Failed checks: 0, Skipped checks: 11
+
+
+[OK] Checkov final audit passed
+
+--- Step 8 — write bilingual audit and sanitization reports
+[OK] bilingual audit and sanitization reports written
+
+--- Step 9 — update README, evidence index, and cloud evidence gap register
+[OK] README final audit section added
+[OK] documentation indexes updated
+
+--- Step 10 — final repository safety checks
+[OK] git diff whitespace check passed
+[OK] no forbidden state/key/kubeconfig/env artifacts found
+[OK] no internal or unprofessional wording found
+[90m7:20PM[0m [32mINF[0m [1m56 commits scanned.[0m
+[90m7:20PM[0m [32mINF[0m [1mscanned ~9200633 bytes (9.20 MB) in 705ms[0m
+[90m7:20PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] final pre-commit Gitleaks passed
+
+--- Step 11 — write final git control evidence
+[OK] final git control evidence written
+
+--- Step 12 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 13.14 final repository audit passed
+
+--- Step 13 — commit/tag/push Phase 13.14
+M  README.md
+M  docs/cloud-evidence-gap-register.md
+M  docs/evidence-index.md
+A  docs/final-repository-audit-en.md
+A  docs/final-repository-audit-ru.md
+A  docs/publication-sanitization-report-en.md
+A  docs/publication-sanitization-report-ru.md
+ M evidence/command-outputs/YCSEC_10_OUTPUT_yandex_cloud_readiness.txt
+ M evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt
+ M evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_repair_apply_sanitized.txt
+ M evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt
+ M evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_apply_sanitized.txt
+ M evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_destroy_sanitized.txt
+ M evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_plan_sanitized.txt
+ M evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_final_cleanup.txt
+ M evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_metadata_repair.txt
+A  evidence/command-outputs/YCSEC_13_14_OUTPUT_checkov_final_audit.txt
+A  evidence/command-outputs/YCSEC_13_14_OUTPUT_final_git_control.txt
+A  evidence/command-outputs/YCSEC_13_14_OUTPUT_gitleaks_final_audit.txt
+A  evidence/command-outputs/YCSEC_13_14_OUTPUT_gitleaks_final_precommit.txt
+A  evidence/command-outputs/YCSEC_13_14_OUTPUT_repository_inventory_before.txt
+ M evidence/command-outputs/YCSEC_13_3_OUTPUT_failed_build_log_analysis.txt
+ M evidence/command-outputs/YCSEC_13_3_OUTPUT_registry_inventory_after_push.txt
+ M evidence/command-outputs/YCSEC_13_4_OUTPUT_sbom_vulnerability_validation.txt
+ M evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_get_credentials_sanitized.txt
+ M evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_destroy_sanitized.txt
+A  evidence/metrics/final_repository_audit.json
+A  evidence/metrics/final_repository_audit.txt
+A  evidence/metrics/final_repository_audit_findings.json
+A  evidence/metrics/final_repository_file_inventory.json
+A  evidence/metrics/final_sanitization_changed_files.json
+ M evidence/sbom/ycsec_supply_chain_hardened_sbom_cyclonedx.json
+ M evidence/sbom/ycsec_supply_chain_insecure_sbom_cyclonedx.json
+ M evidence/vulnerability/grype_hardened_image.json
+ M evidence/vulnerability/grype_insecure_image.json
+M  evidence/vulnerability/trivy_hardened_image.json
+ M evidence/vulnerability/trivy_hardened_image.txt
+M  evidence/vulnerability/trivy_insecure_image.json
+ M evidence/vulnerability/trivy_insecure_image.txt
+?? evidence/command-outputs/YCSEC_13_14_OUTPUT_final_repository_audit.txt
+[main be44587] docs: add final repository audit and sanitization reports
+ 19 files changed, 10205 insertions(+), 14 deletions(-)
+ create mode 100644 docs/final-repository-audit-en.md
+ create mode 100644 docs/final-repository-audit-ru.md
+ create mode 100644 docs/publication-sanitization-report-en.md
+ create mode 100644 docs/publication-sanitization-report-ru.md
+ create mode 100644 evidence/command-outputs/YCSEC_13_14_OUTPUT_checkov_final_audit.txt
+ create mode 100644 evidence/command-outputs/YCSEC_13_14_OUTPUT_final_git_control.txt
+ create mode 100644 evidence/command-outputs/YCSEC_13_14_OUTPUT_gitleaks_final_audit.txt
+ create mode 100644 evidence/command-outputs/YCSEC_13_14_OUTPUT_gitleaks_final_precommit.txt
+ create mode 100644 evidence/command-outputs/YCSEC_13_14_OUTPUT_repository_inventory_before.txt
+ create mode 100644 evidence/metrics/final_repository_audit.json
+ create mode 100644 evidence/metrics/final_repository_audit.txt
+ create mode 100644 evidence/metrics/final_repository_audit_findings.json
+ create mode 100644 evidence/metrics/final_repository_file_inventory.json
+ create mode 100644 evidence/metrics/final_sanitization_changed_files.json
+To https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program.git
+   370cd97..be44587  main -> main
+To https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program.git
+ * [new tag]         v0.13.14-final-repository-audit -> v0.13.14-final-repository-audit
+
+--- Post-commit verification
+be44587 (HEAD -> main, tag: v0.13.14-final-repository-audit, origin/main, origin/HEAD) docs: add final repository audit and sanitization reports
+370cd97 fix: sanitize scanner metadata for Gitleaks
+19354a0 (tag: v0.13.12-checkov-stabilization) test: stabilize Checkov IaC security workflow
+a18df35 (tag: v0.13.11-retained-bootstrap-cleanup) docs: record retained bootstrap cleanup
+4233e3c (tag: v0.13.10-final-reports-publication-summary) docs: add final technical reports and publication summary
+10f1fdd (tag: v0.13.9-cross-cloud-publication-readiness) docs: add cross-cloud mapping and publication readiness
+90759e4 (tag: v0.13.8-final-risk-register) docs: add final risk register
+24b0ba7 (tag: v0.13.7-final-control-matrix) docs: add final control matrix
+d75cebd (tag: v0.13.6-final-remediation-metrics) docs: consolidate final remediation metrics
+2d686fd (tag: v0.13.5-kyverno-admission-policy-enforcement) test: validate Kyverno admission policy enforcement
+11c4767 (tag: v0.13.5a2-kyverno-runner-hardening) fix: harden Kyverno admission MKS runner
+6b7f94a (tag: v0.13.5a1-kyverno-denial-attribution-fix) fix: require Kyverno-specific admission denial evidence
+e238df2 (tag: v0.13.5a-kyverno-mks-repair-package) fix: prepare Kyverno admission MKS rerun
+5c00f76 (tag: v0.13.4a-gitleaks-generated-evidence-handling) test: handle generated evidence gitleaks findings
+v0.13.14-final-repository-audit
+ M evidence/command-outputs/YCSEC_10_OUTPUT_yandex_cloud_readiness.txt
+ M evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt
+ M evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_repair_apply_sanitized.txt
+ M evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt
+ M evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_apply_sanitized.txt
+ M evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_destroy_sanitized.txt
+ M evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_plan_sanitized.txt
+ M evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_final_cleanup.txt
+ M evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_metadata_repair.txt
+ M evidence/command-outputs/YCSEC_13_3_OUTPUT_failed_build_log_analysis.txt
+ M evidence/command-outputs/YCSEC_13_3_OUTPUT_registry_inventory_after_push.txt
+ M evidence/command-outputs/YCSEC_13_4_OUTPUT_sbom_vulnerability_validation.txt
+ M evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_get_credentials_sanitized.txt
+ M evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_destroy_sanitized.txt
+ M evidence/sbom/ycsec_supply_chain_hardened_sbom_cyclonedx.json
+ M evidence/sbom/ycsec_supply_chain_insecure_sbom_cyclonedx.json
+ M evidence/vulnerability/grype_hardened_image.json
+ M evidence/vulnerability/grype_insecure_image.json
+ M evidence/vulnerability/trivy_hardened_image.txt
+ M evidence/vulnerability/trivy_insecure_image.txt
+?? evidence/command-outputs/YCSEC_13_14_OUTPUT_final_repository_audit.txt
+[OK] Phase 13.14 committed, tagged, and pushed
+[OK] Next step: final GitHub Actions verification

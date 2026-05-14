@@ -282,7 +282,7 @@ Terraform apply
 [0m[1myandex_iam_service_account.audit_trail: Creation complete after 4s [id=<YC_RESOURCE_ID_REDACTED>][0m
 [0m[<LONG_IDENTIFIER_REDACTED>.audit_trail_storage_uploader: Creating...[0m[0m
 [0m[<LONG_IDENTIFIER_REDACTED>.audit_trail_admin: Creating...[0m[0m
-[0m[1myandex_container_registry.bootstrap: Creation complete after 4s [id=crpom0rdegblf5au4nsu][0m
+[0m[1myandex_container_registry.bootstrap: Creation complete after 4s [id=<registry-or-image-id>][0m
 [0m[<LONG_IDENTIFIER_REDACTED>.github: Creation complete after 4s [id=<YC_RESOURCE_ID_REDACTED>][0m
 [0m[1myandex_iam_service_account.github_actions: Creation complete after 5s [id=<YC_RESOURCE_ID_REDACTED>][0m
 [0m[<LONG_IDENTIFIER_REDACTED>.github_main_branch: Creating...[0m[0m
@@ -323,7 +323,7 @@ Read-only cloud inventory after apply
 +----------------------+--------------------------+----------------------+
 |          ID          |           NAME           |      FOLDER ID       |
 +----------------------+--------------------------+----------------------+
-| crpom0rdegblf5au4nsu | ycsec-bootstrap-registry | <YC_RESOURCE_ID_REDACTED> |
+| <registry-or-image-id> | ycsec-bootstrap-registry | <YC_RESOURCE_ID_REDACTED> |
 +----------------------+--------------------------+----------------------+
 +------+-----------+----------+-----------------------+------------+
 | NAME | FOLDER ID | MAX SIZE | DEFAULT STORAGE CLASS | CREATED AT |
@@ -390,7 +390,7 @@ Container registries:
 +----------------------+--------------------------+----------------------+
 |          ID          |           NAME           |      FOLDER ID       |
 +----------------------+--------------------------+----------------------+
-| crpom0rdegblf5au4nsu | ycsec-bootstrap-registry | <YC_RESOURCE_ID_REDACTED> |
+| <registry-or-image-id> | ycsec-bootstrap-registry | <YC_RESOURCE_ID_REDACTED> |
 +----------------------+--------------------------+----------------------+
 
 Object Storage buckets:

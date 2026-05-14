@@ -135,14 +135,14 @@ Step 8 — apply repair plan
 [0m[1myandex_storage_bucket.audit_evidence: Creating...[0m[0m
 [0m[1myandex_storage_bucket.audit_evidence: Creation complete after 7s [id=ycsec-audit-<YC_FOLDER_ID_REDACTED>-20260514t072540][0m
 [0m[1myandex_audit_trails_trail.bootstrap: Creating...[0m[0m
-[0m[1myandex_audit_trails_trail.bootstrap: Creation complete after 4s [id=cnpmvekt5ea1ku241qe0][0m
+[0m[1myandex_audit_trails_trail.bootstrap: Creation complete after 4s [id=<audit-trail-id>][0m
 [0m[1m[32m
 Apply complete! Resources: 2 added, 0 changed, 0 destroyed.[0m
 [0m[1m[32m
 Outputs:
 
 [0maudit_bucket_name = "ycsec-audit-<YC_FOLDER_ID_REDACTED>-20260514t072540"
-audit_trail_id = "cnpmvekt5ea1ku241qe0"
+audit_trail_id = "<audit-trail-id>"
 container_registry_id = "<YC_CONTAINER_REGISTRY_ID_REDACTED>"
 github_actions_service_account_id = "<YC_IAM_RESOURCE_ID_REDACTED>"
 github_oidc_subject = "repo:w88005215-ctrl/yandex-cloud-security-remediation-program:ref:refs/heads/main"
@@ -159,7 +159,7 @@ Step 9 — capture Terraform outputs
   "audit_trail_id": {
     "sensitive": false,
     "type": "string",
-    "value": "cnpmvekt5ea1ku241qe0"
+    "value": "<audit-trail-id>"
   },
   "container_registry_id": {
     "sensitive": false,
@@ -217,7 +217,7 @@ Audit Trails:
 +----------------------+-----------------------------+--------+---------+
 |          ID          |            NAME             | STATUS | FILTERS |
 +----------------------+-----------------------------+--------+---------+
-| cnpmvekt5ea1ku241qe0 | ycsec-bootstrap-audit-trail | ACTIVE |         |
+| <audit-trail-id> | ycsec-bootstrap-audit-trail | ACTIVE |         |
 +----------------------+-----------------------------+--------+---------+
 [OK] Object Storage audit bucket exists
 [OK] Audit Trails trail exists

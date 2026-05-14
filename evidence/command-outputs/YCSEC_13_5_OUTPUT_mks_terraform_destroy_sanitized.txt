@@ -175,7 +175,7 @@ Terraform will perform the following actions:
               [31m-[0m[0m nat                = true [90m-> null[0m[0m
               [31m-[0m[0m security_group_ids = [] [90m-> null[0m[0m
               [31m-[0m[0m subnet_ids         = [
-                  [31m-[0m[0m "e9b0t2tkg3mib50oiqup",
+                  [31m-[0m[0m "<subnet-id>",
                 ] [90m-> null[0m[0m
             }
 
@@ -237,9 +237,9 @@ Terraform will perform the following actions:
       [31m-[0m[0m labels                    = {} [90m-> null[0m[0m
       [31m-[0m[0m name                      = "ycsec-mks-cloud-run-network" [90m-> null[0m[0m
       [31m-[0m[0m subnet_ids                = [
-          [31m-[0m[0m "e9b0t2tkg3mib50oiqup",
-          [31m-[0m[0m "e9bc43h7h6btq2g3355f",
-          [31m-[0m[0m "e9bn25ohq0irgjofr4ra",
+          [31m-[0m[0m "<subnet-id>",
+          [31m-[0m[0m "<subnet-id>",
+          [31m-[0m[0m "<subnet-id>",
         ] [90m-> null[0m[0m
     }
 

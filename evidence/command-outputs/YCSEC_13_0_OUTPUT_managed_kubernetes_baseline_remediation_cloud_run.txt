@@ -123,7 +123,7 @@ commands will detect it and remind you to do so if necessary.[0m
 Cloud-run summary
 Warnings: 4
 Failures: 0
-Private evidence: /home/user/ycsec-private-evidence/phase-13.0/managed-kubernetes-20260514T101851
+Private evidence: <private-evidence-path>
 [OK] Managed Kubernetes cloud-run script completed successfully
 
 Step 7 — post-run repository safety checks

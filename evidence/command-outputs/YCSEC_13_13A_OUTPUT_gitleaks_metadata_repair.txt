@@ -72,4 +72,4 @@ FAIL_COUNT=1
 ?? evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_after_metadata_repair.txt
 ?? evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_metadata_repair.txt
 
-Private evidence: /home/user/ycsec-private-evidence/phase-13.13a-gitleaks-real-gpgkey-repair-20260514T191017
+Private evidence: <private-evidence-path>

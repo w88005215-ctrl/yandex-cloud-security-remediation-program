@@ -136,4 +136,4 @@ FAIL_COUNT=0
 
 Next: send this output. Then we close Phase 13.11 evidence in one clean commit, and only after that fix Checkov.
 
-Private evidence: /home/user/ycsec-private-evidence/phase-13.11c-registry-final-cleanup-20260514T180549
+Private evidence: <private-evidence-path>

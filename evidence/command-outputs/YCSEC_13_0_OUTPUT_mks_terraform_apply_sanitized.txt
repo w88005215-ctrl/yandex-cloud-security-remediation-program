@@ -1,18 +1,18 @@
 [0m[1myandex_vpc_network.mks: Creating...[0m[0m
 [0m[1myandex_iam_service_account.nodes: Creating...[0m[0m
 [0m[1myandex_iam_service_account.cluster: Creating...[0m[0m
-[0m[1myandex_iam_service_account.cluster: Creation complete after 5s [id=aje02gj1e23h3s156vh8][0m
+[0m[1myandex_iam_service_account.cluster: Creation complete after 5s [id=<service-account-or-federation-id>][0m
 [0m[1myandex_resourcemanager_folder_iam_member.cluster_agent: Creating...[0m[0m
 [0m[1myandex_resourcemanager_folder_iam_member.cluster_vpc_admin: Creating...[0m[0m
-[0m[1myandex_iam_service_account.nodes: Creation complete after 5s [id=ajerdm1srd5l9ck5vo9v][0m
+[0m[1myandex_iam_service_account.nodes: Creation complete after 5s [id=<service-account-or-federation-id>][0m
 [0m[1myandex_resourcemanager_folder_iam_member.nodes_registry_puller: Creating...[0m[0m
-[0m[1myandex_vpc_network.mks: Creation complete after 5s [id=enpao31e8ng402mugna7][0m
+[0m[1myandex_vpc_network.mks: Creation complete after 5s [id=<network-id>][0m
 [0m[1myandex_vpc_subnet.mks: Creating...[0m[0m
-[0m[1myandex_vpc_subnet.mks: Creation complete after 1s [id=e9bquivoa3m3ldomfcdi][0m
-[0m[1myandex_resourcemanager_folder_iam_member.cluster_agent: Creation complete after 5s [id=b1gmqa2hij6h8ank5tvr/k8s.clusters.agent/serviceAccount:aje02gj1e23h3s156vh8][0m
-[0m[1myandex_resourcemanager_folder_iam_member.cluster_vpc_admin: Creation complete after 9s [id=b1gmqa2hij6h8ank5tvr/vpc.publicAdmin/serviceAccount:aje02gj1e23h3s156vh8][0m
+[0m[1myandex_vpc_subnet.mks: Creation complete after 1s [id=<subnet-id>][0m
+[0m[1myandex_resourcemanager_folder_iam_member.cluster_agent: Creation complete after 5s [id=<folder-id>/k8s.clusters.agent/serviceAccount:<service-account-or-federation-id>][0m
+[0m[1myandex_resourcemanager_folder_iam_member.cluster_vpc_admin: Creation complete after 9s [id=<folder-id>/vpc.publicAdmin/serviceAccount:<service-account-or-federation-id>][0m
 [0m[1myandex_resourcemanager_folder_iam_member.nodes_registry_puller: Still creating... [00m10s elapsed][0m[0m
-[0m[1myandex_resourcemanager_folder_iam_member.nodes_registry_puller: Creation complete after 13s [id=b1gmqa2hij6h8ank5tvr/container-registry.images.puller/serviceAccount:ajerdm1srd5l9ck5vo9v][0m
+[0m[1myandex_resourcemanager_folder_iam_member.nodes_registry_puller: Creation complete after 13s [id=<folder-id>/container-registry.images.puller/serviceAccount:<service-account-or-federation-id>][0m
 [0m[1myandex_kubernetes_cluster.mks: Creating...[0m[0m
 [0m[1myandex_kubernetes_cluster.mks: Still creating... [00m10s elapsed][0m[0m
 [0m[1myandex_kubernetes_cluster.mks: Still creating... [00m20s elapsed][0m[0m
@@ -79,6 +79,6 @@ Outputs:
 
 [0mcluster_id = "cat9d2or3mjf09vcvrv1"
 cluster_name = "ycsec-mks-cloud-run"
-network_id = "enpao31e8ng402mugna7"
+network_id = "<network-id>"
 node_group_id = "cat9vkrsefa9bphe216f"
-subnet_id = "e9bquivoa3m3ldomfcdi"
+subnet_id = "<subnet-id>"
