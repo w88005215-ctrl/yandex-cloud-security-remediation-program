@@ -178,3 +178,29 @@ Still open:
 - Terraform destroy evidence for Managed Kubernetes resources.
 - Zero-resource verification after Managed Kubernetes destroy.
 - Final cloud before/after metrics.
+
+## Phase 13.0 — Managed Kubernetes baseline/remediation cloud-run
+
+Status: Managed Kubernetes baseline/remediation cloud-run: completed.
+
+Closed evidence:
+
+- Real Managed Kubernetes cluster lifecycle evidence.
+- Insecure baseline deployment evidence.
+- Hardened/remediated deployment evidence.
+- Before/after scanner evidence.
+- RBAC validation evidence.
+- NetworkPolicy validation evidence.
+- Pod security context validation evidence.
+- Terraform destroy evidence.
+- Post-destroy zero-resource inventory for Managed Kubernetes, Compute, and Network Load Balancer resources.
+
+Remaining future work:
+
+- Final control matrix.
+- Final risk register.
+- Final remediation metrics summary.
+- AWS/GCP/Azure control mapping.
+- Final RU/EN portfolio reports.
+- Publication safety review.
+- Final cleanup of retained bootstrap resources after all cloud evidence is no longer needed.

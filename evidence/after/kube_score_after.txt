@@ -1,0 +1,32 @@
+apps/v1/Deployment hardened-web in ycsec-hardened                             💥
+    path=/home/user/projects/yandex-cloud-security-remediation-program/kubernetes/cloud-run/hardened/workload-hardened.yaml
+    [CRITICAL] Container Image Pull Policy
+        · web -> ImagePullPolicy is not set to Always
+            It's recommended to always set the ImagePullPolicy to Always, to make sure that the imagePullSecrets are
+            always correct, and to always get the image you want.
+    [CRITICAL] Container Ephemeral Storage Request and Limit
+        · web -> Ephemeral Storage limit is not set
+            Resource limits are recommended to avoid resource DDOS. Set resources.limits.ephemeral-storage
+        · web -> Ephemeral Storage request is not set
+            Resource requests are recommended to make sure the application can start and run without crashing. Set
+            resource.requests.ephemeral-storage
+    [CRITICAL] Pod Probes
+        · Container is missing a readinessProbe
+            A readinessProbe should be used to indicate when the service is ready to receive traffic. Without it,
+            the Pod is risking to receive traffic before it has booted. It's also used during rollouts, and can
+            prevent downtime if a new version of the application is failing.
+            More information: https://github.com/zegl/kube-score/blob/master/README_PROBES.md
+    [CRITICAL] Container Security Context User Group ID
+        · web -> The container is running with a low user ID
+            A userid above 10 000 is recommended to avoid conflicts with the host. Set securityContext.runAsUser to
+            a value > 10000
+        · web -> The container running with a low group ID
+            A groupid above 10 000 is recommended to avoid conflicts with the host. Set securityContext.runAsGroup
+            to a value > 10000
+    [WARNING] Deployment Replicas
+        · Deployment few replicas
+            Deployments targeted by Services are recommended to have at least 2 replicas to prevent unwanted
+            downtime.
+networking.k8s.io/v1/NetworkPolicy allow-dns-egress in ycsec-hardened         ✅
+networking.k8s.io/v1/NetworkPolicy default-deny-ingress-egress in ycsec-hardened✅
+v1/Service hardened-web in ycsec-hardened                                     ✅

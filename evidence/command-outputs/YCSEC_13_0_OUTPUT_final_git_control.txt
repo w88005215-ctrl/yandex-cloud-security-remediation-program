@@ -9,3 +9,69 @@ Decision:
 [OK] destroy/zero-resource verification evidence checked
 [OK] bootstrap OIDC/Audit resources intentionally retained
 [OK] repository safety checks passed
+Phase 13.0 — final git control
+Date: 2026-05-14T10:31:56+00:00
+Qube: cloud-dev-workbech
+
+Step 1 — verify cloud-run result
+[OK] cloud-run command completed successfully
+[OK] phase output confirms Managed Kubernetes cloud-run completion
+[OK] phase output contains destroy or zero-resource evidence markers
+
+Step 2 — verify repository safety before commit
+[OK] no Terraform state files
+[OK] no kubeconfig files
+[OK] no private/key/token-like artifacts
+[90m10:31AM[0m [32mINF[0m [1m35 commits scanned.[0m
+[90m10:31AM[0m [32mINF[0m [1mscanned ~797230 bytes (797.23 KB) in 584ms[0m
+[90m10:31AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 3 — write final git control evidence
+[OK] final git control evidence written: evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt
+
+Step 4 — commit, tag and push
+[main 17045b7] test: validate Managed Kubernetes baseline remediation cloud run
+ 10 files changed, 813 insertions(+)
+ create mode 100644 evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt
+ create mode 100644 evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt.tmp
+ create mode 100644 evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt
+ create mode 100644 evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_get_credentials_sanitized.txt
+ create mode 100644 evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_apply_sanitized.txt
+ create mode 100644 evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_destroy_sanitized.txt
+ create mode 100644 evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_plan_sanitized.txt
+ create mode 100644 evidence/command-outputs/YCSEC_13_0_OUTPUT_post_destroy_compute_instance_list.txt
+ create mode 100644 evidence/command-outputs/YCSEC_13_0_OUTPUT_post_destroy_mks_cluster_list.txt
+ create mode 100644 evidence/command-outputs/YCSEC_13_0_OUTPUT_post_destroy_nlb_list.txt
+To https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program.git
+   99b9e11..17045b7  main -> main
+To https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program.git
+ * [new tag]         v0.13.0-managed-kubernetes-baseline-remediation-cloud-run -> v0.13.0-managed-kubernetes-baseline-remediation-cloud-run
+[OK] Phase 13.0 evidence committed, tagged and pushed
+
+Post-commit verification
+17045b7 (HEAD -> main, tag: v0.13.0-managed-kubernetes-baseline-remediation-cloud-run, origin/main, origin/HEAD) test: validate Managed Kubernetes baseline remediation cloud run
+99b9e11 (tag: v0.13.0a-managed-kubernetes-cloud-run-implementation) feat: prepare Managed Kubernetes cloud remediation run
+690425b (tag: v0.12.9-managed-kubernetes-cloud-run-plan) docs: plan Managed Kubernetes baseline remediation cloud run
+3f670fe (tag: v0.12.8f-registry-evidence-storage-validation) test: validate registry and evidence storage resources
+d172951 (tag: v0.12.8e-audit-trails-evidence-validation) test: validate Audit Trails evidence delivery
+664c3ff (tag: v0.12.8d-github-actions-oidc-validation) ci: validate GitHub Actions OIDC token exchange
+9772ab6 ci: use direct Yandex Cloud OIDC token exchange validation
+483160e ci: repair GitHub Actions OIDC validation workflow
+f58270b ci: validate GitHub Actions OIDC federation
+cba7dd7 (tag: v0.12.8c-github-publication) docs: record GitHub publication evidence
+v0.13.0-managed-kubernetes-baseline-remediation-cloud-run
+ M evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt.tmp
+?? evidence/after/kube_score_after.txt
+?? evidence/after/kubectl_apply_hardened.txt
+?? evidence/after/kubectl_auth_can_i.txt
+?? evidence/after/kubectl_delete_insecure_baseline.txt
+?? evidence/after/kubectl_get_all_hardened.txt
+?? evidence/after/network_policy_validation.txt
+?? evidence/after/pod_security_labels.txt
+?? evidence/after/trivy_k8s_after.txt
+?? evidence/before/kube_score_before.txt
+?? evidence/before/kubectl_apply_insecure_baseline.txt
+?? evidence/before/kubectl_get_all_insecure.txt
+?? evidence/before/trivy_k8s_before.txt
+?? evidence/before/yc_mks_nodes_ready.txt

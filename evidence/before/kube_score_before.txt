@@ -1,0 +1,52 @@
+apps/v1/Deployment insecure-web in ycsec-insecure-baseline                    💥
+    path=/home/user/projects/yandex-cloud-security-remediation-program/kubernetes/cloud-run/insecure-baseline/workload-insecure.yaml
+    [CRITICAL] Container Security Context Privileged
+        · web -> The container is privileged
+            Set securityContext.privileged to false. Privileged containers can access all devices on the host, and
+            grants almost the same access as non-containerized processes on the host.
+    [CRITICAL] Pod NetworkPolicy
+        · The pod does not have a matching NetworkPolicy
+            Create a NetworkPolicy that targets this pod to control who/what can communicate with this pod. Note,
+            this feature needs to be supported by the CNI implementation used in the Kubernetes cluster to have an
+            effect.
+    [CRITICAL] Pod Probes
+        · Container is missing a readinessProbe
+            A readinessProbe should be used to indicate when the service is ready to receive traffic. Without it,
+            the Pod is risking to receive traffic before it has booted. It's also used during rollouts, and can
+            prevent downtime if a new version of the application is failing.
+            More information: https://github.com/zegl/kube-score/blob/master/README_PROBES.md
+    [CRITICAL] Container Ephemeral Storage Request and Limit
+        · web -> Ephemeral Storage limit is not set
+            Resource limits are recommended to avoid resource DDOS. Set resources.limits.ephemeral-storage
+        · web -> Ephemeral Storage request is not set
+            Resource requests are recommended to make sure the application can start and run without crashing. Set
+            resource.requests.ephemeral-storage
+    [CRITICAL] Container Resources
+        · web -> CPU limit is not set
+            Resource limits are recommended to avoid resource DDOS. Set resources.limits.cpu
+        · web -> Memory limit is not set
+            Resource limits are recommended to avoid resource DDOS. Set resources.limits.memory
+        · web -> CPU request is not set
+            Resource requests are recommended to make sure that the application can start and run without crashing.
+            Set resources.requests.cpu
+        · web -> Memory request is not set
+            Resource requests are recommended to make sure that the application can start and run without crashing.
+            Set resources.requests.memory
+    [CRITICAL] Container Image Tag
+        · web -> Image with latest tag
+            Using a fixed tag is recommended to avoid accidental upgrades
+    [CRITICAL] Container Security Context User Group ID
+        · web -> The container is running with a low user ID
+            A userid above 10 000 is recommended to avoid conflicts with the host. Set securityContext.runAsUser to
+            a value > 10000
+        · web -> The container running with a low group ID
+            A groupid above 10 000 is recommended to avoid conflicts with the host. Set securityContext.runAsGroup
+            to a value > 10000
+    [CRITICAL] Container Security Context ReadOnlyRootFilesystem
+        · web -> The pod has a container with a writable root filesystem
+            Set securityContext.readOnlyRootFilesystem to true
+    [WARNING] Deployment Replicas
+        · Deployment few replicas
+            Deployments targeted by Services are recommended to have at least 2 replicas to prevent unwanted
+            downtime.
+v1/Service insecure-web in ycsec-insecure-baseline                            ✅

@@ -402,3 +402,18 @@ Evidence:
 - evidence/command-outputs/YCSEC_13_0A_OUTPUT_final_git_control.txt — final git control evidence.
 
 Cloud resources created in this phase: none.
+
+## Phase 13.0 — Managed Kubernetes baseline/remediation cloud-run
+
+| Evidence | Description |
+|---|---|
+| `docs/managed-kubernetes-cloud-run-results.md` | Results of the real Managed Kubernetes baseline/remediation cloud-run |
+| `docs/managed-kubernetes-before-after-cloud-comparison.md` | Before/after cloud comparison for Kubernetes remediation |
+| `evidence/before/` | Insecure baseline deployment and scanner evidence |
+| `evidence/after/` | Hardened/remediated deployment and validation evidence |
+| `evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt` | Main command evidence for Phase 13.0 |
+| `evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_apply_sanitized.txt` | Sanitized Terraform apply evidence |
+| `evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_destroy_sanitized.txt` | Sanitized Terraform destroy evidence |
+| `evidence/command-outputs/YCSEC_13_0_OUTPUT_post_destroy_mks_cluster_list.txt` | Post-destroy Managed Kubernetes inventory |
+| `evidence/command-outputs/YCSEC_13_0_OUTPUT_post_destroy_compute_instance_list.txt` | Post-destroy Compute inventory |
+| `evidence/command-outputs/YCSEC_13_0_OUTPUT_post_destroy_nlb_list.txt` | Post-destroy Network Load Balancer inventory |
