@@ -320,3 +320,18 @@ Purpose:
 Still open:
 
 - Successful Phase 13.5B paid Kyverno admission enforcement rerun on short-lived Managed Kubernetes.
+
+## Phase 13.5A2 — Kyverno MKS runner hardening
+
+Status: local repair package completed.
+
+No cloud resources were created.
+
+Purpose:
+
+- Stabilize the corrected Kyverno admission validation runner before another paid Managed Kubernetes rerun.
+- Prevent repeated paid reruns caused by image-tag detection, cleanup trap, kubeconfig, or undeclared Terraform variable issues.
+
+Next required cloud evidence:
+
+- Corrected Phase 13.5B/13.5C paid Kyverno Managed Kubernetes admission validation.

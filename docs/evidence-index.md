@@ -498,3 +498,11 @@ Cloud resources created in this phase: none.
 | `scripts/run-kyverno-admission-policy-mks-validation.sh` | Corrected denial validation requiring Kyverno-specific evidence |
 | `evidence/command-outputs/YCSEC_13_5A1_OUTPUT_kyverno_denial_attribution_fix.txt` | Command evidence for attribution fix |
 | `evidence/command-outputs/YCSEC_13_5A1_OUTPUT_final_git_control.txt` | Final git control evidence |
+
+## Phase 13.5A2 — Kyverno MKS runner hardening
+
+| Evidence | Description |
+|---|---|
+| `scripts/run-kyverno-admission-policy-mks-validation.sh` | Hardened Kyverno Managed Kubernetes validation runner |
+| `evidence/command-outputs/YCSEC_13_5A2_OUTPUT_kyverno_runner_hardening.txt` | Command evidence for local runner hardening |
+| `evidence/command-outputs/YCSEC_13_5A2_OUTPUT_final_git_control.txt` | Final git control evidence for runner hardening |

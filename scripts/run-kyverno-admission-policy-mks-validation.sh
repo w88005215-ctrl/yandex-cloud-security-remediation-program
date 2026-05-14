@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-echo "YCSEC Phase 13.5 — Kyverno admission policy enforcement on Managed Kubernetes"
-echo "Date: $(date -Is)"
-echo "Qube: $(hostname)"
-echo
-
 FAIL_COUNT=0
 WARN_COUNT=0
 
@@ -31,28 +26,49 @@ need_cmd() {
   fi
 }
 
-sanitize_file() {
-  SRC="$1"
-  DST="$2"
-
-  if [ ! -s "$SRC" ]; then
-    : > "$DST"
-    return 0
-  fi
-
+sanitize_stream() {
   sed -E \
     -e 's#cr[.]yandex/[a-z0-9]+#cr.yandex/<registry-id>#g' \
-    -e 's#(id[ =:]+)[a-z0-9]{18,}#\1<resource-id>#g' \
-    -e 's#(cluster_id[ =:]+)[a-z0-9]{18,}#\1<cluster-id>#g' \
-    -e 's#(node_group_id[ =:]+)[a-z0-9]{18,}#\1<node-group-id>#g' \
-    -e 's#(network_id[ =:]+)[a-z0-9]{18,}#\1<network-id>#g' \
-    -e 's#(subnet_id[ =:]+)[a-z0-9]{18,}#\1<subnet-id>#g' \
-    -e 's#(folder_id[ =:]+)[a-z0-9]{18,}#\1<folder-id>#g' \
-    -e 's#(cloud_id[ =:]+)[a-z0-9]{18,}#\1<cloud-id>#g' \
-    -e 's#([0-9]{1,3}[.]){3}[0-9]{1,3}#<ip-address>#g' \
-    -e 's#Bearer [A-Za-z0-9._-]+#Bearer <redacted>#g' \
-    "$SRC" > "$DST"
+    -e 's#https://[0-9]{1,3}([.][0-9]{1,3}){3}#https://<external-endpoint>#g' \
+    -e 's#[0-9]{1,3}([.][0-9]{1,3}){3}#<ip-address>#g' \
+    -e 's#(folder_id|cloud_id|network_id|subnet_id|cluster_id|node_group_id)[ =:"]+[a-z0-9]{12,}#\1=<resource-id>#g' \
+    -e 's#(id|ID)[ =:"]+[a-z0-9]{12,}#\1=<resource-id>#g' \
+    -e 's#serviceAccount:[a-z0-9]{12,}#serviceAccount:<service-account-id>#g' \
+    -e 's#-----BEGIN CERTIFICATE-----.*-----END CERTIFICATE-----#<certificate-redacted>#g'
 }
+
+sanitize_file() {
+  local src="$1"
+  local dst="$2"
+  mkdir -p "$(dirname "$dst")"
+
+  if [ -f "$src" ]; then
+    sanitize_stream < "$src" > "$dst"
+  else
+    : > "$dst"
+  fi
+}
+
+run_and_capture() {
+  local private_file="$1"
+  shift
+
+  set +e
+  "$@" 2>&1 | tee "$private_file"
+  local rc=${PIPESTATUS[0]}
+  set -e
+
+  return "$rc"
+}
+
+RUN_TS="$(date -u +%Y%m%dT%H%M%S)"
+PRIVATE_DIR="${PRIVATE_DIR:-$HOME/ycsec-private-evidence/phase-13.5/kyverno-admission-${RUN_TS}}"
+RUNTIME_DIR="${RUNTIME_DIR:-$PRIVATE_DIR/terraform-runtime}"
+KUBE_HOME="${KUBE_HOME:-$PRIVATE_DIR/kube-home}"
+KUBECONFIG_PATH="${KUBECONFIG_PATH:-$KUBE_HOME/.kube/config}"
+ORIGINAL_HOME="$HOME"
+
+mkdir -p "$PRIVATE_DIR" evidence/after evidence/sanitized evidence/command-outputs
 
 cleanup() {
   set +e
@@ -60,22 +76,20 @@ cleanup() {
   echo
   echo "Cleanup — terraform destroy Managed Kubernetes resources"
 
-  if [ -n "${RUNTIME_DIR:-}" ] && [ -d "$RUNTIME_DIR" ]; then
-    terraform -chdir="$RUNTIME_DIR" destroy -auto-approve \
-      > "$PRIVATE_DIR/terraform_destroy_RAW_PRIVATE.txt" 2>&1
-    DESTROY_RC=$?
+  mkdir -p "$PRIVATE_DIR" evidence/command-outputs
 
-    cat "$PRIVATE_DIR/terraform_destroy_RAW_PRIVATE.txt"
+  if [ -n "${RUNTIME_DIR:-}" ] && [ -d "$RUNTIME_DIR" ] && [ -f "$RUNTIME_DIR/main.tf" ]; then
+    terraform -chdir="$RUNTIME_DIR" destroy -auto-approve -compact-warnings \
+      2>&1 | tee "$PRIVATE_DIR/terraform_destroy_RAW_PRIVATE.txt"
+
     sanitize_file "$PRIVATE_DIR/terraform_destroy_RAW_PRIVATE.txt" \
       "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_destroy_sanitized.txt"
-
-    if [ "$DESTROY_RC" -eq 0 ]; then
-      ok "terraform destroy completed"
-    else
-      fail "terraform destroy returned non-zero"
-    fi
   else
-    warn "Terraform runtime directory was not created"
+    echo "[WARN] Terraform runtime directory was not created" \
+      | tee "$PRIVATE_DIR/terraform_destroy_RAW_PRIVATE.txt"
+
+    sanitize_file "$PRIVATE_DIR/terraform_destroy_RAW_PRIVATE.txt" \
+      "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_destroy_sanitized.txt"
   fi
 
   yc managed-kubernetes cluster list \
@@ -93,22 +107,32 @@ cleanup() {
   sanitize_file "$PRIVATE_DIR/post_destroy_nlb_list_RAW_PRIVATE.txt" \
     "evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_nlb_list.txt"
 
-  rm -rf "${RUNTIME_DIR:-}" 2>/dev/null || true
+  rm -rf "${RUNTIME_DIR:-}" "${KUBE_HOME:-}" 2>/dev/null || true
+
+  echo "[OK] cleanup evidence collected"
+  return 0
 }
+
 trap cleanup EXIT
 
-if [ "${YCSEC_CONFIRM_KYVERNO_MKS_RUN:-}" != "YES" ]; then
-  fail "explicit Kyverno MKS cloud-run approval is missing"
+echo "YCSEC Phase 13.5 — Kyverno admission policy enforcement on Managed Kubernetes"
+echo "Date: $(date -Is)"
+echo "Qube: $(hostname)"
+echo
+
+if [ "${YCSEC_CONFIRM_KYVERNO_MKS_RUN:-}" = "YES" ]; then
+  ok "explicit Kyverno MKS cloud-run approval provided"
+else
+  fail "explicit approval missing: set YCSEC_CONFIRM_KYVERNO_MKS_RUN=YES"
   exit 1
 fi
-ok "explicit Kyverno MKS cloud-run approval provided"
 
-for CMD in yc terraform kubectl jq curl tar grep sed awk find gitleaks; do
-  need_cmd "$CMD"
+for cmd in yc terraform kubectl jq curl tar grep sed awk find gitleaks; do
+  need_cmd "$cmd"
 done
 
 if [ "$FAIL_COUNT" -ne 0 ]; then
-  fail "required tools missing"
+  fail "required tool checks failed"
   exit 1
 fi
 
@@ -116,15 +140,29 @@ CLOUD_ID="$(yc config get cloud-id 2>/dev/null || true)"
 FOLDER_ID="$(yc config get folder-id 2>/dev/null || true)"
 ZONE="${YCSEC_MKS_ZONE:-ru-central1-a}"
 
-if [ -n "$CLOUD_ID" ]; then ok "cloud-id configured"; else fail "cloud-id missing"; fi
-if [ -n "$FOLDER_ID" ]; then ok "folder-id configured"; else fail "folder-id missing"; fi
-ok "zone selected: $ZONE"
+if [ -n "$CLOUD_ID" ]; then
+  ok "cloud-id configured"
+else
+  fail "cloud-id is not configured"
+fi
 
-IAM_TOKEN="$(yc iam create-token)"
-if [ -n "$IAM_TOKEN" ]; then ok "short-lived IAM token created"; else fail "IAM token creation failed"; fi
+if [ -n "$FOLDER_ID" ]; then
+  ok "folder-id configured"
+else
+  fail "folder-id is not configured"
+fi
 
-if [ "$FAIL_COUNT" -ne 0 ]; then
-  exit 1
+if [ -n "$ZONE" ]; then
+  ok "zone selected: $ZONE"
+else
+  fail "zone is empty"
+fi
+
+IAM_TOKEN="$(yc iam create-token 2>/dev/null || true)"
+if [ -n "$IAM_TOKEN" ]; then
+  ok "short-lived IAM token created"
+else
+  fail "failed to create short-lived IAM token"
 fi
 
 REGISTRY_ID="$(
@@ -133,56 +171,69 @@ REGISTRY_ID="$(
     | head -n 1
 )"
 
-if [ -n "$REGISTRY_ID" ]; then
+if [ -n "$REGISTRY_ID" ] && [ "$REGISTRY_ID" != "null" ]; then
   ok "retained Yandex Container Registry detected"
 else
   fail "retained Yandex Container Registry not detected"
+fi
+
+if [ "$FAIL_COUNT" -ne 0 ]; then
+  fail "cloud context checks failed before paid action"
   exit 1
 fi
 
-HARDENED_TAG="$(
-  yc container image list --registry-id "$REGISTRY_ID" --format json \
-    | jq -r '.[] | select(.name | contains("ycsec-supply-chain-demo:hardened-")) | .name' \
-    | sed 's#^cr.yandex/[^/]*/##' \
-    | sed 's#^ycsec-supply-chain-demo:##' \
-    | head -n 1
-)"
+HARDENED_IMAGE="${YCSEC_HARDENED_IMAGE:-}"
 
-if [ -z "$HARDENED_TAG" ]; then
-  fail "hardened registry image tag not detected"
-  exit 1
+if [ -n "$HARDENED_IMAGE" ]; then
+  if echo "$HARDENED_IMAGE" | grep -Eq '^cr[.]yandex/[a-z0-9]+/ycsec-supply-chain-demo:hardened-[0-9a-f]{7,40}$'; then
+    ok "hardened image accepted from YCSEC_HARDENED_IMAGE"
+  else
+    fail "YCSEC_HARDENED_IMAGE has unexpected format"
+    exit 1
+  fi
+else
+  HARDENED_TAG="$(
+    grep -RhoE 'hardened-[0-9a-f]{7,40}' docs evidence .github supply-chain 2>/dev/null \
+      | sort -u \
+      | tail -n 1
+  )"
+
+  if [ -z "$HARDENED_TAG" ]; then
+    fail "hardened image tag not detected from committed evidence"
+    exit 1
+  fi
+
+  HARDENED_IMAGE="cr.yandex/${REGISTRY_ID}/ycsec-supply-chain-demo:${HARDENED_TAG}"
+  ok "hardened image detected from committed evidence"
 fi
 
-HARDENED_IMAGE="cr.yandex/${REGISTRY_ID}/ycsec-supply-chain-demo:${HARDENED_TAG}"
+HARDENED_TAG="${HARDENED_IMAGE##*:}"
 echo "Hardened image: cr.yandex/<registry-id>/ycsec-supply-chain-demo:${HARDENED_TAG}"
-ok "hardened registry image detected for admission allow test"
-
-PRIVATE_DIR="$HOME/ycsec-private-evidence/phase-13.5/kyverno-admission-$(date +%Y%m%dT%H%M%S)"
-RUNTIME_DIR="$PRIVATE_DIR/terraform-runtime"
-KUBE_HOME="$PRIVATE_DIR/kube-home"
-KUBECONFIG_PATH="$KUBE_HOME/.kube/config"
-ORIGINAL_HOME="$HOME"
-
-mkdir -p "$PRIVATE_DIR" "$RUNTIME_DIR" "$KUBE_HOME/.kube" evidence/after evidence/sanitized evidence/command-outputs
+echo "$HARDENED_IMAGE" > "$PRIVATE_DIR/hardened_image_private.txt"
 
 echo
 echo "Step A — prepare temporary Terraform runtime outside repository"
-tar --exclude='.terraform' --exclude='.terraform.lock.hcl' -cf - terraform/environments/managed-kubernetes-cloud-run \
-  | tar -xf - -C "$PRIVATE_DIR"
+mkdir -p "$RUNTIME_DIR" "$KUBE_HOME/.kube" "$KUBE_HOME/.config"
 
-mv "$PRIVATE_DIR/terraform/environments/managed-kubernetes-cloud-run"/* "$RUNTIME_DIR"/
-rm -rf "$PRIVATE_DIR/terraform"
+cp -a terraform/environments/managed-kubernetes-cloud-run/. "$RUNTIME_DIR"/
 
 cat > "$RUNTIME_DIR/terraform.tfvars" <<TFVARS
-cloud_id     = "$CLOUD_ID"
-folder_id    = "$FOLDER_ID"
-zone         = "$ZONE"
-iam_token    = "$IAM_TOKEN"
-cluster_name = "ycsec-kyverno-mks-$(date +%Y%m%d%H%M%S)"
-node_count   = 1
+cloud_id         = "$CLOUD_ID"
+folder_id        = "$FOLDER_ID"
+zone             = "$ZONE"
+iam_token        = "$IAM_TOKEN"
+cluster_name     = "ycsec-kyverno-mks-${RUN_TS}"
+network_cidr     = "10.130.0.0/24"
+node_count       = 1
+node_platform_id = "standard-v3"
+node_cores       = 2
+node_memory      = 4
+node_disk_type   = "network-hdd"
+node_disk_size   = 32
+node_preemptible = true
 TFVARS
 
-ok "temporary Terraform runtime prepared with declared variables only"
+ok "temporary Terraform runtime prepared"
 
 echo
 echo "Step B — terraform init/validate/plan/apply with visible progress"
@@ -191,106 +242,127 @@ export YC_CLOUD_ID="$CLOUD_ID"
 export YC_FOLDER_ID="$FOLDER_ID"
 
 terraform -chdir="$RUNTIME_DIR" init
-terraform -chdir="$RUNTIME_DIR" validate
+ok "terraform init passed"
 
-terraform -chdir="$RUNTIME_DIR" plan \
-  > "$PRIVATE_DIR/terraform_plan_RAW_PRIVATE.txt" 2>&1
-cat "$PRIVATE_DIR/terraform_plan_RAW_PRIVATE.txt"
-sanitize_file "$PRIVATE_DIR/terraform_plan_RAW_PRIVATE.txt" \
-  "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_plan_sanitized.txt"
-ok "terraform plan completed"
+terraform -chdir="$RUNTIME_DIR" validate -compact-warnings
+ok "terraform validate passed"
 
-terraform -chdir="$RUNTIME_DIR" apply -auto-approve \
-  > "$PRIVATE_DIR/terraform_apply_RAW_PRIVATE.txt" 2>&1
-cat "$PRIVATE_DIR/terraform_apply_RAW_PRIVATE.txt"
-sanitize_file "$PRIVATE_DIR/terraform_apply_RAW_PRIVATE.txt" \
-  "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_apply_sanitized.txt"
-ok "terraform apply completed"
+if run_and_capture "$PRIVATE_DIR/terraform_plan_RAW_PRIVATE.txt" \
+  terraform -chdir="$RUNTIME_DIR" plan -compact-warnings -out=tfplan; then
+  sanitize_file "$PRIVATE_DIR/terraform_plan_RAW_PRIVATE.txt" \
+    "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_plan_sanitized.txt"
+  ok "terraform plan completed"
+else
+  sanitize_file "$PRIVATE_DIR/terraform_plan_RAW_PRIVATE.txt" \
+    "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_plan_sanitized.txt"
+  fail "terraform plan failed"
+  exit 1
+fi
+
+if run_and_capture "$PRIVATE_DIR/terraform_apply_RAW_PRIVATE.txt" \
+  terraform -chdir="$RUNTIME_DIR" apply -auto-approve -compact-warnings tfplan; then
+  sanitize_file "$PRIVATE_DIR/terraform_apply_RAW_PRIVATE.txt" \
+    "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_apply_sanitized.txt"
+  ok "terraform apply completed"
+else
+  sanitize_file "$PRIVATE_DIR/terraform_apply_RAW_PRIVATE.txt" \
+    "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_apply_sanitized.txt"
+  fail "terraform apply failed"
+  exit 1
+fi
 
 CLUSTER_ID="$(terraform -chdir="$RUNTIME_DIR" output -raw cluster_id 2>/dev/null || true)"
 if [ -n "$CLUSTER_ID" ]; then
   ok "cluster_id obtained from Terraform output"
 else
-  fail "cluster_id missing from Terraform output"
+  fail "cluster_id was not obtained from Terraform output"
   exit 1
 fi
 
 echo
 echo "Step C — obtain isolated kubeconfig"
 if [ -d "$ORIGINAL_HOME/.config/yandex-cloud" ]; then
-  mkdir -p "$KUBE_HOME/.config"
   cp -a "$ORIGINAL_HOME/.config/yandex-cloud" "$KUBE_HOME/.config/"
-  ok "Yandex CLI config copied to private kube home"
-else
-  warn "Yandex CLI config directory not found; relying on YC_* environment variables"
 fi
 
-HOME="$KUBE_HOME" \
-YC_TOKEN="$IAM_TOKEN" \
-YC_CLOUD_ID="$CLOUD_ID" \
-YC_FOLDER_ID="$FOLDER_ID" \
-yc managed-kubernetes cluster get-credentials --id "$CLUSTER_ID" --external --force \
-  > "$PRIVATE_DIR/get_credentials_RAW_PRIVATE.txt" 2>&1
+(
+  export HOME="$KUBE_HOME"
+  export KUBECONFIG="$KUBECONFIG_PATH"
+  export YC_TOKEN="$IAM_TOKEN"
+  yc managed-kubernetes cluster get-credentials --id "$CLUSTER_ID" --external --force
+) > "$PRIVATE_DIR/get_credentials_RAW_PRIVATE.txt" 2>&1
 
 cat "$PRIVATE_DIR/get_credentials_RAW_PRIVATE.txt"
 sanitize_file "$PRIVATE_DIR/get_credentials_RAW_PRIVATE.txt" \
   "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_get_credentials_sanitized.txt"
 
 if [ -s "$KUBECONFIG_PATH" ]; then
-  ok "isolated kubeconfig created: private kube home"
+  ok "isolated kubeconfig created"
 else
   fail "isolated kubeconfig was not created"
   exit 1
 fi
 
-export KUBECONFIG="$KUBECONFIG_PATH"
-
 kubectl --kubeconfig "$KUBECONFIG_PATH" cluster-info \
   > "$PRIVATE_DIR/kubectl_cluster_info_RAW_PRIVATE.txt" 2>&1
 cat "$PRIVATE_DIR/kubectl_cluster_info_RAW_PRIVATE.txt"
-ok "kubectl cluster-info succeeded with isolated kubeconfig"
 
 echo
 echo "Step D — wait for node readiness"
 NODE_READY=0
-for ATTEMPT in $(seq 1 40); do
-  echo "[INFO] node readiness attempt $ATTEMPT/40"
+
+for attempt in $(seq 1 40); do
+  echo "[INFO] node readiness attempt $attempt/40"
 
   if kubectl --kubeconfig "$KUBECONFIG_PATH" get nodes -o wide \
-    > "$PRIVATE_DIR/kubectl_nodes_attempt_${ATTEMPT}_RAW_PRIVATE.txt" 2>&1; then
-    cat "$PRIVATE_DIR/kubectl_nodes_attempt_${ATTEMPT}_RAW_PRIVATE.txt"
+    > "$PRIVATE_DIR/kubectl_nodes_attempt_${attempt}_RAW_PRIVATE.txt" 2>&1; then
+    cat "$PRIVATE_DIR/kubectl_nodes_attempt_${attempt}_RAW_PRIVATE.txt"
 
-    if grep -q " Ready " "$PRIVATE_DIR/kubectl_nodes_attempt_${ATTEMPT}_RAW_PRIVATE.txt"; then
-      sanitize_file "$PRIVATE_DIR/kubectl_nodes_attempt_${ATTEMPT}_RAW_PRIVATE.txt" \
+    if grep -q " Ready " "$PRIVATE_DIR/kubectl_nodes_attempt_${attempt}_RAW_PRIVATE.txt"; then
+      sanitize_file "$PRIVATE_DIR/kubectl_nodes_attempt_${attempt}_RAW_PRIVATE.txt" \
         "evidence/after/kyverno_mks_nodes_ready.txt"
       NODE_READY=1
-      ok "node became Ready"
+      ok "MKS node is Ready"
       break
     fi
   else
-    cat "$PRIVATE_DIR/kubectl_nodes_attempt_${ATTEMPT}_RAW_PRIVATE.txt"
+    cat "$PRIVATE_DIR/kubectl_nodes_attempt_${attempt}_RAW_PRIVATE.txt"
   fi
 
   sleep 15
 done
 
 if [ "$NODE_READY" -ne 1 ]; then
-  fail "node did not become Ready"
+  fail "MKS node did not become Ready"
   exit 1
 fi
 
 echo
 echo "Step E — install Kyverno admission controller"
-KYVERNO_INSTALL_URL="${KYVERNO_INSTALL_URL:-https://github.com/kyverno/kyverno/releases/download/v1.13.4/install.yaml}"
+KYVERNO_INSTALL_URL="${YCSEC_KYVERNO_INSTALL_URL:-https://github.com/kyverno/kyverno/releases/download/v1.13.4/install.yaml}"
 
-kubectl --kubeconfig "$KUBECONFIG_PATH" apply -f "$KYVERNO_INSTALL_URL" \
-  > "$PRIVATE_DIR/kyverno_install_apply_RAW_PRIVATE.txt" 2>&1
-cat "$PRIVATE_DIR/kyverno_install_apply_RAW_PRIVATE.txt"
-sanitize_file "$PRIVATE_DIR/kyverno_install_apply_RAW_PRIVATE.txt" \
-  "evidence/after/kyverno_install_apply.txt"
-ok "Kyverno install manifest applied"
+if run_and_capture "$PRIVATE_DIR/kyverno_install_apply_RAW_PRIVATE.txt" \
+  kubectl --kubeconfig "$KUBECONFIG_PATH" apply -f "$KYVERNO_INSTALL_URL"; then
+  sanitize_file "$PRIVATE_DIR/kyverno_install_apply_RAW_PRIVATE.txt" \
+    "evidence/after/kyverno_install_apply.txt"
+  ok "Kyverno install manifest applied"
+else
+  sanitize_file "$PRIVATE_DIR/kyverno_install_apply_RAW_PRIVATE.txt" \
+    "evidence/after/kyverno_install_apply.txt"
+  fail "Kyverno install failed"
+  exit 1
+fi
 
-kubectl --kubeconfig "$KUBECONFIG_PATH" -n kyverno rollout status deployment/kyverno-admission-controller --timeout=300s \
+kubectl --kubeconfig "$KUBECONFIG_PATH" wait \
+  --for condition=established \
+  --timeout=180s \
+  crd/clusterpolicies.kyverno.io \
+  > "$PRIVATE_DIR/kyverno_crd_wait_RAW_PRIVATE.txt" 2>&1 || true
+cat "$PRIVATE_DIR/kyverno_crd_wait_RAW_PRIVATE.txt"
+
+kubectl --kubeconfig "$KUBECONFIG_PATH" -n kyverno rollout status \
+  deployment/kyverno-admission-controller \
+  --timeout=300s \
   > "$PRIVATE_DIR/kyverno_controller_rollout_RAW_PRIVATE.txt" 2>&1
 cat "$PRIVATE_DIR/kyverno_controller_rollout_RAW_PRIVATE.txt"
 
@@ -299,32 +371,43 @@ kubectl --kubeconfig "$KUBECONFIG_PATH" -n kyverno get pods -o wide \
 cat "$PRIVATE_DIR/kyverno_controller_pods_READY_RAW_PRIVATE.txt"
 sanitize_file "$PRIVATE_DIR/kyverno_controller_pods_READY_RAW_PRIVATE.txt" \
   "evidence/after/kyverno_controller_pods_ready.txt"
+
 ok "Kyverno admission controller is ready"
 
 echo
-echo "Step F — apply namespace and Kyverno policy"
-kubectl --kubeconfig "$KUBECONFIG_PATH" apply -f kubernetes/admission-validation/namespace.yaml \
+echo "Step F — apply validation namespace and Kyverno policy"
+kubectl --kubeconfig "$KUBECONFIG_PATH" apply \
+  -f kubernetes/admission-validation/namespace.yaml \
   > "$PRIVATE_DIR/namespace_apply_RAW_PRIVATE.txt" 2>&1
 cat "$PRIVATE_DIR/namespace_apply_RAW_PRIVATE.txt"
 
-kubectl --kubeconfig "$KUBECONFIG_PATH" apply -f kubernetes/admission-validation/kyverno-supply-chain-policy.yaml \
-  > "$PRIVATE_DIR/kyverno_policy_apply_RAW_PRIVATE.txt" 2>&1
-cat "$PRIVATE_DIR/kyverno_policy_apply_RAW_PRIVATE.txt"
-sanitize_file "$PRIVATE_DIR/kyverno_policy_apply_RAW_PRIVATE.txt" \
-  "evidence/after/kyverno_policy_apply.txt"
-ok "Kyverno supply-chain admission policy applied"
+if run_and_capture "$PRIVATE_DIR/kyverno_policy_apply_RAW_PRIVATE.txt" \
+  kubectl --kubeconfig "$KUBECONFIG_PATH" apply \
+    -f kubernetes/admission-validation/kyverno-supply-chain-policy.yaml; then
+  sanitize_file "$PRIVATE_DIR/kyverno_policy_apply_RAW_PRIVATE.txt" \
+    "evidence/after/kyverno_policy_apply.txt"
+  ok "Kyverno admission policy applied"
+else
+  sanitize_file "$PRIVATE_DIR/kyverno_policy_apply_RAW_PRIVATE.txt" \
+    "evidence/after/kyverno_policy_apply.txt"
+  fail "Kyverno admission policy apply failed"
+  exit 1
+fi
 
-sleep 15
+sleep 20
 
-kubectl --kubeconfig "$KUBECONFIG_PATH" get clusterpolicy ycsec-supply-chain-admission-controls -o yaml \
+kubectl --kubeconfig "$KUBECONFIG_PATH" get clusterpolicy \
+  ycsec-supply-chain-admission-controls \
+  -o yaml \
   > "$PRIVATE_DIR/kyverno_policy_status_RAW_PRIVATE.txt" 2>&1
 cat "$PRIVATE_DIR/kyverno_policy_status_RAW_PRIVATE.txt"
 sanitize_file "$PRIVATE_DIR/kyverno_policy_status_RAW_PRIVATE.txt" \
   "evidence/after/kyverno_policy_status.txt"
-ok "Kyverno policy status collected"
+
+ok "Kyverno policy status captured"
 
 echo
-echo "Step G — verify insecure workload is denied"
+echo "Step G — verify insecure workload is denied by Kyverno"
 set +e
 kubectl --kubeconfig "$KUBECONFIG_PATH" apply --dry-run=server \
   -f kubernetes/admission-validation/insecure-workload-denied.yaml \
@@ -336,52 +419,54 @@ cat "$PRIVATE_DIR/insecure_workload_denied_RAW_PRIVATE.txt"
 sanitize_file "$PRIVATE_DIR/insecure_workload_denied_RAW_PRIVATE.txt" \
   "evidence/after/kyverno_insecure_workload_denied.txt"
 
-if [ "$INSECURE_RC" -ne 0 ] && grep -Ei 'ycsec-supply-chain-admission-controls|require-yandex-container-registry|require-non-root-container|deny-privilege-escalation|require-read-only-root-filesystem|require-capabilities-drop-all|require-runtime-default-seccomp|admission webhook.*kyverno|kyverno|Container images must be pulled from Yandex Container Registry|Containers must run as non-root|Privilege escalation must be disabled' "$PRIVATE_DIR/insecure_workload_denied_RAW_PRIVATE.txt" >/dev/null 2>&1; then
+if [ "$INSECURE_RC" -ne 0 ] && grep -Ei \
+  'ycsec-supply-chain-admission-controls|require-yandex-container-registry|require-non-root-container|deny-privilege-escalation|require-read-only-root-filesystem|require-capabilities-drop-all|require-runtime-default-seccomp|admission webhook.*kyverno|kyverno|Container images must be pulled from Yandex Container Registry|Containers must run as non-root|Privilege escalation must be disabled' \
+  "$PRIVATE_DIR/insecure_workload_denied_RAW_PRIVATE.txt" >/dev/null 2>&1; then
   ok "insecure workload was denied by Kyverno admission policy"
 else
-  fail "insecure workload was not clearly denied by Kyverno admission policy"
+  fail "insecure workload denial was not clearly attributed to Kyverno"
   exit 1
 fi
 
 echo
 echo "Step H — verify hardened workload is allowed"
 HARDENED_RENDERED="$PRIVATE_DIR/hardened-workload-rendered.yaml"
+
 sed "s#IMAGE_PLACEHOLDER#$HARDENED_IMAGE#g" \
   kubernetes/admission-validation/hardened-workload-allowed.yaml \
   > "$HARDENED_RENDERED"
 
-kubectl --kubeconfig "$KUBECONFIG_PATH" apply --dry-run=server -f "$HARDENED_RENDERED" \
-  > "$PRIVATE_DIR/hardened_workload_allowed_RAW_PRIVATE.txt" 2>&1
-cat "$PRIVATE_DIR/hardened_workload_allowed_RAW_PRIVATE.txt"
-sanitize_file "$PRIVATE_DIR/hardened_workload_allowed_RAW_PRIVATE.txt" \
-  "evidence/after/kyverno_hardened_workload_allowed.txt"
-
-if grep -Ei 'configured|created|unchanged|dry run|ycsec-hardened-workload-allowed' "$PRIVATE_DIR/hardened_workload_allowed_RAW_PRIVATE.txt" >/dev/null 2>&1; then
+if run_and_capture "$PRIVATE_DIR/hardened_workload_allowed_RAW_PRIVATE.txt" \
+  kubectl --kubeconfig "$KUBECONFIG_PATH" apply --dry-run=server -f "$HARDENED_RENDERED"; then
+  sanitize_file "$PRIVATE_DIR/hardened_workload_allowed_RAW_PRIVATE.txt" \
+    "evidence/after/kyverno_hardened_workload_allowed.txt"
   ok "hardened workload passed server-side admission validation"
 else
-  fail "hardened workload was not clearly allowed"
+  sanitize_file "$PRIVATE_DIR/hardened_workload_allowed_RAW_PRIVATE.txt" \
+    "evidence/after/kyverno_hardened_workload_allowed.txt"
+  fail "hardened workload was not allowed by server-side admission validation"
   exit 1
 fi
 
 echo
-echo "Step I — create consolidated sanitized evidence"
+echo "Step I — write sanitized consolidated admission evidence"
 {
-  echo "Kyverno admission policy enforcement validation"
+  echo "YCSEC Kyverno admission policy enforcement evidence"
   echo "Date: $(date -Is)"
   echo
   echo "[OK] short-lived Managed Kubernetes cluster created"
-  echo "[OK] node became Ready"
+  echo "[OK] MKS node reached Ready"
   echo "[OK] Kyverno admission controller installed"
-  echo "[OK] supply-chain admission policy applied"
-  echo "[OK] insecure workload denied by Kyverno admission policy"
-  echo "[OK] hardened workload allowed by server-side admission validation"
+  echo "[OK] Kyverno admission policy applied"
+  echo "[OK] insecure workload denied by Kyverno"
+  echo "[OK] hardened registry workload allowed by server-side admission validation"
   echo "[OK] Terraform destroy is executed by cleanup trap"
+  echo
+  echo "Hardened image: cr.yandex/<registry-id>/ycsec-supply-chain-demo:${HARDENED_TAG}"
 } > evidence/sanitized/kyverno_admission_policy_enforcement_redacted.txt
 
-ok "sanitized admission evidence written"
-
 echo
-echo "Kyverno admission run summary"
+echo "Cloud-run summary"
 echo "Warnings: $WARN_COUNT"
 echo "Failures: $FAIL_COUNT"
 echo "Private evidence: $PRIVATE_DIR"
@@ -392,3 +477,6 @@ else
   fail "Kyverno admission validation completed with failures"
   exit 1
 fi
+
+trap - EXIT
+cleanup

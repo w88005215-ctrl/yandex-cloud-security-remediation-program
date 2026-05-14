@@ -67,3 +67,17 @@ The admission validation namespace intentionally does not use the `pod-security.
 This prevents Kubernetes Pod Security Admission from taking ownership of the insecure workload denial. The expected denial evidence must reference Kyverno-specific admission behavior, policy names, rule names, webhook output, or Kyverno policy messages.
 
 This makes the Phase 13.5B evidence stronger because the rejected workload is attributed to the project policy-as-code control rather than a default built-in Kubernetes restriction.
+
+## Phase 13.5A2 runner hardening
+
+The Kyverno Managed Kubernetes validation runner was hardened before the next paid rerun.
+
+Corrections:
+
+- Private evidence directory is initialized before the cleanup trap.
+- Cleanup can run safely even if the script fails before Terraform runtime creation.
+- Hardened image reference can be supplied explicitly through `YCSEC_HARDENED_IMAGE`.
+- If no explicit image is supplied, the runner detects the hardened registry image tag from committed Phase 13.3/13.4 evidence.
+- `yc managed-kubernetes cluster get-credentials` runs under isolated `HOME` and explicit `KUBECONFIG`.
+- Terraform variables are limited to the declared Managed Kubernetes module contract.
+- Kyverno denial evidence must be attributable to the Kyverno admission policy, not only to Kubernetes Pod Security Admission.

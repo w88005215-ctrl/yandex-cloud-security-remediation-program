@@ -1,0 +1,58 @@
+Phase 13.5A2 — Kyverno MKS runner hardening
+Date: 2026-05-14T15:27:07+00:00
+Qube: cloud-dev-workbech
+
+--- Step 1 — verify baseline
+6b7f94a (HEAD -> main, tag: v0.13.5a1-kyverno-denial-attribution-fix, origin/main, origin/HEAD) fix: require Kyverno-specific admission denial evidence
+e238df2 (tag: v0.13.5a-kyverno-mks-repair-package) fix: prepare Kyverno admission MKS rerun
+5c00f76 (tag: v0.13.4a-gitleaks-generated-evidence-handling) test: handle generated evidence gitleaks findings
+195efa4 (tag: v0.13.4-sbom-vulnerability-validation) test: validate SBOM and supply chain vulnerability evidence
+961ab7a (tag: v0.13.3-supply-chain-oidc-registry-validation) test: validate supply chain OIDC registry push
+579fac9 fix: stabilize supply chain demo image builds
+66daf02 ci: repair supply chain registry OIDC workflow
+c396086 (tag: v0.13.2-supply-chain-implementation-package) feat: add supply chain security validation package
+1ba3a92 (tag: v0.13.1-supply-chain-roadmap-extension) docs: extend roadmap with supply chain security validation
+61bff33 (tag: v0.13.0-managed-kubernetes-baseline-remediation-cloud-run) docs: close Managed Kubernetes cloud run evidence package
+
+[OK] current HEAD has required Phase 13.5A1 tag
+[OK] current branch is main
+[OK] working tree is clean for Phase 13.5A2
+
+--- Step 2 — verify hardened image source before patch
+[OK] retained registry detected
+[OK] hardened image tag detected from committed evidence: hardened-579fac92e70b
+[OK] hardened image reference can be constructed
+
+--- Step 3 — rewrite corrected Kyverno MKS runner
+[OK] corrected runner rewritten: scripts/run-kyverno-admission-policy-mks-validation.sh
+
+--- Step 4 — local static validation of corrected runner
+[OK] runner script syntax valid
+[OK] PRIVATE_DIR is initialized before cleanup trap
+[OK] runner supports explicit YCSEC_HARDENED_IMAGE override
+[OK] runner can detect hardened image tag from committed evidence
+[OK] runner uses isolated HOME and explicit KUBECONFIG for get-credentials
+[OK] runner does not write known undeclared Terraform variables
+[OK] runner contains Terraform destroy cleanup path
+[OK] runner requires Kyverno-specific denial attribution
+
+--- Step 5 — update documentation with runner hardening note
+[OK] Kyverno validation documentation updated
+[OK] evidence index updated
+[OK] cloud evidence gap register updated
+
+--- Step 6 — repository safety checks
+[OK] no Terraform state files in repository
+[OK] no kubeconfig files in repository
+[OK] no key/token-like files in repository
+[90m3:27PM[0m [32mINF[0m [1m46 commits scanned.[0m
+[90m3:27PM[0m [32mINF[0m [1mscanned ~8937310 bytes (8.94 MB) in 637ms[0m
+[90m3:27PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+--- Step 7 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 13.5A2 Kyverno runner hardening completed
+[OK] no cloud resources were created in this phase
+[OK] project is ready for one corrected paid Kyverno MKS rerun
