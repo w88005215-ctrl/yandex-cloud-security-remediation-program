@@ -1,0 +1,2858 @@
+[
+  {
+    "path": "LICENSE",
+    "size_bytes": 986,
+    "sha256": "71c019a21bd8d443b77af9f44ae5b0deb7192565f667fd58619b6b3ec0fc4a4d",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": ".gitignore",
+    "size_bytes": 1431,
+    "sha256": "0093a18c7ec5709426872b8e106ec41b0c5a343da3269ded55d481744dd562ef",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "GITHUB_PUBLICATION_NOTE.md",
+    "size_bytes": 1830,
+    "sha256": "02e89ad2c94bb4bd3312223a34a4679cde039eb87d433d85f6571ec853b3329c",
+    "suffix": ".md"
+  },
+  {
+    "path": "PROJECT_TREE.txt",
+    "size_bytes": 8857,
+    "sha256": "c8a1ef32e527bb21cbc59dec6c77558db33e8125bd7d0d2c305b993b8da17ae7",
+    "suffix": ".txt"
+  },
+  {
+    "path": "RELEASE_CHECKLIST.md",
+    "size_bytes": 2217,
+    "sha256": "5a54ce3d63667d6b569fddc3f52aaef4af5d99fe09748b56b6ef8f26efe767a4",
+    "suffix": ".md"
+  },
+  {
+    "path": "README_EN.md",
+    "size_bytes": 3306,
+    "sha256": "4ac06c98411f46b0850e66cd1a7cdd937fefddf0204d8e38962fe2257dd1b5ad",
+    "suffix": ".md"
+  },
+  {
+    "path": "README.md",
+    "size_bytes": 5603,
+    "sha256": "9845d500c267ffe92f04b21e81cbd6fbb9bc66e8124c9793e6b84a6c71f96e3c",
+    "suffix": ".md"
+  },
+  {
+    "path": ".gitleaksignore",
+    "size_bytes": 438,
+    "sha256": "149e2f24418fadc97a582a7ed9254257fc2df15b6fd2773169392f7674165f8b",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "PORTFOLIO_SUMMARY.md",
+    "size_bytes": 2660,
+    "sha256": "711291dd3b74db6c81daeaa92e5db07ab48c5e6030440d4a75e849a68847c1d2",
+    "suffix": ".md"
+  },
+  {
+    "path": "README_RU.md",
+    "size_bytes": 4195,
+    "sha256": "0b66d63c327cb59c3bcc19bb82a1c6914915749823a8fa8dfe23f9c5b0b5e202",
+    "suffix": ".md"
+  },
+  {
+    "path": ".gitleaks.toml",
+    "size_bytes": 354,
+    "sha256": "84f445561f87e7f2040f04e6c1410c470d0061ac5f540167d3864bfc1bb5c931",
+    "suffix": ".toml"
+  },
+  {
+    "path": "SECURITY.md",
+    "size_bytes": 1831,
+    "sha256": "cc741fa2560afe3c7edd3c72ab7a053817c70364331bc4f2148f10f0d38e7f6f",
+    "suffix": ".md"
+  },
+  {
+    "path": "presentation/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "scripts/run-local-kubernetes-runtime-validation.sh",
+    "size_bytes": 6792,
+    "sha256": "6ecac7ccb7e4f8361166ef4b89bd435628d01979b03f476cdf5a5fc6a37b5182",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/run-local-security-gates.sh",
+    "size_bytes": 4240,
+    "sha256": "d1e337d3157c5210272205a113ec7b409c6f4dcbbee6e52a6d2f198b0efb09b6",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/collect-evidence.sh",
+    "size_bytes": 901,
+    "sha256": "8fa266e6ef1d87f5da2a8943a956b61dba0426861c5caeb082ebb6ba2a2facc4",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/compare-kubernetes-baseline-remediation.sh",
+    "size_bytes": 6214,
+    "sha256": "d13aa988facfe6227527e19a8202fddb7fff74faa65eff8a68cc17b0b3573242",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/run-yandex-cloud-smoke-run.sh",
+    "size_bytes": 10841,
+    "sha256": "d46493b9e3e55d1e37a10e1e2e71d15a8c73e8a80652696b1ede69237e954d44",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/validate-supply-chain-package.sh",
+    "size_bytes": 3867,
+    "sha256": "5919d377fde971c6f24463b2c2d42e305f1176c12d615c2908afb158c62b24d3",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/destroy-checklist.sh",
+    "size_bytes": 895,
+    "sha256": "ab8b1d3e6e28d9247a91e245b4a1c5c90a45398425a07c3b25e96ab5b5d068d9",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/validate-kubernetes-static-baseline.sh",
+    "size_bytes": 9063,
+    "sha256": "8424efeaaa880fb79fd84ea5db4254e88e6e65e24af3f9b823f6ac7072d7b125",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/validate-kubernetes-remediation-static.sh",
+    "size_bytes": 3521,
+    "sha256": "9296771a7f8f47d1f270234db90743704502f31ce256ac720d742781742daa33",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/validate-managed-kubernetes-cloud-run-package.sh",
+    "size_bytes": 4069,
+    "sha256": "2e8a0e32c7b160fb9e55a4397d955d326910e3b179b445a1fd3324e96121aa20",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/run-managed-kubernetes-baseline-remediation-cloud-run.sh",
+    "size_bytes": 7906,
+    "sha256": "1fae7f09a3dea744fc14ec282d0a9c0c884fab9b8e54886ca0d9f4b5d64dc66a",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/validate-kubernetes-baseline-static.sh",
+    "size_bytes": 5156,
+    "sha256": "73ebb6d3a774bafc05118343f42be434a062fe6952d714419341c74913853a2d",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "size_bytes": 15947,
+    "sha256": "8f4be687f345f434b0e1c430a464e2b82a98281d413c85596ddd1ada1b807ad9",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/check-yandex-cloud-readiness.sh",
+    "size_bytes": 2627,
+    "sha256": "4ba46b60bcf831f9eaa3edc67909eb34c0bc91fc2ba202a158e333bc7d902391",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "scripts/check-toolchain.sh",
+    "size_bytes": 3047,
+    "sha256": "c062d1d350a47ef7043c5e64bb3ef00ff4068c3717884c09c6c1dd69b3fd56cb",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/qubes-toolchain-discovery.sh",
+    "size_bytes": 2122,
+    "sha256": "8c4962af26bbdfcdd18bea2dcd028c218ab3cfbf402d476039be2c1c44baf7a5",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/redact-evidence.sh",
+    "size_bytes": 811,
+    "sha256": "8c05f33862b4556cf70b1e8a5dcd677bc4e3a717d16ce29fa81ed54a608dae98",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/run-bootstrap-oidc-audit-cloud-run.sh",
+    "size_bytes": 9021,
+    "sha256": "668737c80f46bd35ad1c913b120404db0c7663a31e946ffe3dc2692cc1c43bf7",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/cost-check.sh",
+    "size_bytes": 1201,
+    "sha256": "4df6e4830e7b40cef8fe5bab1d23f901759f8b0db34be08f0e4f34410c0adcde",
+    "suffix": ".sh"
+  },
+  {
+    "path": "scripts/run-supply-chain-local-evidence.sh",
+    "size_bytes": 3011,
+    "sha256": "2330823ef337f7f31e140510434f5cecb55b4d2d55938650d1bb4f3c34b9fc75",
+    "suffix": ".sh"
+  },
+  {
+    "path": "diagrams/ycsec-evidence-flow.mmd",
+    "size_bytes": 550,
+    "sha256": "936b7a44cd3e055e0596d7cd324b99a30b5679a6dec7310dbc0534f72710fc2a",
+    "suffix": ".mmd"
+  },
+  {
+    "path": "diagrams/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "diagrams/ycsec-iam-oidc-saml-flow.mmd",
+    "size_bytes": 712,
+    "sha256": "a25becd75f68732056d18432a0ea8f10e5b598aff47f858c91a42003d1e9b076",
+    "suffix": ".mmd"
+  },
+  {
+    "path": "ci/security-gates.md",
+    "size_bytes": 1557,
+    "sha256": "d133aaf423d2a361a378169e3bc7d5b6e5bdc2fbbc1a8aa5f1b4270578521233",
+    "suffix": ".md"
+  },
+  {
+    "path": "ci/github-oidc-validation-trigger.md",
+    "size_bytes": 527,
+    "sha256": "bda72a6cda21936fba8e259a85f51a8aeed8ea7cc4ff46e071e492b29b7903a0",
+    "suffix": ".md"
+  },
+  {
+    "path": "ci/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "kubernetes/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "reports/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "terraform/README.md",
+    "size_bytes": 946,
+    "sha256": "b19d063dabbf51d233f271dc6a159cfe5c86b5932ff7019b6170fb1e7c89b3b6",
+    "suffix": ".md"
+  },
+  {
+    "path": "terraform/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "evidence/before-after-metrics.md",
+    "size_bytes": 10600,
+    "sha256": "e91655b4193712d0c9cded39e006ab62906efad9836ea153dfe231e88ec9712e",
+    "suffix": ".md"
+  },
+  {
+    "path": "evidence/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "docs/managed-kubernetes-evidence-collection-plan.md",
+    "size_bytes": 1858,
+    "sha256": "6d23e06fcd59fba85e886020f19fc3fc44dea8810807a4dda8c0d563fdddb15e",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/toolchain-installation.md",
+    "size_bytes": 1951,
+    "sha256": "c3a11cb89229132a90f655e279bbd390be41c9ebd140f84582b539ad36d7821e",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/supply-chain-operator-runbook.md",
+    "size_bytes": 1206,
+    "sha256": "aa55701cb4059e15ef9d366b022d222945e9d4c810aa4411e680a975f060190b",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/managed-kubernetes-cloud-run-operator-runbook.md",
+    "size_bytes": 1697,
+    "sha256": "84d64c3b0b6dfee309b4c1041125d14babe1abd8da271eaa2f3abb2507dc5fd9",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/kyverno-admission-policy-enforcement-validation.md",
+    "size_bytes": 3536,
+    "sha256": "6b7a65e38a327bb4b02fbf2dec419f0cd0e31da8e77da94f4e3d33673b656882",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/supply-chain-evidence-and-metrics-plan.md",
+    "size_bytes": 2843,
+    "sha256": "333386fa6423614bc7068ad8bda50ef1066860ac931bf927e75c0bb20fef51ac",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/iam-oidc-audit-control-design.md",
+    "size_bytes": 2803,
+    "sha256": "e19a8b033e3699ceede0166bfc2e4dfa89b3e2f10db1cf043e25078fed952dbc",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/cost-control.md",
+    "size_bytes": 3413,
+    "sha256": "e62aacfaa738b63b6d772276ff0f583fb77640aa6a599d2e17c9faad4805473c",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/resource-inventory.md",
+    "size_bytes": 3460,
+    "sha256": "f4109266fdec510e8352f01f30bdd378799ccbe1a545a30426b021b0efe88600",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/retained-bootstrap-cleanup-evidence.md",
+    "size_bytes": 1515,
+    "sha256": "158667f3603696e699ff7b533ea14ed7455c93dcbef6b309941ce5d6825bcbee",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/kubernetes-remediation-results.md",
+    "size_bytes": 3350,
+    "sha256": "1ccab766b5c597aa0594edbd8344978be7ce15797a1e2bb523caac6f15c48265",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/supply-chain-security-roadmap-extension.md",
+    "size_bytes": 4260,
+    "sha256": "de5683055d109d4aff4bd4cdb92a23de1cf7c08286aea257adc430c86c256090",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/final-technical-report-en.md",
+    "size_bytes": 3024,
+    "sha256": "0bd913d69db3a1a491314dd4904e86d1a51b1c26c585bad693a16ffc0b9725c3",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/kubernetes-remediation-readiness.md",
+    "size_bytes": 2043,
+    "sha256": "baa3ba53bbf0f443bcaa4496de8d7da7008a4a9820499c85581c39db9b8386be",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/audit-trails-evidence-validation.md",
+    "size_bytes": 1070,
+    "sha256": "218482126afb66c752da7ff442d5d83d675db4e5444b75e1a71df0d681589ac2",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/control-matrix.md",
+    "size_bytes": 2297,
+    "sha256": "caf1b100540bedf215fc4effdf63374d886e989a739bc00d9647b78530fafffb",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/managed-kubernetes-cloud-run-checklist.md",
+    "size_bytes": 1643,
+    "sha256": "427dc84a48b4574d8636397fbb9539dcd8138fe608f8b043c3d11df73fe992e7",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/kubernetes-before-after-remediation-comparison.md",
+    "size_bytes": 3009,
+    "sha256": "7ba16ef85c8687c49b38fedde78360dfbaaccfd2e784060e41cb464780eaa6c1",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/portfolio-claims-policy.md",
+    "size_bytes": 4153,
+    "sha256": "d5c2a2e18547d4c50493137d8ad42b6338643b488d5ed7000252b3df37156a7a",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/github-actions-oidc-validation.md",
+    "size_bytes": 1050,
+    "sha256": "1bf52a0b4bad5a25a9a9b4976ea6180ef3ca4a161802f82280f8073ee30ceecc",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/ci-oidc-registry-build-push-plan.md",
+    "size_bytes": 1694,
+    "sha256": "ce0024d99b8c06deb52a1abad0f2d4d980d076cc7af47b5259b9668243065831",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/kyverno-admission-policy-enforcement-plan.md",
+    "size_bytes": 2090,
+    "sha256": "058bc63ca1e82263355c5259563b7cb80bf60fb8262abac228181f019a105574",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/managed-kubernetes-destroy-and-retention-plan.md",
+    "size_bytes": 1213,
+    "sha256": "b1b5da0bd5ed54401ae43781c19061647830810d0f6a237bb1b55dcd32718d67",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/final-technical-report-ru.md",
+    "size_bytes": 4078,
+    "sha256": "9cc4b7d9c9d366f705c1dc801e3d9c9277c0f57e490079e5100680aa87d00607",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/toolchain-model.md",
+    "size_bytes": 3472,
+    "sha256": "3c7b52d533099adff45da47705a275907eb5882a65626067c939bd9659ce72e6",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/container-image-vulnerability-cloud-run-plan.md",
+    "size_bytes": 2139,
+    "sha256": "c2f2eb805272c87f6f45d5dc32f6c61c0580dc2036d3efd3ef846c5dd8e21afe",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/kubernetes-security-remediation-case-study.md",
+    "size_bytes": 7644,
+    "sha256": "b345ae45ce22504e3af022b5a7ebb2defa65caa95294489e416fe09445cec33d",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/bootstrap-oidc-audit-cloud-run-results.md",
+    "size_bytes": 2165,
+    "sha256": "527b3b2085f926c4a0a209f2f6b0567be079e2370fee4f28d1fdcf62f0515932",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/supply-chain-vulnerability-metrics.md",
+    "size_bytes": 1006,
+    "sha256": "0da050cab17a3068baf33a81dc98954286e1e36a6ee0717c67ebb99978fabf32",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/supply-chain-implementation-package.md",
+    "size_bytes": 1994,
+    "sha256": "e980aa2d22a46d28f1e22715149ad91a209ba6f50ba4641e87cd6a9592762e3a",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/roadmap-reconciliation.md",
+    "size_bytes": 4916,
+    "sha256": "c344937d798c420f276355b35b69e8139248a4e9df686d7376e7a3ea0edecf59",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/final-risk-register.md",
+    "size_bytes": 9111,
+    "sha256": "65299520d080a541bd55cb72bf662c1071e0ad3a886115c5308244c39f5f4753",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/multi-cloud-control-mapping.md",
+    "size_bytes": 1413,
+    "sha256": "c4a5613d27f1ed39a73a64c76798036571fb6648f3dde39c45667090ee7fd766",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/managed-kubernetes-cloud-run-results.md",
+    "size_bytes": 2799,
+    "sha256": "6f6ed356a4754ce3d4769d2073c4d361b9c8e1933864a30de1fce4f4aeb50a2e",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/final-remediation-metrics.md",
+    "size_bytes": 4698,
+    "sha256": "2a3c0f458b65837e954649497890ea5775e24217d26de9e577027d8b77d37493",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/registry-evidence-storage-validation.md",
+    "size_bytes": 1410,
+    "sha256": "ee14ecf976f0a87cf51a3024adce849c2a1bb8bf53ab711831e06201d68e15d7",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/generated-evidence-gitleaks-handling.md",
+    "size_bytes": 1360,
+    "sha256": "44eb69d219db777a6454eaa090e4e65caeb2e25d74c6be0d1f5bc29d1f739ac1",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/sbom-vulnerability-validation.md",
+    "size_bytes": 2036,
+    "sha256": "a9ff0193476d88ca50a12fa07d4489be41b725095f23bb7154f7bd8aaae27dc1",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/evidence-index.md",
+    "size_bytes": 37791,
+    "sha256": "8f81eb53b6a8e0dc7f91f4fdec825632bbedc5b09e6669e01f2b0a78fbe35a6a",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/bootstrap-cloud-run-implementation.md",
+    "size_bytes": 2633,
+    "sha256": "764fd7f83d24ce7a2807b8932356510f7bbf43455ad6b3c51dde1b168a265581",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/kyverno-admission-policy-enforcement-metrics.md",
+    "size_bytes": 1790,
+    "sha256": "68bf1558003b5c899793f39f592a006605de9313acb8238ec383df48c240fec1",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/bootstrap-cloud-run-checklist.md",
+    "size_bytes": 2005,
+    "sha256": "f056576e1ce038828b66168a3f7251827cb5df8712775a4c8dfa4abe2603286d",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/kubernetes-baseline-findings.md",
+    "size_bytes": 3590,
+    "sha256": "12a601515aec2ee3cb91df8d81182c843d3156c58632beb568e0fb47457e0b7b",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/iac-security-exceptions.md",
+    "size_bytes": 2340,
+    "sha256": "b79e901bac15bc84a447a5569399d28e3b434fb6c82b3f9b08ec8f44f135adf6",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "docs/retained-bootstrap-cleanup-plan.md",
+    "size_bytes": 1933,
+    "sha256": "d4b525694be5e5e60e201cd246f0a6876df5764618f18d13296f4bdcaafad26c",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/publication-safety-checklist.md",
+    "size_bytes": 2344,
+    "sha256": "255787dc31429488654029f29841bf7773c092a9cf8cfe5fac8abe5a5b2de2f6",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/managed-kubernetes-before-after-cloud-comparison.md",
+    "size_bytes": 2055,
+    "sha256": "105ee02bc0eddca8df2d6a103b96b0c8871c3708e7db04252c0bd482697dfb22",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/supply-chain-oidc-registry-validation.md",
+    "size_bytes": 1259,
+    "sha256": "deda7a7016b7c477dfeb11f0f0686de25dc37c384e055bd6fc2a5c99bf91689d",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/risk-register.md",
+    "size_bytes": 1426,
+    "sha256": "ba98e664197f79bbbe4f6008af1024491829868a14ae9ca519658df332ee6557",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/kubernetes-baseline-validation-plan.md",
+    "size_bytes": 6213,
+    "sha256": "ecc39fff4907ffad16796c9b53783fafbc5830f5bf8e8e8f3636ff998f0d2c2f",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/final-control-matrix.md",
+    "size_bytes": 7917,
+    "sha256": "047c010c658028f8cbc337c44acc5e03cd5eadf170a775373ef1b08b5048db99",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/final-publication-readiness.md",
+    "size_bytes": 2489,
+    "sha256": "bbbafbaf0267a56d806338905e36155119844156a1f7c56b5f46202e81ba562d",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/cloud-smoke-run-validation.md",
+    "size_bytes": 3299,
+    "sha256": "a419e658a4e5774fcc9d3777206a06c170558af5c19f13f0e202abea7d8825f6",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/bootstrap-evidence-collection-plan.md",
+    "size_bytes": 2394,
+    "sha256": "c45d263d25ac3396cb167b04852d3b445431106af8a92fd81534034d82b5c8c5",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/final-cross-cloud-control-mapping.md",
+    "size_bytes": 9200,
+    "sha256": "41e594df3627110dfb4aab9bdc06bbf69c198f9b91a8fa4978cbe9e5fb8e5282",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/bootstrap-oidc-audit-cloud-run-plan.md",
+    "size_bytes": 5369,
+    "sha256": "44c241bf49c745e311f720c1123b4fd391e9289c8320c2b290416d7ee6d1e429",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/managed-kubernetes-cloud-run-plan.md",
+    "size_bytes": 2560,
+    "sha256": "5c641bf3e0d457b70084768a2c8b76a65b6a42ea3a50c01944243d1764a79483",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/evidence-redaction-notes.md",
+    "size_bytes": 894,
+    "sha256": "b512980aa17c892588c69613146559298192d3603d9a9e3bc3847d4e6617aa3a",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/kubernetes-baseline-control-matrix.md",
+    "size_bytes": 2962,
+    "sha256": "82d5abece046d3e356b626f7a01e1efd48a403352653f81a103d24cc9321590b",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/qubes-workstation-model.md",
+    "size_bytes": 2131,
+    "sha256": "d904279f05a2c639d7d235475ae0a27379c1325bf697ee8b146d9f59a3e84531",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/cloud-evidence-gap-register.md",
+    "size_bytes": 19179,
+    "sha256": "2713d99a2c1d48e1b45bdc9392761e7a8f5c0868b68e70aca8601c4216d5abdd",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/managed-kubernetes-vulnerability-demonstration-plan.md",
+    "size_bytes": 2251,
+    "sha256": "ca0c471022860bd44dbb037974ab7c65d089f86d41594c003e4f26e26c9eda28",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/managed-kubernetes-cloud-run-implementation.md",
+    "size_bytes": 2124,
+    "sha256": "e63c16b3fd15aac413f0fed4b7cbbf28cf1e24218626cac1b4e4798d001353f2",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/ru/yandex-cloud-smoke-run.md",
+    "size_bytes": 1851,
+    "sha256": "32b486696f32d29991af0d54a287c0c3e922366e74d146e77d14d795275030fd",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/ru/security-control-model.md",
+    "size_bytes": 4206,
+    "sha256": "f90b9a496cf1d5c9b1989012033ce85d4f4e409b43c3d029fd1a7a8a45d9202f",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/ru/terraform-architecture.md",
+    "size_bytes": 2348,
+    "sha256": "093fd2bfce29a92c1d4139f71c28776e157c93ff5786c971b82544b49730d591",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/ru/threat-model.md",
+    "size_bytes": 3958,
+    "sha256": "a531a1b355b26d704e393844e9e0a238e1a686aca2d2d5f5d679bf6da1590392",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/ru/kubernetes-security-model.md",
+    "size_bytes": 2668,
+    "sha256": "711c24a8f125aea8a9c1c8998a3893a91eab332b2b917a9be88bcc08e3675194",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/ru/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "docs/ru/kubernetes-runtime-validation.md",
+    "size_bytes": 1275,
+    "sha256": "503e3590106af2fc3e8508360ac07cb2f7b263bcef9a01ab915673da00a2d5b8",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/ru/iam-oidc-saml-design.md",
+    "size_bytes": 2924,
+    "sha256": "b1dc54114ef1947697323e494db69a0485a97bfe74d4dab64410c92cf72d23ee",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/ru/yandex-cloud-readiness.md",
+    "size_bytes": 924,
+    "sha256": "7bd3379f15f0538adc4e1d2d3414e567f6851fea64b5a5637879a873579745ab",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/en/yandex-cloud-smoke-run.md",
+    "size_bytes": 1218,
+    "sha256": "15a5dd0179b0840b54e8f2f69301b76fcf8612963f2165bceca043c518981749",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/en/security-control-model.md",
+    "size_bytes": 3502,
+    "sha256": "0f818c634dd39c8cc53a7e54c5482dc1b06d7f942c83b247a4bef8d9fe184706",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/en/terraform-architecture.md",
+    "size_bytes": 2048,
+    "sha256": "2e7aaac082e8dce7217fc1f18f92f7e6deea77566617f804d04b5573222ad1c1",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/en/threat-model.md",
+    "size_bytes": 3741,
+    "sha256": "bb478c0d59be8f87a8088c4916dad70a4ce343636b4b4ba6bd7c111c13e490b2",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/en/kubernetes-security-model.md",
+    "size_bytes": 2066,
+    "sha256": "ae8419c13d0c79247b361c60388a1ea1a3b53e74fdbd8b0120260e3f0314131b",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/en/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "docs/en/kubernetes-runtime-validation.md",
+    "size_bytes": 866,
+    "sha256": "0fb4951e54704f70179de6fdabde99533a0f1c1cc4448e69a35e4606bc03eb31",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/en/iam-oidc-saml-design.md",
+    "size_bytes": 2365,
+    "sha256": "a84752d4c2873c345d5e82cbd065eac4ccc9e93b79f074d5e14334378a685cd8",
+    "suffix": ".md"
+  },
+  {
+    "path": "docs/en/yandex-cloud-readiness.md",
+    "size_bytes": 541,
+    "sha256": "03ca474ea36a1d5d7716f5d6c225c2b00e46d6d77197f5f284b9b0cfb00777e0",
+    "suffix": ".md"
+  },
+  {
+    "path": "supply-chain/demo-app/requirements-vulnerable.txt",
+    "size_bytes": 169,
+    "sha256": "2796aee72fb93074b5ca1a8b9c5a082d7d07650b41fcd39a5539f72a1f49206d",
+    "suffix": ".txt"
+  },
+  {
+    "path": "supply-chain/demo-app/requirements-remediated.txt",
+    "size_bytes": 180,
+    "sha256": "f7cfd54835f2d642c562e44f325bc7ab07e5470999e5e1b168827210af53816a",
+    "suffix": ".txt"
+  },
+  {
+    "path": "supply-chain/demo-app/app.py",
+    "size_bytes": 370,
+    "sha256": "a87735bb704f99823650244844e9183a0f66f715d1a1c7a7c6655b961ae246a2",
+    "suffix": ".py"
+  },
+  {
+    "path": "supply-chain/demo-app/README.md",
+    "size_bytes": 890,
+    "sha256": "257a9fecd83ec190bf09f169b14ec6f7cbfac4f5c6bd18e5f55c80a2ca8831a4",
+    "suffix": ".md"
+  },
+  {
+    "path": "supply-chain/demo-app/Dockerfile.hardened",
+    "size_bytes": 451,
+    "sha256": "493cd88cacd9daa385771dab9456eba28cf126c1cd8e2437a8b57ec33018a027",
+    "suffix": ".hardened"
+  },
+  {
+    "path": "supply-chain/demo-app/Dockerfile.insecure",
+    "size_bytes": 333,
+    "sha256": "c12697b3b7f0ae777119cc7b8527bb9b6914bb861c6d5db993c8a52ab33f288a",
+    "suffix": ".insecure"
+  },
+  {
+    "path": "evidence/metrics/final_sanitization_changed_files.json",
+    "size_bytes": 1723,
+    "sha256": "a2623edcdaa2a2ed5df49620ff1577357351c17b7841884b8fc0aff72b68ace8",
+    "suffix": ".json"
+  },
+  {
+    "path": "evidence/metrics/final_control_matrix.json",
+    "size_bytes": 10638,
+    "sha256": "1c83377536686c2e10958ee22f2981a49d6d3b38adda8994dc1a9a782ac5f480",
+    "suffix": ".json"
+  },
+  {
+    "path": "evidence/metrics/final_publication_summary.json",
+    "size_bytes": 978,
+    "sha256": "10bc5fbcb94e963f8d59f239bde47108e02892385f13a31a91f730ec707f4ea6",
+    "suffix": ".json"
+  },
+  {
+    "path": "evidence/metrics/supply_chain_vulnerability_metrics.txt",
+    "size_bytes": 516,
+    "sha256": "e3daf544e0983cc43945e39e1b0219c3a1e9b6f3acb931eacc70aa45675ab00d",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/metrics/final_publication_summary.txt",
+    "size_bytes": 812,
+    "sha256": "0bd63e0da39dc20a88940a952d7e379c23331af139bca6147bef4d9521ffa307",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/metrics/final_cross_cloud_control_mapping.csv",
+    "size_bytes": 7798,
+    "sha256": "c34625b318e4eb94c0b745e67f89fce107b7b24626a2b4a60d8498cf48f9c385",
+    "suffix": ".csv"
+  },
+  {
+    "path": "evidence/metrics/final_cross_cloud_control_mapping.txt",
+    "size_bytes": 759,
+    "sha256": "683f825c588c4c16dc43d9e3a51b4a9be1dbcb0a12da7b0e9517ebcaaa9d9953",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/metrics/final_risk_register.json",
+    "size_bytes": 8576,
+    "sha256": "b178cdb48a017961763f618166dc5daf4f8250c5037dccdd293f82767676a333",
+    "suffix": ".json"
+  },
+  {
+    "path": "evidence/metrics/final_risk_register.csv",
+    "size_bytes": 4404,
+    "sha256": "2181b84836e5a8c08a73ff2ad635db3fdd237558e7e0be5681e627beeb9caae9",
+    "suffix": ".csv"
+  },
+  {
+    "path": "evidence/metrics/final_control_matrix.txt",
+    "size_bytes": 802,
+    "sha256": "efe138ef27d1da10b22e2f79061a6c599d98e04e7f78b361311fd5811b447bc8",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/metrics/final_remediation_metrics.json",
+    "size_bytes": 4186,
+    "sha256": "d1edc7bd281ef34784c2dd3f1df9c51385920702eca6400c8fcd871ae8ffa5c2",
+    "suffix": ".json"
+  },
+  {
+    "path": "evidence/metrics/supply_chain_vulnerability_metrics.json",
+    "size_bytes": 667,
+    "sha256": "5fc6bddfb2c8ab29bc505ea432c0ee01357e6fb28560387f539176a8308b8489",
+    "suffix": ".json"
+  },
+  {
+    "path": "evidence/metrics/final_risk_register.txt",
+    "size_bytes": 1094,
+    "sha256": "301efd7dc44e30cd09d9c69651d59612be3edc66ae4f344b8dd1d1286d54e2d5",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/metrics/final_control_matrix.csv",
+    "size_bytes": 7017,
+    "sha256": "0a3275c089ea2c25f65cb62be7025f9c2122cfd15d2cff115962e9d167e8825f",
+    "suffix": ".csv"
+  },
+  {
+    "path": "evidence/metrics/final_cross_cloud_control_mapping.json",
+    "size_bytes": 10179,
+    "sha256": "b721b1c4023311f86f402310139c8d63ba0fdd5bd4179c0cac02387f3eb58269",
+    "suffix": ".json"
+  },
+  {
+    "path": "evidence/metrics/final_remediation_metrics.txt",
+    "size_bytes": 2313,
+    "sha256": "f3aff69f59c28fe39c93dc30d74ca7aeb27be7242b9d7e8677a76e2348cfca47",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/sbom/ycsec_supply_chain_insecure_sbom_cyclonedx.json",
+    "size_bytes": 1291666,
+    "sha256": "d4fa29bf68d1e369fb8f9f5bcaae4c73e961cc7e3498709a2f6e2906c8543761",
+    "suffix": ".json"
+  },
+  {
+    "path": "evidence/sbom/ycsec_supply_chain_hardened_sbom_cyclonedx.json",
+    "size_bytes": 1256191,
+    "sha256": "6f7267fbfce6148eedf17974a72a6a31fcaf54ce066b60d7ea7ed9fa5d3733d3",
+    "suffix": ".json"
+  },
+  {
+    "path": "evidence/after/kubectl_auth_can_i.txt",
+    "size_bytes": 98,
+    "sha256": "cef7ca76a0cdf3808063ed0bc9c96176192fc847d89580dda0532d28d523d485",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/after/kyverno_mks_nodes_ready.txt",
+    "size_bytes": 307,
+    "sha256": "5f707f9841eb56815eecc1f47c846168b6095f618abeb9ac62b88f551576d734",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/after/kubectl_apply_hardened.txt",
+    "size_bytes": 1466,
+    "sha256": "d4d0d59b10c4ba24ee6ddbb1832ecaf32de1f1d27cc888af4b075c3b8457162b",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/after/kubectl_get_all_hardened.txt",
+    "size_bytes": 1153,
+    "sha256": "a1af9bb6caa6c34a58d8ed4fe50b42c594c373337c4e76bbe72a736754b9e471",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/after/kyverno_policy_status.txt",
+    "size_bytes": 13511,
+    "sha256": "6b064dccc857fa47be081a014a7a5ef60cdbc7e89472a690cee88a2021e9e577",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/after/trivy_k8s_after.txt",
+    "size_bytes": 100,
+    "sha256": "7f4e7f44564fcf0f0250156f5a8009ee7a4e2f4d569101999189fb349753cfbe",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/after/kyverno_controller_pods_ready.txt",
+    "size_bytes": 766,
+    "sha256": "90e22505736e3986f78e2202c973b91944b1ad8cd110cd21b0c89a8a0e1c0bfc",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/after/kyverno_policy_apply.txt",
+    "size_bytes": 71,
+    "sha256": "5421dd9071b9057639500406b6366e899e986876b328b9d4ff3371f65b90c01a",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/after/kube_score_after.txt",
+    "size_bytes": 2315,
+    "sha256": "e2d698722a73b7b80c66c0031cf76042d7500323173ea070edf9bf1f8516971d",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/after/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "evidence/after/kyverno_hardened_workload_allowed.txt",
+    "size_bytes": 61,
+    "sha256": "75fd0af00fad1093b93e851fdc8a6a7990d9094ac7486fe11f228dacc24d674c",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/after/network_policy_validation.txt",
+    "size_bytes": 1153,
+    "sha256": "552754d29328ba4d3bf6300de340125c51c181137a2f56d86efcfd2fcd9ea1f8",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/after/kyverno_insecure_workload_denied.txt",
+    "size_bytes": 2145,
+    "sha256": "b3e59d4b997a31d5f3481dbc3f2da815eda6733f3f733d33a754e6bcc509b79f",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/after/kyverno_install_apply.txt",
+    "size_bytes": 4068,
+    "sha256": "5284c4382cd4fc9278912fca9e00242ac8df7aab1277a98b5eddf802edea7e89",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/after/pod_security_labels.txt",
+    "size_bytes": 1153,
+    "sha256": "0db44b72ff767fe16475acc5b37ae3173a90f286bc10c9c6239ceea2bbd973a4",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/after/kubectl_delete_insecure_baseline.txt",
+    "size_bytes": 1153,
+    "sha256": "038b82b8f702e28bc0b4daa2d7b6d1e6612f3c709d36a1c3d9581a0c73660e81",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/before/kube_score_before.txt",
+    "size_bytes": 3571,
+    "sha256": "bdb1b23a790e677b409e9c5dd09b1a9ae207bea09ea51d8da1372cc05d1489af",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/before/kubectl_get_all_insecure.txt",
+    "size_bytes": 1153,
+    "sha256": "d9baae46e06d44a2ea432eafd144d8807b15c0a92c7f49783e38a5cbd6726e5b",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/before/trivy_k8s_before.txt",
+    "size_bytes": 100,
+    "sha256": "31f95c6e606fd7f6c02cc7ba4ebfda4582675e38e97b1beafc43a6a81939d080",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/before/yc_mks_nodes_ready.txt",
+    "size_bytes": 1153,
+    "sha256": "9cca5edc00e55f77cd45b0071b54978029cf8464ec8659e0b6c88259415accef",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/before/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "evidence/before/kubectl_apply_insecure_baseline.txt",
+    "size_bytes": 1125,
+    "sha256": "e9c81f562ce08f39aa3387471c48b60d551cbbd23773ee25db6af850dd7865e8",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/screenshots/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11C_OUTPUT_compute_instance_list_after_cleanup.txt",
+    "size_bytes": 159,
+    "sha256": "bb1628bfc29cf6a1a0801d8412a4a98b0fac9b956ac81d87ac11b564f212c03e",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_post_destroy_mks_cluster_list.txt",
+    "size_bytes": 341,
+    "sha256": "cd07d7931ac94c5afd683b1a4ecfdd040d29e792ba9687a029d2fe79933ca8f7",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_11R_OUTPUT_runtime_snapshot_before_destroy.txt",
+    "size_bytes": 2302,
+    "sha256": "bc932335d796ab8e0ef74870559fe184f9359f0641bed2aa46dcd322d1d71622",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_destroy_behavior_inspection.txt",
+    "size_bytes": 6902,
+    "sha256": "2ffa43eeb8d4dad7f8d08d8faaa41e79a6f668ed1792ac50a8716c0cb5d1bb60",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_11_TERRAFORM_cloud_smoke.tfplan",
+    "size_bytes": 5815,
+    "sha256": "85a60bcd8e119086767a5eb0e5615c38e027d448cc0899fec8472bd13a235c30",
+    "suffix": ".tfplan"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11C_OUTPUT_nlb_list_after_cleanup.txt",
+    "size_bytes": 174,
+    "sha256": "bf4431012dce416687468f43dc5ab44516449fc7131c1a2c3258649884b3e4cb",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_5A2_OUTPUT_final_git_control.txt",
+    "size_bytes": 612,
+    "sha256": "442b681273222a3ef3fcd2af57fdaa1c5f63d90aae4affc85ab551491865d057",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_closeout.txt",
+    "size_bytes": 188,
+    "sha256": "14a5b5c0bdf346385756a66c40e3bf351416348606072cfbac96a8b28dce266d",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_11_1_OUTPUT_smoke_script_safety_control.txt",
+    "size_bytes": 793,
+    "sha256": "73e800127ac4b7eaa92f4294ac73af1f5f3c6699cb4b8c27efb522c78f2841c9",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt",
+    "size_bytes": 22668,
+    "sha256": "e77d619827097d617e9266f8151bb2bb010c36ee0d0b6530a994524f8b357d88",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_github_remote_scope.txt",
+    "size_bytes": 1961,
+    "sha256": "f62fdb8e57cbf96373db189b7879011e3c5d288a07e0be67f98bff8e2d1cb9bb",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_5_OUTPUT_case_study_fix.txt",
+    "size_bytes": 3191,
+    "sha256": "7ab4ceb9a22d0bcbaff50d3f182c56e85b547fa227ccf487d055e44524e08aba",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_repair_apply_sanitized.txt",
+    "size_bytes": 13582,
+    "sha256": "dd3e4c872196d34e60a622e9ca3762398b197b452ca3b53dcaa871779adbbad4",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11_CLOSEOUT_OUTPUT.txt",
+    "size_bytes": 207,
+    "sha256": "bb0ce606e114e942de745037fa3e23d5b4a8ca64218c086e1a811622a1baeb19",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_mks_cluster_list.txt",
+    "size_bytes": 341,
+    "sha256": "cd07d7931ac94c5afd683b1a4ecfdd040d29e792ba9687a029d2fe79933ca8f7",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_05_OUTPUT_final_git_control.txt",
+    "size_bytes": 550,
+    "sha256": "67c12b39f8b70d27c18c062b835da56ff0c1a4874098fd2ac7e6406e313bb5ab",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_1_OUTPUT_final_git_control.txt",
+    "size_bytes": 1685,
+    "sha256": "d980fd8be3d02bb41b79fc479d4745ed6ad550c46af459a42ba08c163310e1c6",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_04_OUTPUT_qubes_toolchain_discovery.txt",
+    "size_bytes": 1771,
+    "sha256": "86f936386cd95f7146f1bf0fd625d2243fa509c1c3428d4c83d40895469c734c",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11C_OUTPUT_mks_cluster_list_after_cleanup.txt",
+    "size_bytes": 341,
+    "sha256": "cd07d7931ac94c5afd683b1a4ecfdd040d29e792ba9687a029d2fe79933ca8f7",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_control.txt",
+    "size_bytes": 2639,
+    "sha256": "a1536e97e1c1bda8296cbc9af2463281c0870818159519e55bbfa8b6b0a2cb00",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation_success.txt",
+    "size_bytes": 5089,
+    "sha256": "f6e61622a4d1fbba3424158b4cbfb1b97214f0bf719ba17ee7cd480684539f4e",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_0A_OUTPUT_final_git_control.txt",
+    "size_bytes": 677,
+    "sha256": "968fd0395b44bc4bdb3550639bdf4c59acf8c130eb30f2d3c6fdc90de5b3aacb",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_closeout_amend.txt",
+    "size_bytes": 3104,
+    "sha256": "fee27a2ae13a7aba917241e25d1b0fabad6399046172d79e1d2167b5f92f97ff",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_4_OUTPUT_kubernetes_before_after_comparison.txt",
+    "size_bytes": 3973,
+    "sha256": "b9fbe7500197c5b3956ca67c4940f5ac9532aa24aec527a87170268e26c03c6e",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_closeout_amend_final_git_control.txt",
+    "size_bytes": 353,
+    "sha256": "e8a13c8e499151e941b6af1ce3995b77803ef7aab344444ab96d875a14f31a78",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_7_OUTPUT_final_git_control.txt",
+    "size_bytes": 2045,
+    "sha256": "8e4022f50e3e828ce361ab1139f8542969e1fbf78f3e188a99af953c58d9c5e0",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11_OUTPUT_registry_list_final_verification.txt",
+    "size_bytes": 210,
+    "sha256": "5aab1451556c455d534917b3749d47ccb9d49e54a77ec30f5c7b370a8931103b",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_8_OUTPUT_final_risk_register.txt",
+    "size_bytes": 278,
+    "sha256": "ec3e8522b8170826d8527e2c0e9d66cd6e628ca316c2f87b084ce3719ca75ef7",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_06_OUTPUT_iac_skeleton_control.txt",
+    "size_bytes": 5654,
+    "sha256": "ddbd55468d55bf8401324a9284fe55a5cd149eae84d55358567fe8a86ccfd1d6",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_5A2_OUTPUT_kyverno_runner_hardening.txt",
+    "size_bytes": 2957,
+    "sha256": "1a15a7fb7cd5c805f0919828b29ac6d58b711fc283bbe8fd1733bc0deafaafa5",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8C_OUTPUT_github_publication_summary.txt",
+    "size_bytes": 605,
+    "sha256": "8ac10abeecded076a66807e4dbb926e7c9b0bfc5b07846f3ff59726d6a12de9e",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_evidence_closeout_final_git_control.txt",
+    "size_bytes": 521,
+    "sha256": "bb73f30f1815b9beb2f2cfd23864fe142c889673127fba81c4c14bc375fcda7c",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11C_OUTPUT_audit_trail_list_after_cleanup.txt",
+    "size_bytes": 133,
+    "sha256": "7cfd6c1965000bb034cf4e3f1d25c0fe49968a139f3f5bf98125dbe667f82bad",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_9_OUTPUT_cross_cloud_publication_readiness.txt",
+    "size_bytes": 5456,
+    "sha256": "21735cdee7ed20dad33f5013820f3fb69453eb7e1c5daa4877a2296ba04acd81",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_11R_OUTPUT_manual_cleanup_after_lost_state.txt",
+    "size_bytes": 8928,
+    "sha256": "bc762f6a40ded0859de7b116a2fac7f5e4e15a8bde4995d2c06d37599d9a1ec0",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_5_CLOSEOUT_OUTPUT.txt",
+    "size_bytes": 8553,
+    "sha256": "7452206ec2f0f06efb2c5aa6a6f245f357c75ca127bb04058e4598fd3804cc83",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_2_OUTPUT_final_git_control.txt",
+    "size_bytes": 1720,
+    "sha256": "e4e10b362e09092ca0d4de38ab0a45e28658750d831cd1c93be7ee60fd4b36f8",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt",
+    "size_bytes": 7637,
+    "sha256": "27e3fe41708925603d10c7f8fe2a68cb12877bbf991517c612c18cc93e08c7b6",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_02_OUTPUT_final_git_control.txt",
+    "size_bytes": 287,
+    "sha256": "5a734c2ae0974d56bd72428f94c23ffb057d5e442c7cc65f51d64b564514c382",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11_OUTPUT_bucket_list_final_verification.txt",
+    "size_bytes": 395,
+    "sha256": "56eea4238fbe96db6fa270fd5cd93b81925dfb540c8202f7edc037b6fbdd1fc3",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt",
+    "size_bytes": 3329,
+    "sha256": "8338668bb18db92af918d6b1bdf2b82abdbda4847e72f3f6259c2315e61a5b17",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_final_git_control.txt",
+    "size_bytes": 1093,
+    "sha256": "a6a08e9213095911b9b48f39e5ea4ea735149d410f39564717925ef576e38b99",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_7_OUTPUT_final_control_matrix.txt",
+    "size_bytes": 3544,
+    "sha256": "616dd7c81b10b41ff5cd497c0e6e64826443da5698013569bb02cc7ded301e70",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_nlb_list.txt",
+    "size_bytes": 337,
+    "sha256": "51aaabeec6ed6c40b7512e40fd7306b55672be4d8b16de72b48d20b3c77ccf23",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8C_OUTPUT_final_git_control.txt",
+    "size_bytes": 3165,
+    "sha256": "848f850bed6847c9830497a5ac5a84066cfac67790b92f9f8e9a8533940340a8",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_final_git_control.txt",
+    "size_bytes": 627,
+    "sha256": "88f2a9ab711296b6dc7759f226f981ed0ca4fa767333b30be6a064d622289dc2",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "size_bytes": 18475,
+    "sha256": "865205d2cd37348ed0c1a91741a55c9a3bcdf0a2f11e7dac2f41f8098ffbf7fc",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_0_OUTPUT_final_git_control.txt",
+    "size_bytes": 1597,
+    "sha256": "4541ebb0403ff41bd97bc107452fcb4707829af5177d7929b88a114b50d85d89",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_delete.txt",
+    "size_bytes": 112,
+    "sha256": "1967787b41548b71fb7132407bc528d6048f9d8a586b1c5f0e680105471380f2",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_01C_OUTPUT_git_author_email_fix.txt",
+    "size_bytes": 545,
+    "sha256": "25fbfd5ed145a462e037cc38ab3783f9309b505e19e9cc8219d334f3b1e19281",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt",
+    "size_bytes": 1537,
+    "sha256": "998e89313d5bb0b5c74fc282c0dd64fad4d5fb41e718602cc38a6affecd50446",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_4A_OUTPUT_final_git_control.txt",
+    "size_bytes": 566,
+    "sha256": "4716bfcfadb12b4b4e4f9c7337aedf62c855273e51b55c4910ff6cde024ea7c7",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_11R_OUTPUT_final_cloud_cleanup_verification.txt",
+    "size_bytes": 2017,
+    "sha256": "4a4915776f7c3f44c4dbc61a3af6fb162d8614511422a7c0a7aca93524d1ba48",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt",
+    "size_bytes": 3663,
+    "sha256": "6b6f8e99c838a2e77f825e6e6ee64efb2226a65cc22c083e17b6322d8057c90e",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_destroy_sanitized.txt",
+    "size_bytes": 20487,
+    "sha256": "bfabee2fcbe95667e113a00e59f72cee7c51b874df58339f9836f49c65782d4b",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_11_OUTPUT_final_control.txt",
+    "size_bytes": 1218,
+    "sha256": "7318b09f3b4dba0161b5058719852299cc12535da14b08f154a1c270c9970f95",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8E_OUTPUT_audit_trails_delivery_validation.txt",
+    "size_bytes": 2299,
+    "sha256": "2d9bbbee03d32da42ccff1ce063a68614c667240f924fb63532413ce49141a5f",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11_OUTPUT_final_git_control.txt",
+    "size_bytes": 3241,
+    "sha256": "58ab82536133d219ae54fbcb76d90ad96434fe87c96ab005ae000835701a1ba3",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_10_CLOSEOUT_OUTPUT.txt",
+    "size_bytes": 3871,
+    "sha256": "813a36115cf798744c94e97d40f1aef9cb4bd9410d87e4104c95a0b407efc61f",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_images_after_cleanup.txt",
+    "size_bytes": 4,
+    "sha256": "5239a7754876b9a70871c45e41f1bd9abbd91ed2de67af926c1cfcc9c9377d51",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_final_cleanup.txt",
+    "size_bytes": 5813,
+    "sha256": "9ebae18e02b0f3f82093fcccb15cc619ed66b159c6ce5ccb79991ebdcf5082ad",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_7_OUTPUT_bootstrap_oidc_audit_cloud_run_plan.txt",
+    "size_bytes": 4398,
+    "sha256": "dd4c06764466fe34bbe9dd69ce33386515f1fc3f88c52034b09e720098fc315e",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt",
+    "size_bytes": 102062,
+    "sha256": "f3dc94120230291046e818d2833e3719fd95fe169061b64ae14cf655a075df1e",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_evidence_closeout.txt",
+    "size_bytes": 4240,
+    "sha256": "a76bfaaf34403c2474c98b87024acf72ba6e9d14c2dc1216d047a31139fff2e3",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_result.txt",
+    "size_bytes": 301,
+    "sha256": "60af1a6b91c7ae994725cf670349eed98d10f23044c9e1f694fd0aa7ea15d7e1",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_plan_sanitized.txt",
+    "size_bytes": 10031,
+    "sha256": "49d7d801eee3f460e59f2b05dd4fda23588ec1e372726fc6fb741ba4dae6d94f",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_07_OUTPUT_control_model_validation.txt",
+    "size_bytes": 1817,
+    "sha256": "6307d802b568a10106955fa37b275daf760c7ccd6a76eefbccd4a7bcad9527d6",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt",
+    "size_bytes": 2744,
+    "sha256": "16d0a28ec205827934e82dfbd2ab8e4eabecec4559ba73f171bc2641e00247c8",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_10_OUTPUT_final_control.txt",
+    "size_bytes": 731,
+    "sha256": "7a9b61253a4995bb17516c45f61980165273cf8a3c9783f8fdc0c1d21e4e27e0",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_image_delete.txt",
+    "size_bytes": 140,
+    "sha256": "00f4cc6a7c64f0c0ecb516fb2c463b55cb8ebd17181facc0a6e0b644b04fbfab",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_4A_OUTPUT_gitleaks_findings_sanitized.txt",
+    "size_bytes": 1177,
+    "sha256": "0f202bd062876e3a69314fd739ddcb7e735bf79fde301018370cb170160d8e64",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_failed_workflow_log_analysis.txt",
+    "size_bytes": 10428,
+    "sha256": "37e80dfcc6937a122324a1512012e8f3bea5e2c74bca65a5b00943407238e376",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_04_OUTPUT_toolchain_phase_control.txt",
+    "size_bytes": 1667,
+    "sha256": "fcdd0773fb4d78058f0d09d750d7f00be1014fb0945ce3b9921572a918963f88",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_08_OUTPUT_final_git_control.txt",
+    "size_bytes": 806,
+    "sha256": "8a250b9fcbaa71157e447911d0c555539503251181df967224e7a8ac0e23b9bd",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_9_OUTPUT_managed_kubernetes_cloud_run_plan.txt",
+    "size_bytes": 2506,
+    "sha256": "5c147217f6a716cdb5195eb39f19036e8a9497f809c89ad07f4ae75dfce711f0",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_13A_OUTPUT_final_git_control.txt",
+    "size_bytes": 1941,
+    "sha256": "d148ae0b16943d1f65b6225b37d478a8b7ec3f44dfe1606a07103e4a1f5e223c",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8E_OUTPUT_final_git_control.txt",
+    "size_bytes": 637,
+    "sha256": "17aeb598b3f60258444e5749fb36f3d980e43f6b622ddfe89f90ddb58cd50a5f",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_3_OUTPUT_kubernetes_remediation_control_package.txt",
+    "size_bytes": 5205,
+    "sha256": "cf2cbfd99e81ca16319c85eae94096450cd549d3c5d831d72edb82c6f27ce129",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "size_bytes": 29827,
+    "sha256": "87ce64eecb79c2d49a67bcf8c14e4c6517e636cd1b683d38661abe6e25ab2895",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_list_after_cleanup.txt",
+    "size_bytes": 4,
+    "sha256": "5239a7754876b9a70871c45e41f1bd9abbd91ed2de67af926c1cfcc9c9377d51",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_apply_sanitized.txt",
+    "size_bytes": 6745,
+    "sha256": "9f6f1514f0708cfa14d9329be086d7f3a908eeb4ef3ce9f761ca22ec100f60a9",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_5_OUTPUT_post_destroy_compute_instance_list.txt",
+    "size_bytes": 245,
+    "sha256": "2cd218b87c23d5730d2fbd093dc3282b151a401f84595c928e742e2af7a922dc",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_5_OUTPUT_final_git_control.txt",
+    "size_bytes": 1779,
+    "sha256": "65c75914ea9deca1e39eb4a55896844c831277d35ff0017d8cce8fa22035420f",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11_OUTPUT_audit_trail_list_final_verification.txt",
+    "size_bytes": 245,
+    "sha256": "7644e7e2af5497ab8ae28b2b43bc5457d0644a53106dec3c1b2e8ee3ef07b636",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_plan_after_disk_fix.txt",
+    "size_bytes": 8339,
+    "sha256": "50ce57f464b46af24996d5335cd976b7d6fa4e9dd2113167db5fd6d73d5a5785",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_14_OUTPUT_final_repository_audit.txt",
+    "size_bytes": 4507,
+    "sha256": "db1bddf36679a3aec773c53ac4d49506c3ea42a000ec8cecc168060b3ea57c98",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt",
+    "size_bytes": 34884,
+    "sha256": "e5b5d1ac8d9c6e21098151a5853accd46098338ca3a4a7fddc255b71ad886f3c",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt",
+    "size_bytes": 6801,
+    "sha256": "0ea1ce7633397c6e3c28c9a3127c60561c75dadd6dc54953cecc3bc7ae8061ba",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_script_auth_fix_control.txt",
+    "size_bytes": 610,
+    "sha256": "eee4fde8241a7f09fb184bd30c4aa62670c04bf8e7cddfccd7140e78da2927c6",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8F_OUTPUT_final_git_control.txt",
+    "size_bytes": 698,
+    "sha256": "1a6c306d79a22df731a1b064840ee04b427503437adb45ab84976a03950f01ad",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_03_OUTPUT_final_git_control.txt",
+    "size_bytes": 414,
+    "sha256": "bf9d8ebda69b118ec2d43b785b390607e177e344f20b42380005945d3a827db4",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_4_OUTPUT_sbom_vulnerability_validation.txt",
+    "size_bytes": 6382,
+    "sha256": "3931754e502c73ade7a2b26028ee3c2888bba304a08f0a1571034baf97d5b098",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt",
+    "size_bytes": 4805,
+    "sha256": "9755e75e8e552210f37e0d78b016cfa40ebd40f03057638ec3a5e29ab16e277e",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_destroy_sanitized.txt",
+    "size_bytes": 19228,
+    "sha256": "5d83b27bf5b9b0a0e381bce05c679caa602a9668ab966bb8a355b07c5ed9348b",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_12_OUTPUT_checkov_after_exceptions.txt",
+    "size_bytes": 104,
+    "sha256": "b0258c8ea1bf2ce8b3c52ede43522367fc1deaa3f7a305c91c2ab5f7abaa5680",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_final_git_control.txt",
+    "size_bytes": 3366,
+    "sha256": "0b66169e91d0bcf664c53b52f110a621c02b1c1a3d2f3e0ea7a3fa5c4e6ee813",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_11_OUTPUT_post_sanitization_cloud_verification.txt",
+    "size_bytes": 2017,
+    "sha256": "2603eae069a67c5cfa394ff43a36799d770248c083e3d7c1127cf1c7c4858891",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_2_OUTPUT_kubernetes_baseline_static_validation.txt",
+    "size_bytes": 4783,
+    "sha256": "0820b3746d0cf381ab079e90e4d43af62d22c454fcc4c5e55c503454a24148e1",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_final_git_control.txt",
+    "size_bytes": 693,
+    "sha256": "ec32a1615ee4c3fa00c5ead2acbd79c869b0ad81c30bd8cb82585ee6ff95949c",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_1_OUTPUT_kubernetes_baseline_validation_plan.txt",
+    "size_bytes": 3203,
+    "sha256": "776cc405783da0a03318b430a4281db4129a6d9199ebcd61b8efa2973249974d",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt",
+    "size_bytes": 13804,
+    "sha256": "c56a2bdde360d20d97f731dc8c687f892cc63e919af71edbd6816515159ef9f5",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11_OUTPUT_mks_cluster_list_final_verification.txt",
+    "size_bytes": 465,
+    "sha256": "7e5c9996d3eb8997838010e7eddae140cae0d95e44225945a455ffc571577fcd",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_9_OUTPUT_final_git_control.txt",
+    "size_bytes": 542,
+    "sha256": "e712efd4df9ce2e50de22ac6d419516f1de07af153e32d9c09d5df6e9b170f5d",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_14_OUTPUT_repository_inventory_before.txt",
+    "size_bytes": 27170,
+    "sha256": "446038569e80bcb4009460b68c4d134156abd14fe1e61156be17a28a8d268aeb",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_failed_build_log_analysis.txt",
+    "size_bytes": 25225,
+    "sha256": "18904563cda5bd117a5fa221b67c992bfadc892b778ff48d982796d8ad6a34ba",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_plan_sanitized.txt",
+    "size_bytes": 10144,
+    "sha256": "f51f899661b32f514390f9f98902a928ea4819da69516f44627fc612b059a94a",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_8_OUTPUT_final_git_control.txt",
+    "size_bytes": 494,
+    "sha256": "eb00bf14b889ed4f5c0b178e671a1aba7ab019d21c2a03a21fd016dfa054d9f5",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_02_OUTPUT_root_portfolio_files_control.txt",
+    "size_bytes": 1940,
+    "sha256": "26c7b0333a9765f6c129ba41f10caa405eed6319929373d1ec8f786cfe2f2c6f",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_after_metadata_repair.txt",
+    "size_bytes": 188,
+    "sha256": "3f9887ebe9ded5cce43fcfa9a13c84725d366e68491e4c4ff6d9d40d59ba2489",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_post_destroy_compute_instance_list.txt",
+    "size_bytes": 245,
+    "sha256": "2cd218b87c23d5730d2fbd093dc3282b151a401f84595c928e742e2af7a922dc",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_6_OUTPUT_final_git_control.txt",
+    "size_bytes": 542,
+    "sha256": "7b69f4fb3c4568464da2e3841d03f83e5b492836efeaa1d4bff1874a38bc9b33",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_07_OUTPUT_final_git_control.txt",
+    "size_bytes": 725,
+    "sha256": "0cf34e8667c24d49fff5041ca83fa6cf20a112e367cb71beb70aec271809cc1c",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_github_remote_scope_final_git_control.txt",
+    "size_bytes": 2639,
+    "sha256": "ad1ac7de0fc6f3170287e4889a91bb4687563bff6ba4eb2a6e62fbf02f6521df",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_3_OUTPUT_final_git_control.txt",
+    "size_bytes": 2233,
+    "sha256": "035e5374be982694efafa526686bb973f4714d1007962ae6afd993d938b1a08c",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_10_OUTPUT_final_git_control.txt",
+    "size_bytes": 629,
+    "sha256": "7d99a5fad890a19b7dcb2ab39864b18b35db57eb54c69ce93df20036688f3d20",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_6_OUTPUT_final_git_control.txt",
+    "size_bytes": 1942,
+    "sha256": "0d85fe91f2e991ca8d2e0e777c9ad0265e81e2ad2e66cfcac995fe45a6a014d0",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_bootstrap_cloud_run_implementation_package.txt",
+    "size_bytes": 4791,
+    "sha256": "98b254f0a29f2bbd6dec53defb1327b9ba9eb0760b955cc103395478bea83f7d",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_12_OUTPUT_final_git_control.txt",
+    "size_bytes": 1838,
+    "sha256": "300591c03b9262f2864385b3bf437764a85c98ff374fa62497d45aca481ae250",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8C_OUTPUT_github_publication_push.txt",
+    "size_bytes": 5207,
+    "sha256": "8ac7e4683bd8eec9aa565ada516398fe00b85ba77e0e0bcfa811a363503547fe",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_9_OUTPUT_final_git_control.txt",
+    "size_bytes": 554,
+    "sha256": "c8d77fb6817a7e8d65b5d7eb63b8e7298632ed1cc2fdcac2215b72991ea10479",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_03_OUTPUT_evidence_cost_control.txt",
+    "size_bytes": 1370,
+    "sha256": "034e2fd7bddb14ccbd7df94a9716f716d09ed2711e49b0b14ea3a047b3a3eca7",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_2_OUTPUT_final_git_control.txt",
+    "size_bytes": 594,
+    "sha256": "8bd7b86121e596eceab7876f4dac0e8a65f74fc2714bf65c2a5e46cb338f3de5",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt",
+    "size_bytes": 4481,
+    "sha256": "5523e0720aeaa823d1eeb61d325020f64b9dcf005ebbf61098aa529e628f0891",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_4_OUTPUT_final_git_control.txt",
+    "size_bytes": 485,
+    "sha256": "14b2fd618fba523a8ebc5a473fe25f723117176d9ccca708b19f01c7df52e7c7",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_apply_sanitized.txt",
+    "size_bytes": 6642,
+    "sha256": "a734769df9116699c61a461116bf80a89ea30f256d2d2bffd456046618569929",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_get_credentials_sanitized.txt",
+    "size_bytes": 365,
+    "sha256": "123fa332d624819a370c340c5de1506fb4af0afef31ee2ce3505f9725093357f",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt",
+    "size_bytes": 2397,
+    "sha256": "45428a2fb0e87cc994a424fac0f335437f26fc05894e93003ca5c88a01eb4e33",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_5_OUTPUT_kubernetes_remediation_case_study.txt",
+    "size_bytes": 3508,
+    "sha256": "2a38221d8be6cf74c876b8eedad2183997c386092efd4297e5fcb38eee8a0827",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_images_before_cleanup.txt",
+    "size_bytes": 596,
+    "sha256": "d3e84337f4ee63547edc2d041994ec814a0530f2ddb20f86c7a47075212414f6",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_2_OUTPUT_supply_chain_implementation_package.txt",
+    "size_bytes": 4025,
+    "sha256": "4a7a4e9704ba065698468d4a376183db940e5bcbd5c78c45a8956d682200d097",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_0A_OUTPUT_managed_kubernetes_cloud_run_implementation_package.txt",
+    "size_bytes": 6167,
+    "sha256": "632d8d2d6ca6fa1ebb952fe1839e31c063951711be8dcd021242de403f521cad",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_03C_OUTPUT_git_history_cleanup.txt",
+    "size_bytes": 653,
+    "sha256": "60353a41d6f8b8cb3637facaa37eb1e8220a9f80e52c2f112d6cb05bb6afd03b",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_check.txt",
+    "size_bytes": 3421,
+    "sha256": "4f348f4bdf7051a61dfd8d4ea8725b6c69f573a0005f8ca3771dc31f0c57840f",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_4A_OUTPUT_gitleaks_generated_evidence_handling.txt",
+    "size_bytes": 3178,
+    "sha256": "ae6066845f0d6f8717e685c999d11c022384261685f27d7d9adaada429badb10",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_04_OUTPUT_final_git_control.txt",
+    "size_bytes": 439,
+    "sha256": "0a499e672e4d503002cfc55275b1010d45ecf6bff7609bec144039f1f44136e1",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11C_OUTPUT_service_account_list_after_cleanup.txt",
+    "size_bytes": 241,
+    "sha256": "f6d7438255484f2b114602fcb253be660bb70e256e00fbe2241df7636c6d300d",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_5_OUTPUT_final_git_control.txt",
+    "size_bytes": 912,
+    "sha256": "faca38fdebc33d5bb529a0da3c13ee803d535bd376353bb2e55f52fdfcfb04e4",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_5A_OUTPUT_kyverno_mks_repair_package.txt",
+    "size_bytes": 3827,
+    "sha256": "28c1a61a6bbe62f398bca3414a8aca91c536f9196e70e5f2f555c95f3225415b",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_post_destroy_nlb_list.txt",
+    "size_bytes": 337,
+    "sha256": "51aaabeec6ed6c40b7512e40fd7306b55672be4d8b16de72b48d20b3c77ccf23",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_registry_inventory_after_push.txt",
+    "size_bytes": 1405,
+    "sha256": "5d070112ef6dfe549a48de790774e8a2c770a223aae702b2ce0b08ef719f5627",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8F_OUTPUT_registry_evidence_storage_validation.txt",
+    "size_bytes": 2497,
+    "sha256": "816dfd5bc6f92926f8b130f382982e921e2ebba786d8481e0b0ced601de2dda5",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_final_git_control.txt",
+    "size_bytes": 1104,
+    "sha256": "053e4f3ec92f9cbf2544aa43d82df5411595edd03f58bb2a648481df5b917523",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_5A1_OUTPUT_final_git_control.txt",
+    "size_bytes": 583,
+    "sha256": "a20bd4cf56440fc59b7828e26c39ac5fa0d004d9657c34e3b251bbbdc477617e",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_5A1_OUTPUT_kyverno_denial_attribution_fix.txt",
+    "size_bytes": 2756,
+    "sha256": "30ca26d0a4ce3136dcdb4858a492e124213e0009a70a328ea0892634e4d1ebb6",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_06_OUTPUT_final_git_control.txt",
+    "size_bytes": 630,
+    "sha256": "3e05b9084aabe7eb55a15c2687abbc689284cf555030b21d9d3e4dbf00dcf8c0",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt",
+    "size_bytes": 6291,
+    "sha256": "f23ce0d20b999782604605e2994508654db35914bf1f76bfc743f7db75429473",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_10_OUTPUT_final_git_control.txt",
+    "size_bytes": 494,
+    "sha256": "df7e4d078044f9cbb2854bfda5fc3f2d06b8ab206a9625a29e6ebd4a6f2d9e4b",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_04_OUTPUT_toolchain_check.txt",
+    "size_bytes": 3265,
+    "sha256": "9474cb514ee8d9c18195c57828bb6a2e02ada81d02c5f5f58a5f3e01b4c867cc",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_1_OUTPUT_final_git_control.txt",
+    "size_bytes": 484,
+    "sha256": "c133c7e833bb9921a0557598f5fec391ea6d75a1a1d8b2bb5630ed35fcc0c1c4",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_11_1_OUTPUT_cloud_zero_resource_verification.txt",
+    "size_bytes": 1992,
+    "sha256": "4e31e00f932238967caa7471c5d3ef706d0dc2ac668120086ab3132ee09e198f",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_10_OUTPUT_yandex_cloud_readiness.txt",
+    "size_bytes": 1296,
+    "sha256": "1a0e36e2b30e229d98630914a74502063e781c084d8495fd8e15c0051f0287fb",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11_OUTPUT_service_account_list_final_verification.txt",
+    "size_bytes": 381,
+    "sha256": "e0d731913a6eed13ef2159d90787a66162b4ccfe88bea7f59ad2302e0ce0aede",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_5A_OUTPUT_final_git_control.txt",
+    "size_bytes": 616,
+    "sha256": "ec253303609f6ff083bb5526d7b3bac6512410765277e5c4ce6a783e5d257e76",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_11R_OUTPUT_cluster_list_after_apply.txt",
+    "size_bytes": 670,
+    "sha256": "4a869e47de2d77d3622a485b85b735fee0d4f8a7e823944e351792ce18c9791e",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_4_OUTPUT_final_git_control.txt",
+    "size_bytes": 1790,
+    "sha256": "379d978cba19788a5c6a0f4301fba89889fb166bf1e720bd46b5bf20f4431a51",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_get_credentials_sanitized.txt",
+    "size_bytes": 352,
+    "sha256": "2b8f31ddc306e3dc030c55948872e6d75c36b26af7badca20fc0165448524546",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_github_remote_scope_summary.txt",
+    "size_bytes": 721,
+    "sha256": "86ee8de6e1e86f3604cbe201c9f8da0707d681d4bb98f6c157c3718150047b1e",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_1_OUTPUT_supply_chain_roadmap_extension.txt",
+    "size_bytes": 3751,
+    "sha256": "5beeba86132bca66d19cbb1be0ec86134d708b7dc8e77597a654c0a06eeca7fa",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11_OUTPUT_compute_instance_list_final_verification.txt",
+    "size_bytes": 361,
+    "sha256": "75117cfb26a3df95860b5b8313bcd1b5dbc13c9bdeba4ae0ac3148dd919897d1",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11C_OUTPUT_bucket_list_after_cleanup.txt",
+    "size_bytes": 277,
+    "sha256": "fdf2c9c6949ef078c4e8459e5ec281407865950b85c76c124b328c7193e0b688",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_7_OUTPUT_final_git_control.txt",
+    "size_bytes": 409,
+    "sha256": "4db7a2508fd3159b49730e06f8efc8be7f3cca14124a7443e714457402107b0f",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_6_OUTPUT_roadmap_reconciliation.txt",
+    "size_bytes": 5034,
+    "sha256": "56d5f0965d8a239d0e2c5338a19b462fb059fd24f0674ad41759ff53ecb6736b",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_metadata_repair.txt",
+    "size_bytes": 9929,
+    "sha256": "d5a8c9e550a46fd99878c10d346d417785204cd7114be54a7599d6256dce33e9",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_6_OUTPUT_final_remediation_metrics.txt",
+    "size_bytes": 6827,
+    "sha256": "17d9bfdfa5c2cfbb227ca125641c79bbad12686b7eb1ba0654e255f7de429536",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_12_8C_OUTPUT_github_publication_closeout.txt",
+    "size_bytes": 2111,
+    "sha256": "be445b850cd2fe7ada48bf51466b901f6a787308486550c5fd925466646206b6",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_11_OUTPUT_final_git_control.txt",
+    "size_bytes": 498,
+    "sha256": "7a78e59b5dd80dd2141582fb3077f6df7efa7ac486db760098888a971cc317aa",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_03_OUTPUT_tool_versions.txt",
+    "size_bytes": 1127,
+    "sha256": "ef929ac1a5b3c22229d033ab72993a2ecd0492acbb1b6c67f1413d64851f4020",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_13_11_OUTPUT_nlb_list_final_verification.txt",
+    "size_bytes": 472,
+    "sha256": "806527869841e9fb676940099bd99662103d56a2ade99287f80efb381c9d3db6",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/command-outputs/YCSEC_11_1_OUTPUT_final_git_control.txt",
+    "size_bytes": 483,
+    "sha256": "f626446adf7ce59a34868461ff37d9c1d9d0ea758966ca065ad01b61c4e4ab04",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/before_after/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "evidence/vulnerability/grype_hardened_image.txt",
+    "size_bytes": 27876,
+    "sha256": "36291ca9a1448849f4cabbb99ebbec97060670cbaabfd133386b02f64dc6b6af",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/vulnerability/grype_hardened_image.json",
+    "size_bytes": 841830,
+    "sha256": "765c97eed01042b47648b2cd974ae9e270413ec6beb8c5082b23051b4c15e72f",
+    "suffix": ".json"
+  },
+  {
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "size_bytes": 998718,
+    "sha256": "42f7a1aff7b7975b349a7894b7c156d1906dd70cadba5c15ad6c72e450f32744",
+    "suffix": ".json"
+  },
+  {
+    "path": "evidence/vulnerability/trivy_insecure_image.txt",
+    "size_bytes": 284369,
+    "sha256": "bd7388d697d848115d2c551e5da894d9dbce30a2a17e609c6abf45e85a343fc9",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/vulnerability/grype_insecure_image.txt",
+    "size_bytes": 44843,
+    "sha256": "d8cfa18f177c64109b175b5a01772c940bf71a6201b2c2eb7b8f290e92a3f735",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/vulnerability/trivy_hardened_image.txt",
+    "size_bytes": 200865,
+    "sha256": "181c2c843061a9bcae70c4bf07843c320629c3052ba0365c869e4f196286af3c",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "size_bytes": 1416394,
+    "sha256": "4d0c8bf5a7557a6fcfd5d64469f9e4ca8061b6353d621765ba326b619bee4eef",
+    "suffix": ".json"
+  },
+  {
+    "path": "evidence/vulnerability/grype_insecure_image.json",
+    "size_bytes": 1530907,
+    "sha256": "7f500c339a08372ac43c170f1a76ddcc41e322330b98ff86fe8464f9b140161d",
+    "suffix": ".json"
+  },
+  {
+    "path": "evidence/sanitized/audit_trails_delivery_object_listing_redacted.txt",
+    "size_bytes": 723,
+    "sha256": "635f81dcd388ce522d7a2bd5d76522a99a4ee2a4a3247ca6ec14fba26a452ab9",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/sanitized/kyverno_admission_policy_enforcement_redacted.txt",
+    "size_bytes": 502,
+    "sha256": "74c5478ffd382e1b13de6e1ab4bdea4686c90660efc18fab699bfa05fcf37036",
+    "suffix": ".txt"
+  },
+  {
+    "path": "evidence/sanitized/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "policies/kyverno/kubernetes-baseline-controls.yaml",
+    "size_bytes": 2168,
+    "sha256": "049df089b74a4a35075ea9041cfabda1b7c38c232c3fa26b5d269a1031e166d2",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "policies/kyverno/cloud-run/baseline-remediation-controls.yaml",
+    "size_bytes": 2120,
+    "sha256": "26d9ee733dcaeaa4ae512f0d764906d6e8c534a9324582ba8111f7bb25e57a1b",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "policies/kyverno/supply-chain/registry-and-image-policy.yaml",
+    "size_bytes": 2139,
+    "sha256": "0be1a7252cdba4fdb4cbd1b88f6c30fce1c59c430f5f55eea00a0981da3a37a6",
+    "suffix": ".yaml"
+  },
+  {
+    "path": ".github/workflows/cloud-deploy-oidc.yml",
+    "size_bytes": 3140,
+    "sha256": "ce1ff29f22ee8e26323ea9e44b0245d8a2fe71f6f895f80882117b4ee65f3ef7",
+    "suffix": ".yml"
+  },
+  {
+    "path": ".github/workflows/supply-chain-oidc-registry-validation.yml",
+    "size_bytes": 5180,
+    "sha256": "85bf1754fd2e293580ca4bbccb1bc805bb94c098d3a8d2742d5420b64408f10a",
+    "suffix": ".yml"
+  },
+  {
+    "path": ".github/workflows/iac-security.yml",
+    "size_bytes": 1175,
+    "sha256": "18ed6f236b59119e27838e07e137d68e908bf54b63ab0ffcdb1fddf4b48577b9",
+    "suffix": ".yml"
+  },
+  {
+    "path": ".github/workflows/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "terraform/modules/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "terraform/environments/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "terraform/environments/bootstrap-oidc-audit/main.tf",
+    "size_bytes": 4148,
+    "sha256": "965a02ca4530fe47f722240b5c7b0e116ca24854b0f35a153e0a9a98c3eb5fe5",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/bootstrap-oidc-audit/outputs.tf",
+    "size_bytes": 1021,
+    "sha256": "a5ee66b48dea3cb02eb04fed2da02ea21e5bd076559755b3030f396ba64426a8",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/bootstrap-oidc-audit/variables.tf",
+    "size_bytes": 1116,
+    "sha256": "05abfae1379839966d981717a4922a83e31b5cd92645edf2d186dbcbc113a83b",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/cloud-smoke/terraform.tfvars.example",
+    "size_bytes": 107,
+    "sha256": "28c983425d0963dcc82b10822f1e8cf022cd68fbf159d51d64888ea45490dd4a",
+    "suffix": ".example"
+  },
+  {
+    "path": "terraform/environments/cloud-smoke/main.tf",
+    "size_bytes": 4062,
+    "sha256": "0169ccb83dbe7c0139e14a44c3ddee21652f772a9fba2c9260d8c39772f81a1f",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/cloud-smoke/providers.tf",
+    "size_bytes": 100,
+    "sha256": "d3a93f3fd8cc141804bf01e050a12868ca212e0d6a3069b73cf8aade0a241ab5",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/cloud-smoke/outputs.tf",
+    "size_bytes": 492,
+    "sha256": "6d121cc9198aa0e3c79869241f36a1308ceee355a2264dd215ac8d4a2b9ad74e",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/cloud-smoke/variables.tf",
+    "size_bytes": 547,
+    "sha256": "f63a3ad49b096ca98a9ee0a62e16d7d05cd42cfb8d595bc9e1a38c13f653a230",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/cloud-smoke/.terraform.lock.hcl",
+    "size_bytes": 1276,
+    "sha256": "23bfe887bc8696cec2d73ec2c93202ced960dcc367f1ed216bf8cb98b0d39c30",
+    "suffix": ".hcl"
+  },
+  {
+    "path": "terraform/environments/cloud-smoke/versions.tf",
+    "size_bytes": 171,
+    "sha256": "bcb1c8257c1de6403e39bebfd4bcc6f860dc0cc9a815c6c5df6582874bc8d063",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/bootstrap/terraform.tfvars.example",
+    "size_bytes": 184,
+    "sha256": "5cbfe0d4d40aa22140a2814113a713150bef570e10a359fd30667f4d76494845",
+    "suffix": ".example"
+  },
+  {
+    "path": "terraform/environments/bootstrap/main.tf",
+    "size_bytes": 1125,
+    "sha256": "df9e64718df90c4cb7352ce22bb7aec40cafd76c0e31e3ba2fe11c523c5bd6b5",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/bootstrap/providers.tf",
+    "size_bytes": 108,
+    "sha256": "eab87cceb3c12435abd177831ba6b50accdb6c362e3f8475af6aa94f6cef816b",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/bootstrap/outputs.tf",
+    "size_bytes": 593,
+    "sha256": "4c304f4d99f01993ec3b28def1bc48d0fd12c1db4871ff682ed795ea0d355f31",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/bootstrap/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "terraform/environments/bootstrap/variables.tf",
+    "size_bytes": 860,
+    "sha256": "82647ead037947db5ef5ca459cd8e92f1f3d70b2020c1e8f76a87e1cc4fe4ee2",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/bootstrap/.terraform.lock.hcl",
+    "size_bytes": 1276,
+    "sha256": "23bfe887bc8696cec2d73ec2c93202ced960dcc367f1ed216bf8cb98b0d39c30",
+    "suffix": ".hcl"
+  },
+  {
+    "path": "terraform/environments/bootstrap/versions.tf",
+    "size_bytes": 171,
+    "sha256": "4a645da6e4ce89e478af89459c50395154f81c1da8aeab0874450ec2ac4bce20",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/dev/terraform.tfvars.example",
+    "size_bytes": 184,
+    "sha256": "5cbfe0d4d40aa22140a2814113a713150bef570e10a359fd30667f4d76494845",
+    "suffix": ".example"
+  },
+  {
+    "path": "terraform/environments/dev/main.tf",
+    "size_bytes": 1125,
+    "sha256": "df9e64718df90c4cb7352ce22bb7aec40cafd76c0e31e3ba2fe11c523c5bd6b5",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/dev/providers.tf",
+    "size_bytes": 108,
+    "sha256": "eab87cceb3c12435abd177831ba6b50accdb6c362e3f8475af6aa94f6cef816b",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/dev/outputs.tf",
+    "size_bytes": 593,
+    "sha256": "4c304f4d99f01993ec3b28def1bc48d0fd12c1db4871ff682ed795ea0d355f31",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/dev/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "terraform/environments/dev/variables.tf",
+    "size_bytes": 854,
+    "sha256": "376b8b32a79352b1e8c8515746e781c52180f885ce029a09ee9b4f4f1a44b81f",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/dev/.terraform.lock.hcl",
+    "size_bytes": 1276,
+    "sha256": "23bfe887bc8696cec2d73ec2c93202ced960dcc367f1ed216bf8cb98b0d39c30",
+    "suffix": ".hcl"
+  },
+  {
+    "path": "terraform/environments/dev/versions.tf",
+    "size_bytes": 171,
+    "sha256": "4a645da6e4ce89e478af89459c50395154f81c1da8aeab0874450ec2ac4bce20",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/prod-like/terraform.tfvars.example",
+    "size_bytes": 184,
+    "sha256": "5cbfe0d4d40aa22140a2814113a713150bef570e10a359fd30667f4d76494845",
+    "suffix": ".example"
+  },
+  {
+    "path": "terraform/environments/prod-like/main.tf",
+    "size_bytes": 1125,
+    "sha256": "df9e64718df90c4cb7352ce22bb7aec40cafd76c0e31e3ba2fe11c523c5bd6b5",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/prod-like/providers.tf",
+    "size_bytes": 108,
+    "sha256": "eab87cceb3c12435abd177831ba6b50accdb6c362e3f8475af6aa94f6cef816b",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/prod-like/outputs.tf",
+    "size_bytes": 593,
+    "sha256": "4c304f4d99f01993ec3b28def1bc48d0fd12c1db4871ff682ed795ea0d355f31",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/prod-like/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "terraform/environments/prod-like/variables.tf",
+    "size_bytes": 860,
+    "sha256": "dd1effbeebaab347667302d9a013b35be3f0e0751309042c3d2b31e349046302",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/prod-like/.terraform.lock.hcl",
+    "size_bytes": 1276,
+    "sha256": "23bfe887bc8696cec2d73ec2c93202ced960dcc367f1ed216bf8cb98b0d39c30",
+    "suffix": ".hcl"
+  },
+  {
+    "path": "terraform/environments/prod-like/versions.tf",
+    "size_bytes": 171,
+    "sha256": "4a645da6e4ce89e478af89459c50395154f81c1da8aeab0874450ec2ac4bce20",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/managed-kubernetes-cloud-run/main.tf",
+    "size_bytes": 4285,
+    "sha256": "6252907115404b6a5033091b689c1ed8aa71facd739cb20794114a1d5c75a3a2",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/managed-kubernetes-cloud-run/outputs.tf",
+    "size_bytes": 606,
+    "sha256": "b8dbb854dbad6382e82bcdc2279c6a4f45b4b04325c50a6c7704e1d8e3eac53c",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/environments/managed-kubernetes-cloud-run/variables.tf",
+    "size_bytes": 1660,
+    "sha256": "00c77956a708d8e0fa0b99197eb331ebd709d3ca93a03b0218353773f7e4b56e",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/object-storage/main.tf",
+    "size_bytes": 293,
+    "sha256": "e3a33a7b7c48f671fd27e4d1264218ab650b910a64c82e3616a4fe8b339c7a04",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/object-storage/outputs.tf",
+    "size_bytes": 310,
+    "sha256": "afe18a69f77530b9f654c87c2b8e6c7702cd35b22201787188b05b025c8021ec",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/object-storage/README.md",
+    "size_bytes": 443,
+    "sha256": "e0668193200fe4f82e886b060284ee95e2c306ed62fa836f53990ba48cb45302",
+    "suffix": ".md"
+  },
+  {
+    "path": "terraform/modules/object-storage/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "terraform/modules/object-storage/variables.tf",
+    "size_bytes": 315,
+    "sha256": "53bc5d6e42ea921ce7c4bd974bd8c4fe2f5951c15e11eecce20b6f590641f6f4",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/iam/main.tf",
+    "size_bytes": 271,
+    "sha256": "663bd450858c8077d84f808eb76bf3036926aa3d9793a9309e7c1b274a721a95",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/iam/outputs.tf",
+    "size_bytes": 310,
+    "sha256": "afe18a69f77530b9f654c87c2b8e6c7702cd35b22201787188b05b025c8021ec",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/iam/README.md",
+    "size_bytes": 437,
+    "sha256": "ed9c956cc7dddc853f687fcdfd5ecc5be9110da2422810c924b8ee086955278a",
+    "suffix": ".md"
+  },
+  {
+    "path": "terraform/modules/iam/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "terraform/modules/iam/variables.tf",
+    "size_bytes": 315,
+    "sha256": "53bc5d6e42ea921ce7c4bd974bd8c4fe2f5951c15e11eecce20b6f590641f6f4",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/oidc/main.tf",
+    "size_bytes": 273,
+    "sha256": "6a78fd189eaa51455348b71cd0f405797a85f423dea64820197e9bdc64974041",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/oidc/outputs.tf",
+    "size_bytes": 310,
+    "sha256": "afe18a69f77530b9f654c87c2b8e6c7702cd35b22201787188b05b025c8021ec",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/oidc/README.md",
+    "size_bytes": 450,
+    "sha256": "b44f305dbeab2f3eba9bde923accd63cd2f1b660ac351cf6d8ea43a95a53178e",
+    "suffix": ".md"
+  },
+  {
+    "path": "terraform/modules/oidc/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "terraform/modules/oidc/variables.tf",
+    "size_bytes": 315,
+    "sha256": "53bc5d6e42ea921ce7c4bd974bd8c4fe2f5951c15e11eecce20b6f590641f6f4",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/registry/main.tf",
+    "size_bytes": 281,
+    "sha256": "03ca0cff36270ac8c174e6cd2201fe8ea735da975d6fed4c2430d863cc174b6c",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/registry/outputs.tf",
+    "size_bytes": 310,
+    "sha256": "afe18a69f77530b9f654c87c2b8e6c7702cd35b22201787188b05b025c8021ec",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/registry/README.md",
+    "size_bytes": 435,
+    "sha256": "f180e6cc48ed0a361c91f6151cda5480c25af24d4766d9ce4cb3e768dc1f26dc",
+    "suffix": ".md"
+  },
+  {
+    "path": "terraform/modules/registry/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "terraform/modules/registry/variables.tf",
+    "size_bytes": 315,
+    "sha256": "53bc5d6e42ea921ce7c4bd974bd8c4fe2f5951c15e11eecce20b6f590641f6f4",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/network/main.tf",
+    "size_bytes": 279,
+    "sha256": "fd93f3aa33a4fa71faf9a7d3e193be076f4ec92b505f87105d2149f0b0b31b43",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/network/outputs.tf",
+    "size_bytes": 310,
+    "sha256": "afe18a69f77530b9f654c87c2b8e6c7702cd35b22201787188b05b025c8021ec",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/network/README.md",
+    "size_bytes": 429,
+    "sha256": "29b29e14efed0a27022f7674b7df3bb6ee829a510f449a1533e225e31bb92e57",
+    "suffix": ".md"
+  },
+  {
+    "path": "terraform/modules/network/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "terraform/modules/network/variables.tf",
+    "size_bytes": 315,
+    "sha256": "53bc5d6e42ea921ce7c4bd974bd8c4fe2f5951c15e11eecce20b6f590641f6f4",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/audit/main.tf",
+    "size_bytes": 275,
+    "sha256": "cfe0c9d67bd07e8b412bd82cd18aa7ded7b46ff3462ad0d540f41c6c8ad71822",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/audit/outputs.tf",
+    "size_bytes": 310,
+    "sha256": "afe18a69f77530b9f654c87c2b8e6c7702cd35b22201787188b05b025c8021ec",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/audit/README.md",
+    "size_bytes": 425,
+    "sha256": "97ddee98a27bba16fb2ea97913c1759c6e4f77768b56cd68d658375b6d0159e1",
+    "suffix": ".md"
+  },
+  {
+    "path": "terraform/modules/audit/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "terraform/modules/audit/variables.tf",
+    "size_bytes": 315,
+    "sha256": "53bc5d6e42ea921ce7c4bd974bd8c4fe2f5951c15e11eecce20b6f590641f6f4",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/managed-kubernetes/main.tf",
+    "size_bytes": 301,
+    "sha256": "1ab6bed135542c854a690599dedef575df9563d4080c153929ed781db12ca17c",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/managed-kubernetes/outputs.tf",
+    "size_bytes": 310,
+    "sha256": "afe18a69f77530b9f654c87c2b8e6c7702cd35b22201787188b05b025c8021ec",
+    "suffix": ".tf"
+  },
+  {
+    "path": "terraform/modules/managed-kubernetes/README.md",
+    "size_bytes": 445,
+    "sha256": "db1a4cb09e43cb82b93ce6e3693a39ba924fd01d2a701802c52d347d03d6dcfb",
+    "suffix": ".md"
+  },
+  {
+    "path": "terraform/modules/managed-kubernetes/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "terraform/modules/managed-kubernetes/variables.tf",
+    "size_bytes": 315,
+    "sha256": "53bc5d6e42ea921ce7c4bd974bd8c4fe2f5951c15e11eecce20b6f590641f6f4",
+    "suffix": ".tf"
+  },
+  {
+    "path": "kubernetes/kyverno-policies/require-readonly-rootfs.yaml",
+    "size_bytes": 672,
+    "sha256": "b87083b542cf160ead1bb4cbb6020425105e1b5f02eef458d4708fbc0901436e",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/kyverno-policies/require-resource-limits.yaml",
+    "size_bytes": 814,
+    "sha256": "e285e34cd29e274488d8ba9374859ea77077dddc9c75e7f45efc94a46461747e",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/kyverno-policies/disallow-privileged.yaml",
+    "size_bytes": 642,
+    "sha256": "9932cc22ab8cabd9ee37880e8d20d5d45974fe32a162ead774617e463e6efbb0",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/kyverno-policies/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "kubernetes/kyverno-policies/require-non-root.yaml",
+    "size_bytes": 559,
+    "sha256": "844c7b9a6f04d530dc68dcaae772ee9753f47abefa71d18518105e2ef3ca8ff2",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/rbac/ycsec-demo-readonly.yaml",
+    "size_bytes": 952,
+    "sha256": "dbd0aa16eeadadaa2136082347e171b49257426a2ea9be28bc96db349ad2c94b",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/rbac/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "kubernetes/admission-validation/insecure-workload-denied.yaml",
+    "size_bytes": 424,
+    "sha256": "04d1e96d3cebf3d16930fe6f0239cdce1e5247824392ad7310d1cc45469e14e1",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/admission-validation/kyverno-supply-chain-policy.yaml",
+    "size_bytes": 2857,
+    "sha256": "fc30f1fadfc4eb4b361063dbd97224b84eecd896736976bf482933a5b94d6d5d",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/admission-validation/namespace.yaml",
+    "size_bytes": 238,
+    "sha256": "0a330560518bbc346a40aef2302f401bf3670a49136dff498834882646940ef2",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/admission-validation/hardened-workload-allowed.yaml",
+    "size_bytes": 676,
+    "sha256": "bbaf4b5dbe8adbcb71861d267b8441d9545d1449a81554cfbfc939e4b3adb464",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/demo-app/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "kubernetes/pod-security/README.md",
+    "size_bytes": 297,
+    "sha256": "c72f9005e726b8ccd1c247a55fcbbf1675d638ca4da4d0d20763039e42f4a879",
+    "suffix": ".md"
+  },
+  {
+    "path": "kubernetes/pod-security/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "kubernetes/namespaces/ycsec-insecure.yaml",
+    "size_bytes": 295,
+    "sha256": "69967bff191f24fbd864c6fe2abbb36d2c233f9fd51d6f5b7bea6d1b8f526105",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/namespaces/ycsec-hardened.yaml",
+    "size_bytes": 290,
+    "sha256": "43ec061668450f20eb24c07c193c21cfc6ae7612a9ec7d3e7066f0d21025ea50",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/namespaces/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "kubernetes/remediation/30-hardened-workload.yaml",
+    "size_bytes": 1925,
+    "sha256": "01a8146421cd6e2e5768f83a38ec90de1ba8be7acd454cfd3037e00a8c938bfa",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/remediation/00-namespace.yaml",
+    "size_bytes": 401,
+    "sha256": "11e3a744260c51f547268f6d5168d99808617b572df65d6a1aab22d09c970321",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/remediation/40-clusterip-service.yaml",
+    "size_bytes": 395,
+    "sha256": "c3258114d4eb8d6ee468c3fe7261d30f6537ca7b3508468bbf9162eb65d6d516",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/remediation/20-networkpolicy-default-deny.yaml",
+    "size_bytes": 311,
+    "sha256": "488ad71d1a23d69e1f7b1431973dbabf10b5370dfc74a66f5fc47308456c7c5d",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/remediation/21-networkpolicy-controlled-allow.yaml",
+    "size_bytes": 715,
+    "sha256": "b0dc43df0f76f058a4f60e295247df30f6cb684c6b1d9073dce15cd06d8dc0d8",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/remediation/10-rbac.yaml",
+    "size_bytes": 998,
+    "sha256": "3ee8cda64413905e7a9f7a121a5bd6bb7ef20a33f50b7fecae77d48f234db6dd",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/network-policies/default-deny.yaml",
+    "size_bytes": 262,
+    "sha256": "5ae9a283b8ff044fe4c57d5495b79fe505bee2e79ece07b5888e96c49825dbd9",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/network-policies/allow-same-namespace-web.yaml",
+    "size_bytes": 456,
+    "sha256": "7ef2ebe0da4cf6ce5a70e6d3572467f4153e3240e700aeabcc7a434cf770c54a",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/network-policies/allow-dns-egress.yaml",
+    "size_bytes": 480,
+    "sha256": "5e6fe51c81fec9d635b6ef5237b3295e742abd45492acfd80e8897bec2a3eead",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/network-policies/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "kubernetes/hardened/demo-app-hardened.yaml",
+    "size_bytes": 2216,
+    "sha256": "0399de3c37ceaf9185102fdf41e8116b0bdfbb3d56a75574e0eb61241ca0b462",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/hardened/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "kubernetes/insecure-baseline/demo-app-insecure.yaml",
+    "size_bytes": 1268,
+    "sha256": "cc80b513350acfc9d285acc692e776eea4b7dd79240c56c84673e78195a81917",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/insecure-baseline/.gitkeep",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "suffix": "<no_ext>"
+  },
+  {
+    "path": "kubernetes/cloud-run/hardened/network-policies.yaml",
+    "size_bytes": 593,
+    "sha256": "49a752f677df342ee15a284edf166d69b19d0cf621f8b8f6fdc44f3d11fff810",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/cloud-run/hardened/rbac-least-privilege.yaml",
+    "size_bytes": 657,
+    "sha256": "eacd1ae8f8387aa72070ef5e33f4d21599cffdb9c10a7cf25b34d10921f7a795",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/cloud-run/hardened/namespace.yaml",
+    "size_bytes": 292,
+    "sha256": "570a79f659c3a56a89107828947bf1e73ef2bdeb20eb94dd2575a0904fafce99",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/cloud-run/hardened/workload-hardened.yaml",
+    "size_bytes": 1729,
+    "sha256": "3a4ef69a3b2863621ddd38578fb3a7aee5e0628467619463369c82b8e93e65a0",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/cloud-run/insecure-baseline/workload-insecure.yaml",
+    "size_bytes": 1093,
+    "sha256": "a9582785680ab616a0969da30fa3fe64bacb23026ce48495d9a8a0278ed90453",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/cloud-run/insecure-baseline/rbac-overpermissive.yaml",
+    "size_bytes": 843,
+    "sha256": "03bdc71666422386f0e582fd707452a076d0989091a96fd104fe9117a17697b1",
+    "suffix": ".yaml"
+  },
+  {
+    "path": "kubernetes/cloud-run/insecure-baseline/namespace.yaml",
+    "size_bytes": 150,
+    "sha256": "dcbd5a5da23352d5c397f635cc698d29bf10bde892174b9905087a3bfa976e98",
+    "suffix": ".yaml"
+  }
+]

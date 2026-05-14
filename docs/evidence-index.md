@@ -672,3 +672,17 @@ Evidence added:
 - `evidence/command-outputs/YCSEC_13_13A_OUTPUT_final_git_control.txt`
 
 Purpose: normalize redacted scanner image metadata that triggered GitHub Actions Gitleaks false positives while preserving vulnerability evidence semantics.
+
+## Phase 13.14 — Final repository audit and public sanitization
+
+- `docs/final-repository-audit-en.md` — final repository audit report in English.
+- `docs/final-repository-audit-ru.md` — final repository audit report in Russian.
+- `docs/publication-sanitization-report-en.md` — publication sanitization report in English.
+- `docs/publication-sanitization-report-ru.md` — publication sanitization report in Russian.
+- `evidence/metrics/final_repository_audit.json` — machine-readable final repository audit metrics.
+- `evidence/metrics/final_repository_audit.txt` — text summary of final repository audit metrics.
+- `evidence/metrics/final_repository_audit_findings.json` — detailed warning/blocking finding inventory.
+- `evidence/metrics/final_repository_file_inventory.json` — file inventory with sizes and hashes.
+- `evidence/metrics/final_sanitization_changed_files.json` — files changed by the final sanitization pass.
+- `evidence/command-outputs/YCSEC_13_14_OUTPUT_gitleaks_final_audit.txt` — final Gitleaks audit evidence.
+- `evidence/command-outputs/YCSEC_13_14_OUTPUT_checkov_final_audit.txt` — final Checkov audit evidence.

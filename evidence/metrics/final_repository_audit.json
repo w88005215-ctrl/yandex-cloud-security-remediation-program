@@ -1,0 +1,35 @@
+{
+  "audit_date": "",
+  "scope": "tracked and working-tree public repository files, excluding .git and local private runtime directories",
+  "total_files_seen": 476,
+  "text_files_scanned": 423,
+  "blocking_findings": 0,
+  "warning_findings": 1072,
+  "file_types": {
+    ".csv": 3,
+    ".example": 4,
+    ".hardened": 1,
+    ".hcl": 4,
+    ".insecure": 1,
+    ".json": 13,
+    ".md": 99,
+    ".mmd": 2,
+    ".py": 1,
+    ".sh": 20,
+    ".tf": 47,
+    ".tfplan": 1,
+    ".toml": 1,
+    ".txt": 203,
+    ".yaml": 32,
+    ".yml": 3,
+    "<no_ext>": 41
+  },
+  "blocking_rules": [],
+  "warning_rules": [
+    "email_like_text",
+    "literal_docker_gpg_key_variable",
+    "local_home_path",
+    "todo_fixme",
+    "token_word_context"
+  ]
+}

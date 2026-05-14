@@ -1,0 +1,63 @@
+Phase 13.14 final git control
+Date: 2026-05-14T19:20:57+00:00
+
+HEAD:
+370cd97 (HEAD -> main, origin/main, origin/HEAD) fix: sanitize scanner metadata for Gitleaks
+19354a0 (tag: v0.13.12-checkov-stabilization) test: stabilize Checkov IaC security workflow
+a18df35 (tag: v0.13.11-retained-bootstrap-cleanup) docs: record retained bootstrap cleanup
+4233e3c (tag: v0.13.10-final-reports-publication-summary) docs: add final technical reports and publication summary
+10f1fdd (tag: v0.13.9-cross-cloud-publication-readiness) docs: add cross-cloud mapping and publication readiness
+90759e4 (tag: v0.13.8-final-risk-register) docs: add final risk register
+24b0ba7 (tag: v0.13.7-final-control-matrix) docs: add final control matrix
+d75cebd (tag: v0.13.6-final-remediation-metrics) docs: consolidate final remediation metrics
+2d686fd (tag: v0.13.5-kyverno-admission-policy-enforcement) test: validate Kyverno admission policy enforcement
+11c4767 (tag: v0.13.5a2-kyverno-runner-hardening) fix: harden Kyverno admission MKS runner
+6b7f94a (tag: v0.13.5a1-kyverno-denial-attribution-fix) fix: require Kyverno-specific admission denial evidence
+e238df2 (tag: v0.13.5a-kyverno-mks-repair-package) fix: prepare Kyverno admission MKS rerun
+5c00f76 (tag: v0.13.4a-gitleaks-generated-evidence-handling) test: handle generated evidence gitleaks findings
+195efa4 (tag: v0.13.4-sbom-vulnerability-validation) test: validate SBOM and supply chain vulnerability evidence
+
+Status:
+ M README.md
+ M docs/cloud-evidence-gap-register.md
+ M docs/evidence-index.md
+ M evidence/command-outputs/YCSEC_10_OUTPUT_yandex_cloud_readiness.txt
+ M evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt
+ M evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_repair_apply_sanitized.txt
+ M evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt
+ M evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_apply_sanitized.txt
+ M evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_destroy_sanitized.txt
+ M evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_plan_sanitized.txt
+ M evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_final_cleanup.txt
+ M evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_metadata_repair.txt
+ M evidence/command-outputs/YCSEC_13_3_OUTPUT_failed_build_log_analysis.txt
+ M evidence/command-outputs/YCSEC_13_3_OUTPUT_registry_inventory_after_push.txt
+ M evidence/command-outputs/YCSEC_13_4_OUTPUT_sbom_vulnerability_validation.txt
+ M evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_get_credentials_sanitized.txt
+ M evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_destroy_sanitized.txt
+ M evidence/sbom/ycsec_supply_chain_hardened_sbom_cyclonedx.json
+ M evidence/sbom/ycsec_supply_chain_insecure_sbom_cyclonedx.json
+ M evidence/vulnerability/grype_hardened_image.json
+ M evidence/vulnerability/grype_insecure_image.json
+ M evidence/vulnerability/trivy_hardened_image.json
+ M evidence/vulnerability/trivy_hardened_image.txt
+ M evidence/vulnerability/trivy_insecure_image.json
+ M evidence/vulnerability/trivy_insecure_image.txt
+?? docs/final-repository-audit-en.md
+?? docs/final-repository-audit-ru.md
+?? docs/publication-sanitization-report-en.md
+?? docs/publication-sanitization-report-ru.md
+?? evidence/command-outputs/YCSEC_13_14_OUTPUT_checkov_final_audit.txt
+?? evidence/command-outputs/YCSEC_13_14_OUTPUT_final_git_control.txt
+?? evidence/command-outputs/YCSEC_13_14_OUTPUT_final_repository_audit.txt
+?? evidence/command-outputs/YCSEC_13_14_OUTPUT_gitleaks_final_audit.txt
+?? evidence/command-outputs/YCSEC_13_14_OUTPUT_gitleaks_final_precommit.txt
+?? evidence/command-outputs/YCSEC_13_14_OUTPUT_repository_inventory_before.txt
+?? evidence/metrics/final_repository_audit.json
+?? evidence/metrics/final_repository_audit.txt
+?? evidence/metrics/final_repository_audit_findings.json
+?? evidence/metrics/final_repository_file_inventory.json
+?? evidence/metrics/final_sanitization_changed_files.json
+
+Expected tag:
+v0.13.14-final-repository-audit

@@ -158,3 +158,14 @@ Key documents:
 - docs/kubernetes-before-after-remediation-comparison.md
 
 <!-- YCSEC:K8S-REMEDIATION-CASE:END -->
+
+## Final repository audit and publication sanitization
+
+Final public audit artifacts:
+
+- [Final Repository Audit Report EN](docs/final-repository-audit-en.md)
+- [Финальный аудит репозитория RU](docs/final-repository-audit-ru.md)
+- [Publication Sanitization Report EN](docs/publication-sanitization-report-en.md)
+- [Отчёт по публикационной очистке RU](docs/publication-sanitization-report-ru.md)
+
+Publication boundary: repository evidence is sanitized for public portfolio use. It does not contain live cloud credentials, Terraform state, kubeconfig files, PEM keys, or retained cloud runtime artifacts.

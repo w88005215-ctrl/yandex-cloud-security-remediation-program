@@ -1,0 +1,6434 @@
+[
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "GITHUB_PUBLICATION_NOTE.md",
+    "line": 34
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "GITHUB_PUBLICATION_NOTE.md",
+    "line": 52
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "RELEASE_CHECKLIST.md",
+    "line": 9
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "README_EN.md",
+    "line": 74
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "README.md",
+    "line": 12
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "README.md",
+    "line": 119
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "PORTFOLIO_SUMMARY.md",
+    "line": 34
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "README_RU.md",
+    "line": 75
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "SECURITY.md",
+    "line": 14
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "SECURITY.md",
+    "line": 36
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "SECURITY.md",
+    "line": 49
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-kubernetes-runtime-validation.sh",
+    "line": 18
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-kubernetes-runtime-validation.sh",
+    "line": 50
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-kubernetes-runtime-validation.sh",
+    "line": 68
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-kubernetes-runtime-validation.sh",
+    "line": 108
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-kubernetes-runtime-validation.sh",
+    "line": 109
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-kubernetes-runtime-validation.sh",
+    "line": 119
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-kubernetes-runtime-validation.sh",
+    "line": 219
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-kubernetes-runtime-validation.sh",
+    "line": 222
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-kubernetes-runtime-validation.sh",
+    "line": 224
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-kubernetes-runtime-validation.sh",
+    "line": 230
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-kubernetes-runtime-validation.sh",
+    "line": 231
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-kubernetes-runtime-validation.sh",
+    "line": 236
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-security-gates.sh",
+    "line": 120
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-security-gates.sh",
+    "line": 123
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-security-gates.sh",
+    "line": 128
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-security-gates.sh",
+    "line": 130
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-security-gates.sh",
+    "line": 144
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-security-gates.sh",
+    "line": 145
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-security-gates.sh",
+    "line": 148
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-security-gates.sh",
+    "line": 151
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-security-gates.sh",
+    "line": 152
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-local-security-gates.sh",
+    "line": 155
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-yandex-cloud-smoke-run.sh",
+    "line": 14
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-yandex-cloud-smoke-run.sh",
+    "line": 38
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-yandex-cloud-smoke-run.sh",
+    "line": 59
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-yandex-cloud-smoke-run.sh",
+    "line": 288
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-yandex-cloud-smoke-run.sh",
+    "line": 289
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-yandex-cloud-smoke-run.sh",
+    "line": 321
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-yandex-cloud-smoke-run.sh",
+    "line": 322
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-yandex-cloud-smoke-run.sh",
+    "line": 324
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-yandex-cloud-smoke-run.sh",
+    "line": 329
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-yandex-cloud-smoke-run.sh",
+    "line": 335
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-yandex-cloud-smoke-run.sh",
+    "line": 343
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-yandex-cloud-smoke-run.sh",
+    "line": 345
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-yandex-cloud-smoke-run.sh",
+    "line": 347
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-yandex-cloud-smoke-run.sh",
+    "line": 370
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-yandex-cloud-smoke-run.sh",
+    "line": 371
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/validate-supply-chain-package.sh",
+    "line": 66
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/validate-supply-chain-package.sh",
+    "line": 67
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/validate-supply-chain-package.sh",
+    "line": 68
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/validate-supply-chain-package.sh",
+    "line": 77
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/validate-supply-chain-package.sh",
+    "line": 79
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/validate-kubernetes-static-baseline.sh",
+    "line": 139
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/validate-kubernetes-static-baseline.sh",
+    "line": 181
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/validate-kubernetes-static-baseline.sh",
+    "line": 183
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/validate-kubernetes-static-baseline.sh",
+    "line": 185
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/validate-kubernetes-static-baseline.sh",
+    "line": 191
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/validate-kubernetes-static-baseline.sh",
+    "line": 192
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/validate-kubernetes-remediation-static.sh",
+    "line": 53
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-managed-kubernetes-baseline-remediation-cloud-run.sh",
+    "line": 49
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-managed-kubernetes-baseline-remediation-cloud-run.sh",
+    "line": 53
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-managed-kubernetes-baseline-remediation-cloud-run.sh",
+    "line": 59
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-managed-kubernetes-baseline-remediation-cloud-run.sh",
+    "line": 96
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-managed-kubernetes-baseline-remediation-cloud-run.sh",
+    "line": 144
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-managed-kubernetes-baseline-remediation-cloud-run.sh",
+    "line": 145
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 161
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 163
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 165
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 283
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 290
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 300
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 302
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 306
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 317
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 345
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 356
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 363
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 369
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 379
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 385
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 399
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 412
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-kyverno-admission-policy-mks-validation.sh",
+    "line": 440
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/check-yandex-cloud-readiness.sh",
+    "line": 44
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/check-yandex-cloud-readiness.sh",
+    "line": 54
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/check-yandex-cloud-readiness.sh",
+    "line": 74
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/check-yandex-cloud-readiness.sh",
+    "line": 75
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/check-toolchain.sh",
+    "line": 85
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/check-toolchain.sh",
+    "line": 86
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/redact-evidence.sh",
+    "line": 23
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-bootstrap-oidc-audit-cloud-run.sh",
+    "line": 68
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-bootstrap-oidc-audit-cloud-run.sh",
+    "line": 90
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-bootstrap-oidc-audit-cloud-run.sh",
+    "line": 92
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-bootstrap-oidc-audit-cloud-run.sh",
+    "line": 104
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-bootstrap-oidc-audit-cloud-run.sh",
+    "line": 180
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-bootstrap-oidc-audit-cloud-run.sh",
+    "line": 181
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-bootstrap-oidc-audit-cloud-run.sh",
+    "line": 220
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-bootstrap-oidc-audit-cloud-run.sh",
+    "line": 223
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-bootstrap-oidc-audit-cloud-run.sh",
+    "line": 254
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-bootstrap-oidc-audit-cloud-run.sh",
+    "line": 255
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "scripts/run-supply-chain-local-evidence.sh",
+    "line": 68
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "ci/security-gates.md",
+    "line": 16
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "ci/security-gates.md",
+    "line": 48
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "ci/github-oidc-validation-trigger.md",
+    "line": 9
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "ci/github-oidc-validation-trigger.md",
+    "line": 10
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "ci/github-oidc-validation-trigger.md",
+    "line": 11
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "terraform/README.md",
+    "line": 28
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/before-after-metrics.md",
+    "line": 108
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/toolchain-installation.md",
+    "line": 13
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/toolchain-installation.md",
+    "line": 28
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/toolchain-installation.md",
+    "line": 91
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/supply-chain-operator-runbook.md",
+    "line": 15
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/supply-chain-operator-runbook.md",
+    "line": 26
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/supply-chain-operator-runbook.md",
+    "line": 27
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/managed-kubernetes-cloud-run-operator-runbook.md",
+    "line": 16
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/kyverno-admission-policy-enforcement-validation.md",
+    "line": 39
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/iam-oidc-audit-control-design.md",
+    "line": 16
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/iam-oidc-audit-control-design.md",
+    "line": 18
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/iam-oidc-audit-control-design.md",
+    "line": 44
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/cost-control.md",
+    "line": 65
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/supply-chain-security-roadmap-extension.md",
+    "line": 14
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/supply-chain-security-roadmap-extension.md",
+    "line": 74
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/supply-chain-security-roadmap-extension.md",
+    "line": 75
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/supply-chain-security-roadmap-extension.md",
+    "line": 102
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/kubernetes-remediation-readiness.md",
+    "line": 51
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/managed-kubernetes-cloud-run-checklist.md",
+    "line": 41
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/managed-kubernetes-cloud-run-checklist.md",
+    "line": 43
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/portfolio-claims-policy.md",
+    "line": 75
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/github-actions-oidc-validation.md",
+    "line": 15
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/github-actions-oidc-validation.md",
+    "line": 16
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/github-actions-oidc-validation.md",
+    "line": 17
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/github-actions-oidc-validation.md",
+    "line": 26
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/ci-oidc-registry-build-push-plan.md",
+    "line": 11
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/ci-oidc-registry-build-push-plan.md",
+    "line": 12
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/ci-oidc-registry-build-push-plan.md",
+    "line": 13
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/ci-oidc-registry-build-push-plan.md",
+    "line": 21
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/ci-oidc-registry-build-push-plan.md",
+    "line": 22
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/ci-oidc-registry-build-push-plan.md",
+    "line": 60
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/managed-kubernetes-destroy-and-retention-plan.md",
+    "line": 10
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/toolchain-model.md",
+    "line": 43
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/toolchain-model.md",
+    "line": 109
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/container-image-vulnerability-cloud-run-plan.md",
+    "line": 75
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/kubernetes-security-remediation-case-study.md",
+    "line": 101
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-oidc-audit-cloud-run-results.md",
+    "line": 11
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-oidc-audit-cloud-run-results.md",
+    "line": 18
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-oidc-audit-cloud-run-results.md",
+    "line": 41
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/supply-chain-implementation-package.md",
+    "line": 26
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/supply-chain-implementation-package.md",
+    "line": 53
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/roadmap-reconciliation.md",
+    "line": 62
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/roadmap-reconciliation.md",
+    "line": 73
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/final-risk-register.md",
+    "line": 40
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/final-risk-register.md",
+    "line": 46
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/final-risk-register.md",
+    "line": 205
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/multi-cloud-control-mapping.md",
+    "line": 15
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/managed-kubernetes-cloud-run-results.md",
+    "line": 34
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/managed-kubernetes-cloud-run-results.md",
+    "line": 35
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/final-remediation-metrics.md",
+    "line": 15
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/final-remediation-metrics.md",
+    "line": 61
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/registry-evidence-storage-validation.md",
+    "line": 35
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/generated-evidence-gitleaks-handling.md",
+    "line": 31
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/generated-evidence-gitleaks-handling.md",
+    "line": 35
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/evidence-index.md",
+    "line": 69
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/evidence-index.md",
+    "line": 336
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/evidence-index.md",
+    "line": 360
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/evidence-index.md",
+    "line": 479
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-cloud-run-implementation.md",
+    "line": 11
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-cloud-run-implementation.md",
+    "line": 40
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-cloud-run-implementation.md",
+    "line": 55
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-cloud-run-implementation.md",
+    "line": 56
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-cloud-run-implementation.md",
+    "line": 64
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-cloud-run-implementation.md",
+    "line": 65
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-cloud-run-checklist.md",
+    "line": 12
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-cloud-run-checklist.md",
+    "line": 13
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/retained-bootstrap-cleanup-plan.md",
+    "line": 16
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/retained-bootstrap-cleanup-plan.md",
+    "line": 37
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/publication-safety-checklist.md",
+    "line": 15
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/publication-safety-checklist.md",
+    "line": 37
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/publication-safety-checklist.md",
+    "line": 41
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/publication-safety-checklist.md",
+    "line": 57
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/publication-safety-checklist.md",
+    "line": 73
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/publication-safety-checklist.md",
+    "line": 86
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/supply-chain-oidc-registry-validation.md",
+    "line": 9
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/supply-chain-oidc-registry-validation.md",
+    "line": 14
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/supply-chain-oidc-registry-validation.md",
+    "line": 15
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/supply-chain-oidc-registry-validation.md",
+    "line": 16
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/supply-chain-oidc-registry-validation.md",
+    "line": 18
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/final-control-matrix.md",
+    "line": 19
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/final-publication-readiness.md",
+    "line": 20
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/cloud-smoke-run-validation.md",
+    "line": 22
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/cloud-smoke-run-validation.md",
+    "line": 51
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/cloud-smoke-run-validation.md",
+    "line": 52
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/cloud-smoke-run-validation.md",
+    "line": 80
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-evidence-collection-plan.md",
+    "line": 15
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-evidence-collection-plan.md",
+    "line": 20
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-evidence-collection-plan.md",
+    "line": 48
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/final-cross-cloud-control-mapping.md",
+    "line": 19
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/final-cross-cloud-control-mapping.md",
+    "line": 28
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-oidc-audit-cloud-run-plan.md",
+    "line": 86
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-oidc-audit-cloud-run-plan.md",
+    "line": 87
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-oidc-audit-cloud-run-plan.md",
+    "line": 116
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/bootstrap-oidc-audit-cloud-run-plan.md",
+    "line": 131
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/managed-kubernetes-cloud-run-plan.md",
+    "line": 16
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/managed-kubernetes-cloud-run-plan.md",
+    "line": 64
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/evidence-redaction-notes.md",
+    "line": 7
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/qubes-workstation-model.md",
+    "line": 82
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/cloud-evidence-gap-register.md",
+    "line": 15
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/cloud-evidence-gap-register.md",
+    "line": 27
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/cloud-evidence-gap-register.md",
+    "line": 78
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/cloud-evidence-gap-register.md",
+    "line": 85
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/cloud-evidence-gap-register.md",
+    "line": 96
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/cloud-evidence-gap-register.md",
+    "line": 102
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/cloud-evidence-gap-register.md",
+    "line": 111
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/cloud-evidence-gap-register.md",
+    "line": 265
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/cloud-evidence-gap-register.md",
+    "line": 299
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/cloud-evidence-gap-register.md",
+    "line": 333
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/managed-kubernetes-cloud-run-implementation.md",
+    "line": 46
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/ru/yandex-cloud-smoke-run.md",
+    "line": 11
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/ru/security-control-model.md",
+    "line": 162
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/ru/security-control-model.md",
+    "line": 164
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/ru/threat-model.md",
+    "line": 100
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/ru/kubernetes-security-model.md",
+    "line": 62
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/ru/kubernetes-runtime-validation.md",
+    "line": 31
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/ru/yandex-cloud-readiness.md",
+    "line": 15
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/en/yandex-cloud-smoke-run.md",
+    "line": 11
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/en/security-control-model.md",
+    "line": 52
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/en/security-control-model.md",
+    "line": 164
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/en/security-control-model.md",
+    "line": 166
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/en/threat-model.md",
+    "line": 100
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/en/kubernetes-security-model.md",
+    "line": 62
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/en/kubernetes-runtime-validation.md",
+    "line": 31
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "docs/en/yandex-cloud-readiness.md",
+    "line": 15
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_control_matrix.json",
+    "line": 11
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_control_matrix.json",
+    "line": 130
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_publication_summary.json",
+    "line": 7
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_publication_summary.json",
+    "line": 8
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_publication_summary.txt",
+    "line": 10
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_publication_summary.txt",
+    "line": 11
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_cross_cloud_control_mapping.csv",
+    "line": 2
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_cross_cloud_control_mapping.csv",
+    "line": 11
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_risk_register.json",
+    "line": 26
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_risk_register.json",
+    "line": 38
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_risk_register.json",
+    "line": 161
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_risk_register.csv",
+    "line": 2
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_remediation_metrics.json",
+    "line": 19
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_control_matrix.csv",
+    "line": 2
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_control_matrix.csv",
+    "line": 9
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_cross_cloud_control_mapping.json",
+    "line": 17
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_cross_cloud_control_mapping.json",
+    "line": 107
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/metrics/final_remediation_metrics.txt",
+    "line": 7
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/sbom/ycsec_supply_chain_insecure_sbom_cyclonedx.json",
+    "line": 1
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/sbom/ycsec_supply_chain_insecure_sbom_cyclonedx.json",
+    "line": 1
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/sbom/ycsec_supply_chain_hardened_sbom_cyclonedx.json",
+    "line": 1
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/sbom/ycsec_supply_chain_hardened_sbom_cyclonedx.json",
+    "line": 1
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/after/kubectl_apply_hardened.txt",
+    "line": 1
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/after/kubectl_apply_hardened.txt",
+    "line": 2
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/after/kubectl_apply_hardened.txt",
+    "line": 3
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/after/kubectl_apply_hardened.txt",
+    "line": 4
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/after/kube_score_after.txt",
+    "line": 2
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/before/kube_score_before.txt",
+    "line": 2
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/before/kubectl_apply_insecure_baseline.txt",
+    "line": 1
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/before/kubectl_apply_insecure_baseline.txt",
+    "line": 2
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/before/kubectl_apply_insecure_baseline.txt",
+    "line": 3
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_destroy_behavior_inspection.txt",
+    "line": 78
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_5A2_OUTPUT_final_git_control.txt",
+    "line": 10
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt",
+    "line": 39
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt",
+    "line": 53
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt",
+    "line": 56
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt",
+    "line": 190
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt",
+    "line": 191
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt",
+    "line": 273
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt",
+    "line": 274
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt",
+    "line": 321
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt",
+    "line": 337
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt",
+    "line": 347
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt",
+    "line": 355
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt",
+    "line": 356
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt",
+    "line": 386
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt",
+    "line": 410
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt",
+    "line": 411
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_github_remote_scope.txt",
+    "line": 28
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_github_remote_scope.txt",
+    "line": 29
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_5_OUTPUT_case_study_fix.txt",
+    "line": 50
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_5_OUTPUT_case_study_fix.txt",
+    "line": 51
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_repair_apply_sanitized.txt",
+    "line": 199
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_repair_apply_sanitized.txt",
+    "line": 234
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_repair_apply_sanitized.txt",
+    "line": 235
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_repair_apply_sanitized.txt",
+    "line": 237
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_04_OUTPUT_qubes_toolchain_discovery.txt",
+    "line": 41
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_04_OUTPUT_qubes_toolchain_discovery.txt",
+    "line": 42
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_04_OUTPUT_qubes_toolchain_discovery.txt",
+    "line": 66
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_control.txt",
+    "line": 28
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_control.txt",
+    "line": 29
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation_success.txt",
+    "line": 20
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation_success.txt",
+    "line": 21
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation_success.txt",
+    "line": 22
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation_success.txt",
+    "line": 39
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation_success.txt",
+    "line": 40
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation_success.txt",
+    "line": 41
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_closeout_amend.txt",
+    "line": 12
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_closeout_amend.txt",
+    "line": 13
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_closeout_amend.txt",
+    "line": 41
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_closeout_amend.txt",
+    "line": 42
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_4_OUTPUT_kubernetes_before_after_comparison.txt",
+    "line": 79
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_4_OUTPUT_kubernetes_before_after_comparison.txt",
+    "line": 80
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_06_OUTPUT_iac_skeleton_control.txt",
+    "line": 70
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_06_OUTPUT_iac_skeleton_control.txt",
+    "line": 71
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_5A2_OUTPUT_kyverno_runner_hardening.txt",
+    "line": 34
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_5A2_OUTPUT_kyverno_runner_hardening.txt",
+    "line": 46
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_5A2_OUTPUT_kyverno_runner_hardening.txt",
+    "line": 47
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_9_OUTPUT_cross_cloud_publication_readiness.txt",
+    "line": 84
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_5_CLOSEOUT_OUTPUT.txt",
+    "line": 114
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_5_CLOSEOUT_OUTPUT.txt",
+    "line": 115
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_5_CLOSEOUT_OUTPUT.txt",
+    "line": 138
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt",
+    "line": 6
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt",
+    "line": 8
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt",
+    "line": 13
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt",
+    "line": 14
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt",
+    "line": 38
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt",
+    "line": 159
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt",
+    "line": 163
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt",
+    "line": 167
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt",
+    "line": 168
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt",
+    "line": 172
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt",
+    "line": 182
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt",
+    "line": 46
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt",
+    "line": 47
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_final_git_control.txt",
+    "line": 7
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_final_git_control.txt",
+    "line": 12
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_7_OUTPUT_final_control_matrix.txt",
+    "line": 60
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8C_OUTPUT_final_git_control.txt",
+    "line": 12
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8C_OUTPUT_final_git_control.txt",
+    "line": 13
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_final_git_control.txt",
+    "line": 10
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_final_git_control.txt",
+    "line": 13
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 19
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 80
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 87
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 95
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 96
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 150
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 154
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 168
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 172
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 186
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 190
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 204
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 208
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 222
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 226
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 240
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 244
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 258
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 262
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 276
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 280
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 294
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 298
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 312
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 316
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 330
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 334
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 348
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 352
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 366
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 370
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 384
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 388
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 402
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 406
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 420
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 424
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 436
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 440
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 450
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 454
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 468
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_supply_chain_oidc_registry_validation.txt",
+    "line": 469
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/command-outputs/YCSEC_01C_OUTPUT_git_author_email_fix.txt",
+    "line": 7
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/command-outputs/YCSEC_01C_OUTPUT_git_author_email_fix.txt",
+    "line": 11
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/command-outputs/YCSEC_01C_OUTPUT_git_author_email_fix.txt",
+    "line": 14
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/command-outputs/YCSEC_01C_OUTPUT_git_author_email_fix.txt",
+    "line": 15
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt",
+    "line": 27
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt",
+    "line": 33
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt",
+    "line": 34
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt",
+    "line": 35
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt",
+    "line": 37
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt",
+    "line": 38
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_OUTPUT_final_control.txt",
+    "line": 32
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_OUTPUT_final_control.txt",
+    "line": 33
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8E_OUTPUT_audit_trails_delivery_validation.txt",
+    "line": 6
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8E_OUTPUT_audit_trails_delivery_validation.txt",
+    "line": 7
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8E_OUTPUT_audit_trails_delivery_validation.txt",
+    "line": 39
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8E_OUTPUT_audit_trails_delivery_validation.txt",
+    "line": 40
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_10_CLOSEOUT_OUTPUT.txt",
+    "line": 58
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_10_CLOSEOUT_OUTPUT.txt",
+    "line": 59
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_final_cleanup.txt",
+    "line": 111
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_7_OUTPUT_bootstrap_oidc_audit_cloud_run_plan.txt",
+    "line": 76
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_7_OUTPUT_bootstrap_oidc_audit_cloud_run_plan.txt",
+    "line": 77
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt",
+    "line": 262
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt",
+    "line": 266
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt",
+    "line": 267
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt",
+    "line": 268
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt",
+    "line": 271
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt",
+    "line": 272
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt",
+    "line": 509
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt",
+    "line": 548
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt",
+    "line": 735
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt",
+    "line": 1000
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt",
+    "line": 1005
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt",
+    "line": 1006
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_evidence_closeout.txt",
+    "line": 11
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_evidence_closeout.txt",
+    "line": 12
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_evidence_closeout.txt",
+    "line": 68
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_evidence_closeout.txt",
+    "line": 69
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_07_OUTPUT_control_model_validation.txt",
+    "line": 35
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_07_OUTPUT_control_model_validation.txt",
+    "line": 36
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt",
+    "line": 16
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt",
+    "line": 20
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt",
+    "line": 43
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt",
+    "line": 45
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt",
+    "line": 47
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_10_OUTPUT_final_control.txt",
+    "line": 20
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_10_OUTPUT_final_control.txt",
+    "line": 21
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_4A_OUTPUT_gitleaks_findings_sanitized.txt",
+    "line": 6
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_failed_workflow_log_analysis.txt",
+    "line": 29
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_failed_workflow_log_analysis.txt",
+    "line": 59
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_failed_workflow_log_analysis.txt",
+    "line": 88
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_failed_workflow_log_analysis.txt",
+    "line": 100
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_04_OUTPUT_toolchain_phase_control.txt",
+    "line": 30
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_04_OUTPUT_toolchain_phase_control.txt",
+    "line": 31
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_9_OUTPUT_managed_kubernetes_cloud_run_plan.txt",
+    "line": 8
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_9_OUTPUT_managed_kubernetes_cloud_run_plan.txt",
+    "line": 9
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_9_OUTPUT_managed_kubernetes_cloud_run_plan.txt",
+    "line": 39
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_9_OUTPUT_managed_kubernetes_cloud_run_plan.txt",
+    "line": 40
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_3_OUTPUT_kubernetes_remediation_control_package.txt",
+    "line": 49
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_3_OUTPUT_kubernetes_remediation_control_package.txt",
+    "line": 105
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_3_OUTPUT_kubernetes_remediation_control_package.txt",
+    "line": 106
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 2
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 29
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 39
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 54
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 66
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 136
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 137
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 138
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 139
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 140
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 141
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 142
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 143
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 144
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 145
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 146
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 147
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 148
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 149
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 150
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 151
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 152
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 153
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 154
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 155
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 156
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 157
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 158
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 159
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 160
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 161
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 162
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 163
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 164
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 165
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 166
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 167
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 168
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 169
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 170
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 171
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 172
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 173
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 174
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 175
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 176
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 177
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 178
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 179
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 180
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 181
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 182
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 183
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 184
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 185
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 186
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 187
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 188
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 189
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 190
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 191
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 192
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 193
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 194
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 195
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 196
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 197
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 198
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 199
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 200
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt",
+    "line": 201
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_13_14_OUTPUT_final_repository_audit.txt",
+    "line": 44
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt",
+    "line": 18
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt",
+    "line": 30
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt",
+    "line": 32
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt",
+    "line": 332
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt",
+    "line": 333
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt",
+    "line": 424
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt",
+    "line": 425
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt",
+    "line": 429
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt",
+    "line": 439
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt",
+    "line": 443
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt",
+    "line": 785
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt",
+    "line": 786
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_script_auth_fix_control.txt",
+    "line": 10
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_4_OUTPUT_sbom_vulnerability_validation.txt",
+    "line": 48
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_4_OUTPUT_sbom_vulnerability_validation.txt",
+    "line": 49
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_4_OUTPUT_sbom_vulnerability_validation.txt",
+    "line": 108
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_4_OUTPUT_sbom_vulnerability_validation.txt",
+    "line": 109
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt",
+    "line": 6
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt",
+    "line": 65
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt",
+    "line": 92
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt",
+    "line": 96
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt",
+    "line": 100
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt",
+    "line": 101
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_final_git_control.txt",
+    "line": 9
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_final_git_control.txt",
+    "line": 23
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_final_git_control.txt",
+    "line": 24
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_final_git_control.txt",
+    "line": 25
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_2_OUTPUT_kubernetes_baseline_static_validation.txt",
+    "line": 106
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_2_OUTPUT_kubernetes_baseline_static_validation.txt",
+    "line": 107
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_1_OUTPUT_kubernetes_baseline_validation_plan.txt",
+    "line": 59
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_1_OUTPUT_kubernetes_baseline_validation_plan.txt",
+    "line": 60
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt",
+    "line": 8
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt",
+    "line": 9
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt",
+    "line": 260
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt",
+    "line": 261
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt",
+    "line": 262
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt",
+    "line": 263
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt",
+    "line": 290
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt",
+    "line": 294
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt",
+    "line": 298
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt",
+    "line": 299
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_failed_build_log_analysis.txt",
+    "line": 43
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_8_OUTPUT_final_git_control.txt",
+    "line": 10
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/command-outputs/YCSEC_02_OUTPUT_root_portfolio_files_control.txt",
+    "line": 8
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_02_OUTPUT_root_portfolio_files_control.txt",
+    "line": 32
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_02_OUTPUT_root_portfolio_files_control.txt",
+    "line": 33
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_6_OUTPUT_final_git_control.txt",
+    "line": 12
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_bootstrap_cloud_run_implementation_package.txt",
+    "line": 56
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_bootstrap_cloud_run_implementation_package.txt",
+    "line": 63
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_bootstrap_cloud_run_implementation_package.txt",
+    "line": 65
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_bootstrap_cloud_run_implementation_package.txt",
+    "line": 89
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_bootstrap_cloud_run_implementation_package.txt",
+    "line": 90
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8C_OUTPUT_github_publication_push.txt",
+    "line": 27
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8C_OUTPUT_github_publication_push.txt",
+    "line": 28
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_03_OUTPUT_evidence_cost_control.txt",
+    "line": 24
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_03_OUTPUT_evidence_cost_control.txt",
+    "line": 25
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt",
+    "line": 23
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt",
+    "line": 24
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt",
+    "line": 58
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt",
+    "line": 59
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_4_OUTPUT_final_git_control.txt",
+    "line": 10
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_get_credentials_sanitized.txt",
+    "line": 2
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_get_credentials_sanitized.txt",
+    "line": 3
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt",
+    "line": 8
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt",
+    "line": 35
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt",
+    "line": 36
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_5_OUTPUT_kubernetes_remediation_case_study.txt",
+    "line": 66
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_5_OUTPUT_kubernetes_remediation_case_study.txt",
+    "line": 67
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_2_OUTPUT_supply_chain_implementation_package.txt",
+    "line": 13
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_2_OUTPUT_supply_chain_implementation_package.txt",
+    "line": 14
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_2_OUTPUT_supply_chain_implementation_package.txt",
+    "line": 62
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_2_OUTPUT_supply_chain_implementation_package.txt",
+    "line": 75
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_2_OUTPUT_supply_chain_implementation_package.txt",
+    "line": 76
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0A_OUTPUT_managed_kubernetes_cloud_run_implementation_package.txt",
+    "line": 120
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0A_OUTPUT_managed_kubernetes_cloud_run_implementation_package.txt",
+    "line": 121
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_check.txt",
+    "line": 140
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_check.txt",
+    "line": 141
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_4A_OUTPUT_gitleaks_generated_evidence_handling.txt",
+    "line": 31
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_4A_OUTPUT_gitleaks_generated_evidence_handling.txt",
+    "line": 56
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_4A_OUTPUT_gitleaks_generated_evidence_handling.txt",
+    "line": 57
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_5_OUTPUT_final_git_control.txt",
+    "line": 14
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_5A_OUTPUT_kyverno_mks_repair_package.txt",
+    "line": 42
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_5A_OUTPUT_kyverno_mks_repair_package.txt",
+    "line": 44
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_5A_OUTPUT_kyverno_mks_repair_package.txt",
+    "line": 66
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_5A_OUTPUT_kyverno_mks_repair_package.txt",
+    "line": 67
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8F_OUTPUT_registry_evidence_storage_validation.txt",
+    "line": 10
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8F_OUTPUT_registry_evidence_storage_validation.txt",
+    "line": 11
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8F_OUTPUT_registry_evidence_storage_validation.txt",
+    "line": 43
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8F_OUTPUT_registry_evidence_storage_validation.txt",
+    "line": 44
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_final_git_control.txt",
+    "line": 15
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_final_git_control.txt",
+    "line": 16
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_5A1_OUTPUT_kyverno_denial_attribution_fix.txt",
+    "line": 46
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_5A1_OUTPUT_kyverno_denial_attribution_fix.txt",
+    "line": 47
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt",
+    "line": 10
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt",
+    "line": 11
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt",
+    "line": 33
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt",
+    "line": 35
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt",
+    "line": 53
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt",
+    "line": 54
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt",
+    "line": 79
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt",
+    "line": 116
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt",
+    "line": 117
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt",
+    "line": 131
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt",
+    "line": 132
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_10_OUTPUT_yandex_cloud_readiness.txt",
+    "line": 6
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_10_OUTPUT_yandex_cloud_readiness.txt",
+    "line": 40
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_10_OUTPUT_yandex_cloud_readiness.txt",
+    "line": 41
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_5A_OUTPUT_final_git_control.txt",
+    "line": 7
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_get_credentials_sanitized.txt",
+    "line": 2
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_get_credentials_sanitized.txt",
+    "line": 2
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_get_credentials_sanitized.txt",
+    "line": 3
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_get_credentials_sanitized.txt",
+    "line": 3
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_1_OUTPUT_supply_chain_roadmap_extension.txt",
+    "line": 12
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_1_OUTPUT_supply_chain_roadmap_extension.txt",
+    "line": 13
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_1_OUTPUT_supply_chain_roadmap_extension.txt",
+    "line": 63
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_1_OUTPUT_supply_chain_roadmap_extension.txt",
+    "line": 64
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_6_OUTPUT_roadmap_reconciliation.txt",
+    "line": 79
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_6_OUTPUT_roadmap_reconciliation.txt",
+    "line": 80
+  },
+  {
+    "severity": "WARNING",
+    "rule": "literal_docker_gpg_key_variable",
+    "path": "evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_metadata_repair.txt",
+    "line": 37
+  },
+  {
+    "severity": "WARNING",
+    "rule": "literal_docker_gpg_key_variable",
+    "path": "evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_metadata_repair.txt",
+    "line": 38
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_metadata_repair.txt",
+    "line": 49
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_6_OUTPUT_final_remediation_metrics.txt",
+    "line": 85
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_6_OUTPUT_final_remediation_metrics.txt",
+    "line": 86
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_13_6_OUTPUT_final_remediation_metrics.txt",
+    "line": 112
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8C_OUTPUT_github_publication_closeout.txt",
+    "line": 31
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/command-outputs/YCSEC_12_8C_OUTPUT_github_publication_closeout.txt",
+    "line": 32
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/command-outputs/YCSEC_03_OUTPUT_tool_versions.txt",
+    "line": 6
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/grype_hardened_image.json",
+    "line": 1
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/grype_hardened_image.json",
+    "line": 1
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/vulnerability/grype_hardened_image.json",
+    "line": 1
+  },
+  {
+    "severity": "WARNING",
+    "rule": "literal_docker_gpg_key_variable",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 82
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 258
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 274
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 354
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 581
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 636
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 696
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 808
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 858
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 1055
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 1176
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 1350
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 1391
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 1452
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 1461
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 1471
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 1482
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 1492
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 1501
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 1549
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 1594
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 1712
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 1788
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 1988
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2097
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2112
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2185
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2195
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2228
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2270
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2291
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2365
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2393
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2423
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2455
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2505
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2542
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2636
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2676
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2712
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2763
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2800
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2837
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 2900
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3219
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3260
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3306
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3340
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3385
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3421
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3464
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3506
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3537
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3572
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3617
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3660
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3708
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3778
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3814
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3862
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3905
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 3970
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4008
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4042
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4085
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4121
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4169
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4215
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4264
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4299
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4344
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4394
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4437
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4483
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4623
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4688
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4799
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4800
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4833
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4854
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4882
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4924
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 4966
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5002
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5039
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5072
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5116
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5164
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5202
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5248
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5287
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5324
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5370
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5413
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5453
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5496
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5536
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5581
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5626
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5675
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5711
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5749
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5790
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 5963
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 6001
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 6063
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 6116
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 6168
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 6198
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 6248
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 6281
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 6525
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 6571
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 6884
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 7538
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 7586
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 7669
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 7718
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 7799
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 8734
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 8778
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 9103
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 9141
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 9155
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 9418
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 9450
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 10187
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 10219
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 10513
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 10661
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 10708
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 10800
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 11452
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 11600
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 11647
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 11739
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 14499
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 14531
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 14693
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 14787
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 14788
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 14849
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 14850
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 14911
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 14912
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 14973
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 14974
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 15176
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 15208
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 16261
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 16948
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 16980
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 17325
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 17357
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 17519
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 17708
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 18460
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 18492
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 18700
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 18732
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 18783
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_hardened_image.json",
+    "line": 18859
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.txt",
+    "line": 473
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.txt",
+    "line": 483
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.txt",
+    "line": 493
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.txt",
+    "line": 503
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_hardened_image.txt",
+    "line": 461
+  },
+  {
+    "severity": "WARNING",
+    "rule": "literal_docker_gpg_key_variable",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 81
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 231
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 247
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 342
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 572
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 627
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 676
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 786
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 836
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 1014
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 1135
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 1313
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 1354
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 1416
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 1425
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 1435
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 1446
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 1456
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 1465
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 1513
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 1553
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 1653
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 1730
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 1921
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2007
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2022
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2095
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2105
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2133
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2143
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2176
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2218
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2239
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2311
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2339
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2369
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2401
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2450
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2484
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2578
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2617
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2653
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2704
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2740
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2776
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 2841
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3159
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3192
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3225
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3257
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3288
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3323
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3358
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3389
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3424
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3468
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3508
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3556
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3624
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3660
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3708
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3751
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3814
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3852
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3886
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3929
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 3965
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4013
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4065
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4099
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4144
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4194
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4234
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4271
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4402
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4452
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4563
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4564
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4588
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4609
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4630
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4665
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4707
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4749
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4785
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4821
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4854
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4895
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4943
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 4980
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5014
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5046
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5083
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5129
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5163
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5203
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5218
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5248
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5287
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5331
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5375
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5424
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5460
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5498
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5535
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5691
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5725
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5759
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5821
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5877
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 5957
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 6007
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 6034
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 6156
+  },
+  {
+    "severity": "WARNING",
+    "rule": "todo_fixme",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 6202
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 6485
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 7132
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 7172
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 7253
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 7296
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 7374
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 8771
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 9082
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 9096
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 9426
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 9458
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 9788
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 9848
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 10328
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 10360
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 10553
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 10554
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 10555
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 10891
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 11039
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 11086
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 11178
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 11729
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 11730
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 11731
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 12067
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 12215
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 12262
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 12354
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 12884
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 13779
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 15625
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 15657
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 15819
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 16008
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 16009
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 16245
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 16246
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 16482
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 16483
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 16719
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 16720
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 17371
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 17403
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 18663
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 19034
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 19883
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 20785
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 20817
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 21169
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 21170
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 21171
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 21546
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 21578
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 21740
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 21929
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 22858
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24027
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24059
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24110
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24186
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24733
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24734
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24735
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24736
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24737
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24738
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24814
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24815
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24816
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24817
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24818
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24819
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24820
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 24821
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 25206
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 25207
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 25208
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 25209
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 25752
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 25753
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 25912
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 25913
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 25914
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 25915
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 25916
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 25917
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 25918
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 25919
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 25980
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 25981
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26039
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26040
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26161
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26162
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26345
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26346
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26347
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26348
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26428
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26429
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26430
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26431
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26855
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26856
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26954
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26955
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26956
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26957
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26958
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 26959
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 27403
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 27404
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 27405
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 27406
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 27589
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 27590
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 27591
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 27592
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 27593
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/trivy_insecure_image.json",
+    "line": 27594
+  },
+  {
+    "severity": "WARNING",
+    "rule": "email_like_text",
+    "path": "evidence/vulnerability/grype_insecure_image.json",
+    "line": 1
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "evidence/vulnerability/grype_insecure_image.json",
+    "line": 1
+  },
+  {
+    "severity": "WARNING",
+    "rule": "local_home_path",
+    "path": "evidence/vulnerability/grype_insecure_image.json",
+    "line": 1
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/cloud-deploy-oidc.yml",
+    "line": 8
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/cloud-deploy-oidc.yml",
+    "line": 27
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/cloud-deploy-oidc.yml",
+    "line": 36
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/cloud-deploy-oidc.yml",
+    "line": 38
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/cloud-deploy-oidc.yml",
+    "line": 51
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/cloud-deploy-oidc.yml",
+    "line": 53
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/cloud-deploy-oidc.yml",
+    "line": 54
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/cloud-deploy-oidc.yml",
+    "line": 57
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/cloud-deploy-oidc.yml",
+    "line": 67
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/cloud-deploy-oidc.yml",
+    "line": 69
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/cloud-deploy-oidc.yml",
+    "line": 87
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/supply-chain-oidc-registry-validation.yml",
+    "line": 8
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/supply-chain-oidc-registry-validation.yml",
+    "line": 56
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/supply-chain-oidc-registry-validation.yml",
+    "line": 63
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/supply-chain-oidc-registry-validation.yml",
+    "line": 65
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/supply-chain-oidc-registry-validation.yml",
+    "line": 66
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/supply-chain-oidc-registry-validation.yml",
+    "line": 69
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/supply-chain-oidc-registry-validation.yml",
+    "line": 92
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": ".github/workflows/supply-chain-oidc-registry-validation.yml",
+    "line": 125
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "terraform/environments/bootstrap-oidc-audit/main.tf",
+    "line": 16
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "terraform/environments/bootstrap-oidc-audit/main.tf",
+    "line": 23
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "terraform/environments/bootstrap-oidc-audit/main.tf",
+    "line": 24
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "terraform/environments/bootstrap-oidc-audit/outputs.tf",
+    "line": 12
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "terraform/environments/bootstrap-oidc-audit/variables.tf",
+    "line": 18
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "terraform/environments/bootstrap-oidc-audit/variables.tf",
+    "line": 34
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "terraform/environments/managed-kubernetes-cloud-run/main.tf",
+    "line": 16
+  },
+  {
+    "severity": "WARNING",
+    "rule": "token_word_context",
+    "path": "terraform/environments/managed-kubernetes-cloud-run/variables.tf",
+    "line": 19
+  }
+]

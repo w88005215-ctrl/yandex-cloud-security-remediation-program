@@ -487,3 +487,11 @@ Status: CLOSED.
 Cloud actions: NONE.
 
 Result: GitHub Actions Gitleaks false positives caused by redacted Trivy image metadata were normalized. No cloud resources were created or modified.
+
+## Phase 13.14 update — public repository audit and sanitization
+
+Status: closed.
+
+The final repository audit verified the public working tree for secret exposure, private runtime artifacts, Terraform state, kubeconfig files, key material, internal wording, private evidence paths, and provider-specific resource identifiers. Bilingual audit and sanitization reports were added under `docs/`, with machine-readable metrics under `evidence/metrics/`.
+
+Publication boundary remains explicit: the repository contains sanitized evidence and public portfolio artifacts only.

@@ -1,0 +1,27 @@
+{
+  "scanned_text_files": 422,
+  "changed_files": [
+    "evidence/sbom/ycsec_supply_chain_insecure_sbom_cyclonedx.json",
+    "evidence/sbom/ycsec_supply_chain_hardened_sbom_cyclonedx.json",
+    "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_oidc_audit_cloud_run_sanitized.txt",
+    "evidence/command-outputs/YCSEC_12_8B_OUTPUT_bootstrap_repair_apply_sanitized.txt",
+    "evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_destroy_sanitized.txt",
+    "evidence/command-outputs/YCSEC_13_11C_OUTPUT_registry_final_cleanup.txt",
+    "evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_apply_sanitized.txt",
+    "evidence/command-outputs/YCSEC_13_4_OUTPUT_sbom_vulnerability_validation.txt",
+    "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_terraform_destroy_sanitized.txt",
+    "evidence/command-outputs/YCSEC_13_3_OUTPUT_failed_build_log_analysis.txt",
+    "evidence/command-outputs/YCSEC_13_0_OUTPUT_mks_terraform_plan_sanitized.txt",
+    "evidence/command-outputs/YCSEC_13_5_OUTPUT_mks_get_credentials_sanitized.txt",
+    "evidence/command-outputs/YCSEC_13_3_OUTPUT_registry_inventory_after_push.txt",
+    "evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt",
+    "evidence/command-outputs/YCSEC_10_OUTPUT_yandex_cloud_readiness.txt",
+    "evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_metadata_repair.txt",
+    "evidence/vulnerability/grype_hardened_image.json",
+    "evidence/vulnerability/trivy_hardened_image.json",
+    "evidence/vulnerability/trivy_insecure_image.txt",
+    "evidence/vulnerability/trivy_hardened_image.txt",
+    "evidence/vulnerability/trivy_insecure_image.json",
+    "evidence/vulnerability/grype_insecure_image.json"
+  ]
+}

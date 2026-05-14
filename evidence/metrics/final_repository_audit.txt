@@ -1,0 +1,15 @@
+Final repository audit metrics
+==============================
+Total files seen: 476
+Text files scanned: 423
+Blocking findings: 0
+Warning findings: 1072
+
+Blocking rules:
+
+Warning rules:
+- email_like_text
+- literal_docker_gpg_key_variable
+- local_home_path
+- todo_fixme
+- token_word_context
