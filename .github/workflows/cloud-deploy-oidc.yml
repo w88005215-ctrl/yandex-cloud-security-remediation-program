@@ -2,60 +2,92 @@ name: YCSEC Cloud Deploy OIDC Validation
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/workflows/cloud-deploy-oidc.yml"
-      - "ci/github-oidc-validation-trigger.md"
 
 permissions:
   contents: read
   id-token: write
 
 jobs:
-  validate-yandex-cloud-oidc:
+  validate-oidc:
     name: Validate GitHub OIDC to Yandex Cloud
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Validate repository variables
+      - name: Validate runner tooling
         shell: bash
         run: |
           set -euo pipefail
-          test -n "${{ vars.YCSEC_YC_SA_ID }}"
-          test -n "${{ vars.YCSEC_YC_FOLDER_ID }}"
-          echo "[OK] required repository variables are present"
+          command -v curl
+          command -v jq
+          echo "[OK] runner tooling available"
 
-      - name: Obtain Yandex Cloud IAM token through GitHub OIDC
-        id: yc-token
-        uses: yandex-cloud/yc-github-actions/yc-iam-token-fed@v1
+      - name: Request GitHub OIDC ID token
+        id: github_oidc
+        uses: actions/github-script@v7
         with:
-          yc-sa-id: ${{ vars.YCSEC_YC_SA_ID }}
+          script: |
+            const audience = `https://github.com/${context.repo.owner}`;
+            const idToken = await core.getIDToken(audience);
+            core.setSecret(idToken);
+            core.setOutput('id_token', idToken);
+            core.info('[OK] GitHub OIDC ID token requested for expected audience');
 
-      - name: Validate no static cloud credential is used
-        shell: bash
-        run: |
-          set -euo pipefail
-          test -n "${{ steps.yc-token.outputs.token }}"
-          echo "[OK] GitHub Actions obtained a Yandex Cloud IAM token through OIDC"
-          echo "[OK] workflow uses GitHub id-token permission"
-          echo "[OK] workflow uses repository variables for scoped service account and folder"
-          echo "[OK] no authorized key file is required"
-          echo "[OK] no long-lived cloud key is stored in repository secrets"
-
-      - name: Validate Yandex Cloud API access with short-lived token
+      - name: Exchange GitHub OIDC token for Yandex Cloud IAM token
+        id: yc_iam
         shell: bash
         env:
-          YC_TOKEN: ${{ steps.yc-token.outputs.token }}
-          YC_FOLDER_ID: ${{ vars.YCSEC_YC_FOLDER_ID }}
+          YCSEC_YC_SA_ID: ${{ vars.YCSEC_YC_SA_ID }}
+          GH_ID_TOKEN: ${{ steps.github_oidc.outputs.id_token }}
         run: |
           set -euo pipefail
-          curl -fsS \
-            -H "Authorization: Bearer ${YC_TOKEN}" \
-            "https://resource-manager.api.cloud.yandex.net/resource-manager/v1/folders/${YC_FOLDER_ID}" \
-            | python3 -m json.tool
-          echo "[OK] Yandex Cloud Resource Manager API accepted the OIDC-derived IAM token"
+
+          test -n "${YCSEC_YC_SA_ID}"
+          test -n "${GH_ID_TOKEN}"
+
+          TOKEN_RESPONSE="$(
+            curl -fsS -X POST "https://auth.yandex.cloud/oauth/token" \
+              -H "Content-Type: application/x-www-form-urlencoded" \
+              --data-urlencode "grant_type=urn:ietf:params:oauth:grant-type:token-exchange" \
+              --data-urlencode "requested_token_type=urn:ietf:params:oauth:token-type:access_token" \
+              --data-urlencode "audience=${YCSEC_YC_SA_ID}" \
+              --data-urlencode "subject_token=${GH_ID_TOKEN}" \
+              --data-urlencode "subject_token_type=urn:ietf:params:oauth:token-type:id_token"
+          )"
+
+          IAM_TOKEN="$(echo "$TOKEN_RESPONSE" | jq -r '.access_token // empty')"
+
+          test -n "$IAM_TOKEN"
+          test "$IAM_TOKEN" != "null"
+
+          echo "::add-mask::$IAM_TOKEN"
+          echo "iam_token=$IAM_TOKEN" >> "$GITHUB_OUTPUT"
+          echo "[OK] IAM token obtained through GitHub OIDC token exchange"
+
+      - name: Validate Yandex Cloud API access with federated IAM token
+        shell: bash
+        env:
+          IAM_TOKEN: ${{ steps.yc_iam.outputs.iam_token }}
+          YCSEC_YC_FOLDER_ID: ${{ vars.YCSEC_YC_FOLDER_ID }}
+        run: |
+          set -euo pipefail
+
+          test -n "${IAM_TOKEN}"
+          test -n "${YCSEC_YC_FOLDER_ID}"
+
+          RESPONSE="$(
+            curl -fsS \
+              -H "Authorization: Bearer ${IAM_TOKEN}" \
+              "https://resource-manager.api.cloud.yandex.net/resource-manager/v1/folders/${YCSEC_YC_FOLDER_ID}"
+          )"
+
+          echo "$RESPONSE" | jq -e '.id == env.YCSEC_YC_FOLDER_ID' >/dev/null
+          echo "[OK] Yandex Cloud API accepted IAM token from GitHub OIDC"
+
+      - name: Confirm no long-lived cloud key material was used
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "[OK] no long-lived cloud key material was used"

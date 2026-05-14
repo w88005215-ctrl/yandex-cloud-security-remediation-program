@@ -1,13 +1,16 @@
-# GitHub Actions OIDC validation trigger
+# GitHub Actions OIDC Validation Trigger
 
-This file intentionally changes the repository state to trigger the Yandex Cloud OIDC validation workflow.
+## Purpose
 
-Validation scope:
+This document records the repository-side trigger used to validate GitHub Actions to Yandex Cloud authentication through Workload Identity Federation.
 
-- Repository: w88005215-ctrl/yandex-cloud-security-remediation-program
-- Branch: main
-- Expected OIDC subject: repo:w88005215-ctrl/yandex-cloud-security-remediation-program:ref:refs/heads/main
-- Cloud access model: GitHub Actions OIDC to Yandex Cloud Workload Identity Federation
-- Static cloud key requirement: removed
+## Validation scope
 
-Generated at: 2026-05-14T08:19:59+00:00
+- GitHub Actions requests an OIDC ID token.
+- The workflow exchanges that token for a Yandex Cloud IAM token.
+- The IAM token is used to call the Yandex Cloud Resource Manager API.
+- No long-lived cloud key material is used by the workflow.
+
+## Phase
+
+Phase 12.8D — GitHub Actions OIDC validation.
