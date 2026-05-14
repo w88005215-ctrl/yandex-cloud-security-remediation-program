@@ -1,0 +1,28 @@
+Phase 12.8D-FINAL — final git control
+Date: 2026-05-14T08:28:57+00:00
+Qube: cloud-dev-workbech
+
+Step 1 — verify OIDC validation evidence
+[OK] OIDC validation evidence exists
+[OK] evidence confirms IAM token exchange
+[OK] evidence confirms Yandex Cloud API validation
+[OK] OIDC validation document exists
+
+Step 2 — verify repository safety
+[OK] no Terraform state, kubeconfig, key or token files
+[90m8:28AM[0m [32mINF[0m [1m30 commits scanned.[0m
+[90m8:28AM[0m [32mINF[0m [1mscanned ~690892 bytes (690.89 KB) in 524ms[0m
+[90m8:28AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 3 — current git status before commit
+ M docs/cloud-evidence-gap-register.md
+ M docs/evidence-index.md
+?? docs/github-actions-oidc-validation.md
+?? evidence/command-outputs/YCSEC_12_8D_OUTPUT_failed_workflow_log_analysis.txt
+?? evidence/command-outputs/YCSEC_12_8D_OUTPUT_final_git_control.txt
+?? evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt
+
+Step 4 — final decision
+FAIL_COUNT=0
+[OK] Phase 12.8D evidence is ready for commit

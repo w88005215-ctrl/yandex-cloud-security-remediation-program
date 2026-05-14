@@ -103,3 +103,9 @@ Still pending:
 - Audit Trails event export validation.
 - Registry image/security workflow validation.
 - Controlled cleanup after evidence collection.
+
+## Phase 12.8D update — GitHub Actions OIDC validation
+
+Status: closed.
+
+Bootstrap/OIDC retained resources were used to validate GitHub Actions authentication to Yandex Cloud through Workload Identity Federation. The workflow uses GitHub OIDC token exchange and validates access through the Yandex Cloud Resource Manager API.

@@ -1,0 +1,223 @@
+Phase 12.8D GitHub Actions OIDC validation evidence
+Purpose: prove GitHub Actions can access Yandex Cloud through OIDC token exchange without long-lived cloud key material.
+Sanitization: service account ID, folder ID, JWT-like values and bearer tokens are redacted.
+
+Validate GitHub OIDC to Yandex Cloud	Set up job	﻿2026-05-14T08:28:39.8051284Z Current runner version: '2.334.0'
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8074852Z ##[group]Runner Image Provisioner
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8075628Z Hosted Compute Agent
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8076104Z Version: 20260213.493
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8076657Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8077311Z Build Date: 2026-02-13T00:28:41Z
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8077871Z Worker ID: {103b9620-b63e-4d94-8c18-91549362c3a2}
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8078758Z Azure Region: westcentralus
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8079268Z ##[endgroup]
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8080610Z ##[group]Operating System
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8081132Z Ubuntu
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8081611Z 24.04.4
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8081994Z LTS
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8082398Z ##[endgroup]
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8082874Z ##[group]Runner Image
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8083328Z Image: ubuntu-24.04
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8083796Z Version: 20260413.86.1
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8084669Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260413.86/images/ubuntu/Ubuntu2404-Readme.md
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8086099Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260413.86
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8086920Z ##[endgroup]
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8087803Z ##[group]GITHUB_TOKEN Permissions
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8089740Z Contents: read
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8090184Z Metadata: read
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8090636Z ##[endgroup]
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8092556Z Secret source: Actions
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8093223Z Prepare workflow directory
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8403876Z Prepare all required actions
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:39.8440390Z Getting action download info
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:40.2236020Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:40.3160159Z Download action repository 'actions/github-script@v7' (SHA:f28e40c7f34bde8b3046d885e986cb6290c5673b)
+Validate GitHub OIDC to Yandex Cloud	Set up job	2026-05-14T08:28:40.9253091Z Complete job name: Validate GitHub OIDC to Yandex Cloud
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	﻿2026-05-14T08:28:40.9942458Z ##[group]Run actions/checkout@v4
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:40.9943523Z with:
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:40.9944309Z   repository: w88005215-ctrl/yandex-cloud-security-remediation-program
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:40.9945356Z   token: ***
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:40.9945921Z   ssh-strict: true
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:40.9946440Z   ssh-user: git
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:40.9946932Z   persist-credentials: true
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:40.9947539Z   clean: true
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:40.9948031Z   sparse-checkout-cone-mode: true
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:40.9948776Z   fetch-depth: 1
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:40.9949331Z   fetch-tags: false
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:40.9949820Z   show-progress: true
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:40.9950356Z   lfs: false
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:40.9950822Z   submodules: false
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:40.9951369Z   set-safe-directory: true
+Validate GitHub[OK] sanitized public workflow evidence written: evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt
+
+Step 13 — validate OIDC success evidence
+[OK] evidence confirms IAM token exchange
+[OK] evidence confirms Yandex Cloud API validation
+[OK] evidence confirms no long-lived cloud key material
+
+Step 14 — write OIDC validation result document
+[OK] OIDC validation result document written
+
+Step 15 — update evidence index and cloud evidence gap register
+[OK] evidence index updated
+[OK] cloud evidence gap register updated
+
+Step 16 — final repository safety checks before evidence commit
+[OK] no Terraform state, kubeconfig, key or token files before evidence commit
+[90m8:28AM[0m [32mINF[0m [1m30 commits scanned.[0m
+[90m8:28AM[0m [32mINF[0m [1mscanned ~690892 bytes (690.89 KB) in 552ms[0m
+[90m8:28AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed before evidence commit
+
+Step 17 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 12.8D GitHub Actions OIDC validation completed
+[OK] project is ready for Audit Trails evidence validation while bootstrap resources remain retained
+ut repository	2026-05-14T08:28:41.1080104Z Adding repository directory to the temporary git global config as a safe directory
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1091374Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/yandex-cloud-security-remediation-program/yandex-cloud-security-remediation-program
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1119340Z Deleting the contents of '/home/runner/work/yandex-cloud-security-remediation-program/yandex-cloud-security-remediation-program'
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1121917Z ##[group]Initializing the repository
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1126387Z [command]/usr/bin/git init /home/runner/work/yandex-cloud-security-remediation-program/yandex-cloud-security-remediation-program
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1218791Z hint: Using 'master' as the name for the initial branch. This default branch name
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1219985Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1221296Z hint: to use in all of your new repositories, which will suppress this warning,
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1222828Z hint: call:
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1223560Z hint:
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1224400Z hint: 	git config --global init.defaultBranch <name>
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1225151Z hint:
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1225791Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1226797Z hint: 'development'. The just-created branch can be renamed via this command:
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1227680Z hint:
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1228290Z hint: 	git branch -m <name>
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1228855Z hint:
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1229887Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1231598Z Initialized empty Git repository in /home/runner/work/yandex-cloud-security-remediation-program/yandex-cloud-security-remediation-program/.git/
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1234483Z [command]/usr/bin/git remote add origin https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1256847Z ##[endgroup]
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1257902Z ##[group]Disabling automatic garbage collection
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1260387Z [command]/usr/bin/git config --local gc.auto 0
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1285448Z ##[endgroup]
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1286343Z ##[group]Setting up auth
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1291143Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1316688Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1573034Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1597507Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1770071Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1802333Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.1977847Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.2104164Z ##[endgroup]
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.2105741Z ##[group]Fetching the repository
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.2108454Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +9772ab66dd6d7dadbd2fdd2b77db574a535d6a23:refs/remotes/origin/main
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.7360239Z From https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.7364432Z  * [new ref]         9772ab66dd6d7dadbd2fdd2b77db574a535d6a23 -> origin/main
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.7380280Z ##[endgroup]
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.7381744Z ##[group]Determining the checkout info
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.7383203Z ##[endgroup]
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.7386242Z [command]/usr/bin/git sparse-checkout disable
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.7417821Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.7441238Z ##[group]Checking out the ref
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.7445315Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.7546880Z Switched to a new branch 'main'
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.7548680Z branch 'main' set up to track 'origin/main'.
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.7553590Z ##[endgroup]
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.7580613Z [command]/usr/bin/git log -1 --format=%H
+Validate GitHub OIDC to Yandex Cloud	Checkout repository	2026-05-14T08:28:41.7598412Z 9772ab66dd6d7dadbd2fdd2b77db574a535d6a23
+Validate GitHub OIDC to Yandex Cloud	Validate runner tooling	﻿2026-05-14T08:28:41.7814157Z ##[group]Run set -euo pipefail
+Validate GitHub OIDC to Yandex Cloud	Validate runner tooling	2026-05-14T08:28:41.7815588Z [36;1mset -euo pipefail[0m
+Validate GitHub OIDC to Yandex Cloud	Validate runner tooling	2026-05-14T08:28:41.7816686Z [36;1mcommand -v curl[0m
+Validate GitHub OIDC to Yandex Cloud	Validate runner tooling	2026-05-14T08:28:41.7817669Z [36;1mcommand -v jq[0m
+Validate GitHub OIDC to Yandex Cloud	Validate runner tooling	2026-05-14T08:28:41.7818944Z [36;1mecho "[OK] runner tooling available"[0m
+Validate GitHub OIDC to Yandex Cloud	Validate runner tooling	2026-05-14T08:28:41.7839826Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Validate GitHub OIDC to Yandex Cloud	Validate runner tooling	2026-05-14T08:28:41.7841222Z ##[endgroup]
+Validate GitHub OIDC to Yandex Cloud	Validate runner tooling	2026-05-14T08:28:41.7906771Z /usr/bin/curl
+Validate GitHub OIDC to Yandex Cloud	Validate runner tooling	2026-05-14T08:28:41.7908785Z /usr/bin/jq
+Validate GitHub OIDC to Yandex Cloud	Validate runner tooling	2026-05-14T08:28:41.7909891Z [OK] runner tooling available
+Validate GitHub OIDC to Yandex Cloud	Request GitHub OIDC ID token	﻿2026-05-14T08:28:41.8056156Z ##[group]Run actions/github-script@v7
+Validate GitHub OIDC to Yandex Cloud	Request GitHub OIDC ID token	2026-05-14T08:28:41.8057192Z with:
+Validate GitHub OIDC to Yandex Cloud	Request GitHub OIDC ID token	2026-05-14T08:28:41.8060666Z   script: const audience = `https://github.com/${context.repo.owner}`;
+Validate GitHub OIDC to Yandex Cloud	Request GitHub OIDC ID token	const idToken = await core.getIDToken(audience);
+Validate GitHub OIDC to Yandex Cloud	Request GitHub OIDC ID token	core.setSecret(idToken);
+Validate GitHub OIDC to Yandex Cloud	Request GitHub OIDC ID token	core.setOutput('id_token', idToken);
+Validate GitHub OIDC to Yandex Cloud	Request GitHub OIDC ID token	core.info('[OK] GitHub OIDC ID token requested for expected audience');
+Validate GitHub OIDC to Yandex Cloud	Request GitHub OIDC ID token	
+Validate GitHub OIDC to Yandex Cloud	Request GitHub OIDC ID token	2026-05-14T08:28:41.8064812Z   github-token: ***
+Validate GitHub OIDC to Yandex Cloud	Request GitHub OIDC ID token	2026-05-14T08:28:41.8065592Z   debug: false
+Validate GitHub OIDC to Yandex Cloud	Request GitHub OIDC ID token	2026-05-14T08:28:41.8066405Z   user-agent: actions/github-script
+Validate GitHub OIDC to Yandex Cloud	Request GitHub OIDC ID token	2026-05-14T08:28:41.8067441Z   result-encoding: json
+Validate GitHub OIDC to Yandex Cloud	Request GitHub OIDC ID token	2026-05-14T08:28:41.8068326Z   retries: 0
+Validate GitHub OIDC to Yandex Cloud	Request GitHub OIDC ID token	2026-05-14T08:28:41.8069182Z   retry-exempt-status-codes: 400,401,403,404,422
+Validate GitHub OIDC to Yandex Cloud	Request GitHub OIDC ID token	2026-05-14T08:28:41.8070281Z ##[endgroup]
+Validate GitHub OIDC to Yandex Cloud	Request GitHub OIDC ID token	2026-05-14T08:28:42.1085290Z [OK] GitHub OIDC ID token requested for expected audience
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	﻿2026-05-14T08:28:42.1214551Z ##[group]Run set -euo pipefail
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1215556Z [36;1mset -euo pipefail[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1216404Z [36;1m[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1217108Z [36;1mtest -n "${YCSEC_YC_SA_ID}"[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1218070Z [36;1mtest -n "${GH_ID_TOKEN}"[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1219156Z [36;1m[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1219924Z [36;1mTOKEN_RESPONSE="$([0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1221586Z [36;1m  curl -fsS -X POST "https://auth.yandex.cloud/oauth/token" \[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1224127Z [36;1m    -H "Content-Type: application/x-www-form-urlencoded" \[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1227401Z [36;1m    --data-urlencode "grant_type=urn:ietf:params:oauth:grant-type:token-exchange" \[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1230373Z [36;1m    --data-urlencode "requested_token_type=urn:ietf:params:oauth:token-type:access_token" \[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1232246Z [36;1m    --data-urlencode "audience=${YCSEC_YC_SA_ID}" \[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1233629Z [36;1m    --data-urlencode "subject_token=${GH_ID_TOKEN}" \[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1235378Z [36;1m    --data-urlencode "subject_token_type=urn:ietf:params:oauth:token-type:id_token"[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1236897Z [36;1m)"[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1237552Z [36;1m[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1238799Z [36;1mIAM_TOKEN="$(echo "$TOKEN_RESPONSE" | jq -r '.access_token // empty')"[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1240142Z [36;1m[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1240824Z [36;1mtest -n "$IAM_TOKEN"[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1241701Z [36;1mtest "$IAM_TOKEN" != "null"[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1242604Z [36;1m[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1243302Z [36;1mecho "::add-mask::$IAM_TOKEN"[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1244443Z [36;1mecho "iam_token=$IAM_TOKEN" >> "$GITHUB_OUTPUT"[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1245933Z [36;1mecho "[OK] IAM token obtained through GitHub OIDC token exchange"[0m
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1262357Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1263522Z env:
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1264237Z   YCSEC_YC_SA_ID: <YC_GITHUB_ACTIONS_SERVICE_ACCOUNT_ID>
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1382477Z   GH_ID_TOKEN: ***
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:42.1383273Z ##[endgroup]
+Validate GitHub OIDC to Yandex Cloud	Exchange GitHub OIDC token for Yandex Cloud IAM token	2026-05-14T08:28:43.8060225Z [OK] IAM token obtained through GitHub OIDC token exchange
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	﻿2026-05-14T08:28:43.8085372Z ##[group]Run set -euo pipefail
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8085667Z [36;1mset -euo pipefail[0m
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8085879Z [36;1m[0m
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8086060Z [36;1mtest -n "${IAM_TOKEN}"[0m
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8086294Z [36;1mtest -n "${YCSEC_YC_FOLDER_ID}"[0m
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8086530Z [36;1m[0m
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8086704Z [36;1mRESPONSE="$([0m
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8086897Z [36;1m  curl -fsS \[0m
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8087283Z [36;1m    -H "Authorization: ***" \[0m
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8087787Z [36;1m    "https://resource-manager.api.cloud.yandex.net/resource-manager/v1/folders/${YCSEC_YC_FOLDER_ID}"[0m
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8088584Z [36;1m)"[0m
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8088751Z [36;1m[0m
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8089029Z [36;1mecho "$RESPONSE" | jq -e '.id == env.YCSEC_YC_FOLDER_ID' >/dev/null[0m
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8089450Z [36;1mecho "[OK] Yandex Cloud API accepted IAM token from GitHub OIDC"[0m
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8102354Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8102695Z env:
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8104176Z   IAM_TOKEN: ***
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8104388Z   YCSEC_YC_FOLDER_ID: <YC_FOLDER_ID>
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:43.8104636Z ##[endgroup]
+Validate GitHub OIDC to Yandex Cloud	Validate Yandex Cloud API access with federated IAM token	2026-05-14T08:28:45.1057096Z [OK] Yandex Cloud API accepted IAM token from GitHub OIDC
+Validate GitHub OIDC to Yandex Cloud	Confirm no long-lived cloud key material was used	﻿2026-05-14T08:28:45.1088669Z ##[group]Run set -euo pipefail
+Validate GitHub OIDC to Yandex Cloud	Confirm no long-lived cloud key material was used	2026-05-14T08:28:45.1089003Z [36;1mset -euo pipefail[0m
+Validate GitHub OIDC to Yandex Cloud	Confirm no long-lived cloud key material was used	2026-05-14T08:28:45.1089282Z [36;1mecho "[OK] no long-lived cloud key material was used"[0m
+Validate GitHub OIDC to Yandex Cloud	Confirm no long-lived cloud key material was used	2026-05-14T08:28:45.1101953Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Validate GitHub OIDC to Yandex Cloud	Confirm no long-lived cloud key material was used	2026-05-14T08:28:45.1102294Z ##[endgroup]
+Validate GitHub OIDC to Yandex Cloud	Confirm no long-lived cloud key material was used	2026-05-14T08:28:45.1131022Z [OK] no long-lived cloud key material was used
+Validate GitHub OIDC to Yandex Cloud	Post Checkout repository	﻿2026-05-14T08:28:45.1206815Z Post job cleanup.
+Validate GitHub OIDC to Yandex Cloud	Post Checkout repository	2026-05-14T08:28:45.2079974Z [command]/usr/bin/git version
+Validate GitHub OIDC to Yandex Cloud	Post Checkout repository	2026-05-14T08:28:45.2111617Z git version 2.53.0
+Validate GitHub OIDC to Yandex Cloud	Post Checkout repository	2026-05-14T08:28:45.2148418Z Temporarily overriding HOME='/home/runner/work/_temp/ac184a23-c6f9-4610-a67a-dd393cbabdf1' before making global git config changes
+Validate GitHub OIDC to Yandex Cloud	Post Checkout repository	2026-05-14T08:28:45.2149729Z Adding repository directory to the temporary git global config as a safe directory
+Validate GitHub OIDC to Yandex Cloud	Post Checkout repository	2026-05-14T08:28:45.2153889Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/yandex-cloud-security-remediation-program/yandex-cloud-security-remediation-program
+Validate GitHub OIDC to Yandex Cloud	Post Checkout repository	2026-05-14T08:28:45.2188556Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Validate GitHub OIDC to Yandex Cloud	Post Checkout repository	2026-05-14T08:28:45.2214934Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Validate GitHub OIDC to Yandex Cloud	Post Checkout repository	2026-05-14T08:28:45.2383570Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Validate GitHub OIDC to Yandex Cloud	Post Checkout repository	2026-05-14T08:28:45.2399299Z http.https://github.com/.extraheader
+Validate GitHub OIDC to Yandex Cloud	Post Checkout repository	2026-05-14T08:28:45.2410058Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Validate GitHub OIDC to Yandex Cloud	Post Checkout repository	2026-05-14T08:28:45.2434567Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Validate GitHub OIDC to Yandex Cloud	Post Checkout repository	2026-05-14T08:28:45.2598708Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Validate GitHub OIDC to Yandex Cloud	Post Checkout repository	2026-05-14T08:28:45.2625567Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Validate GitHub OIDC to Yandex Cloud	Complete job	﻿2026-05-14T08:28:45.2879747Z Cleaning up orphan processes
+Validate GitHub OIDC to Yandex Cloud	Complete job	2026-05-14T08:28:45.3076764Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/github-script@v7. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

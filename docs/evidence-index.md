@@ -348,3 +348,13 @@ Result:
 - Bucket-name generation was corrected to use lowercase timestamps.
 - Terraform runtime and state remained outside the public repository.
 - Bootstrap resources were retained temporarily for OIDC, Audit Trails, and registry validation.
+
+## EVID-OIDC-12-8D — GitHub Actions OIDC validation
+
+- Phase: 12.8D
+- Status: implemented
+- Evidence:
+  - `evidence/command-outputs/YCSEC_12_8D_OUTPUT_github_actions_oidc_validation_success.txt`
+  - `.github/workflows/cloud-deploy-oidc.yml`
+  - `docs/github-actions-oidc-validation.md`
+- Control value: GitHub Actions authenticates to Yandex Cloud through OIDC token exchange without long-lived cloud key material.
