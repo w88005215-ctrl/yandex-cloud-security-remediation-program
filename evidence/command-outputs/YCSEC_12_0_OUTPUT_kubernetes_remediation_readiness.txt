@@ -1,0 +1,1035 @@
+Phase 12.0-REPAIR — Kubernetes baseline/remediation readiness inventory
+Date: 2026-05-14T05:53:17+00:00
+Qube: cloud-dev-workbench
+
+Step 1 — quarantine unrelated Phase 11.5 artifacts
+[OK] quarantined unrelated artifact: docs/project-evidence-coverage.md
+[OK] quarantined unrelated artifact: evidence/command-outputs/YCSEC_11_5_OUTPUT_project_evidence_coverage_audit.txt
+[OK] unrelated artifact absent: evidence/command-outputs/YCSEC_11_5_OUTPUT_final_git_control.txt
+
+Step 2 — repository baseline
+259ea41 (HEAD -> main, tag: v0.11.4-smoke-run-evidence-package) docs: integrate Yandex Cloud smoke-run evidence package
+1dc86dc (tag: v0.11.3-yandex-cloud-smoke-run-success) test: record successful Yandex Cloud smoke run
+e4e0e50 (tag: v0.11.2-smoke-run-auth-fix) fix: pass Yandex Cloud auth to smoke-run Terraform
+6bf5287 (tag: v0.11.1-smoke-run-safety) chore: harden Yandex Cloud smoke-run cleanup safety
+5d6e853 (tag: v0.11-yandex-cloud-smoke-run) test: add Yandex Cloud Kubernetes smoke run
+52d64d0 (tag: v0.10-yandex-cloud-readiness) test: add Yandex Cloud readiness gate
+c24edc3 (tag: v0.9-local-kubernetes-runtime) test: add local Kubernetes runtime validation
+70558b0 (tag: v0.8-kubernetes-baseline) feat: add Kubernetes security baseline manifests
+2aca601 (tag: v0.7-security-control-model) docs: add security control model and threat model
+2d117ed (tag: v0.6-iac-skeleton) feat: add Terraform IaC skeleton and local security gates
+
+Tags at HEAD:
+v0.11.4-smoke-run-evidence-package
+
+[OK] current HEAD has required tag: v0.11.4-smoke-run-evidence-package
+
+Step 3 — working tree guard
+[OK] working tree has no unexpected changes
+
+Step 4 — define Kubernetes inventory roots
+[OK] inventory root exists: kubernetes
+[WARN] inventory root absent: k8s
+[WARN] inventory root absent: manifests
+[WARN] inventory root absent: policies
+[WARN] inventory root absent: policy-as-code
+[OK] Kubernetes inventory roots available
+
+Step 5 — project structure inventory
+
+Documentation files:
+docs/.gitkeep
+docs/cloud-smoke-run-validation.md
+docs/control-matrix.md
+docs/cost-control.md
+docs/en/.gitkeep
+docs/en/iam-oidc-saml-design.md
+docs/en/kubernetes-runtime-validation.md
+docs/en/kubernetes-security-model.md
+docs/en/security-control-model.md
+docs/en/terraform-architecture.md
+docs/en/threat-model.md
+docs/en/yandex-cloud-readiness.md
+docs/en/yandex-cloud-smoke-run.md
+docs/evidence-index.md
+docs/kubernetes-remediation-readiness.md
+docs/multi-cloud-control-mapping.md
+docs/publication-safety-checklist.md
+docs/qubes-workstation-model.md
+docs/resource-inventory.md
+docs/risk-register.md
+docs/ru/.gitkeep
+docs/ru/iam-oidc-saml-design.md
+docs/ru/kubernetes-runtime-validation.md
+docs/ru/kubernetes-security-model.md
+docs/ru/security-control-model.md
+docs/ru/terraform-architecture.md
+docs/ru/threat-model.md
+docs/ru/yandex-cloud-readiness.md
+docs/ru/yandex-cloud-smoke-run.md
+docs/toolchain-installation.md
+docs/toolchain-model.md
+
+Evidence files:
+evidence/.gitkeep
+evidence/after/.gitkeep
+evidence/before-after-metrics.md
+evidence/before/.gitkeep
+evidence/before_after/.gitkeep
+evidence/command-outputs/.gitkeep
+evidence/command-outputs/YCSEC_01C_OUTPUT_git_author_email_fix.txt
+evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt
+evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_result.txt
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt
+evidence/command-outputs/YCSEC_02_OUTPUT_final_git_control.txt
+evidence/command-outputs/YCSEC_02_OUTPUT_root_portfolio_files_control.txt
+evidence/command-outputs/YCSEC_03C_OUTPUT_git_history_cleanup.txt
+evidence/command-outputs/YCSEC_03_OUTPUT_evidence_cost_control.txt
+evidence/command-outputs/YCSEC_03_OUTPUT_final_git_control.txt
+evidence/command-outputs/YCSEC_03_OUTPUT_tool_versions.txt
+evidence/command-outputs/YCSEC_04_OUTPUT_final_git_control.txt
+evidence/command-outputs/YCSEC_04_OUTPUT_qubes_toolchain_discovery.txt
+evidence/command-outputs/YCSEC_04_OUTPUT_toolchain_check.txt
+evidence/command-outputs/YCSEC_04_OUTPUT_toolchain_phase_control.txt
+evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_check.txt
+evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_control.txt
+evidence/command-outputs/YCSEC_05_OUTPUT_final_git_control.txt
+evidence/command-outputs/YCSEC_06_OUTPUT_final_git_control.txt
+evidence/command-outputs/YCSEC_06_OUTPUT_iac_skeleton_control.txt
+evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt
+evidence/command-outputs/YCSEC_07_OUTPUT_control_model_validation.txt
+evidence/command-outputs/YCSEC_07_OUTPUT_final_git_control.txt
+evidence/command-outputs/YCSEC_08_OUTPUT_final_git_control.txt
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt
+evidence/command-outputs/YCSEC_09_OUTPUT_final_git_control.txt
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt
+evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt
+evidence/command-outputs/YCSEC_10_OUTPUT_final_control.txt
+evidence/command-outputs/YCSEC_10_OUTPUT_final_git_control.txt
+evidence/command-outputs/YCSEC_10_OUTPUT_yandex_cloud_readiness.txt
+evidence/command-outputs/YCSEC_11R_OUTPUT_cluster_list_after_apply.txt
+evidence/command-outputs/YCSEC_11R_OUTPUT_final_cloud_cleanup_verification.txt
+evidence/command-outputs/YCSEC_11R_OUTPUT_manual_cleanup_after_lost_state.txt
+evidence/command-outputs/YCSEC_11R_OUTPUT_runtime_snapshot_before_destroy.txt
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_plan_after_disk_fix.txt
+evidence/command-outputs/YCSEC_11_1_OUTPUT_cloud_zero_resource_verification.txt
+evidence/command-outputs/YCSEC_11_1_OUTPUT_final_git_control.txt
+evidence/command-outputs/YCSEC_11_1_OUTPUT_smoke_script_safety_control.txt
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt
+evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt
+evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_script_auth_fix_control.txt
+evidence/command-outputs/YCSEC_11_OUTPUT_final_control.txt
+evidence/command-outputs/YCSEC_11_OUTPUT_final_git_control.txt
+evidence/command-outputs/YCSEC_11_OUTPUT_post_sanitization_cloud_verification.txt
+evidence/command-outputs/YCSEC_11_TERRAFORM_cloud_smoke.tfplan
+evidence/command-outputs/YCSEC_12_0_OUTPUT_final_git_control.txt
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt
+evidence/sanitized/.gitkeep
+evidence/screenshots/.gitkeep
+
+Terraform files:
+terraform/.gitkeep
+terraform/README.md
+terraform/environments/.gitkeep
+terraform/environments/bootstrap/.gitkeep
+terraform/environments/bootstrap/.terraform.lock.hcl
+terraform/environments/bootstrap/main.tf
+terraform/environments/bootstrap/outputs.tf
+terraform/environments/bootstrap/providers.tf
+terraform/environments/bootstrap/terraform.tfvars.example
+terraform/environments/bootstrap/variables.tf
+terraform/environments/bootstrap/versions.tf
+terraform/environments/cloud-smoke/.terraform.lock.hcl
+terraform/environments/cloud-smoke/main.tf
+terraform/environments/cloud-smoke/outputs.tf
+terraform/environments/cloud-smoke/providers.tf
+terraform/environments/cloud-smoke/terraform.tfvars.example
+terraform/environments/cloud-smoke/variables.tf
+terraform/environments/cloud-smoke/versions.tf
+terraform/environments/dev/.gitkeep
+terraform/environments/dev/.terraform.lock.hcl
+terraform/environments/dev/main.tf
+terraform/environments/dev/outputs.tf
+terraform/environments/dev/providers.tf
+terraform/environments/dev/terraform.tfvars.example
+terraform/environments/dev/variables.tf
+terraform/environments/dev/versions.tf
+terraform/environments/prod-like/.gitkeep
+terraform/environments/prod-like/.terraform.lock.hcl
+terraform/environments/prod-like/main.tf
+terraform/environments/prod-like/outputs.tf
+terraform/environments/prod-like/providers.tf
+terraform/environments/prod-like/terraform.tfvars.example
+terraform/environments/prod-like/variables.tf
+terraform/environments/prod-like/versions.tf
+terraform/modules/.gitkeep
+terraform/modules/audit/.gitkeep
+terraform/modules/audit/README.md
+terraform/modules/audit/main.tf
+terraform/modules/audit/outputs.tf
+terraform/modules/audit/variables.tf
+terraform/modules/iam/.gitkeep
+terraform/modules/iam/README.md
+terraform/modules/iam/main.tf
+terraform/modules/iam/outputs.tf
+terraform/modules/iam/variables.tf
+terraform/modules/managed-kubernetes/.gitkeep
+terraform/modules/managed-kubernetes/README.md
+terraform/modules/managed-kubernetes/main.tf
+terraform/modules/managed-kubernetes/outputs.tf
+terraform/modules/managed-kubernetes/variables.tf
+terraform/modules/network/.gitkeep
+terraform/modules/network/README.md
+terraform/modules/network/main.tf
+terraform/modules/network/outputs.tf
+terraform/modules/network/variables.tf
+terraform/modules/object-storage/.gitkeep
+terraform/modules/object-storage/README.md
+terraform/modules/object-storage/main.tf
+terraform/modules/object-storage/outputs.tf
+terraform/modules/object-storage/variables.tf
+terraform/modules/oidc/.gitkeep
+terraform/modules/oidc/README.md
+terraform/modules/oidc/main.tf
+terraform/modules/oidc/outputs.tf
+terraform/modules/oidc/variables.tf
+terraform/modules/registry/.gitkeep
+terraform/modules/registry/README.md
+terraform/modules/registry/main.tf
+terraform/modules/registry/outputs.tf
+terraform/modules/registry/variables.tf
+
+Kubernetes-related files:
+kubernetes/hardened/demo-app-hardened.yaml
+kubernetes/insecure-baseline/demo-app-insecure.yaml
+kubernetes/kyverno-policies/disallow-privileged.yaml
+kubernetes/kyverno-policies/require-non-root.yaml
+kubernetes/kyverno-policies/require-readonly-rootfs.yaml
+kubernetes/kyverno-policies/require-resource-limits.yaml
+kubernetes/namespaces/ycsec-hardened.yaml
+kubernetes/namespaces/ycsec-insecure.yaml
+kubernetes/network-policies/allow-dns-egress.yaml
+kubernetes/network-policies/allow-same-namespace-web.yaml
+kubernetes/network-policies/default-deny.yaml
+kubernetes/pod-security/README.md
+kubernetes/rbac/ycsec-demo-readonly.yaml
+
+Script files:
+scripts/.gitkeep
+scripts/check-toolchain.sh
+scripts/check-yandex-cloud-readiness.sh
+scripts/collect-evidence.sh
+scripts/cost-check.sh
+scripts/destroy-checklist.sh
+scripts/qubes-toolchain-discovery.sh
+scripts/redact-evidence.sh
+scripts/run-local-kubernetes-runtime-validation.sh
+scripts/run-local-security-gates.sh
+scripts/run-yandex-cloud-smoke-run.sh
+scripts/validate-kubernetes-static-baseline.sh
+
+Step 6 — Kubernetes manifest presence check
+Kubernetes YAML manifests found: 12
+[OK] Kubernetes manifests are present
+
+Step 7 — Kubernetes control coverage scan
+Namespace files: 2
+Workload files: 2
+Service files: 3
+RBAC files: 2
+NetworkPolicy files: 3
+SecurityContext files: 5
+Pod Security files: 2
+Policy-as-code references: 11
+
+[OK] workload manifests detected
+[OK] RBAC manifests detected
+[OK] NetworkPolicy manifests detected
+[OK] securityContext hardening references detected
+[OK] Pod Security labels detected
+[OK] policy-as-code references detected
+
+Step 8 — validation tooling readiness
+[OK] git -> /usr/bin/git
+[OK] grep -> alias grep='grep --color=auto'
+[OK] find -> /usr/bin/find
+[OK] sed -> /usr/bin/sed
+[OK] awk -> /usr/bin/awk
+[OK] python3 -> /usr/bin/python3
+[OK] jq -> /usr/bin/jq
+[OK] kubectl -> /home/user/.local/bin/kubectl
+[OK] gitleaks -> /usr/bin/gitleaks
+[OK] optional tool available: terraform -> /usr/bin/terraform
+[OK] optional tool available: tofu -> /usr/bin/tofu
+[OK] optional tool available: kind -> /home/user/.local/bin/kind
+[OK] optional tool available: k3d -> /home/user/.local/bin/k3d
+[OK] optional tool available: kube-score -> /home/user/.local/bin/kube-score
+[WARN] optional tool missing: kube-linter
+[WARN] optional tool missing: conftest
+[OK] optional tool available: trivy -> /home/user/.local/bin/trivy
+[OK] optional tool available: checkov -> /home/user/.local/bin/checkov
+
+Step 9 — documentation and evidence coverage check
+[OK] docs/evidence-index.md
+[OK] docs/resource-inventory.md
+[OK] evidence/before-after-metrics.md
+[OK] docs/cloud-smoke-run-validation.md
+
+Kubernetes references in docs/evidence/reports:
+docs/ru/yandex-cloud-smoke-run.md:10:- Managed Kubernetes API доступен;
+docs/ru/yandex-cloud-smoke-run.md:12:- Kubernetes-манифесты проекта применимы к реальному кластеру;
+docs/ru/yandex-cloud-smoke-run.md:13:- Pod Security Admission работает на реальном API;
+docs/ru/yandex-cloud-smoke-run.md:23:- Managed Kubernetes zonal cluster;
+docs/ru/yandex-cloud-smoke-run.md:34:- Managed Kubernetes zonal master: примерно 9.6624 ₽ за час;
+docs/ru/security-control-model.md:7:Цель модели — показать не просто набор Terraform и Kubernetes файлов, а управляемую программу remediation:
+docs/ru/security-control-model.md:23:- Managed Kubernetes baseline;
+docs/ru/security-control-model.md:24:- Kubernetes hardening;
+docs/ru/security-control-model.md:25:- RBAC;
+docs/ru/security-control-model.md:26:- NetworkPolicy;
+docs/ru/security-control-model.md:27:- Pod Security Standards;
+docs/ru/security-control-model.md:28:- Kyverno policies;
+docs/ru/security-control-model.md:84:### Kubernetes security
+docs/ru/security-control-model.md:88:- показать insecure baseline;
+docs/ru/security-control-model.md:89:- применить hardening;
+docs/ru/security-control-model.md:95:- RBAC least privilege;
+docs/ru/security-control-model.md:96:- NetworkPolicy default deny;
+docs/ru/security-control-model.md:97:- Pod Security Standards;
+docs/ru/security-control-model.md:101:- Kyverno policy-as-code;
+docs/ru/security-control-model.md:108:- Kyverno policies;
+docs/ru/terraform-architecture.md:29:- Kubernetes baseline testing;
+docs/ru/terraform-architecture.md:30:- remediation testing.
+docs/ru/terraform-architecture.md:36:- before/after remediation metrics.
+docs/ru/terraform-architecture.md:77:managed-kubernetes:
+docs/ru/terraform-architecture.md:79:- Managed Kubernetes;
+docs/ru/terraform-architecture.md:82:- hardening controls.
+docs/ru/threat-model.md:5:Threat model описывает основные угрозы для проекта и показывает, как они будут снижены через Terraform, IAM, OIDC, Kubernetes hardening и evidence workflow.
+docs/ru/threat-model.md:18:- Kubernetes cluster;
+docs/ru/threat-model.md:19:- Kubernetes workloads;
+docs/ru/threat-model.md:33:- Yandex Cloud Managed Kubernetes;
+docs/ru/threat-model.md:116:### T04 — Public Kubernetes workload exposure
+docs/ru/threat-model.md:120:Insecure baseline workload may expose services too broadly.
+docs/ru/threat-model.md:130:- NetworkPolicy default deny;
+docs/ru/threat-model.md:141:### T05 — Privileged Kubernetes workload
+docs/ru/threat-model.md:155:- Pod Security Standards;
+docs/ru/threat-model.md:159:- Kyverno enforcement.
+docs/ru/threat-model.md:164:- Kyverno policy output;
+docs/ru/threat-model.md:171:Cloud actions and remediation steps may not be traceable.
+docs/ru/threat-model.md:177:- inability to prove remediation.
+docs/ru/threat-model.md:196:Managed Kubernetes and public resources may create unexpected cost.
+docs/ru/threat-model.md:219:Some risks remain by design during insecure baseline phases.
+docs/ru/kubernetes-security-model.md:1:# Kubernetes security model
+docs/ru/kubernetes-security-model.md:5:Этот документ описывает Kubernetes security baseline для проекта Yandex Cloud Security Remediation Program.
+docs/ru/kubernetes-security-model.md:7:Phase 8 является static/offline фазой. Она проверяет структуру и безопасность Kubernetes-манифестов без подключения к Kubernetes API.
+docs/ru/kubernetes-security-model.md:15:- insecure baseline manifest существует;
+docs/ru/kubernetes-security-model.md:17:- namespace labels для Pod Security Standards описаны;
+docs/ru/kubernetes-security-model.md:18:- RBAC readonly-модель описана;
+docs/ru/kubernetes-security-model.md:19:- NetworkPolicy baseline описан;
+docs/ru/kubernetes-security-model.md:20:- Kyverno policy-as-code baseline описан;
+docs/ru/kubernetes-security-model.md:22:- insecure baseline содержит ожидаемые риски;
+docs/ru/kubernetes-security-model.md:23:- hardened baseline содержит ожидаемые security controls;
+docs/ru/kubernetes-security-model.md:30:- что Kubernetes API принимает эти манифесты;
+docs/ru/kubernetes-security-model.md:32:- что Kyverno CRD установлены в кластере;
+docs/ru/kubernetes-security-model.md:33:- что NetworkPolicy enforced конкретным CNI;
+docs/ru/kubernetes-security-model.md:34:- что Pod Security Admission работает в runtime.
+docs/ru/kubernetes-security-model.md:38:## Insecure baseline
+docs/ru/kubernetes-security-model.md:40:Insecure baseline нужен не как рекомендация, а как controlled negative example.
+docs/ru/kubernetes-security-model.md:51:## Hardened baseline
+docs/ru/kubernetes-security-model.md:53:Hardened baseline показывает remediation controls:
+docs/ru/kubernetes-security-model.md:63:- restricted Pod Security namespace labels;
+docs/ru/kubernetes-security-model.md:64:- default deny NetworkPolicy;
+docs/ru/kubernetes-security-model.md:66:- readonly RBAC;
+docs/ru/kubernetes-security-model.md:67:- Kyverno policy-as-code.
+docs/ru/kubernetes-security-model.md:71:Phase 9 должен поднять временный локальный Kubernetes cluster, применить манифесты, проверить runtime behavior и удалить cluster после сбора evidence.
+docs/ru/kubernetes-runtime-validation.md:1:# Kubernetes runtime validation
+docs/ru/kubernetes-runtime-validation.md:5:Phase 9 проверяет Kubernetes-манифесты на локальном временном Kubernetes API.
+docs/ru/kubernetes-runtime-validation.md:7:Цель фазы — подтвердить, что манифесты из Phase 8 не только проходят статическую проверку, но и принимаются реальным Kubernetes API server.
+docs/ru/kubernetes-runtime-validation.md:16:- применение insecure baseline;
+docs/ru/kubernetes-runtime-validation.md:18:- применение RBAC;
+docs/ru/kubernetes-runtime-validation.md:19:- применение NetworkPolicy;
+docs/ru/kubernetes-runtime-validation.md:20:- отклонение небезопасного privileged Pod в restricted namespace через Pod Security Admission;
+docs/ru/kubernetes-runtime-validation.md:29:Phase 9 не использует Managed Kubernetes.
+docs/ru/iam-oidc-saml-design.md:56:| ycsec-runtime-sa | Kubernetes workload identity pattern | minimal runtime access |
+docs/toolchain-installation.md:11:- Kubernetes local and cloud validation;
+docs/toolchain-installation.md:16:- Kubernetes hardening validation;
+docs/toolchain-installation.md:17:- policy-as-code checks;
+docs/toolchain-installation.md:39:For gitleaks, the accepted local baseline is the Fedora package installed in TemplateVM and resolved in the AppVM as /usr/bin/gitleaks.
+docs/toolchain-installation.md:49:Kubernetes:
+docs/toolchain-installation.md:55:Local container and Kubernetes tooling:
+docs/cost-control.md:17:Promo code must not be activated until local Terraform, Kubernetes manifests, CI/CD checks and evidence model are ready.
+docs/cost-control.md:25:| Managed Kubernetes master | Continuous cost while running | Use only during short evidence runs |
+docs/cost-control.md:26:| Compute node group | VM cost while running | Destroy after Kubernetes evidence collection |
+docs/cost-control.md:92:9. Confirm no Managed Kubernetes cluster or node group remains running without purpose.
+docs/cost-control.md:94:## Kubernetes cost rule
+docs/cost-control.md:96:Managed Kubernetes must be used only for a short evidence run.
+docs/cost-control.md:115:- real Managed Kubernetes cluster evidence;
+docs/resource-inventory.md:21:| 2026-05-12 | Phase 2 | Root portfolio docs | Documentation | cloud-dev-workbench | Portfolio publication baseline | None | Active | N/A | EVID-DOC-001 |
+docs/resource-inventory.md:48:- Managed Kubernetes cluster;
+docs/resource-inventory.md:49:- Managed Kubernetes node group;
+docs/resource-inventory.md:83:| Managed Kubernetes cluster | 1 | 1 | 1 | Removed |
+docs/resource-inventory.md:84:| Managed Kubernetes node group | 1 | 1 | 1 | Removed |
+docs/resource-inventory.md:92:| Smoke Managed Kubernetes clusters | 0 remaining |
+docs/kubernetes-remediation-readiness.md:1:# Kubernetes Baseline and Remediation Readiness
+docs/kubernetes-remediation-readiness.md:5:This document records the local readiness state before moving from the completed Yandex Cloud smoke-run milestone to Kubernetes baseline and remediation validation.
+docs/kubernetes-remediation-readiness.md:9:baseline state -> validation findings -> remediation controls -> repeated validation -> before/after evidence.
+docs/kubernetes-remediation-readiness.md:25:| Kubernetes YAML manifests | 12 |
+docs/kubernetes-remediation-readiness.md:29:| RBAC files | 2 |
+docs/kubernetes-remediation-readiness.md:30:| NetworkPolicy files | 3 |
+docs/kubernetes-remediation-readiness.md:32:| Pod Security files | 2 |
+docs/kubernetes-remediation-readiness.md:41:| Kubernetes manifests | Inventory completed |
+docs/kubernetes-remediation-readiness.md:43:| RBAC coverage | Inventory completed |
+docs/kubernetes-remediation-readiness.md:44:| NetworkPolicy coverage | Inventory completed |
+docs/kubernetes-remediation-readiness.md:45:| Pod Security coverage | Inventory completed |
+docs/kubernetes-remediation-readiness.md:57:The next phase should convert the current inventory into a controlled Kubernetes baseline validation workflow.
+docs/kubernetes-remediation-readiness.md:61:1. Define baseline validation targets.
+docs/kubernetes-remediation-readiness.md:62:2. Identify insecure or intentionally weak baseline controls.
+docs/kubernetes-remediation-readiness.md:63:3. Validate baseline manifests locally.
+docs/kubernetes-remediation-readiness.md:64:4. Prepare remediation controls.
+docs/kubernetes-remediation-readiness.md:65:5. Validate remediation locally.
+docs/kubernetes-remediation-readiness.md:66:6. Only after local validation, plan a short real-cloud baseline/remediation run if required.
+docs/kubernetes-remediation-readiness.md:76:No Kubernetes cluster is created by this phase.
+docs/control-matrix.md:14:| K8S-01 | Kubernetes | Apply namespace isolation | kubernetes/namespaces | Kubernetes evidence | Planned |
+docs/control-matrix.md:15:| K8S-02 | Kubernetes | Apply RBAC least privilege | kubernetes/rbac | RBAC evidence | Planned |
+docs/control-matrix.md:16:| K8S-03 | Kubernetes | Apply NetworkPolicy default deny | kubernetes/network-policies | policy evidence | Planned |
+docs/control-matrix.md:17:| K8S-04 | Kubernetes | Apply Pod Security Standards | kubernetes/pod-security | hardening evidence | Planned |
+docs/control-matrix.md:18:| K8S-05 | Kubernetes | Enforce policy-as-code | kubernetes/kyverno-policies | kyverno output | Planned |
+docs/toolchain-model.md:18:| Phase 9 | Prepare local Kubernetes baseline |
+docs/toolchain-model.md:35:| kubectl | Kubernetes CLI | TemplateVM package or AppVM user-space |
+docs/toolchain-model.md:36:| helm | Kubernetes package manager | TemplateVM package or AppVM user-space |
+docs/toolchain-model.md:39:| kind | Local Kubernetes | AppVM user-space |
+docs/toolchain-model.md:40:| k3d | Local Kubernetes alternative | AppVM user-space |
+docs/toolchain-model.md:47:| kube-score | Kubernetes manifest review | AppVM user-space or CI |
+docs/toolchain-model.md:48:| kubescape | Kubernetes security scanning | AppVM user-space or CI |
+docs/toolchain-model.md:54:Before Terraform and Kubernetes implementation, the minimum useful set is:
+docs/multi-cloud-control-mapping.md:5:| IAM least privilege | Service accounts and folder roles | IAM roles and policies | IAM service accounts and roles | Managed identities and RBAC |
+docs/multi-cloud-control-mapping.md:11:| Managed Kubernetes | Managed Service for Kubernetes | EKS | GKE | AKS |
+docs/multi-cloud-control-mapping.md:13:| Policy-as-code | Kyverno | Kyverno or OPA | Policy Controller or Kyverno | Azure Policy or Kyverno |
+docs/en/yandex-cloud-smoke-run.md:10:- Managed Kubernetes API is reachable;
+docs/en/yandex-cloud-smoke-run.md:12:- project Kubernetes manifests can be applied to a real cluster;
+docs/en/yandex-cloud-smoke-run.md:13:- Pod Security Admission works on a real API server;
+docs/en/yandex-cloud-smoke-run.md:23:- Managed Kubernetes zonal cluster;
+docs/en/yandex-cloud-smoke-run.md:34:- Managed Kubernetes zonal master: about 9.6624 RUB per hour;
+docs/en/security-control-model.md:7:The goal is to demonstrate a managed remediation program, not only a collection of Terraform and Kubernetes files.
+docs/en/security-control-model.md:25:- Managed Kubernetes baseline;
+docs/en/security-control-model.md:26:- Kubernetes hardening;
+docs/en/security-control-model.md:27:- RBAC;
+docs/en/security-control-model.md:28:- NetworkPolicy;
+docs/en/security-control-model.md:29:- Pod Security Standards;
+docs/en/security-control-model.md:30:- Kyverno policies;
+docs/en/security-control-model.md:86:### Kubernetes security
+docs/en/security-control-model.md:90:- demonstrate an insecure baseline;
+docs/en/security-control-model.md:91:- apply hardening;
+docs/en/security-control-model.md:97:- RBAC least privilege;
+docs/en/security-control-model.md:98:- NetworkPolicy default deny;
+docs/en/security-control-model.md:99:- Pod Security Standards;
+docs/en/security-control-model.md:103:- Kyverno policy-as-code;
+docs/en/security-control-model.md:110:- Kyverno policies;
+docs/en/terraform-architecture.md:29:- Kubernetes baseline testing;
+docs/en/terraform-architecture.md:30:- remediation testing.
+docs/en/terraform-architecture.md:36:- before/after remediation metrics.
+docs/en/terraform-architecture.md:77:managed-kubernetes:
+docs/en/terraform-architecture.md:79:- Managed Kubernetes;
+docs/en/terraform-architecture.md:82:- hardening controls.
+docs/en/threat-model.md:5:This threat model describes the main threats for the project and maps them to Terraform, IAM, OIDC, Kubernetes hardening and evidence workflow controls.
+docs/en/threat-model.md:18:- Kubernetes cluster;
+docs/en/threat-model.md:19:- Kubernetes workloads;
+docs/en/threat-model.md:33:- Yandex Cloud Managed Kubernetes;
+docs/en/threat-model.md:116:### T04 — Public Kubernetes workload exposure
+docs/en/threat-model.md:120:An insecure baseline workload may expose services too broadly.
+docs/en/threat-model.md:130:- NetworkPolicy default deny;
+docs/en/threat-model.md:141:### T05 — Privileged Kubernetes workload
+docs/en/threat-model.md:155:- Pod Security Standards;
+docs/en/threat-model.md:159:- Kyverno enforcement.
+docs/en/threat-model.md:164:- Kyverno policy output;
+docs/en/threat-model.md:171:Cloud actions and remediation steps may not be traceable.
+docs/en/threat-model.md:177:- inability to prove remediation.
+docs/en/threat-model.md:196:Managed Kubernetes and public resources may create unexpected cost.
+docs/en/threat-model.md:219:Some risks remain by design during insecure baseline phases.
+docs/en/kubernetes-security-model.md:1:# Kubernetes security model
+docs/en/kubernetes-security-model.md:5:This document describes the Kubernetes security baseline for the Yandex Cloud Security Remediation Program.
+docs/en/kubernetes-security-model.md:7:Phase 8 is a static/offline phase. It validates Kubernetes manifests without connecting to a Kubernetes API.
+docs/en/kubernetes-security-model.md:15:- the insecure baseline manifest exists;
+docs/en/kubernetes-security-model.md:17:- namespace labels for Pod Security Standards are defined;
+docs/en/kubernetes-security-model.md:18:- the readonly RBAC model is defined;
+docs/en/kubernetes-security-model.md:19:- the NetworkPolicy baseline is defined;
+docs/en/kubernetes-security-model.md:20:- the Kyverno policy-as-code baseline is defined;
+docs/en/kubernetes-security-model.md:22:- the insecure baseline contains expected risks;
+docs/en/kubernetes-security-model.md:23:- the hardened baseline contains expected security controls;
+docs/en/kubernetes-security-model.md:30:- the Kubernetes API accepts these manifests;
+docs/en/kubernetes-security-model.md:32:- Kyverno CRDs are installed in a cluster;
+docs/en/kubernetes-security-model.md:33:- NetworkPolicy is enforced by a concrete CNI;
+docs/en/kubernetes-security-model.md:34:- Pod Security Admission works at runtime.
+docs/en/kubernetes-security-model.md:38:## Insecure baseline
+docs/en/kubernetes-security-model.md:40:The insecure baseline is a controlled negative example.
+docs/en/kubernetes-security-model.md:51:## Hardened baseline
+docs/en/kubernetes-security-model.md:53:The hardened baseline demonstrates remediation controls:
+docs/en/kubernetes-security-model.md:63:- restricted Pod Security namespace labels;
+docs/en/kubernetes-security-model.md:64:- default deny NetworkPolicy;
+docs/en/kubernetes-security-model.md:66:- readonly RBAC;
+docs/en/kubernetes-security-model.md:67:- Kyverno policy-as-code.
+docs/en/kubernetes-security-model.md:71:Phase 9 must create a temporary local Kubernetes cluster, apply manifests, validate runtime behavior and destroy the cluster after evidence collection.
+docs/en/kubernetes-runtime-validation.md:1:# Kubernetes runtime validation
+docs/en/kubernetes-runtime-validation.md:5:Phase 9 validates Kubernetes manifests against a temporary local Kubernetes API.
+docs/en/kubernetes-runtime-validation.md:7:The goal is to prove that the Phase 8 manifests are not only statically valid, but are also accepted by a real Kubernetes API server.
+docs/en/kubernetes-runtime-validation.md:16:- insecure baseline application;
+docs/en/kubernetes-runtime-validation.md:18:- RBAC application;
+docs/en/kubernetes-runtime-validation.md:19:- NetworkPolicy application;
+docs/en/kubernetes-runtime-validation.md:20:- rejection of an unsafe privileged Pod in a restricted namespace through Pod Security Admission;
+docs/en/kubernetes-runtime-validation.md:29:Phase 9 does not use Managed Kubernetes.
+docs/en/iam-oidc-saml-design.md:56:| ycsec-runtime-sa | Kubernetes workload identity pattern | minimal runtime access |
+docs/evidence-index.md:5:This document maps project evidence to implemented controls, remediation outcomes and audit artifacts.
+docs/evidence-index.md:15:| Before-state findings | evidence/before/ | Yes, after review | Used to prove insecure baseline |
+docs/evidence-index.md:16:| After-state findings | evidence/after/ | Yes, after review | Used to prove remediation |
+docs/evidence-index.md:18:| Before/after metrics | evidence/before-after-metrics.md | Yes | Main remediation outcome table |
+docs/evidence-index.md:31:| EVID-K8S | Kubernetes baseline and hardening |
+docs/evidence-index.md:32:| EVID-NET | NetworkPolicy and network isolation |
+docs/evidence-index.md:81:architecture -> implementation -> scan result -> remediation -> audit evidence -> control matrix -> final report.
+docs/evidence-index.md:99:| EVID-LOCAL-015 | Phase 5 | evidence/command-outputs/YCSEC_05_OUTPUT_final_git_control.txt | Git commit and tag evidence for toolchain baseline | Yes | Yes |
+docs/evidence-index.md:130:| EVID-K8S-001 | Phase 8 | evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt | Kubernetes static manifest validation output | Yes | Yes |
+docs/evidence-index.md:131:| EVID-K8S-002 | Phase 8 | evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt | Final Kubernetes static baseline control evidence | Yes | Yes |
+docs/evidence-index.md:132:| EVID-K8S-003 | Phase 8 | evidence/command-outputs/YCSEC_08_OUTPUT_final_git_control.txt | Git commit and tag evidence for Kubernetes static baseline | Yes | Yes |
+docs/evidence-index.md:138:| EVID-K8S-004 | Phase 9 | evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt | Local kind-based Kubernetes runtime validation | Yes | Yes |
+docs/evidence-index.md:140:| EVID-K8S-006 | Phase 9 | evidence/command-outputs/YCSEC_09_OUTPUT_final_git_control.txt | Git commit and tag evidence for local Kubernetes runtime validation | Yes | Yes |
+docs/evidence-index.md:167:## Phase 11.2 — Yandex Cloud Managed Kubernetes Smoke-Run
+docs/evidence-index.md:171:| EVID-YC-SMOKE-001 | evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt | Command output | Sanitized successful Yandex Cloud Managed Kubernetes smoke-run output | Public-safe |
+docs/evidence-index.md:179:- Terraform apply created real Yandex Cloud Managed Kubernetes resources.
+docs/evidence-index.md:180:- kubectl confirmed Kubernetes API access and worker node readiness.
+docs/risk-register.md:8:| R-004 | Public Kubernetes workload exposure | Medium | High | High | NetworkPolicy, service review | before/after manifests | Open |
+docs/risk-register.md:9:| R-005 | Privileged Kubernetes workload | Medium | High | High | Pod Security, Kyverno | policy scan output | Open |
+docs/risk-register.md:14:| R-010 | Insecure baseline misunderstood as final state | Low | High | Medium | clear before/after documentation | final report | Open |
+docs/cloud-smoke-run-validation.md:1:# Yandex Cloud Managed Kubernetes Smoke-Run Validation
+docs/cloud-smoke-run-validation.md:5:This document summarizes the successful short-lived Yandex Cloud Managed Kubernetes smoke-run performed as part of the Yandex Cloud Security Remediation Program.
+docs/cloud-smoke-run-validation.md:7:The objective was to validate real managed cloud provisioning through Terraform, runtime provider authentication, Kubernetes API access, worker node readiness, mandatory cleanup, zero-resource verification and publication-safe evidence handling.
+docs/cloud-smoke-run-validation.md:20:| Managed Kubernetes API reachability | Passed |
+docs/cloud-smoke-run-validation.md:34:| Subnet | 1 | Zonal subnet for Managed Kubernetes |
+docs/cloud-smoke-run-validation.md:37:| Managed Kubernetes cluster | 1 | Real managed Kubernetes control plane validation |
+docs/cloud-smoke-run-validation.md:38:| Managed Kubernetes node group | 1 | Worker node readiness validation |
+docs/cloud-smoke-run-validation.md:63:The warning was accepted because it did not indicate authentication failure, Terraform failure, resource leakage, cleanup failure, cost-control failure or Kubernetes runtime failure.
+docs/cloud-smoke-run-validation.md:80:Terraform authentication -> plan -> apply -> Kubernetes validation -> secret scan -> destroy -> zero-resource verification -> sanitized evidence.
+docs/cloud-smoke-run-validation.md:82:This validates the cloud execution foundation required for the managed Kubernetes baseline and remediation stages.
+docs/qubes-workstation-model.md:5:This project is implemented in Qubes OS using isolated qubes for development, local Kubernetes testing, evidence handling and browser-based cloud access.
+docs/qubes-workstation-model.md:14:| cloud-k8s-local-lab | kind/k3d, local Kubernetes testing, insecure baseline, hardening tests | Used for local Kubernetes phases |
+docs/qubes-workstation-model.md:27:- Kubernetes testing;
+docs/qubes-workstation-model.md:63:| Kubernetes CLI | kubectl, helm |
+docs/qubes-workstation-model.md:66:| Local Kubernetes | kind or k3d |
+docs/qubes-workstation-model.md:67:| Kubernetes security | kube-score, kubescape, kyverno |
+evidence/before-after-metrics.md:21:| Privileged Kubernetes pods | TBD | TBD | EVID-K8S-001 |
+evidence/before-after-metrics.md:25:| Missing NetworkPolicy | TBD | TBD | EVID-NET-001 |
+evidence/before-after-metrics.md:26:| Broad RBAC permissions | TBD | TBD | EVID-K8S-005 |
+evidence/before-after-metrics.md:27:| Pod Security Standards | TBD | TBD | EVID-K8S-006 |
+evidence/before-after-metrics.md:28:| Kyverno policy enforcement | TBD | TBD | EVID-K8S-007 |
+evidence/before-after-metrics.md:41:- Do not claim 100% remediation unless evidence proves it.
+evidence/before-after-metrics.md:58:## Phase 8 Kubernetes baseline metrics
+evidence/before-after-metrics.md:60:| Control | Insecure baseline | Hardened state | Evidence |
+evidence/before-after-metrics.md:62:| Runs as non-root | No | Yes | kubernetes/insecure-baseline, kubernetes/hardened |
+evidence/before-after-metrics.md:69:| Namespace Pod Security | privileged | restricted | namespace labels |
+evidence/before-after-metrics.md:70:| Network default deny | Missing | Present | NetworkPolicy manifests |
+evidence/before-after-metrics.md:71:| RBAC least privilege | Missing | Present | RBAC manifests |
+evidence/before-after-metrics.md:72:| Policy-as-code | Missing | Present | Kyverno policies |
+evidence/before-after-metrics.md:74:## Phase 8 — Kubernetes static baseline metrics
+evidence/before-after-metrics.md:78:| Privileged workload example | Not documented | Documented as insecure baseline | kubernetes/insecure-baseline/demo-app-insecure.yaml |
+evidence/before-after-metrics.md:79:| Root container example | Not documented | Documented as insecure baseline | kubernetes/insecure-baseline/demo-app-insecure.yaml |
+evidence/before-after-metrics.md:80:| Hardened non-root workload | Not documented | Documented | kubernetes/hardened/demo-app-hardened.yaml |
+evidence/before-after-metrics.md:81:| Read-only root filesystem | Not documented | Documented | kubernetes/hardened/demo-app-hardened.yaml |
+evidence/before-after-metrics.md:82:| Dropped Linux capabilities | Not documented | Documented | kubernetes/hardened/demo-app-hardened.yaml |
+evidence/before-after-metrics.md:83:| RuntimeDefault seccomp | Not documented | Documented | kubernetes/hardened/demo-app-hardened.yaml |
+evidence/before-after-metrics.md:84:| Default deny NetworkPolicy | Not documented | Documented | kubernetes/network-policies/default-deny.yaml |
+evidence/before-after-metrics.md:85:| Kyverno policy-as-code | Not documented | Documented | kubernetes/kyverno-policies/ |
+evidence/before-after-metrics.md:86:| Runtime enforcement | Not tested in Phase 8 | Deferred to Phase 9 | docs/en/kubernetes-security-model.md |
+evidence/before-after-metrics.md:88:## Phase 9 — local Kubernetes runtime validation
+evidence/before-after-metrics.md:92:| Kubernetes manifests validated only statically | Yes | No |
+evidence/before-after-metrics.md:93:| Kubernetes manifests accepted by local API server | No evidence | Evidence captured |
+evidence/before-after-metrics.md:98:## Phase 11.2 — Managed Kubernetes Smoke-Run Metrics
+evidence/before-after-metrics.md:103:| Managed Kubernetes provisioning | Not validated in real cloud | Real Yandex Cloud Managed Kubernetes cluster created successfully | EVID-YC-SMOKE-001 |
+evidence/before-after-metrics.md:104:| Kubernetes API access | Not validated in real cloud | kubectl confirmed API reachability | EVID-YC-SMOKE-001 |
+evidence/command-outputs/YCSEC_11R_OUTPUT_runtime_snapshot_before_destroy.txt:7:Managed Kubernetes clusters:
+evidence/command-outputs/YCSEC_11R_OUTPUT_runtime_snapshot_before_destroy.txt:15:Managed Kubernetes node groups:
+evidence/command-outputs/YCSEC_04_OUTPUT_qubes_toolchain_discovery.txt:66:/home/user/projects/yandex-cloud-security-remediation-program
+evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_control.txt:4:Project: yandex-cloud-security-remediation-program
+evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_control.txt:34:[OK] No Managed Kubernetes created in this phase
+evidence/command-outputs/YCSEC_06_OUTPUT_iac_skeleton_control.txt:4:Project: yandex-cloud-security-remediation-program
+evidence/command-outputs/YCSEC_06_OUTPUT_iac_skeleton_control.txt:31:[OK] terraform/modules/managed-kubernetes/main.tf
+evidence/command-outputs/YCSEC_06_OUTPUT_iac_skeleton_control.txt:32:[OK] terraform/modules/managed-kubernetes/variables.tf
+evidence/command-outputs/YCSEC_06_OUTPUT_iac_skeleton_control.txt:33:[OK] terraform/modules/managed-kubernetes/outputs.tf
+evidence/command-outputs/YCSEC_06_OUTPUT_iac_skeleton_control.txt:77:[OK] No Managed Kubernetes created in this phase
+evidence/command-outputs/YCSEC_06_OUTPUT_iac_skeleton_control.txt:122:?? terraform/modules/managed-kubernetes/README.md
+evidence/command-outputs/YCSEC_06_OUTPUT_iac_skeleton_control.txt:123:?? terraform/modules/managed-kubernetes/main.tf
+evidence/command-outputs/YCSEC_06_OUTPUT_iac_skeleton_control.txt:124:?? terraform/modules/managed-kubernetes/outputs.tf
+evidence/command-outputs/YCSEC_06_OUTPUT_iac_skeleton_control.txt:125:?? terraform/modules/managed-kubernetes/variables.tf
+evidence/command-outputs/YCSEC_11R_OUTPUT_manual_cleanup_after_lost_state.txt:11:Managed Kubernetes clusters:
+evidence/command-outputs/YCSEC_11R_OUTPUT_manual_cleanup_after_lost_state.txt:19:Managed Kubernetes node groups:
+evidence/command-outputs/YCSEC_11R_OUTPUT_manual_cleanup_after_lost_state.txt:67:Step 1 — delete smoke Kubernetes cluster
+evidence/command-outputs/YCSEC_11R_OUTPUT_manual_cleanup_after_lost_state.txt:74:Step 3 — post-cluster Kubernetes inventory
+evidence/command-outputs/YCSEC_11R_OUTPUT_manual_cleanup_after_lost_state.txt:129:Managed Kubernetes clusters:
+evidence/command-outputs/YCSEC_11R_OUTPUT_manual_cleanup_after_lost_state.txt:136:Managed Kubernetes node groups:
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:1:YCSEC Phase 9R — Local Kubernetes Runtime Validation
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:44:Kubernetes control plane is running at https://127.0.0.1:46079
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:68:Apply: insecure baseline
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:69:Warning: would violate PodSecurity "baseline:latest": privileged (container "web" must not set securityContext.privileged=true)
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:72:[OK] insecure baseline applied
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:80:Apply: RBAC
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:84:[OK] RBAC applied
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:86:Apply: default deny NetworkPolicy
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:88:[OK] default deny NetworkPolicy applied
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:90:Apply: DNS egress NetworkPolicy
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:92:[OK] DNS egress NetworkPolicy applied
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:94:Apply: same namespace web NetworkPolicy
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:96:[OK] same namespace web NetworkPolicy applied
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:110:Verify objects from manifest: insecure baseline
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:116:[OK] insecure baseline objects exist
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:129:Verify objects from manifest: RBAC
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:138:[OK] RBAC objects exist
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:140:Verify objects from manifest: default deny NetworkPolicy
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:143:[OK] default deny NetworkPolicy objects exist
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:145:Verify objects from manifest: DNS egress NetworkPolicy
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:148:[OK] DNS egress NetworkPolicy objects exist
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:150:Verify objects from manifest: same namespace web NetworkPolicy
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:152:ycsec-allow-same-namespace-web   app.kubernetes.io/name=ycsec-demo,ycsec.io/profile=hardened   0s
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:153:[OK] same namespace web NetworkPolicy objects exist
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:155:Pod Security Admission runtime check
+evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt:185:[OK] local Kubernetes runtime validation completed without blocking failures
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:1:Phase 8R2 — Kubernetes Static Baseline Control
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:4:Project: yandex-cloud-security-remediation-program
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:8:[OK] Runtime Kubernetes validation is deferred to Phase 9
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:13:[OK] docs/ru/kubernetes-security-model.md
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:14:[OK] docs/en/kubernetes-security-model.md
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:19:[OK] kubernetes/namespaces/ycsec-insecure.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:20:[OK] kubernetes/namespaces/ycsec-hardened.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:21:[OK] kubernetes/insecure-baseline/demo-app-insecure.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:22:[OK] kubernetes/hardened/demo-app-hardened.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:23:[OK] kubernetes/rbac/ycsec-demo-readonly.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:24:[OK] kubernetes/network-policies/default-deny.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:25:[OK] kubernetes/network-policies/allow-dns-egress.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:26:[OK] kubernetes/network-policies/allow-same-namespace-web.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:27:[OK] kubernetes/kyverno-policies/disallow-privileged.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:28:[OK] kubernetes/kyverno-policies/require-non-root.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:29:[OK] kubernetes/kyverno-policies/require-readonly-rootfs.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:30:[OK] kubernetes/kyverno-policies/require-resource-limits.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:31:[OK] kubernetes/pod-security/README.md
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:34:[OK] scripts/validate-kubernetes-static-baseline.sh executable
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:39:NetworkPolicy decision:
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:54:[OK] No Managed Kubernetes created in this phase
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:63:?? docs/en/kubernetes-security-model.md
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:64:?? docs/ru/kubernetes-security-model.md
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:66:?? evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:67:?? evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:68:?? kubernetes/hardened/demo-app-hardened.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:69:?? kubernetes/insecure-baseline/demo-app-insecure.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:70:?? kubernetes/kyverno-policies/disallow-privileged.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:71:?? kubernetes/kyverno-policies/require-non-root.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:72:?? kubernetes/kyverno-policies/require-readonly-rootfs.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:73:?? kubernetes/kyverno-policies/require-resource-limits.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:74:?? kubernetes/namespaces/ycsec-hardened.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:75:?? kubernetes/namespaces/ycsec-insecure.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:76:?? kubernetes/network-policies/allow-dns-egress.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:77:?? kubernetes/network-policies/allow-same-namespace-web.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:78:?? kubernetes/network-policies/default-deny.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:79:?? kubernetes/pod-security/README.md
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:80:?? kubernetes/rbac/ycsec-demo-readonly.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt:81:?? scripts/validate-kubernetes-static-baseline.sh
+evidence/command-outputs/YCSEC_12_0_OUTPUT_final_git_control.txt:8:?? docs/kubernetes-remediation-readiness.md
+evidence/command-outputs/YCSEC_12_0_OUTPUT_final_git_control.txt:12:?? evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt
+evidence/command-outputs/YCSEC_12_0_OUTPUT_final_git_control.txt:17:5d6e853 (tag: v0.11-yandex-cloud-smoke-run) test: add Yandex Cloud Kubernetes smoke run
+evidence/command-outputs/YCSEC_12_0_OUTPUT_final_git_control.txt:19:c24edc3 (tag: v0.9-local-kubernetes-runtime) test: add local Kubernetes runtime validation
+evidence/command-outputs/YCSEC_12_0_OUTPUT_final_git_control.txt:20:70558b0 (tag: v0.8-kubernetes-baseline) feat: add Kubernetes security baseline manifests
+evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt:1:Phase 9C — Local Kubernetes Runtime Validation Evidence Cleanup
+evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt:4:Project: yandex-cloud-security-remediation-program
+evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt:17:[OK] docs/ru/kubernetes-runtime-validation.md
+evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt:18:[OK] docs/en/kubernetes-runtime-validation.md
+evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt:23:[OK] scripts/run-local-kubernetes-runtime-validation.sh executable
+evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt:26:[OK] local kind cluster used for Kubernetes API validation
+evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt:28:[OK] Pod Security Admission rejection checked with server-side dry-run
+evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt:39:[OK] No Managed Kubernetes used in this phase
+evidence/command-outputs/YCSEC_11R_OUTPUT_final_cloud_cleanup_verification.txt:5:Managed Kubernetes clusters:
+evidence/command-outputs/YCSEC_11R_OUTPUT_final_cloud_cleanup_verification.txt:12:Managed Kubernetes node groups:
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:4:Project: yandex-cloud-security-remediation-program
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:15:[OK] terraform/modules/managed-kubernetes
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:19:[OK] kubernetes/insecure-baseline
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:20:[OK] kubernetes/hardened
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:59:?? kubernetes/
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:132:kubernetes
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:133:kubernetes/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:134:kubernetes/demo-app
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:135:kubernetes/demo-app/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:136:kubernetes/hardened
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:137:kubernetes/hardened/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:138:kubernetes/insecure-baseline
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:139:kubernetes/insecure-baseline/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:140:kubernetes/kyverno-policies
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:141:kubernetes/kyverno-policies/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:142:kubernetes/namespaces
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:143:kubernetes/namespaces/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:144:kubernetes/network-policies
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:145:kubernetes/network-policies/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:146:kubernetes/pod-security
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:147:kubernetes/pod-security/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:148:kubernetes/rbac
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:149:kubernetes/rbac/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt:167:terraform/modules/managed-kubernetes
+evidence/command-outputs/YCSEC_11_OUTPUT_final_control.txt:4:Project: yandex-cloud-security-remediation-program
+evidence/command-outputs/YCSEC_11_OUTPUT_final_control.txt:20:[OK] smoke Kubernetes cluster absent
+evidence/command-outputs/YCSEC_11_OUTPUT_final_control.txt:21:[OK] smoke Kubernetes node group absent
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:1:Phase 12.0-REPAIR — Kubernetes baseline/remediation readiness inventory
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:10:Step 2 — repository baseline
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:15:5d6e853 (tag: v0.11-yandex-cloud-smoke-run) test: add Yandex Cloud Kubernetes smoke run
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:17:c24edc3 (tag: v0.9-local-kubernetes-runtime) test: add local Kubernetes runtime validation
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:18:70558b0 (tag: v0.8-kubernetes-baseline) feat: add Kubernetes security baseline manifests
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:30:Step 4 — define Kubernetes inventory roots
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:31:[OK] inventory root exists: kubernetes
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:35:[WARN] inventory root absent: policy-as-code
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:36:[OK] Kubernetes inventory roots available
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:47:docs/en/kubernetes-runtime-validation.md
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:48:docs/en/kubernetes-security-model.md
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:55:docs/kubernetes-remediation-readiness.md
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:63:docs/ru/kubernetes-runtime-validation.md
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:64:docs/ru/kubernetes-security-model.md
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:103:evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:104:evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:106:evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:128:evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:178:terraform/modules/managed-kubernetes/.gitkeep
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:179:terraform/modules/managed-kubernetes/README.md
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:180:terraform/modules/managed-kubernetes/main.tf
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:181:terraform/modules/managed-kubernetes/outputs.tf
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:182:terraform/modules/managed-kubernetes/variables.tf
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:204:Kubernetes-related files:
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:205:kubernetes/hardened/demo-app-hardened.yaml
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:206:kubernetes/insecure-baseline/demo-app-insecure.yaml
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:207:kubernetes/kyverno-policies/disallow-privileged.yaml
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:208:kubernetes/kyverno-policies/require-non-root.yaml
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:209:kubernetes/kyverno-policies/require-readonly-rootfs.yaml
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:210:kubernetes/kyverno-policies/require-resource-limits.yaml
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:211:kubernetes/namespaces/ycsec-hardened.yaml
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:212:kubernetes/namespaces/ycsec-insecure.yaml
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:213:kubernetes/network-policies/allow-dns-egress.yaml
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:214:kubernetes/network-policies/allow-same-namespace-web.yaml
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:215:kubernetes/network-policies/default-deny.yaml
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:216:kubernetes/pod-security/README.md
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:217:kubernetes/rbac/ycsec-demo-readonly.yaml
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:228:scripts/run-local-kubernetes-runtime-validation.sh
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:231:scripts/validate-kubernetes-static-baseline.sh
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:233:Step 6 — Kubernetes manifest presence check
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:234:Kubernetes YAML manifests found: 12
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:235:[OK] Kubernetes manifests are present
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:237:Step 7 — Kubernetes control coverage scan
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:241:RBAC files: 2
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:242:NetworkPolicy files: 3
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:244:Pod Security files: 2
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:248:[OK] RBAC manifests detected
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:249:[OK] NetworkPolicy manifests detected
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:250:[OK] securityContext hardening references detected
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:251:[OK] Pod Security labels detected
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:252:[OK] policy-as-code references detected
+evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt:280:Kubernetes references in docs/evidence/reports:
+evidence/command-outputs/YCSEC_07_OUTPUT_control_model_validation.txt:4:Project: yandex-cloud-security-remediation-program
+evidence/command-outputs/YCSEC_07_OUTPUT_control_model_validation.txt:42:[OK] No Managed Kubernetes created in this phase
+evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt:1:Phase 11.2-CLOSEOUT — Successful Yandex Cloud Managed Kubernetes Smoke-Run
+evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt:4:Short-lived Yandex Cloud Managed Kubernetes smoke-run for validating Terraform-based infrastructure creation, provider authentication, Kubernetes API access, node readiness, cleanup discipline and publication-safe evidence handling.
+evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt:12:[OK] Managed Kubernetes control plane became reachable.
+evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt:13:[OK] Kubernetes node group became available.
+evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt:14:[OK] kubectl confirmed Kubernetes API access.
+evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt:29:- 1 zonal Managed Kubernetes cluster.
+evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt:30:- 1 Managed Kubernetes node group.
+evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt:33:[OK] no smoke Managed Kubernetes clusters remain.
+evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt:47:[OK] sanitized evidence preserves technical proof of plan, apply, Kubernetes validation, secret scan, destroy and zero-resource verification.
+evidence/command-outputs/YCSEC_11_2_OUTPUT_smoke_run_success_closeout.txt:54:[OK] Phase 11.2 confirmed successful real-cloud Managed Kubernetes provisioning and cleanup.
+evidence/command-outputs/YCSEC_10_OUTPUT_final_control.txt:4:Project: yandex-cloud-security-remediation-program
+evidence/command-outputs/YCSEC_04_OUTPUT_toolchain_phase_control.txt:4:Project: yandex-cloud-security-remediation-program
+evidence/command-outputs/YCSEC_04_OUTPUT_toolchain_phase_control.txt:36:[OK] No Managed Kubernetes created in this phase
+evidence/command-outputs/YCSEC_08_OUTPUT_final_git_control.txt:5:3c55281 feat: add Kubernetes security baseline manifests
+evidence/command-outputs/YCSEC_08_OUTPUT_final_git_control.txt:22:v0.8-kubernetes-baseline
+evidence/command-outputs/YCSEC_08_OUTPUT_final_git_control.txt:25:v0.8-kubernetes-baseline
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_plan_after_disk_fix.txt:11:      + description        = "Temporary service account for YCSEC Kubernetes smoke cluster"
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_plan_after_disk_fix.txt:22:      + description        = "Temporary service account for YCSEC Kubernetes smoke nodes"
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_plan_after_disk_fix.txt:30:  # yandex_kubernetes_cluster.smoke will be created
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_plan_after_disk_fix.txt:31:  + resource "yandex_kubernetes_cluster" "smoke" {
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_plan_after_disk_fix.txt:35:      + description              = "Temporary YCSEC smoke-run Managed Kubernetes cluster"
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_plan_after_disk_fix.txt:82:  # yandex_kubernetes_node_group.smoke will be created
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_plan_after_disk_fix.txt:83:  + resource "yandex_kubernetes_node_group" "smoke" {
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:6:[OK] Kubernetes cluster/node group IDs redacted
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:10:[OK] Kubernetes cluster CA certificate block redacted
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:22:YCSEC Phase 11 — Yandex Cloud short Kubernetes smoke-run
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:56:[OK] expected resources: VPC, subnet, two service accounts, zonal Managed Kubernetes cluster, one preemptible node group
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:110:      + description        = "Temporary service account for YCSEC Kubernetes smoke cluster"
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:121:      + description        = "Temporary service account for YCSEC Kubernetes smoke nodes"
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:129:  # yandex_kubernetes_cluster.smoke will be created
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:130:  + resource "yandex_kubernetes_cluster" "smoke" {
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:134:      + description              = "Temporary YCSEC smoke-run Managed Kubernetes cluster"
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:181:  # yandex_kubernetes_node_group.smoke will be created
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:182:  + resource "yandex_kubernetes_node_group" "smoke" {
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:351:yandex_kubernetes_cluster.smoke: Creating...
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:352:yandex_kubernetes_cluster.smoke: Still creating... [00m10s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:353:yandex_kubernetes_cluster.smoke: Still creating... [00m20s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:354:yandex_kubernetes_cluster.smoke: Still creating... [00m30s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:355:yandex_kubernetes_cluster.smoke: Still creating... [00m40s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:356:yandex_kubernetes_cluster.smoke: Still creating... [00m50s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:357:yandex_kubernetes_cluster.smoke: Still creating... [01m00s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:358:yandex_kubernetes_cluster.smoke: Still creating... [01m10s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:359:yandex_kubernetes_cluster.smoke: Still creating... [01m20s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:360:yandex_kubernetes_cluster.smoke: Still creating... [01m30s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:361:yandex_kubernetes_cluster.smoke: Still creating... [01m40s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:362:yandex_kubernetes_cluster.smoke: Still creating... [01m51s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:363:yandex_kubernetes_cluster.smoke: Still creating... [02m01s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:364:yandex_kubernetes_cluster.smoke: Still creating... [02m11s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:365:yandex_kubernetes_cluster.smoke: Still creating... [02m21s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:366:yandex_kubernetes_cluster.smoke: Still creating... [02m31s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:367:yandex_kubernetes_cluster.smoke: Still creating... [02m41s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:368:yandex_kubernetes_cluster.smoke: Still creating... [02m51s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:369:yandex_kubernetes_cluster.smoke: Still creating... [03m01s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:370:yandex_kubernetes_cluster.smoke: Still creating... [03m11s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:371:yandex_kubernetes_cluster.smoke: Still creating... [03m21s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:372:yandex_kubernetes_cluster.smoke: Still creating... [03m31s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:373:yandex_kubernetes_cluster.smoke: Still creating... [03m41s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:374:yandex_kubernetes_cluster.smoke: Still creating... [03m51s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:375:yandex_kubernetes_cluster.smoke: Still creating... [04m01s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:376:yandex_kubernetes_cluster.smoke: Still creating... [04m11s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:377:yandex_kubernetes_cluster.smoke: Still creating... [04m21s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:378:yandex_kubernetes_cluster.smoke: Still creating... [04m31s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:379:yandex_kubernetes_cluster.smoke: Still creating... [04m41s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:380:yandex_kubernetes_cluster.smoke: Still creating... [04m51s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:381:yandex_kubernetes_cluster.smoke: Still creating... [05m01s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:382:yandex_kubernetes_cluster.smoke: Still creating... [05m11s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:383:yandex_kubernetes_cluster.smoke: Still creating... [05m21s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:384:yandex_kubernetes_cluster.smoke: Still creating... [05m31s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:385:yandex_kubernetes_cluster.smoke: Still creating... [05m41s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:386:yandex_kubernetes_cluster.smoke: Still creating... [05m51s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:387:yandex_kubernetes_cluster.smoke: Still creating... [06m01s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:388:yandex_kubernetes_cluster.smoke: Still creating... [06m11s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:389:yandex_kubernetes_cluster.smoke: Still creating... [06m21s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:390:yandex_kubernetes_cluster.smoke: Still creating... [06m31s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:391:yandex_kubernetes_cluster.smoke: Still creating... [06m41s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:392:yandex_kubernetes_cluster.smoke: Still creating... [06m51s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:393:yandex_kubernetes_cluster.smoke: Still creating... [07m01s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:394:yandex_kubernetes_cluster.smoke: Still creating... [07m11s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:395:yandex_kubernetes_cluster.smoke: Still creating... [07m21s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:396:yandex_kubernetes_cluster.smoke: Still creating... [07m31s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:397:yandex_kubernetes_cluster.smoke: Still creating... [07m41s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:398:yandex_kubernetes_cluster.smoke: Creation complete after 7m41s [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:399:yandex_kubernetes_node_group.smoke: Creating...
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:400:yandex_kubernetes_node_group.smoke: Still creating... [00m10s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:401:yandex_kubernetes_node_group.smoke: Still creating... [00m20s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:402:yandex_kubernetes_node_group.smoke: Still creating... [00m30s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:403:yandex_kubernetes_node_group.smoke: Still creating... [00m40s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:404:yandex_kubernetes_node_group.smoke: Still creating... [00m50s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:405:yandex_kubernetes_node_group.smoke: Still creating... [01m00s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:406:yandex_kubernetes_node_group.smoke: Still creating... [01m10s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:407:yandex_kubernetes_node_group.smoke: Still creating... [01m20s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:408:yandex_kubernetes_node_group.smoke: Still creating... [01m30s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:409:yandex_kubernetes_node_group.smoke: Creation complete after 1m34s [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:428:To access clusters using the Kubernetes API, please use Kubernetes Service Account.
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:430:Kubernetes control plane is running at https://<YC_K8S_ENDPOINT_REDACTED>
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:453:yandex_kubernetes_cluster.smoke: Refreshing state... [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:454:yandex_kubernetes_node_group.smoke: Refreshing state... [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:465:      - description        = "Temporary service account for YCSEC Kubernetes smoke cluster" -> null
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:475:      - description        = "Temporary service account for YCSEC Kubernetes smoke nodes" -> null
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:482:  # yandex_kubernetes_cluster.smoke will be destroyed
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:483:  - resource "yandex_kubernetes_cluster" "smoke" {
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:486:      - description              = "Temporary YCSEC smoke-run Managed Kubernetes cluster" -> null
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:549:  # yandex_kubernetes_node_group.smoke will be destroyed
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:550:  - resource "yandex_kubernetes_node_group" "smoke" {
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:717:yandex_kubernetes_node_group.smoke: Destroying... [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:718:yandex_kubernetes_node_group.smoke: Still destroying... [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>, 00m10s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:719:yandex_kubernetes_node_group.smoke: Still destroying... [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>, 00m20s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:720:yandex_kubernetes_node_group.smoke: Still destroying... [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>, 00m30s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:721:yandex_kubernetes_node_group.smoke: Still destroying... [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>, 00m40s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:722:yandex_kubernetes_node_group.smoke: Still destroying... [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>, 00m50s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:723:yandex_kubernetes_node_group.smoke: Still destroying... [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>, 01m00s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:724:yandex_kubernetes_node_group.smoke: Destruction complete after 1m2s
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:725:yandex_kubernetes_cluster.smoke: Destroying... [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:726:yandex_kubernetes_cluster.smoke: Still destroying... [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>, 00m10s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:727:yandex_kubernetes_cluster.smoke: Still destroying... [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>, 00m20s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:728:yandex_kubernetes_cluster.smoke: Still destroying... [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>, 00m30s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:729:yandex_kubernetes_cluster.smoke: Still destroying... [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>, 00m40s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:730:yandex_kubernetes_cluster.smoke: Still destroying... [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>, 00m50s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:731:yandex_kubernetes_cluster.smoke: Still destroying... [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>, 01m00s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:732:yandex_kubernetes_cluster.smoke: Still destroying... [id=<YC_K8S_CLUSTER_OR_NODE_GROUP_ID_REDACTED>, 01m10s elapsed]
+evidence/command-outputs/YCSEC_11_2_OUTPUT_hardened_smoke_run_success_sanitized.txt:733:yandex_kubernetes_cluster.smoke: Destruction complete after 1m12s
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:16:[0m[1myandex_kubernetes_cluster.smoke: Creating...[0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:17:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [00m10s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:18:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [00m20s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:19:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [00m30s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:20:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [00m40s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:21:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [00m50s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:22:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [01m00s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:23:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [01m10s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:24:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [01m20s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:25:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [01m30s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:26:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [01m40s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:27:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [01m50s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:28:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [02m00s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:29:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [02m10s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:30:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [02m20s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:31:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [02m30s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:32:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [02m40s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:33:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [02m50s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:34:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [03m00s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:35:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [03m10s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:36:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [03m20s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:37:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [03m30s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:38:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [03m40s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:39:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [03m50s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:40:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [04m00s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:41:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [04m10s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:42:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [04m20s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:43:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [04m30s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:44:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [04m40s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:45:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [04m50s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:46:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [05m00s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:47:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [05m10s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:48:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [05m20s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:49:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [05m30s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:50:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [05m40s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:51:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [05m50s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:52:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [06m00s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:53:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [06m10s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:54:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [06m20s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:55:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [06m30s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:56:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [06m40s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:57:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [06m50s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:58:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [07m00s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:59:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [07m10s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:60:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [07m20s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:61:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [07m30s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:62:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [07m40s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:63:[0m[1myandex_kubernetes_cluster.smoke: Still creating... [07m50s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:64:[0m[1myandex_kubernetes_cluster.smoke: Creation complete after 7m58s [id=<redacted-yc-id>][0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:65:[0m[1myandex_kubernetes_node_group.smoke: Creating...[0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:66:[0m[1myandex_kubernetes_node_group.smoke: Still creating... [00m10s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:67:[0m[1myandex_kubernetes_node_group.smoke: Still creating... [00m20s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:68:[0m[1myandex_kubernetes_node_group.smoke: Still creating... [00m30s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:69:[0m[1myandex_kubernetes_node_group.smoke: Still creating... [00m40s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:70:[0m[1myandex_kubernetes_node_group.smoke: Still creating... [00m50s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:71:[0m[1myandex_kubernetes_node_group.smoke: Still creating... [01m00s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:72:[0m[1myandex_kubernetes_node_group.smoke: Still creating... [01m10s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:73:[0m[1myandex_kubernetes_node_group.smoke: Still creating... [01m20s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:74:[0m[1myandex_kubernetes_node_group.smoke: Still creating... [01m30s elapsed][0m[0m
+evidence/command-outputs/YCSEC_11R_OUTPUT_smoke_apply.txt:75:[0m[1myandex_kubernetes_node_group.smoke: Creation complete after 1m36s [id=<redacted-yc-id>][0m
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:1:YCSEC Phase 8R2 — Kubernetes Static Baseline Validation
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:10:[OK] docs/ru/kubernetes-security-model.md
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:11:[OK] docs/en/kubernetes-security-model.md
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:14:[OK] kubernetes/namespaces/ycsec-insecure.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:15:[OK] kubernetes/namespaces/ycsec-hardened.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:16:[OK] kubernetes/insecure-baseline/demo-app-insecure.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:17:[OK] kubernetes/hardened/demo-app-hardened.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:18:[OK] kubernetes/rbac/ycsec-demo-readonly.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:19:[OK] kubernetes/network-policies/default-deny.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:20:[OK] kubernetes/network-policies/allow-dns-egress.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:21:[OK] kubernetes/network-policies/allow-same-namespace-web.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:22:[OK] kubernetes/kyverno-policies/disallow-privileged.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:23:[OK] kubernetes/kyverno-policies/require-non-root.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:24:[OK] kubernetes/kyverno-policies/require-readonly-rootfs.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:25:[OK] kubernetes/kyverno-policies/require-resource-limits.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:26:[OK] kubernetes/pod-security/README.md
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:29:[OK] YAML parse: kubernetes/namespaces/ycsec-insecure.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:30:[OK] YAML parse: kubernetes/namespaces/ycsec-hardened.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:31:[OK] YAML parse: kubernetes/insecure-baseline/demo-app-insecure.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:32:[OK] YAML parse: kubernetes/hardened/demo-app-hardened.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:33:[OK] YAML parse: kubernetes/rbac/ycsec-demo-readonly.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:34:[OK] YAML parse: kubernetes/network-policies/default-deny.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:35:[OK] YAML parse: kubernetes/network-policies/allow-dns-egress.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:36:[OK] YAML parse: kubernetes/network-policies/allow-same-namespace-web.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:37:[OK] YAML parse: kubernetes/kyverno-policies/disallow-privileged.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:38:[OK] YAML parse: kubernetes/kyverno-policies/require-non-root.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:39:[OK] YAML parse: kubernetes/kyverno-policies/require-readonly-rootfs.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:40:[OK] YAML parse: kubernetes/kyverno-policies/require-resource-limits.yaml
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:42:Static baseline scope decision
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:46:[OK] runtime Kubernetes API validation is deferred to Phase 9
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:48:Insecure baseline expected-risk checks
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:49:[OK] baseline demonstrates privileged container risk
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:50:[OK] baseline demonstrates root user risk
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:51:[OK] baseline demonstrates privilege escalation risk
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:52:[OK] baseline demonstrates NodePort exposure risk
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:54:Hardened baseline security checks
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:55:[OK] hardened namespace enforces restricted Pod Security
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:68:NetworkPolicy checks
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:69:[OK] default deny NetworkPolicy declares policyTypes
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:70:[OK] default deny NetworkPolicy covers ingress
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:71:[OK] default deny NetworkPolicy covers egress
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:78:RBAC checks
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:79:[OK] RBAC Role present
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:80:[OK] RBAC RoleBinding present
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:81:[OK] RBAC readonly get permission present
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:82:[OK] RBAC readonly list permission present
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:83:[OK] RBAC readonly watch permission present
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:85:Kyverno policy checks
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:86:[OK] Kyverno privileged policy is ClusterPolicy
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:87:[OK] Kyverno privileged policy checks privileged containers
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:88:[OK] Kyverno non-root policy checks runAsNonRoot
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:89:[OK] Kyverno readonly rootfs policy checks readOnlyRootFilesystem
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:90:[OK] Kyverno resource policy checks resource requirements
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:108:[OK] No Managed Kubernetes created in this phase
+evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt:114:[OK] Kubernetes static baseline validation completed without blocking failures
+evidence/command-outputs/YCSEC_11_OUTPUT_post_sanitization_cloud_verification.txt:5:Managed Kubernetes clusters:
+evidence/command-outputs/YCSEC_11_OUTPUT_post_sanitization_cloud_verification.txt:12:Managed Kubernetes node groups:
+evidence/command-outputs/YCSEC_09_OUTPUT_final_git_control.txt:4:[OK] Phase 9 local Kubernetes runtime validation is committed
+evidence/command-outputs/YCSEC_09_OUTPUT_final_git_control.txt:5:[OK] tag v0.9-local-kubernetes-runtime is the Phase 9 release marker
+evidence/command-outputs/YCSEC_09_OUTPUT_final_git_control.txt:19:v0.9-local-kubernetes-runtime
+evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt:26:- managed_kubernetes in ../../modules/managed-kubernetes
+evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt:63:- managed_kubernetes in ../../modules/managed-kubernetes
+evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt:96:- managed_kubernetes in ../../modules/managed-kubernetes
+evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt:235:== tofu init: terraform/modules/managed-kubernetes ==
+evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt:249:== tofu validate: terraform/modules/managed-kubernetes ==
+evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt:251:[OK] tofu validation passed for terraform/modules/managed-kubernetes
+evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt:305:[OK] No Managed Kubernetes created in this phase
+evidence/command-outputs/YCSEC_02_OUTPUT_root_portfolio_files_control.txt:4:Project: yandex-cloud-security-remediation-program
+evidence/command-outputs/YCSEC_02_OUTPUT_root_portfolio_files_control.txt:24:[OK] kubernetes/insecure-baseline
+evidence/command-outputs/YCSEC_02_OUTPUT_root_portfolio_files_control.txt:25:[OK] kubernetes/hardened
+evidence/command-outputs/YCSEC_02_OUTPUT_root_portfolio_files_control.txt:39:[OK] No Managed Kubernetes created in this phase
+evidence/command-outputs/YCSEC_03_OUTPUT_evidence_cost_control.txt:4:Project: yandex-cloud-security-remediation-program
+evidence/command-outputs/YCSEC_03_OUTPUT_evidence_cost_control.txt:32:[OK] No Managed Kubernetes created in this phase
+evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt:4:Project: yandex-cloud-security-remediation-program
+evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt:27:[OK] kubernetes/insecure-baseline
+evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt:28:[OK] kubernetes/hardened
+evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt:63:A  kubernetes/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt:64:A  kubernetes/demo-app/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt:65:A  kubernetes/hardened/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt:66:A  kubernetes/insecure-baseline/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt:67:A  kubernetes/kyverno-policies/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt:68:A  kubernetes/namespaces/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt:69:A  kubernetes/network-policies/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt:70:A  kubernetes/pod-security/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt:71:A  kubernetes/rbac/.gitkeep
+evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt:83:A  terraform/modules/managed-kubernetes/.gitkeep
+evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_check.txt:36:Kubernetes CLI
+evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_check.txt:47:Container and local Kubernetes
+evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_check.txt:146:[OK] No Managed Kubernetes created in this phase
+evidence/command-outputs/YCSEC_04_OUTPUT_toolchain_check.txt:67:Kubernetes tools:
+evidence/command-outputs/YCSEC_11_1_OUTPUT_cloud_zero_resource_verification.txt:4:Managed Kubernetes clusters:
+evidence/command-outputs/YCSEC_11_1_OUTPUT_cloud_zero_resource_verification.txt:11:Managed Kubernetes node groups:
+evidence/command-outputs/YCSEC_03_OUTPUT_tool_versions.txt:6:/home/user/projects/yandex-cloud-security-remediation-program
+evidence/command-outputs/YCSEC_11_1_OUTPUT_final_git_control.txt:4:[OK] smoke-run script safety hardening is committed
+
+Step 10 — repository safety checks
+[OK] no Terraform state files
+[OK] no kubeconfig files
+[OK] no key/token-like files
+
+Step 11 — publication wording check
+[OK] no internal workflow wording found in public project files
+
+Step 12 — gitleaks scan
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m5:53AM[0m [32mINF[0m [1mscanned ~442409 bytes (442.41 KB) in 458ms[0m
+[90m5:53AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 13 — write Kubernetes remediation readiness document
+[OK] readiness document written: docs/kubernetes-remediation-readiness.md
+
+Step 14 — phase decision
+Warnings: 6
+Blocking checks: 0
+[OK] Phase 12.0 readiness inventory completed
+[OK] repository is ready for Kubernetes baseline validation planning
+
+Final git status before commit:
+?? docs/kubernetes-remediation-readiness.md
+?? evidence/command-outputs/YCSEC_12_0_OUTPUT_final_git_control.txt
+?? evidence/command-outputs/YCSEC_12_0_OUTPUT_kubernetes_remediation_readiness.txt
