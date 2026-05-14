@@ -1,0 +1,54 @@
+Phase 12.8F — Registry and evidence storage validation
+Date: 2026-05-14T09:09:15+00:00
+Qube: cloud-dev-workbech
+
+Step 1 — normalize Phase 12.8E leftover artifact
+[OK] moved leftover Phase 12.8E artifact to private evidence
+
+Step 2 — verify roadmap baseline
+d172951 (HEAD -> main, tag: v0.12.8e-audit-trails-evidence-validation, origin/main) test: validate Audit Trails evidence delivery
+664c3ff (tag: v0.12.8d-github-actions-oidc-validation) ci: validate GitHub Actions OIDC token exchange
+9772ab6 ci: use direct Yandex Cloud OIDC token exchange validation
+483160e ci: repair GitHub Actions OIDC validation workflow
+f58270b ci: validate GitHub Actions OIDC federation
+cba7dd7 (tag: v0.12.8c-github-publication) docs: record GitHub publication evidence
+068a549 (tag: v0.12.8b-bootstrap-oidc-audit-cloud-run) test: run bootstrap OIDC audit cloud provisioning
+6e8b863 (tag: v0.12.8a-github-remote-scope) docs: record GitHub OIDC repository scope
+[OK] current HEAD has required Phase 12.8E tag
+[OK] current branch is main
+
+Step 3 — validate retained Container Registry
+[OK] Container Registry exists: ycsec-bootstrap-registry
+
+Step 4 — validate retained Object Storage evidence bucket
+[OK] Object Storage audit/evidence bucket exists: <redacted>
+
+Step 5 — validate Audit Trails destination remains active
+[OK] Audit Trails trail remains ACTIVE
+
+Step 6 — validate IAM/OIDC bootstrap identities remain available
+[OK] GitHub Actions service account exists
+[OK] Audit Trails service account exists
+[OK] Workload Identity OIDC federation exists
+
+Step 7 — write registry/evidence-storage validation document
+[OK] validation document written: docs/registry-evidence-storage-validation.md
+
+Step 8 — update evidence index and cloud evidence gap register
+[OK] evidence index updated
+[OK] cloud evidence gap register updated
+
+Step 9 — repository artifact safety checks
+[OK] no Terraform state files in repository
+[OK] no kubeconfig files in repository
+[OK] no key/token-like files in repository
+[90m9:09AM[0m [32mINF[0m [1m32 commits scanned.[0m
+[90m9:09AM[0m [32mINF[0m [1mscanned ~739562 bytes (739.56 KB) in 628ms[0m
+[90m9:09AM[0m [32mINF[0m [1mno leaks found[0m
+[OK] gitleaks scan passed
+
+Step 10 — phase decision
+FAIL_COUNT=0
+[OK] Phase 12.8F Registry and evidence storage validation completed
+[OK] Bootstrap/OIDC/Audit retained resource block is ready for next roadmap stage
+[OK] next roadmap stage: Phase 12.9 Managed Kubernetes baseline/remediation cloud-run plan

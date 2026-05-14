@@ -120,3 +120,14 @@ Closed evidence gap:
 - At least one Audit Trails object delivery was observed.
 - Public evidence is sanitized.
 - Raw audit metadata remains outside the repository.
+
+## Phase 12.8F — Registry and evidence storage validation
+
+Status: closed for bootstrap registry/evidence-storage retention validation.
+
+Closed evidence gap:
+- Container Registry exists and is retained for later image/security evidence.
+- Object Storage audit/evidence bucket exists.
+- Audit Trails remains active.
+- GitHub Actions OIDC identity resources remain available.
+- Managed registry vulnerability scanning is not claimed as closed in this phase; it remains assigned to the later container security evidence stage.

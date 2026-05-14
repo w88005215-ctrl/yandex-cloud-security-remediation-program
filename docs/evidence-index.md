@@ -366,3 +366,10 @@ Result:
 | `docs/audit-trails-evidence-validation.md` | Audit Trails delivery validation result |
 | `evidence/sanitized/audit_trails_delivery_object_listing_redacted.txt` | Sanitized Object Storage delivery evidence |
 | `evidence/command-outputs/YCSEC_12_8E_OUTPUT_audit_trails_delivery_validation.txt` | Command evidence for Audit Trails delivery validation |
+
+## Phase 12.8F — Registry and evidence storage validation
+
+| Evidence | Description |
+|---|---|
+| `docs/registry-evidence-storage-validation.md` | Registry and evidence storage validation result |
+| `evidence/command-outputs/YCSEC_12_8F_OUTPUT_registry_evidence_storage_validation.txt` | Command evidence for retained registry and evidence storage validation |
