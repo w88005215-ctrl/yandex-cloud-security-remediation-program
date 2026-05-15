@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-05-15T12:16:58.681105+00:00",
+  "phase": "13.18B",
+  "cloud_actions": "none",
+  "purpose": "Close final synchronization of README_EN.md and README_RU.md with current final publication state.",
+  "baseline": "v0.13.18a-remove-reports-placeholder",
+  "updated_files": [
+    "README_EN.md",
+    "README_RU.md"
+  ],
+  "final_state_reflected": [
+    "completed portfolio-grade status",
+    "root PDF report placement",
+    "final RU/EN reports",
+    "cloud evidence completion",
+    "OIDC validation",
+    "Managed Kubernetes remediation evidence",
+    "SBOM and vulnerability validation",
+    "retained bootstrap cleanup",
+    "repository audit and sanitization",
+    "publication artifact curation",
+    "final publication consistency cleanup",
+    "removed empty reports placeholder",
+    "claim boundaries"
+  ]
+}

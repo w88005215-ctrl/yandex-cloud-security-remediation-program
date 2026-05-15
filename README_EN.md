@@ -1,108 +1,130 @@
 # Yandex Cloud Security Remediation Program
 
-Terraform + IAM/OIDC/SAML + Managed Kubernetes Hardening + Audit Evidence
+Terraform + IAM/OIDC + Managed Kubernetes Hardening + Audit Evidence
 
-## Project overview
+## Project status
 
-This repository demonstrates a production-like cloud security remediation program on real managed cloud infrastructure using Yandex Cloud.
+**Status:** completed portfolio-grade cloud security remediation case.
 
-The project is built as a portfolio-grade Cloud Security / DevSecOps case. It shows how to build an insecure baseline, detect security gaps, apply remediation, collect audit evidence and present measurable before/after outcomes.
+This repository demonstrates an evidence-driven cloud security remediation program implemented on real managed cloud infrastructure. The project covers the complete workflow from insecure baseline identification to remediation as code, policy enforcement, supply-chain validation, cleanup evidence, public sanitization, and final reporting.
 
-## Key capabilities demonstrated
+Final state:
 
-- Terraform / OpenTofu infrastructure as code
-- Modular infrastructure design
-- Yandex Cloud IAM
-- Least-privilege service accounts
-- GitHub Actions OIDC / Workload Identity Federation
-- CI/CD without long-lived cloud credentials
-- SAML/SSO federation pattern
-- Yandex Managed Service for Kubernetes
-- Kubernetes insecure baseline
-- Kubernetes hardening
-- RBAC least privilege
-- NetworkPolicy
-- Pod Security Standards
-- Kyverno policy-as-code
-- CI/CD security gates
-- Container and filesystem security scanning
-- SBOM generation
-- Audit Trails evidence
-- Before/after remediation metrics
-- Risk register
-- Control matrix
-- AWS/GCP/Azure control mapping
-- RU/EN final reports
+- Final RU/EN technical reports completed.
+- Final bilingual PDF report placed in the repository root beside `README.md`.
+- Cloud evidence collection completed.
+- Managed Kubernetes baseline/remediation evidence completed.
+- GitHub Actions OIDC validation completed without long-lived cloud keys.
+- Supply-chain validation, SBOM, vulnerability metrics, Kyverno policy enforcement, Checkov and Gitleaks gates completed.
+- Retained bootstrap resources cleaned up after evidence validation.
+- Public repository audit, sanitization and publication artifact curation completed.
+- Final remediation metrics, control matrix, risk register and cross-cloud mapping published.
 
-## Positioning statement
+## Final PDF report
 
-This project must not be represented as AWS, GCP or Azure production experience.
+- [Final PDF Report — RU/EN](yandex_cloud_security_remediation_final_report_ru_en.pdf)
+- [PDF report index](docs/final-pdf-report.md)
+
+## Core final reports
+
+- [Final Technical Report EN](docs/final-technical-report-en.md)
+- [Final Technical Report RU](docs/final-technical-report-ru.md)
+- [Final Project Completion Report EN](docs/final-project-completion-report-en.md)
+- [Final Project Completion Report RU](docs/final-project-completion-report-ru.md)
+- [Final Remediation Metrics](docs/final-remediation-metrics.md)
+- [Final Control Matrix](docs/final-control-matrix.md)
+- [Final Risk Register](docs/final-risk-register.md)
+- [Cross-Cloud Control Mapping](docs/final-cross-cloud-control-mapping.md)
+- [Publication Readiness](docs/final-publication-readiness.md)
+- [Final Repository Audit EN](docs/final-repository-audit-en.md)
+- [Publication Sanitization Report EN](docs/publication-sanitization-report-en.md)
+- [Evidence Index](docs/evidence-index.md)
+
+## What the project demonstrates
+
+- Terraform / OpenTofu infrastructure as code.
+- Yandex Cloud IAM and least-privilege service accounts.
+- GitHub Actions OIDC / Workload Identity Federation without long-lived cloud keys.
+- SAML/SSO federation pattern.
+- Yandex Managed Service for Kubernetes.
+- Kubernetes insecure baseline and hardened remediation state.
+- RBAC least privilege, NetworkPolicy and Pod Security Standards.
+- Kyverno policy-as-code admission control.
+- CI/CD security gates.
+- Container Registry workflow validation.
+- SBOM generation with CycloneDX.
+- Vulnerability evidence using Trivy and Grype.
+- IaC validation with Checkov.
+- Secret scanning with Gitleaks.
+- Audit Trails evidence and cleanup evidence.
+- Before/after remediation metrics.
+- Final control matrix and risk register.
+- Conceptual AWS/GCP/Azure control mapping.
+
+## Correct positioning
+
+This repository demonstrates practical cloud security engineering on Yandex Cloud and maps equivalent controls conceptually to AWS, GCP and Azure.
+
+It must not be represented as:
+
+- AWS/GCP/Azure production experience.
+- Continuous production operation of live cloud infrastructure.
+- Ownership of third-party production infrastructure.
+- A repository containing live cloud credentials, Terraform state, kubeconfig files, PEM keys or retained cloud runtime artifacts.
 
 Correct positioning:
 
-Production-like cloud security remediation program on real managed cloud infrastructure with provider-agnostic controls mapped to AWS/GCP/Azure.
+> Production-like cloud security remediation program on real managed cloud infrastructure with provider-agnostic controls mapped conceptually to AWS/GCP/Azure.
 
-## Delivery model
+## Repository structure
 
-The project follows a local-first and short cloud evidence run model:
+Main areas:
 
-1. Prepare and validate locally.
-2. Run security checks before cloud deployment.
-3. Create short-lived Yandex Cloud infrastructure only when evidence collection is ready.
-4. Collect baseline evidence.
-5. Apply remediation.
-6. Collect after-state evidence.
-7. Check costs.
-8. Destroy expensive resources.
+- `terraform/` — Terraform environments and infrastructure definitions.
+- `kubernetes/` — insecure baseline, hardened manifests, RBAC, NetworkPolicy, PSS and Kyverno policies.
+- `.github/workflows/` — CI/CD security gates and OIDC-based validation workflows.
+- `docs/` — architecture, final reports, control matrix, risk register, mapping, publication readiness and audit reports.
+- `evidence/` — curated sanitized evidence, metrics and validation outputs.
+- `scripts/` — helper scripts for validation, evidence collection, redaction, cost checks and cleanup checks.
+- `presentation/` — presentation outline.
+- `yandex_cloud_security_remediation_final_report_ru_en.pdf` — final bilingual PDF report in the repository root.
 
 ## Evidence model
 
-Evidence is stored in a structured way:
+The project follows an evidence-first model:
 
-- evidence/command-outputs/ for terminal output
-- evidence/screenshots/ for screenshots
-- evidence/before/ for insecure baseline evidence
-- evidence/after/ for remediated state evidence
-- evidence/sanitized/ for redacted audit artifacts
-- evidence/before-after-metrics.md for measurable outcomes
+- command outputs are stored under `evidence/command-outputs/`;
+- baseline findings are stored under `evidence/before/`;
+- remediation evidence is stored under `evidence/after/`;
+- sanitized audit artifacts are stored under `evidence/sanitized/`;
+- final metrics are stored under `evidence/metrics/`;
+- final reports and governance documents are stored under `docs/`.
 
-## Publication safety
+The public tree was curated to remove low-value intermediate execution noise while preserving final reports, final metrics, validated security evidence, audit reports, sanitization records and publication boundary documentation.
 
-The public repository must not contain:
+## Security and publication safety
 
-- Terraform state
-- kubeconfig files
-- service account keys
-- cloud tokens
-- raw audit logs
-- billing data
-- unredacted screenshots
-- personal or payment information
+The repository has been checked for:
 
-## Audience
+- Terraform state files;
+- kubeconfig files;
+- service account keys;
+- IAM/OIDC tokens;
+- PEM/private key material;
+- raw audit logs;
+- billing data;
+- unredacted sensitive evidence;
+- personal or payment data.
 
-This project is designed for:
+Final validation included Gitleaks, Checkov, repository safety checks, public artifact curation and final publication consistency cleanup.
 
-- GitHub portfolio review
-- technical interviews
-- Cloud Security / DevSecOps demonstrations
-- academic or training project defense
-- security architecture review
+## Intended audience
 
-<!-- YCSEC:K8S-REMEDIATION-CASE:START -->
-## Kubernetes Security Remediation Case
+This project is prepared for:
 
-This repository includes a Kubernetes security remediation track that demonstrates a complete evidence-driven workflow:
-
-readiness inventory -> baseline validation -> remediation controls -> before/after comparison -> portfolio case study.
-
-Key documents:
-
-- docs/kubernetes-security-remediation-case-study.md
-- docs/kubernetes-baseline-validation-plan.md
-- docs/kubernetes-baseline-findings.md
-- docs/kubernetes-remediation-results.md
-- docs/kubernetes-before-after-remediation-comparison.md
-
-<!-- YCSEC:K8S-REMEDIATION-CASE:END -->
+- GitHub portfolio review;
+- technical interview discussion;
+- cloud security / DevSecOps demonstration;
+- academic or training project defense;
+- security engineering review.
 

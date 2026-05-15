@@ -1,0 +1,36 @@
+Phase 13.18B final bilingual README synchronization git control
+Date: 2026-05-15T12:17:07+00:00
+Cloud actions: NONE
+
+HEAD:
+db05054 (HEAD -> main, tag: v0.13.18a-remove-reports-placeholder, origin/main, origin/HEAD) docs: remove empty reports placeholder
+e3b811f (tag: v0.13.18-final-publication-consistency) docs: align final publication status
+a0f9d6d (tag: v0.13.17b-final-pdf-root-placement) docs: move final PDF report to repository root
+3a14b7f (tag: v0.13.17a-final-pdf-artifact-inclusion) docs: include final PDF artifact
+461aae5 (tag: v0.13.17-final-pdf-report) docs: add final PDF report
+d01f4eb (tag: v0.13.16-publication-artifact-curation) docs: curate final publication artifacts
+5f14582 (tag: v0.13.15-final-project-completion-report) docs: add final project completion report
+cf5f74a (tag: v0.13.14a-final-audit-append-closeout) docs: close final audit sanitized evidence
+be44587 (tag: v0.13.14-final-repository-audit) docs: add final repository audit and sanitization reports
+370cd97 fix: sanitize scanner metadata for Gitleaks
+19354a0 (tag: v0.13.12-checkov-stabilization) test: stabilize Checkov IaC security workflow
+a18df35 (tag: v0.13.11-retained-bootstrap-cleanup) docs: record retained bootstrap cleanup
+4233e3c (tag: v0.13.10-final-reports-publication-summary) docs: add final technical reports and publication summary
+10f1fdd (tag: v0.13.9-cross-cloud-publication-readiness) docs: add cross-cloud mapping and publication readiness
+
+Updated files:
+README_EN.md
+README_RU.md
+evidence/metrics/final_bilingual_readme_sync.json
+evidence/metrics/final_bilingual_readme_sync.txt
+
+Status:
+ M README_EN.md
+ M README_RU.md
+?? evidence/command-outputs/YCSEC_13_18B_OUTPUT_final_bilingual_readmes.txt
+?? evidence/command-outputs/YCSEC_13_18B_OUTPUT_final_git_control.txt
+?? evidence/metrics/final_bilingual_readme_sync.json
+?? evidence/metrics/final_bilingual_readme_sync.txt
+
+Expected tag:
+v0.13.18b-final-bilingual-readmes
