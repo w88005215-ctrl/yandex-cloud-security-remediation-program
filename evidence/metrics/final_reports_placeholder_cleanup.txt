@@ -1,0 +1,7 @@
+Final reports placeholder cleanup
+Generated at: 2026-05-15T12:10:15.412723+00:00
+Cloud actions: none
+Removed tracked path: reports/.gitkeep
+Canonical final PDF path: yandex_cloud_security_remediation_final_report_ru_en.pdf
+History rewrite: false
+Force push: false

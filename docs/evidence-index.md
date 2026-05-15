@@ -698,3 +698,16 @@ Corrected items:
 - Repository metadata can be updated through GitHub CLI when authenticated.
 
 Cloud actions: none.
+
+## Phase 13.18A — Remove Tracked Reports Placeholder
+
+Purpose: close the final publication consistency cleanup by removing the empty tracked `reports/.gitkeep` placeholder after the final PDF report was moved to the repository root.
+
+Result:
+
+- `reports/.gitkeep` removed from the tracked public tree.
+- `reports/` is no longer a tracked publication path.
+- Root-level PDF remains the canonical final PDF artifact.
+- No cloud resources were created or modified.
+
+Cloud actions: none.
