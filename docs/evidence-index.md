@@ -669,3 +669,17 @@ Final bilingual completion reports and summary metrics were added:
 - `evidence/metrics/final_project_completion_summary.txt`
 
 The reports summarize the completed remediation program, evidence domains, sensitive-data status, claim boundaries, and portfolio value.
+
+## Phase 13.17 - Final PDF Report
+
+Purpose: add the final bilingual PDF report as a publication-grade portfolio artifact.
+
+Artifacts:
+
+- `reports/yandex_cloud_security_remediation_final_report_ru_en.pdf`
+- `docs/final-pdf-report.md`
+- `evidence/metrics/final_pdf_report_summary.json`
+- `evidence/metrics/final_pdf_report_summary.txt`
+- `evidence/command-outputs/YCSEC_13_17_OUTPUT_final_pdf_report_generation.txt`
+
+Cloud actions: none.

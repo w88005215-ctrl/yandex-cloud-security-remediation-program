@@ -186,3 +186,10 @@ The final public repository tree was curated to reduce intermediate execution no
 - [Publication artifact curation](docs/publication-artifact-curation.md)
 - [Final project completion report — EN](docs/final-project-completion-report-en.md)
 - [Финальный отчет о завершении проекта — RU](docs/final-project-completion-report-ru.md)
+
+## Final PDF Report
+
+A final bilingual PDF report is included for portfolio review, technical interview discussion, and project defense:
+
+- [Final PDF Report - RU/EN](reports/yandex_cloud_security_remediation_final_report_ru_en.pdf)
+- [PDF report index](docs/final-pdf-report.md)

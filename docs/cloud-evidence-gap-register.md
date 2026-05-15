@@ -503,3 +503,9 @@ The project is considered complete for portfolio/publication purposes after fina
 Remaining gaps: none blocking for the declared portfolio scope.
 
 Boundary: AWS/GCP/Azure references remain control-equivalence mappings only. The repository does not claim actual AWS/GCP/Azure deployment evidence.
+
+## Phase 13.17 - Final PDF Report
+
+Status: reporting-only publication enhancement.
+
+No cloud resources were created. No retained cloud resources were introduced. The phase adds the final bilingual PDF report to the curated public repository and records its integrity metadata.
