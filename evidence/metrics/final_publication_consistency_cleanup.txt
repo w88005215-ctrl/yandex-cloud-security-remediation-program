@@ -1,0 +1,5 @@
+Final publication consistency cleanup
+Generated at: 2026-05-15T12:06:36.228861+00:00
+Cloud actions: none
+Corrected: README current status, retained-resource wording, publication readiness, GitHub publication note, reports placeholder.
+Final PDF location: yandex_cloud_security_remediation_final_report_ru_en.pdf

@@ -96,7 +96,7 @@ Main areas:
 - .github/workflows/ — CI/CD security gates and OIDC-based cloud workflow
 - docs/ — architecture, threat model, control matrix, risk register and mapping
 - evidence/ — sanitized command outputs, screenshots and before/after metrics
-- reports/ — final RU/EN reports
+- docs/ — architecture, final reports, control matrix, risk register, mapping and publication documentation
 - presentation/ — presentation outline
 - scripts/ — helper scripts for evidence, redaction, cost checks and destroy checks
 
@@ -127,11 +127,23 @@ The repository must never contain:
 
 ## Current status
 
-Project phase:
+Project status: **completed portfolio-grade cloud security remediation case**.
 
-- v0.1-skeleton — repository skeleton initialized
-- Phase 2 — root portfolio documentation in progress
+Final state:
 
+- Final RU/EN technical reports completed.
+- Final PDF report placed in the repository root beside `README.md`.
+- Cloud evidence collection completed.
+- Managed Kubernetes baseline/remediation evidence completed.
+- GitHub Actions OIDC validation completed without long-lived cloud keys.
+- Supply-chain validation, SBOM, vulnerability metrics, Kyverno policy enforcement and Checkov/Gitleaks gates completed.
+- Retained bootstrap resources cleaned up after evidence validation.
+- Public repository audit, sanitization and publication artifact curation completed.
+- Final remediation metrics, control matrix, risk register and cross-cloud mapping published.
+
+Final public PDF:
+
+- [`yandex_cloud_security_remediation_final_report_ru_en.pdf`](yandex_cloud_security_remediation_final_report_ru_en.pdf)
 ## Intended audience
 
 This project is prepared for:

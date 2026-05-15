@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-05-15T12:06:36.228861+00:00",
+  "phase": "13.18",
+  "cloud_actions": "none",
+  "purpose": "final publication consistency cleanup",
+  "corrected_items": [
+    "README final current status",
+    "final control matrix retained-resource wording",
+    "final publication readiness status",
+    "GitHub publication note current public status",
+    "reports directory placeholder removal",
+    "evidence index Phase 13.18 entry",
+    "cloud evidence gap register Phase 13.18 entry"
+  ],
+  "final_pdf_location": "yandex_cloud_security_remediation_final_report_ru_en.pdf",
+  "claim_boundary": "documentation consistency only; no new cloud actions and no new operational claims"
+}

@@ -509,3 +509,9 @@ Boundary: AWS/GCP/Azure references remain control-equivalence mappings only. The
 Status: reporting-only publication enhancement.
 
 No cloud resources were created. No retained cloud resources were introduced. The phase adds the final bilingual PDF report to the curated public repository and records its integrity metadata.
+
+## Phase 13.18 — Final Publication Consistency Cleanup
+
+Status: documentation consistency closeout.
+
+No new cloud resources were created. No cloud evidence claims were added. The phase aligns final public documentation with the completed cleanup, PDF root placement and publication-ready repository state.

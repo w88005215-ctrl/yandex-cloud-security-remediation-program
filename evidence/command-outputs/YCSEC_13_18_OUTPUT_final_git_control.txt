@@ -1,0 +1,36 @@
+Phase 13.18 final publication consistency git control
+Date: 2026-05-15T12:06:54+00:00
+Cloud actions: NONE
+
+HEAD:
+a0f9d6d (HEAD -> main, tag: v0.13.17b-final-pdf-root-placement, origin/main, origin/HEAD) docs: move final PDF report to repository root
+3a14b7f (tag: v0.13.17a-final-pdf-artifact-inclusion) docs: include final PDF artifact
+461aae5 (tag: v0.13.17-final-pdf-report) docs: add final PDF report
+d01f4eb (tag: v0.13.16-publication-artifact-curation) docs: curate final publication artifacts
+5f14582 (tag: v0.13.15-final-project-completion-report) docs: add final project completion report
+cf5f74a (tag: v0.13.14a-final-audit-append-closeout) docs: close final audit sanitized evidence
+be44587 (tag: v0.13.14-final-repository-audit) docs: add final repository audit and sanitization reports
+370cd97 fix: sanitize scanner metadata for Gitleaks
+19354a0 (tag: v0.13.12-checkov-stabilization) test: stabilize Checkov IaC security workflow
+a18df35 (tag: v0.13.11-retained-bootstrap-cleanup) docs: record retained bootstrap cleanup
+4233e3c (tag: v0.13.10-final-reports-publication-summary) docs: add final technical reports and publication summary
+10f1fdd (tag: v0.13.9-cross-cloud-publication-readiness) docs: add cross-cloud mapping and publication readiness
+90759e4 (tag: v0.13.8-final-risk-register) docs: add final risk register
+24b0ba7 (tag: v0.13.7-final-control-matrix) docs: add final control matrix
+
+Changed files:
+ M GITHUB_PUBLICATION_NOTE.md
+ M PROJECT_TREE.txt
+ M README.md
+ M docs/cloud-evidence-gap-register.md
+ M docs/evidence-index.md
+ M docs/final-control-matrix.md
+ M docs/final-publication-readiness.md
+ D reports/.gitkeep
+?? evidence/command-outputs/YCSEC_13_18_OUTPUT_final_git_control.txt
+?? evidence/command-outputs/YCSEC_13_18_OUTPUT_final_publication_consistency.txt
+?? evidence/metrics/final_publication_consistency_cleanup.json
+?? evidence/metrics/final_publication_consistency_cleanup.txt
+
+Validation target:
+v0.13.18-final-publication-consistency

@@ -683,3 +683,18 @@ Artifacts:
 - `evidence/command-outputs/YCSEC_13_17_OUTPUT_final_pdf_report_generation.txt`
 
 Cloud actions: none.
+
+## Phase 13.18 — Final Publication Consistency Cleanup
+
+Purpose: remove stale final-state contradictions after PDF root placement and publication curation.
+
+Corrected items:
+
+- README current status now reflects the completed final state.
+- `docs/final-control-matrix.md` no longer says retained bootstrap resources remain live.
+- `docs/final-publication-readiness.md` now records the completed publication package instead of a pre-release plan.
+- `GITHUB_PUBLICATION_NOTE.md` now describes the current public publication state.
+- Empty `reports/` placeholder removed because the final PDF is placed in the repository root.
+- Repository metadata can be updated through GitHub CLI when authenticated.
+
+Cloud actions: none.

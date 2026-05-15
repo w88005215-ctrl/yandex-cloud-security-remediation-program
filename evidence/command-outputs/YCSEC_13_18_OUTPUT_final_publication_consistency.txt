@@ -1,0 +1,107 @@
+Phase 13.18 — Final publication consistency cleanup
+Date: 2026-05-15T12:06:34+00:00
+Qube: cloud-dev-workbech
+Cloud actions: NONE
+
+--- Step 1 — verify current final baseline
+From https://github.com/w88005215-ctrl/yandex-cloud-security-remediation-program
+ * branch            main       -> FETCH_HEAD
+a0f9d6d (HEAD -> main, tag: v0.13.17b-final-pdf-root-placement, origin/main, origin/HEAD) docs: move final PDF report to repository root
+3a14b7f (tag: v0.13.17a-final-pdf-artifact-inclusion) docs: include final PDF artifact
+461aae5 (tag: v0.13.17-final-pdf-report) docs: add final PDF report
+d01f4eb (tag: v0.13.16-publication-artifact-curation) docs: curate final publication artifacts
+5f14582 (tag: v0.13.15-final-project-completion-report) docs: add final project completion report
+cf5f74a (tag: v0.13.14a-final-audit-append-closeout) docs: close final audit sanitized evidence
+be44587 (tag: v0.13.14-final-repository-audit) docs: add final repository audit and sanitization reports
+370cd97 fix: sanitize scanner metadata for Gitleaks
+19354a0 (tag: v0.13.12-checkov-stabilization) test: stabilize Checkov IaC security workflow
+a18df35 (tag: v0.13.11-retained-bootstrap-cleanup) docs: record retained bootstrap cleanup
+4233e3c (tag: v0.13.10-final-reports-publication-summary) docs: add final technical reports and publication summary
+10f1fdd (tag: v0.13.9-cross-cloud-publication-readiness) docs: add cross-cloud mapping and publication readiness
+90759e4 (tag: v0.13.8-final-risk-register) docs: add final risk register
+24b0ba7 (tag: v0.13.7-final-control-matrix) docs: add final control matrix
+
+[OK] current branch is main
+CURRENT_TAG=v0.13.17b-final-pdf-root-placement
+[OK] current HEAD is expected Phase 13.17B final baseline
+origin/main...HEAD: 0	0
+[OK] local main and origin/main are aligned
+[OK] working tree is clean except current Phase 13.18 output
+[OK] target tag is available: v0.13.18-final-publication-consistency
+
+--- Step 2 — required tool checks
+[OK] git available: /usr/bin/git
+[OK] python3 available: /usr/bin/python3
+[OK] jq available: /usr/bin/jq
+[OK] grep available: alias grep='grep --color=auto'
+[OK] sed available: /usr/bin/sed
+[OK] awk available: /usr/bin/awk
+[OK] find available: /usr/bin/find
+[OK] gitleaks available: /usr/bin/gitleaks
+[OK] checkov available: /home/user/.local/bin/checkov
+[OK] gh available: /usr/bin/gh
+
+--- Step 3 — fix final publication consistency in public docs
+[OK] publication consistency documentation patched
+
+--- Step 4 — validate specific corrections
+[OK] README final current status is present
+[OK] README references root PDF
+[OK] final control matrix retained-resource wording is corrected
+[OK] final publication readiness status is completed
+[OK] GitHub publication note reflects current public status
+[OK] empty reports placeholder is absent
+[OK] final publication consistency JSON is valid
+
+--- Step 5 — scan for stale public wording
+[OK] stale wording absent: v0.1-skeleton — repository skeleton initialized
+[OK] stale wording absent: Phase 2 — root portfolio documentation in progress
+[OK] stale wording absent: Status: not final-release yet
+[OK] stale wording absent: intended to become public after final redaction
+[OK] stale wording absent: remain intentionally retained until the final cleanup phase
+[OK] stale wording absent: reports/ contains final RU/EN reports
+[OK] stale wording absent: `reports/` — final RU/EN reports
+[OK] stale wording absent: reports/ — final RU/EN reports
+
+--- Step 6 — repository safety checks
+[OK] git diff whitespace check passed
+[OK] no Terraform state, kubeconfig, PEM, env, or key JSON artifacts found
+[OK] no internal or unprofessional wording found
+[90m12:06PM[0m [32mINF[0m [1m63 commits scanned.[0m
+[90m12:06PM[0m [32mINF[0m [1mscanned ~16896520 bytes (16.90 MB) in 1.19s[0m
+[90m12:06PM[0m [32mINF[0m [1mno leaks found[0m
+[OK] Gitleaks passed
+terraform scan results:
+
+Passed checks: 27, Failed checks: 0, Skipped checks: 11
+
+
+[OK] Checkov confirms zero failed checks
+
+--- Step 7 — write final git control evidence
+[OK] final git control evidence written
+
+--- Step 8 — optionally update GitHub About metadata
+[OK] GitHub repository description updated
+[OK] GitHub topic added or already present: cloud-security
+[OK] GitHub topic added or already present: devsecops
+[OK] GitHub topic added or already present: terraform
+[OK] GitHub topic added or already present: yandex-cloud
+[OK] GitHub topic added or already present: kubernetes-security
+[OK] GitHub topic added or already present: oidc
+[OK] GitHub topic added or already present: iam
+[OK] GitHub topic added or already present: kyverno
+[OK] GitHub topic added or already present: sbom
+[OK] GitHub topic added or already present: trivy
+[OK] GitHub topic added or already present: grype
+[OK] GitHub topic added or already present: checkov
+[OK] GitHub topic added or already present: gitleaks
+[OK] GitHub topic added or already present: security-engineering
+[OK] GitHub topic added or already present: infrastructure-security
+
+--- Step 9 — phase decision
+WARN_COUNT=0
+FAIL_COUNT=0
+[OK] Phase 13.18 final publication consistency cleanup passed
+
+--- Step 10 — commit/tag/push final consistency cleanup

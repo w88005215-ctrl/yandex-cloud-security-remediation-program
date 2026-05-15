@@ -1,23 +1,47 @@
-# Final Publication Readiness Plan
+# Final Publication Readiness
 
-Generated at: `2026-05-14T17:27:34.635115+00:00`
+Generated at: `2026-05-15T12:06:36.228861+00:00`
 
-This document defines the final publication boundary for the Yandex Cloud Security Remediation Program.
+This document records the final publication state of the Cloud Security Remediation Program.
+
+## Publication decision
+
+Status: **final publication package completed**.
+
+The repository is now positioned as a completed portfolio-grade cloud security remediation case with final reports, root-level PDF, sanitized evidence, cleanup proof, risk/control governance, and repository safety checks.
+
+## Completed publication tasks
+
+- Final README polish completed.
+- Final RU/EN technical reports completed.
+- Final bilingual PDF report added to the repository root.
+- Public artifact safety review completed.
+- Repository audit and sanitization completed.
+- Publication artifact curation completed.
+- Retained bootstrap resources cleaned up after evidence validation.
+- Final cleanup evidence added.
+- Final remediation metrics published.
+- Final control matrix published.
+- Final risk register published.
+- Cross-cloud control mapping published.
+- Gitleaks and Checkov validations completed.
 
 ## Current validated portfolio claims
 
-The project can safely claim the following:
+The project can safely claim:
 
-1. Terraform-based Yandex Cloud security remediation workflow was implemented with controlled evidence discipline.
+1. Terraform-based cloud security remediation workflow was implemented with controlled evidence discipline.
 2. GitHub Actions OIDC federation was validated without committing durable cloud credentials.
 3. Container Registry push through OIDC-based CI/CD was validated.
-4. SBOM generation and vulnerability scanning were performed against registry-pushed insecure and hardened images.
+4. SBOM generation and vulnerability scanning were performed against insecure and hardened images.
 5. Managed Kubernetes baseline/remediation evidence was collected through short-lived cloud runs.
-6. Kyverno admission policy enforcement was validated on Yandex Managed Kubernetes.
-7. Insecure workload denial and hardened workload allow path were confirmed with public sanitized evidence.
-8. Final remediation metrics, control matrix, risk register, and cross-cloud mapping are documented.
+6. Kyverno admission policy enforcement was validated on Managed Kubernetes.
+7. Insecure workload denial and hardened workload allow path were confirmed with sanitized evidence.
+8. Final remediation metrics, control matrix, risk register and cross-cloud mapping are documented.
 9. Temporary paid Managed Kubernetes resources were destroyed after evidence collection.
-10. Public evidence excludes Terraform state, kubeconfig, private key, token, and raw runtime files.
+10. Retained bootstrap resources were removed after validation and cleanup evidence was recorded.
+11. Public evidence excludes Terraform state, kubeconfig, private key, token and raw runtime files.
+12. The final PDF report is available from the repository root.
 
 ## Claims that must not be made
 
@@ -29,31 +53,19 @@ The public repository must not claim:
 - permanent production Kubernetes operations;
 - 24/7 monitoring or incident response operations;
 - full enterprise SSO rollout;
-- unrestricted evidence disclosure.
-
-## Remaining publication tasks
-
-1. Final README polish.
-2. RU/EN executive reports.
-3. Public artifact safety review across README, docs, scripts, and evidence.
-4. Retained bootstrap resource cleanup after final evidence/export decision.
-5. Final release tag after cleanup evidence and publication package are complete.
+- unrestricted evidence disclosure;
+- retained live cloud resources after cleanup.
 
 ## Recommended final repository framing
 
-Use the project as a cloud security engineering and DevSecOps remediation case:
+Use the project as a cloud security engineering and DevSecOps remediation case covering:
 
 - cloud IAM/OIDC federation;
 - Terraform-controlled infrastructure;
-- managed Kubernetes hardening;
+- Managed Kubernetes hardening;
 - admission policy-as-code;
 - container supply-chain validation;
 - SBOM and vulnerability metrics;
 - audit/evidence discipline;
+- cleanup and publication safety;
 - risk and control governance.
-
-## Publication decision
-
-Status: not final-release yet.
-
-Reason: retained bootstrap resources still need a controlled cleanup phase, and final RU/EN reports plus README publication polish are still pending.
