@@ -27,7 +27,7 @@ c396086 (tag: v0.13.2-supply-chain-implementation-package) feat: add supply chai
  M docs/evidence-index.md
 ?? docs/final-control-matrix.md
 ?? evidence/command-outputs/YCSEC_13_7_OUTPUT_final_control_matrix.txt
-?? evidence/command-outputs/YCSEC_13_7_OUTPUT_final_git_control.txt
+?? <curated-publication-noise-artifact>
 ?? evidence/metrics/final_control_matrix.csv
 ?? evidence/metrics/final_control_matrix.json
 ?? evidence/metrics/final_control_matrix.txt
@@ -71,7 +71,7 @@ c396086 (tag: v0.13.2-supply-chain-implementation-package) feat: add supply chai
 [OK] gitleaks scan passed
 
 --- Step 6 — write final git control evidence
-[OK] final git control evidence written: evidence/command-outputs/YCSEC_13_7_OUTPUT_final_git_control.txt
+[OK] final git control evidence written: <curated-publication-noise-artifact>
 
 --- Step 7 — phase decision
 WARN_COUNT=0

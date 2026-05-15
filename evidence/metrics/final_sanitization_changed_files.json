@@ -16,7 +16,7 @@
     "evidence/command-outputs/YCSEC_13_3_OUTPUT_registry_inventory_after_push.txt",
     "evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt",
     "evidence/command-outputs/YCSEC_10_OUTPUT_yandex_cloud_readiness.txt",
-    "evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_metadata_repair.txt",
+    "<curated-publication-noise-artifact>",
     "evidence/vulnerability/grype_hardened_image.json",
     "evidence/vulnerability/trivy_hardened_image.json",
     "evidence/vulnerability/trivy_insecure_image.txt",

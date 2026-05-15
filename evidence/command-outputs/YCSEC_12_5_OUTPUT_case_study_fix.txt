@@ -23,7 +23,7 @@ Step 3 — verify expected Phase 12.5 workspace files
 [OK] exists: docs/kubernetes-security-remediation-case-study.md
 [OK] exists: docs/evidence-index.md
 [OK] exists: evidence/command-outputs/YCSEC_12_5_OUTPUT_kubernetes_remediation_case_study.txt
-[OK] exists: evidence/command-outputs/YCSEC_12_5_OUTPUT_final_git_control.txt
+[OK] exists: <curated-publication-noise-artifact>
 
 Step 4 — strengthen case study narrative
 [OK] case study narrative strengthened
@@ -72,5 +72,5 @@ Final git status before commit:
  M docs/evidence-index.md
 ?? docs/kubernetes-security-remediation-case-study.md
 ?? evidence/command-outputs/YCSEC_12_5_OUTPUT_case_study_fix.txt
-?? evidence/command-outputs/YCSEC_12_5_OUTPUT_final_git_control.txt
+?? <curated-publication-noise-artifact>
 ?? evidence/command-outputs/YCSEC_12_5_OUTPUT_kubernetes_remediation_case_study.txt

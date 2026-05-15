@@ -1,5 +1,5 @@
 apps/v1/Deployment insecure-web in ycsec-insecure-baseline                    💥
-    path=/home/user/projects/yandex-cloud-security-remediation-program/kubernetes/cloud-run/insecure-baseline/workload-insecure.yaml
+    path=<local-home>/projects/yandex-cloud-security-remediation-program/kubernetes/cloud-run/insecure-baseline/workload-insecure.yaml
     [CRITICAL] Container Security Context Privileged
         · web -> The container is privileged
             Set securityContext.privileged to false. Privileged containers can access all devices on the host, and

@@ -222,7 +222,7 @@ The register is evidence-bound: each risk is tied to validated controls, reposit
 - `docs/generated-evidence-gitleaks-handling.md`
 - `docs/evidence-index.md`
 - `evidence/command-outputs/YCSEC_13_4A_OUTPUT_gitleaks_generated_evidence_handling.txt`
-- `evidence/command-outputs/YCSEC_13_5_OUTPUT_final_git_control.txt`
+- `<curated-publication-noise-artifact>`
 
 ### YCSEC-RISK-08 — Publication Boundary
 

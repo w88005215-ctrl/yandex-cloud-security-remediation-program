@@ -3,9 +3,9 @@ Date: 2026-05-13T09:40:13+00:00
 Qube: cloud-dev-workbench
 
 Tool checks
-[OK] kind -> /home/user/.local/bin/kind
+[OK] kind -> <local-home>/.local/bin/kind
 [OK] podman -> /usr/bin/podman
-[OK] kubectl -> /home/user/.local/bin/kubectl
+[OK] kubectl -> <local-home>/.local/bin/kubectl
 [OK] gitleaks -> /usr/bin/gitleaks
 
 Runtime safety

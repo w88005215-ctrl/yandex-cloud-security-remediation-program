@@ -3,7 +3,7 @@ Date: 2026-05-13T14:02:37+00:00
 Qube: cloud-dev-workbench
 
 Tool checks
-[OK] yc -> /home/user/.local/bin/yc
+[OK] yc -> <local-home>/.local/bin/yc
 Yandex Cloud CLI 1.7.0 linux/amd64
 
 YC profile read-only checks

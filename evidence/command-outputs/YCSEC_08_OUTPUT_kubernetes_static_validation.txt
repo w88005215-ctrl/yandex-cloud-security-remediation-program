@@ -3,7 +3,7 @@ Date: 2026-05-13T09:30:30+00:00
 Qube: cloud-dev-workbench
 
 Tool checks
-[OK] yq -> /home/user/.local/bin/yq
+[OK] yq -> <local-home>/.local/bin/yq
 [OK] gitleaks -> /usr/bin/gitleaks
 
 Documentation checks

@@ -19,7 +19,7 @@ f58270b ci: validate GitHub Actions OIDC federation
 [OK] origin remote is correct
 
 Step 2 — verify only expected leftover is present
- M evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt
+ M <curated-publication-noise-artifact>
 ?? evidence/command-outputs/YCSEC_13_0_OUTPUT_closeout_amend.txt
 [OK] working tree contains only expected Phase 13.0 closeout-amend artifacts
 [OK] remaining final-control evidence file exists and is non-empty

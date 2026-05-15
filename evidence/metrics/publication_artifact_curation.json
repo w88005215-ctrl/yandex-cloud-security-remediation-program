@@ -1,0 +1,33 @@
+{
+  "audit_date": "2026-05-15T05:06:02.133432+00:00",
+  "phase": "13.16A",
+  "purpose": "publication artifact curation and stale-reference repair",
+  "cloud_actions": "none",
+  "git_history_rewrite": false,
+  "force_push": false,
+  "removed_public_noise_artifact_count": 60,
+  "removed_artifact_manifest": "omitted from public repository; preserved only in local private evidence",
+  "private_preservation": "local private evidence archive outside the repository",
+  "stale_reference_repair": {
+    "replacement_marker": "<curated-publication-noise-artifact>",
+    "public_files_rewritten_count": 37
+  },
+  "retained_artifact_classes": [
+    "final reports",
+    "final metrics",
+    "control matrix",
+    "risk register",
+    "cross-cloud mapping",
+    "repository audit reports",
+    "publication sanitization reports",
+    "project completion reports",
+    "successful OIDC evidence",
+    "successful Checkov evidence",
+    "successful Gitleaks evidence",
+    "successful Kyverno evidence",
+    "SBOM and vulnerability evidence",
+    "cleanup evidence",
+    "redaction notes",
+    "IaC security exception rationale"
+  ]
+}

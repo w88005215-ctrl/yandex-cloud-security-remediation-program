@@ -39,10 +39,7 @@ The project follows an evidence-first model. Every important phase must produce 
 | Evidence ID | Phase | File | Description | Sanitized | Public |
 |---|---|---|---|---:|---:|
 | EVID-LOCAL-001 | Phase 1 | evidence/command-outputs/YCSEC_01_OUTPUT_repository_skeleton_control.txt | Repository skeleton validation | Yes | Yes |
-| EVID-LOCAL-002 | Phase 1 | evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt | First commit precheck | Yes | Yes |
 | EVID-LOCAL-003 | Phase 1 | evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_result.txt | First commit result | Yes | Yes |
-| EVID-DOC-001 | Phase 2 | evidence/command-outputs/YCSEC_02_OUTPUT_root_portfolio_files_control.txt | Root portfolio documentation control | Yes | Yes |
-| EVID-DOC-002 | Phase 2 | evidence/command-outputs/YCSEC_02_OUTPUT_final_git_control.txt | Phase 2 final git control | Yes | Yes |
 | EVID-COST-001 | Phase 3 | docs/cost-control.md | Cost-control model | Yes | Yes |
 | EVID-COST-002 | Phase 3 | docs/resource-inventory.md | Resource inventory model | Yes | Yes |
 | EVID-PUB-001 | Phase 3 | docs/publication-safety-checklist.md | Publication safety checklist | Yes | Yes |
@@ -96,7 +93,6 @@ architecture -> implementation -> scan result -> remediation -> audit evidence -
 |---|---|---|---|---:|---:|
 | EVID-LOCAL-013 | Phase 5 | evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_check.txt | Clean final local toolchain validation | Yes | Yes |
 | EVID-LOCAL-014 | Phase 5 | evidence/command-outputs/YCSEC_05_OUTPUT_clean_toolchain_control.txt | Final clean toolchain control evidence | Yes | Yes |
-| EVID-LOCAL-015 | Phase 5 | evidence/command-outputs/YCSEC_05_OUTPUT_final_git_control.txt | Git commit and tag evidence for toolchain baseline | Yes | Yes |
 
 
 ## Phase 6 evidence
@@ -105,7 +101,6 @@ architecture -> implementation -> scan result -> remediation -> audit evidence -
 |---|---|---|---|---:|---:|
 | EVID-IAC-001 | Phase 6 | evidence/command-outputs/YCSEC_06_OUTPUT_local_security_gates.txt | Clean local Terraform/OpenTofu and security gate output | Yes | Yes |
 | EVID-IAC-002 | Phase 6 | evidence/command-outputs/YCSEC_06_OUTPUT_iac_skeleton_control.txt | IaC skeleton final control evidence | Yes | Yes |
-| EVID-IAC-003 | Phase 6 | evidence/command-outputs/YCSEC_06_OUTPUT_final_git_control.txt | Git commit and tag evidence for IaC skeleton | Yes | Yes |
 
 ## Phase 7 evidence
 
@@ -120,7 +115,6 @@ architecture -> implementation -> scan result -> remediation -> audit evidence -
 | EVID-CTRL-007 | Phase 7 | diagrams/ycsec-iam-oidc-saml-flow.mmd | IAM/OIDC/SAML flow diagram | Yes | Yes |
 | EVID-CTRL-008 | Phase 7 | diagrams/ycsec-evidence-flow.mmd | Evidence flow diagram | Yes | Yes |
 | EVID-CTRL-009 | Phase 7 | evidence/command-outputs/YCSEC_07_OUTPUT_control_model_validation.txt | Phase 7 control evidence | Yes | Yes |
-| EVID-CTRL-010 | Phase 7 | evidence/command-outputs/YCSEC_07_OUTPUT_final_git_control.txt | Phase 7 git evidence | Yes | Yes |
 
 
 ## Phase 8 evidence
@@ -129,7 +123,6 @@ architecture -> implementation -> scan result -> remediation -> audit evidence -
 |---|---|---|---|---:|---:|
 | EVID-K8S-001 | Phase 8 | evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt | Kubernetes static manifest validation output | Yes | Yes |
 | EVID-K8S-002 | Phase 8 | evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt | Final Kubernetes static baseline control evidence | Yes | Yes |
-| EVID-K8S-003 | Phase 8 | evidence/command-outputs/YCSEC_08_OUTPUT_final_git_control.txt | Git commit and tag evidence for Kubernetes static baseline | Yes | Yes |
 
 ## Phase 9 evidence
 
@@ -137,7 +130,6 @@ architecture -> implementation -> scan result -> remediation -> audit evidence -
 |---|---|---|---|---:|---:|
 | EVID-K8S-004 | Phase 9 | evidence/command-outputs/YCSEC_09_OUTPUT_local_kubernetes_runtime_validation.txt | Local kind-based Kubernetes runtime validation | Yes | Yes |
 | EVID-K8S-005 | Phase 9 | evidence/command-outputs/YCSEC_09_OUTPUT_runtime_validation_control.txt | Final Phase 9 runtime validation control evidence | Yes | Yes |
-| EVID-K8S-006 | Phase 9 | evidence/command-outputs/YCSEC_09_OUTPUT_final_git_control.txt | Git commit and tag evidence for local Kubernetes runtime validation | Yes | Yes |
 
 ## Phase 10 evidence
 
@@ -145,7 +137,6 @@ architecture -> implementation -> scan result -> remediation -> audit evidence -
 |---|---|---|---|---:|---:|
 | EVID-YC-001 | Phase 10 | evidence/command-outputs/YCSEC_10_OUTPUT_yandex_cloud_readiness.txt | Read-only Yandex Cloud readiness gate output | Yes | Yes |
 | EVID-YC-002 | Phase 10 | evidence/command-outputs/YCSEC_10_OUTPUT_final_control.txt | Final Phase 10 control evidence | Yes | Yes |
-| EVID-YC-003 | Phase 10 | evidence/command-outputs/YCSEC_10_OUTPUT_final_git_control.txt | Git tag evidence for Yandex Cloud readiness gate | Yes | Yes |
 
 ## Phase 10 evidence
 
@@ -153,7 +144,6 @@ architecture -> implementation -> scan result -> remediation -> audit evidence -
 |---|---|---|---|---:|---:|
 | EVID-YC-001 | Phase 10 | evidence/command-outputs/YCSEC_10_OUTPUT_yandex_cloud_readiness.txt | Read-only Yandex Cloud readiness gate output | Yes | Yes |
 | EVID-YC-002 | Phase 10 | evidence/command-outputs/YCSEC_10_OUTPUT_final_control.txt | Final Phase 10 control evidence | Yes | Yes |
-| EVID-YC-003 | Phase 10 | evidence/command-outputs/YCSEC_10_OUTPUT_final_git_control.txt | Git tag evidence for Yandex Cloud readiness gate | Yes | Yes |
 
 ## Phase 10 evidence
 
@@ -161,7 +151,6 @@ architecture -> implementation -> scan result -> remediation -> audit evidence -
 |---|---|---|---|---:|---:|
 | EVID-YC-001 | Phase 10 | evidence/command-outputs/YCSEC_10_OUTPUT_yandex_cloud_readiness.txt | Read-only Yandex Cloud readiness gate output | Yes | Yes |
 | EVID-YC-002 | Phase 10 | evidence/command-outputs/YCSEC_10_OUTPUT_final_control.txt | Final Phase 10 control evidence | Yes | Yes |
-| EVID-YC-003 | Phase 10 | evidence/command-outputs/YCSEC_10_OUTPUT_final_git_control.txt | Git tag evidence for Yandex Cloud readiness gate | Yes | Yes |
 
 <!-- YCSEC:PHASE-11-SMOKE-RUN:START -->
 ## Phase 11.2 — Yandex Cloud Managed Kubernetes Smoke-Run
@@ -384,7 +373,6 @@ Result:
 | docs/managed-kubernetes-vulnerability-demonstration-plan.md | Controlled vulnerability demonstration plan |
 | docs/managed-kubernetes-destroy-and-retention-plan.md | Destroy and retention policy for Kubernetes cloud-run resources |
 | evidence/command-outputs/YCSEC_12_9_OUTPUT_managed_kubernetes_cloud_run_plan.txt | Command evidence for Phase 12.9 |
-| evidence/command-outputs/YCSEC_12_9_OUTPUT_final_git_control.txt | Final git control evidence for Phase 12.9 |
 
 ## Phase 13.0A — Managed Kubernetes cloud-run implementation package
 
@@ -399,7 +387,6 @@ Evidence:
 - kubernetes/cloud-run/hardened — hardened remediation manifests.
 - policies/kyverno/cloud-run — policy-as-code controls.
 - evidence/command-outputs/YCSEC_13_0A_OUTPUT_managed_kubernetes_cloud_run_implementation_package.txt — command evidence for this phase.
-- evidence/command-outputs/YCSEC_13_0A_OUTPUT_final_git_control.txt — final git control evidence.
 
 Cloud resources created in this phase: none.
 
@@ -428,7 +415,6 @@ Cloud resources created in this phase: none.
 | `docs/kyverno-admission-policy-enforcement-plan.md` | Kubernetes admission policy enforcement plan |
 | `docs/supply-chain-evidence-and-metrics-plan.md` | Evidence and metrics plan for supply-chain validation |
 | `evidence/command-outputs/YCSEC_13_1_OUTPUT_supply_chain_roadmap_extension.txt` | Command evidence for Phase 13.1 |
-| `evidence/command-outputs/YCSEC_13_1_OUTPUT_final_git_control.txt` | Final git control evidence for Phase 13.1 |
 
 ## Phase 13.2 — Supply Chain implementation package
 
@@ -442,7 +428,6 @@ Cloud resources created in this phase: none.
 | `scripts/validate-supply-chain-package.sh` | Supply-chain package validator |
 | `policies/kyverno/supply-chain/registry-and-image-policy.yaml` | Admission policy package for registry/image controls |
 | `evidence/command-outputs/YCSEC_13_2_OUTPUT_supply_chain_implementation_package.txt` | Phase 13.2 command evidence |
-| `evidence/command-outputs/YCSEC_13_2_OUTPUT_final_git_control.txt` | Phase 13.2 final git control evidence |
 
 ## Phase 13.3 — Supply Chain OIDC Registry validation
 
@@ -477,7 +462,6 @@ Cloud resources created in this phase: none.
 | `docs/generated-evidence-gitleaks-handling.md` | Rationale and security boundary for generated scanner evidence handling |
 | `evidence/command-outputs/YCSEC_13_4A_OUTPUT_gitleaks_generated_evidence_handling.txt` | Command evidence for Phase 13.4A |
 | `evidence/command-outputs/YCSEC_13_4A_OUTPUT_gitleaks_findings_sanitized.txt` | Sanitized finding classification without secret/match values |
-| `evidence/command-outputs/YCSEC_13_4A_OUTPUT_final_git_control.txt` | Final git control evidence |
 
 ## Phase 13.5A — Kyverno MKS repair package
 
@@ -488,7 +472,6 @@ Cloud resources created in this phase: none.
 | `docs/kyverno-admission-policy-enforcement-validation.md` | Kyverno admission validation documentation |
 | `docs/kyverno-admission-policy-enforcement-metrics.md` | Planned admission enforcement metrics |
 | `evidence/command-outputs/YCSEC_13_5A_OUTPUT_kyverno_mks_repair_package.txt` | Command evidence for local repair package |
-| `evidence/command-outputs/YCSEC_13_5A_OUTPUT_final_git_control.txt` | Final git control evidence |
 
 ## Phase 13.5A1 — Kyverno denial attribution fix
 
@@ -497,7 +480,6 @@ Cloud resources created in this phase: none.
 | `kubernetes/admission-validation/namespace.yaml` | Admission validation namespace without Pod Security enforce label |
 | `scripts/run-kyverno-admission-policy-mks-validation.sh` | Corrected denial validation requiring Kyverno-specific evidence |
 | `evidence/command-outputs/YCSEC_13_5A1_OUTPUT_kyverno_denial_attribution_fix.txt` | Command evidence for attribution fix |
-| `evidence/command-outputs/YCSEC_13_5A1_OUTPUT_final_git_control.txt` | Final git control evidence |
 
 ## Phase 13.5A2 — Kyverno MKS runner hardening
 
@@ -505,7 +487,6 @@ Cloud resources created in this phase: none.
 |---|---|
 | `scripts/run-kyverno-admission-policy-mks-validation.sh` | Hardened Kyverno Managed Kubernetes validation runner |
 | `evidence/command-outputs/YCSEC_13_5A2_OUTPUT_kyverno_runner_hardening.txt` | Command evidence for local runner hardening |
-| `evidence/command-outputs/YCSEC_13_5A2_OUTPUT_final_git_control.txt` | Final git control evidence for runner hardening |
 
 <!-- phase-13-5-kyverno-admission:start -->
 ## Phase 13.5 — Kyverno admission policy enforcement validation
@@ -550,7 +531,6 @@ Final remediation metrics consolidation artifacts:
 - evidence/metrics/final_remediation_metrics.json
 - evidence/metrics/final_remediation_metrics.txt
 - evidence/command-outputs/YCSEC_13_6_OUTPUT_final_remediation_metrics.txt
-- evidence/command-outputs/YCSEC_13_6_OUTPUT_final_git_control.txt
 
 Validation scope:
 
@@ -575,7 +555,6 @@ Artifacts:
 - `evidence/metrics/final_control_matrix.csv`
 - `evidence/metrics/final_control_matrix.txt`
 - `evidence/command-outputs/YCSEC_13_7_OUTPUT_final_control_matrix.txt`
-- `evidence/command-outputs/YCSEC_13_7_OUTPUT_final_git_control.txt`
 
 Purpose:
 
@@ -596,7 +575,6 @@ Public artifacts:
 - `evidence/metrics/final_risk_register.csv`
 - `evidence/metrics/final_risk_register.txt`
 - `evidence/command-outputs/YCSEC_13_8_OUTPUT_final_risk_register.txt`
-- `evidence/command-outputs/YCSEC_13_8_OUTPUT_final_git_control.txt`
 
 Evidence value:
 - consolidates final project risks;
@@ -618,7 +596,6 @@ Artifacts:
 - `evidence/metrics/final_risk_register.csv`
 - `evidence/metrics/final_risk_register.txt`
 - `evidence/command-outputs/YCSEC_13_8_OUTPUT_final_risk_register.txt`
-- `evidence/command-outputs/YCSEC_13_8_OUTPUT_final_git_control.txt`
 
 Validation result:
 
@@ -638,7 +615,6 @@ Validation result:
 - `evidence/metrics/final_cross_cloud_control_mapping.csv` — tabular cross-cloud mapping.
 - `evidence/metrics/final_cross_cloud_control_mapping.txt` — summary metrics for cross-cloud mapping.
 - `evidence/command-outputs/YCSEC_13_9_OUTPUT_cross_cloud_publication_readiness.txt` — command evidence for this phase.
-- `evidence/command-outputs/YCSEC_13_9_OUTPUT_final_git_control.txt` — final git control evidence for this phase.
 
 ## Phase 13.10 — Final RU/EN Reports and README Publication Polish
 
@@ -648,7 +624,6 @@ Validation result:
 - `evidence/metrics/final_publication_summary.json` — structured final publication summary.
 - `evidence/metrics/final_publication_summary.txt` — text final publication summary.
 - `evidence/command-outputs/YCSEC_13_10_OUTPUT_final_reports_readme.txt` — command evidence for this phase.
-- `evidence/command-outputs/YCSEC_13_10_OUTPUT_final_git_control.txt` — final git control evidence.
 
 ## Phase 13.11 — retained bootstrap cleanup
 
@@ -661,15 +636,12 @@ Evidence added:
 ## Phase 13.12 — Checkov workflow stabilization
 
 - `docs/iac-security-exceptions.md` — IaC security exception register for controlled evidence-run tradeoffs.
-- `evidence/command-outputs/YCSEC_13_12_OUTPUT_checkov_after_exceptions.txt` — Checkov result after resource-scoped exception stabilization.
-- `evidence/command-outputs/YCSEC_13_12_OUTPUT_final_git_control.txt` — final git control evidence for Phase 13.12.
 
 ## Phase 13.13A — Gitleaks evidence metadata stabilization
 
 - `docs/evidence-redaction-notes.md`
 - `.gitleaksignore`
 - `evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_worktree_after_sanitization.txt`
-- `evidence/command-outputs/YCSEC_13_13A_OUTPUT_final_git_control.txt`
 
 Purpose: normalize redacted scanner image metadata that triggered GitHub Actions Gitleaks false positives while preserving vulnerability evidence semantics.
 

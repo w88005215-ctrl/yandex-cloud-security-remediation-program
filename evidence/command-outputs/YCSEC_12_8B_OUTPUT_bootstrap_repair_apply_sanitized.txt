@@ -5,7 +5,7 @@ Qube: cloud-dev-workbech
 Step 1 — verify expected repair baseline
  M docs/bootstrap-oidc-audit-cloud-run-results.md
  M docs/evidence-index.md
- M evidence/command-outputs/YCSEC_12_8B_OUTPUT_final_git_control.txt
+ M <curated-publication-noise-artifact>
  M scripts/run-bootstrap-oidc-audit-cloud-run.sh
 376d5b7 (HEAD -> main, tag: v0.12.8b-bootstrap-oidc-audit-cloud-run) test: run bootstrap OIDC audit cloud provisioning
 6e8b863 (tag: v0.12.8a-github-remote-scope) docs: record GitHub OIDC repository scope

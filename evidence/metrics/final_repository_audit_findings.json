@@ -1586,7 +1586,7 @@
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_13_5A2_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 10
   },
   {
@@ -1964,13 +1964,13 @@
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 7
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 12
   },
   {
@@ -1982,25 +1982,25 @@
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_12_8C_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 12
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_12_8C_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 13
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 10
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 13
   },
   {
@@ -2264,25 +2264,25 @@
   {
     "severity": "WARNING",
     "rule": "email_like_text",
-    "path": "evidence/command-outputs/YCSEC_01C_OUTPUT_git_author_email_fix.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 7
   },
   {
     "severity": "WARNING",
     "rule": "email_like_text",
-    "path": "evidence/command-outputs/YCSEC_01C_OUTPUT_git_author_email_fix.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 11
   },
   {
     "severity": "WARNING",
     "rule": "email_like_text",
-    "path": "evidence/command-outputs/YCSEC_01C_OUTPUT_git_author_email_fix.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 14
   },
   {
     "severity": "WARNING",
     "rule": "email_like_text",
-    "path": "evidence/command-outputs/YCSEC_01C_OUTPUT_git_author_email_fix.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 15
   },
   {
@@ -3194,25 +3194,25 @@
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 9
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 23
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 24
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 25
   },
   {
@@ -3308,31 +3308,31 @@
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_13_8_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 10
   },
   {
     "severity": "WARNING",
     "rule": "email_like_text",
-    "path": "evidence/command-outputs/YCSEC_02_OUTPUT_root_portfolio_files_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 8
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_02_OUTPUT_root_portfolio_files_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 32
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_02_OUTPUT_root_portfolio_files_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 33
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_13_6_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 12
   },
   {
@@ -3392,31 +3392,31 @@
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 23
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 24
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 58
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 59
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_13_4_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 10
   },
   {
@@ -3434,19 +3434,19 @@
   {
     "severity": "WARNING",
     "rule": "email_like_text",
-    "path": "evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 8
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 35
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 36
   },
   {
@@ -3536,7 +3536,7 @@
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_13_5_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 14
   },
   {
@@ -3590,13 +3590,13 @@
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 15
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 16
   },
   {
@@ -3698,7 +3698,7 @@
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_13_5A_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 7
   },
   {
@@ -3764,19 +3764,19 @@
   {
     "severity": "WARNING",
     "rule": "literal_docker_gpg_key_variable",
-    "path": "evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_metadata_repair.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 37
   },
   {
     "severity": "WARNING",
     "rule": "literal_docker_gpg_key_variable",
-    "path": "evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_metadata_repair.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 38
   },
   {
     "severity": "WARNING",
     "rule": "token_word_context",
-    "path": "evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_metadata_repair.txt",
+    "path": "<curated-publication-noise-artifact>",
     "line": 49
   },
   {

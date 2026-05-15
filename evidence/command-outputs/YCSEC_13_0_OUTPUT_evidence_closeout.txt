@@ -17,8 +17,8 @@ cba7dd7 (tag: v0.12.8c-github-publication) docs: record GitHub publication evide
 [OK] current branch is main
 
 Step 2 — show current workspace state
- M evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt
- D evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt.tmp
+ M <curated-publication-noise-artifact>
+ D <curated-publication-noise-artifact>.tmp
 ?? evidence/after/kube_score_after.txt
 ?? evidence/after/kubectl_apply_hardened.txt
 ?? evidence/after/kubectl_auth_can_i.txt
@@ -35,8 +35,8 @@ Step 2 — show current workspace state
 ?? evidence/command-outputs/YCSEC_13_0_OUTPUT_evidence_closeout.txt
 
 Step 3 — remove accidental temporary public artifact
-rm 'evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt.tmp'
-[OK] tracked temporary artifact removed from repository index: evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt.tmp
+rm '<curated-publication-noise-artifact>.tmp'
+[OK] tracked temporary artifact removed from repository index: <curated-publication-noise-artifact>.tmp
 
 Step 4 — verify before/after evidence files
 [OK] evidence exists: evidence/before/yc_mks_nodes_ready.txt

@@ -1086,13 +1086,13 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_5A2_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 612,
     "sha256": "442b681273222a3ef3fcd2af57fdaa1c5f63d90aae4affc85ab551491865d057",
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_closeout.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 188,
     "sha256": "14a5b5c0bdf346385756a66c40e3bf351416348606072cfbac96a8b28dce266d",
     "suffix": ".txt"
@@ -1140,13 +1140,13 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_05_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 550,
     "sha256": "67c12b39f8b70d27c18c062b835da56ff0c1a4874098fd2ac7e6406e313bb5ab",
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_12_1_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 1685,
     "sha256": "d980fd8be3d02bb41b79fc479d4745ed6ad550c46af459a42ba08c163310e1c6",
     "suffix": ".txt"
@@ -1176,7 +1176,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_0A_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 677,
     "sha256": "968fd0395b44bc4bdb3550639bdf4c59acf8c130eb30f2d3c6fdc90de5b3aacb",
     "suffix": ".txt"
@@ -1194,13 +1194,13 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_closeout_amend_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 353,
     "sha256": "e8a13c8e499151e941b6af1ce3995b77803ef7aab344444ab96d875a14f31a78",
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_12_7_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 2045,
     "sha256": "8e4022f50e3e828ce361ab1139f8542969e1fbf78f3e188a99af953c58d9c5e0",
     "suffix": ".txt"
@@ -1236,7 +1236,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_evidence_closeout_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 521,
     "sha256": "bb73f30f1815b9beb2f2cfd23864fe142c889673127fba81c4c14bc375fcda7c",
     "suffix": ".txt"
@@ -1266,7 +1266,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_12_2_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 1720,
     "sha256": "e4e10b362e09092ca0d4de38ab0a45e28658750d831cd1c93be7ee60fd4b36f8",
     "suffix": ".txt"
@@ -1278,7 +1278,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_02_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 287,
     "sha256": "5a734c2ae0974d56bd72428f94c23ffb057d5e442c7cc65f51d64b564514c382",
     "suffix": ".txt"
@@ -1296,7 +1296,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_12_8D_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 1093,
     "sha256": "a6a08e9213095911b9b48f39e5ea4ea735149d410f39564717925ef576e38b99",
     "suffix": ".txt"
@@ -1314,13 +1314,13 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_12_8C_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 3165,
     "sha256": "848f850bed6847c9830497a5ac5a84066cfac67790b92f9f8e9a8533940340a8",
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_3_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 627,
     "sha256": "88f2a9ab711296b6dc7759f226f981ed0ca4fa767333b30be6a064d622289dc2",
     "suffix": ".txt"
@@ -1332,7 +1332,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_12_0_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 1597,
     "sha256": "4541ebb0403ff41bd97bc107452fcb4707829af5177d7929b88a114b50d85d89",
     "suffix": ".txt"
@@ -1344,7 +1344,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_01C_OUTPUT_git_author_email_fix.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 545,
     "sha256": "25fbfd5ed145a462e037cc38ab3783f9309b505e19e9cc8219d334f3b1e19281",
     "suffix": ".txt"
@@ -1356,7 +1356,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_4A_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 566,
     "sha256": "4716bfcfadb12b4b4e4f9c7337aedf62c855273e51b55c4910ff6cde024ea7c7",
     "suffix": ".txt"
@@ -1392,7 +1392,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_11_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 3241,
     "sha256": "58ab82536133d219ae54fbcb76d90ad96434fe87c96ab005ae000835701a1ba3",
     "suffix": ".txt"
@@ -1488,7 +1488,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_08_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 806,
     "sha256": "8a250b9fcbaa71157e447911d0c555539503251181df967224e7a8ac0e23b9bd",
     "suffix": ".txt"
@@ -1500,13 +1500,13 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_13A_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 1941,
     "sha256": "d148ae0b16943d1f65b6225b37d478a8b7ec3f44dfe1606a07103e4a1f5e223c",
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_12_8E_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 637,
     "sha256": "17aeb598b3f60258444e5749fb36f3d980e43f6b622ddfe89f90ddb58cd50a5f",
     "suffix": ".txt"
@@ -1542,7 +1542,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_12_5_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 1779,
     "sha256": "65c75914ea9deca1e39eb4a55896844c831277d35ff0017d8cce8fa22035420f",
     "suffix": ".txt"
@@ -1584,13 +1584,13 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_12_8F_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 698,
     "sha256": "1a6c306d79a22df731a1b064840ee04b427503437adb45ab84976a03950f01ad",
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_03_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 414,
     "sha256": "bf9d8ebda69b118ec2d43b785b390607e177e344f20b42380005945d3a827db4",
     "suffix": ".txt"
@@ -1614,13 +1614,13 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_12_OUTPUT_checkov_after_exceptions.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 104,
     "sha256": "b0258c8ea1bf2ce8b3c52ede43522367fc1deaa3f7a305c91c2ab5f7abaa5680",
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 3366,
     "sha256": "0b66169e91d0bcf664c53b52f110a621c02b1c1a3d2f3e0ea7a3fa5c4e6ee813",
     "suffix": ".txt"
@@ -1644,7 +1644,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_09_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 693,
     "sha256": "ec32a1615ee4c3fa00c5ead2acbd79c869b0ad81c30bd8cb82585ee6ff95949c",
     "suffix": ".txt"
@@ -1668,7 +1668,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_9_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 542,
     "sha256": "e712efd4df9ce2e50de22ac6d419516f1de07af153e32d9c09d5df6e9b170f5d",
     "suffix": ".txt"
@@ -1692,19 +1692,19 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_8_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 494,
     "sha256": "eb00bf14b889ed4f5c0b178e671a1aba7ab019d21c2a03a21fd016dfa054d9f5",
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_02_OUTPUT_root_portfolio_files_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 1940,
     "sha256": "26c7b0333a9765f6c129ba41f10caa405eed6319929373d1ec8f786cfe2f2c6f",
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_after_metadata_repair.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 188,
     "sha256": "3f9887ebe9ded5cce43fcfa9a13c84725d366e68491e4c4ff6d9d40d59ba2489",
     "suffix": ".txt"
@@ -1716,37 +1716,37 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_6_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 542,
     "sha256": "7b69f4fb3c4568464da2e3841d03f83e5b492836efeaa1d4bff1874a38bc9b33",
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_07_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 725,
     "sha256": "0cf34e8667c24d49fff5041ca83fa6cf20a112e367cb71beb70aec271809cc1c",
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_12_8A_OUTPUT_github_remote_scope_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 2639,
     "sha256": "ad1ac7de0fc6f3170287e4889a91bb4687563bff6ba4eb2a6e62fbf02f6521df",
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_12_3_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 2233,
     "sha256": "035e5374be982694efafa526686bb973f4714d1007962ae6afd993d938b1a08c",
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_10_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 629,
     "sha256": "7d99a5fad890a19b7dcb2ab39864b18b35db57eb54c69ce93df20036688f3d20",
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_12_6_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 1942,
     "sha256": "0d85fe91f2e991ca8d2e0e777c9ad0265e81e2ad2e66cfcac995fe45a6a014d0",
     "suffix": ".txt"
@@ -1758,7 +1758,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_12_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 1838,
     "sha256": "300591c03b9262f2864385b3bf437764a85c98ff374fa62497d45aca481ae250",
     "suffix": ".txt"
@@ -1770,7 +1770,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_12_9_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 554,
     "sha256": "c8d77fb6817a7e8d65b5d7eb63b8e7298632ed1cc2fdcac2215b72991ea10479",
     "suffix": ".txt"
@@ -1782,19 +1782,19 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_2_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 594,
     "sha256": "8bd7b86121e596eceab7876f4dac0e8a65f74fc2714bf65c2a5e46cb338f3de5",
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 4481,
     "sha256": "5523e0720aeaa823d1eeb61d325020f64b9dcf005ebbf61098aa529e628f0891",
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_4_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 485,
     "sha256": "14b2fd618fba523a8ebc5a473fe25f723117176d9ccca708b19f01c7df52e7c7",
     "suffix": ".txt"
@@ -1812,7 +1812,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_01_OUTPUT_first_commit_precheck.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 2397,
     "sha256": "45428a2fb0e87cc994a424fac0f335437f26fc05894e93003ca5c88a01eb4e33",
     "suffix": ".txt"
@@ -1860,7 +1860,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_04_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 439,
     "sha256": "0a499e672e4d503002cfc55275b1010d45ecf6bff7609bec144039f1f44136e1",
     "suffix": ".txt"
@@ -1872,7 +1872,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_5_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 912,
     "sha256": "faca38fdebc33d5bb529a0da3c13ee803d535bd376353bb2e55f52fdfcfb04e4",
     "suffix": ".txt"
@@ -1902,13 +1902,13 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_12_8B_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 1104,
     "sha256": "053e4f3ec92f9cbf2544aa43d82df5411595edd03f58bb2a648481df5b917523",
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_5A1_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 583,
     "sha256": "a20bd4cf56440fc59b7828e26c39ac5fa0d004d9657c34e3b251bbbdc477617e",
     "suffix": ".txt"
@@ -1920,7 +1920,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_06_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 630,
     "sha256": "3e05b9084aabe7eb55a15c2687abbc689284cf555030b21d9d3e4dbf00dcf8c0",
     "suffix": ".txt"
@@ -1932,7 +1932,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_10_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 494,
     "sha256": "df7e4d078044f9cbb2854bfda5fc3f2d06b8ab206a9625a29e6ebd4a6f2d9e4b",
     "suffix": ".txt"
@@ -1944,7 +1944,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_1_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 484,
     "sha256": "c133c7e833bb9921a0557598f5fec391ea6d75a1a1d8b2bb5630ed35fcc0c1c4",
     "suffix": ".txt"
@@ -1968,7 +1968,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_5A_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 616,
     "sha256": "ec253303609f6ff083bb5526d7b3bac6512410765277e5c4ce6a783e5d257e76",
     "suffix": ".txt"
@@ -1980,7 +1980,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_12_4_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 1790,
     "sha256": "379d978cba19788a5c6a0f4301fba89889fb166bf1e720bd46b5bf20f4431a51",
     "suffix": ".txt"
@@ -2016,7 +2016,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_7_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 409,
     "sha256": "4db7a2508fd3159b49730e06f8efc8be7f3cca14124a7443e714457402107b0f",
     "suffix": ".txt"
@@ -2028,7 +2028,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_13_13A_OUTPUT_gitleaks_metadata_repair.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 9929,
     "sha256": "d5a8c9e550a46fd99878c10d346d417785204cd7114be54a7599d6256dce33e9",
     "suffix": ".txt"
@@ -2046,7 +2046,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_11_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 498,
     "sha256": "7a78e59b5dd80dd2141582fb3077f6df7efa7ac486db760098888a971cc317aa",
     "suffix": ".txt"
@@ -2064,7 +2064,7 @@
     "suffix": ".txt"
   },
   {
-    "path": "evidence/command-outputs/YCSEC_11_1_OUTPUT_final_git_control.txt",
+    "path": "<curated-publication-noise-artifact>",
     "size_bytes": 483,
     "sha256": "f626446adf7ce59a34868461ff37d9c1d9d0ea758966ca065ad01b61c4e4ab04",
     "suffix": ".txt"

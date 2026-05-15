@@ -36,7 +36,7 @@ Required GitHub OIDC scope variables
 [OK] GitHub branch scope: main
 
 Tool checks
-[OK] yc -> /home/user/.local/bin/yc
+[OK] yc -> <local-home>/.local/bin/yc
 [OK] terraform -> /usr/bin/terraform
 [OK] jq -> /usr/bin/jq
 [OK] gitleaks -> /usr/bin/gitleaks

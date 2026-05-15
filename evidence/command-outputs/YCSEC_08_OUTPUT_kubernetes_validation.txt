@@ -62,7 +62,7 @@ Git status:
  M evidence/before-after-metrics.md
 ?? docs/en/kubernetes-security-model.md
 ?? docs/ru/kubernetes-security-model.md
-?? evidence/command-outputs/YCSEC_08_OUTPUT_final_git_control.txt
+?? <curated-publication-noise-artifact>
 ?? evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_static_validation.txt
 ?? evidence/command-outputs/YCSEC_08_OUTPUT_kubernetes_validation.txt
 ?? kubernetes/hardened/demo-app-hardened.yaml

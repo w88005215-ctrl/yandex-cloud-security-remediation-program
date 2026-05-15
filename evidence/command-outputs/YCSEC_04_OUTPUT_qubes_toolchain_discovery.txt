@@ -38,13 +38,13 @@ Shell:
 SHELL=/bin/bash
 
 PATH:
-/home/user/.local/bin
-/home/user/bin
+<local-home>/.local/bin
+<local-home>/bin
 /usr/local/bin
 /usr/bin
 
 Persistent user paths:
-[OK] HOME exists: /home/user
+[OK] HOME exists: <local-home>
 [OK] ~/.local exists
 [WARN] ~/.local/bin missing
 [INFO] /usr/local/bin exists
@@ -63,7 +63,7 @@ Qubes VM type:
 AppVM
 
 Git repository:
-/home/user/projects/yandex-cloud-security-remediation-program
+<local-home>/projects/yandex-cloud-security-remediation-program
 
 Git status:
 ?? docs/qubes-workstation-model.md

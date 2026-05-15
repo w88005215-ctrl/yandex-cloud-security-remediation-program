@@ -178,3 +178,11 @@ The project includes final bilingual completion reports summarizing the implemen
 - [Финальный отчёт о завершении проекта — RU](docs/final-project-completion-report-ru.md)
 
 These reports complement the final technical reports, repository audit, sanitization reports, control matrix, risk register, remediation metrics, and evidence index.
+
+## Publication artifact curation
+
+The final public repository tree was curated to reduce intermediate execution noise while preserving final reports, final metrics, validated security evidence, audit reports, sanitization records, and publication boundary documentation.
+
+- [Publication artifact curation](docs/publication-artifact-curation.md)
+- [Final project completion report — EN](docs/final-project-completion-report-en.md)
+- [Финальный отчет о завершении проекта — RU](docs/final-project-completion-report-ru.md)

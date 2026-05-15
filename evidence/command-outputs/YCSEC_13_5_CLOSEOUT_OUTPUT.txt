@@ -132,7 +132,7 @@ WARNING: Cannot connect to YC tool initialization service. Network connectivity 
 [OK] evidence index and cloud evidence gap register updated
 
 --- Step 10 — write final git control evidence
-[OK] final git control evidence written: evidence/command-outputs/YCSEC_13_5_OUTPUT_final_git_control.txt
+[OK] final git control evidence written: <curated-publication-noise-artifact>
 
 --- Step 11 — final pre-commit safety checks
 [OK] no Terraform state or kubeconfig-like files before commit

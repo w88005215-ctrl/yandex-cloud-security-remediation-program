@@ -5,8 +5,8 @@ Qube: cloud-dev-workbench
 Tool availability
 [OK] terraform -> /usr/bin/terraform
 [OK] tofu -> /usr/bin/tofu
-[OK] checkov -> /home/user/.local/bin/checkov
-[OK] trivy -> /home/user/.local/bin/trivy
+[OK] checkov -> <local-home>/.local/bin/checkov
+[OK] trivy -> <local-home>/.local/bin/trivy
 [OK] gitleaks -> /usr/bin/gitleaks
 
 == terraform fmt recursive ==
@@ -257,7 +257,7 @@ Success! The configuration is valid.
 == trivy filesystem scan ==
 2026-05-13T09:02:20Z	INFO	[vuln] Vulnerability scanning is enabled
 2026-05-13T09:02:20Z	INFO	[misconfig] Misconfiguration scanning is enabled
-2026-05-13T09:02:20Z	INFO	[checks-client] Using existing checks from cache	path="/home/user/.cache/trivy/policy/content"
+2026-05-13T09:02:20Z	INFO	[checks-client] Using existing checks from cache	path="<local-home>/.cache/trivy/policy/content"
 2026-05-13T09:02:21Z	INFO	[secret] Secret scanning is enabled
 2026-05-13T09:02:21Z	INFO	[secret] If your scanning is slow, please try '--scanners vuln,misconfig' to disable secret scanning
 2026-05-13T09:02:21Z	INFO	[secret] Please see https://trivy.dev/docs/v0.70/guide/scanner/secret#recommendation for faster secret detection

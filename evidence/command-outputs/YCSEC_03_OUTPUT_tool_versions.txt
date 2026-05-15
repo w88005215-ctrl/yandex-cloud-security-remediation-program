@@ -3,7 +3,7 @@ Date: 2026-05-12T13:12:07+00:00
 Qube: cloud-dev-workbench
 
 Git repository:
-/home/user/projects/yandex-cloud-security-remediation-program
+<local-home>/projects/yandex-cloud-security-remediation-program
 
 Git status:
 ?? docs/cost-control.md
@@ -86,4 +86,3 @@ not installed
 
 [cosign]
 not installed
-

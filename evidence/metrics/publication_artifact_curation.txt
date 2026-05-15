@@ -1,0 +1,8 @@
+Publication artifact curation summary
+Date: 2026-05-15T05:06:02.133432+00:00
+Removed public noise artifacts: 60
+Public files rewritten for stale-reference cleanup: 37
+Cloud actions: none
+Git history rewrite: false
+Force push: false
+Removed artifact manifest: preserved only in local private evidence

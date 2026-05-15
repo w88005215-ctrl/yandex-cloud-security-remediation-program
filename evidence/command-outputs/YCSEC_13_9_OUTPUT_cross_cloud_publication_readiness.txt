@@ -88,7 +88,7 @@ e238df2 (tag: v0.13.5a-kyverno-mks-repair-package) fix: prepare Kyverno admissio
 [OK] gitleaks scan passed
 
 --- Step 10 — write final git control evidence
-[OK] final git control evidence written: evidence/command-outputs/YCSEC_13_9_OUTPUT_final_git_control.txt
+[OK] final git control evidence written: <curated-publication-noise-artifact>
 
 --- Step 11 — final pre-commit safety checks
 [OK] no forbidden artifacts before commit

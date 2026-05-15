@@ -8,7 +8,7 @@ Step 1 — verify expected Phase 12.8A workspace
 ?? .github/workflows/cloud-deploy-oidc.yml
 ?? docs/bootstrap-cloud-run-implementation.md
 ?? evidence/command-outputs/YCSEC_12_8A_OUTPUT_bootstrap_cloud_run_implementation_package.txt
-?? evidence/command-outputs/YCSEC_12_8A_OUTPUT_final_git_control.txt
+?? <curated-publication-noise-artifact>
 ?? scripts/run-bootstrap-oidc-audit-cloud-run.sh
 ?? terraform/environments/bootstrap-oidc-audit/
 
@@ -111,6 +111,6 @@ Final git status before commit:
 ?? .github/workflows/cloud-deploy-oidc.yml
 ?? docs/bootstrap-cloud-run-implementation.md
 ?? evidence/command-outputs/YCSEC_12_8A_OUTPUT_bootstrap_cloud_run_implementation_package.txt
-?? evidence/command-outputs/YCSEC_12_8A_OUTPUT_final_git_control.txt
+?? <curated-publication-noise-artifact>
 ?? scripts/run-bootstrap-oidc-audit-cloud-run.sh
 ?? terraform/environments/bootstrap-oidc-audit/

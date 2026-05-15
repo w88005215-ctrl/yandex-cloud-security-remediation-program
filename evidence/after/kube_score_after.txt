@@ -1,5 +1,5 @@
 apps/v1/Deployment hardened-web in ycsec-hardened                             💥
-    path=/home/user/projects/yandex-cloud-security-remediation-program/kubernetes/cloud-run/hardened/workload-hardened.yaml
+    path=<local-home>/projects/yandex-cloud-security-remediation-program/kubernetes/cloud-run/hardened/workload-hardened.yaml
     [CRITICAL] Container Image Pull Policy
         · web -> ImagePullPolicy is not set to Always
             It's recommended to always set the ImagePullPolicy to Always, to make sure that the imagePullSecrets are

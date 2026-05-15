@@ -27,9 +27,9 @@ Explicit approval check
 [OK] explicit cloud smoke-run approval provided
 
 Tool checks
-[OK] yc -> /home/user/.local/bin/yc
+[OK] yc -> <local-home>/.local/bin/yc
 [OK] terraform -> /usr/bin/terraform
-[OK] kubectl -> /home/user/.local/bin/kubectl
+[OK] kubectl -> <local-home>/.local/bin/kubectl
 [OK] gitleaks -> /usr/bin/gitleaks
 [OK] jq -> /usr/bin/jq
 [OK] tar -> /usr/bin/tar

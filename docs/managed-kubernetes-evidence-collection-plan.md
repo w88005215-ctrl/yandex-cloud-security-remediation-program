@@ -49,6 +49,6 @@ Planned files:
 Planned files:
 
 - evidence/command-outputs/YCSEC_13_0_OUTPUT_managed_kubernetes_baseline_remediation_cloud_run.txt
-- evidence/command-outputs/YCSEC_13_0_OUTPUT_final_git_control.txt
+- <curated-publication-noise-artifact>
 - docs/managed-kubernetes-cloud-run-results.md
 - docs/managed-kubernetes-before-after-cloud-comparison.md
