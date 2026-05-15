@@ -191,5 +191,5 @@ The final public repository tree was curated to reduce intermediate execution no
 
 A final bilingual PDF report is included for portfolio review, technical interview discussion, and project defense:
 
-- [Final PDF Report - RU/EN](reports/yandex_cloud_security_remediation_final_report_ru_en.pdf)
+- [Final PDF Report - RU/EN](yandex_cloud_security_remediation_final_report_ru_en.pdf)
 - [PDF report index](docs/final-pdf-report.md)

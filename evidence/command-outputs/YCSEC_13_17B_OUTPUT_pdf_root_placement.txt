@@ -1,0 +1,14 @@
+Phase 13.17B final PDF root placement
+Date: 2026-05-15T06:20:20+00:00
+Cloud actions: NONE
+
+Action:
+- Final PDF report is placed in the repository root beside README.md.
+- Public documentation now references the root-level PDF artifact.
+- The previous subdirectory placement was removed from the final public reference path.
+
+PDF path:
+yandex_cloud_security_remediation_final_report_ru_en.pdf
+
+PDF checksum:
+588081f758e6cf851d9528fc050020851d486bc725bb856c6d24f558c0055150  yandex_cloud_security_remediation_final_report_ru_en.pdf

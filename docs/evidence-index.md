@@ -676,7 +676,7 @@ Purpose: add the final bilingual PDF report as a publication-grade portfolio art
 
 Artifacts:
 
-- `reports/yandex_cloud_security_remediation_final_report_ru_en.pdf`
+- `yandex_cloud_security_remediation_final_report_ru_en.pdf`
 - `docs/final-pdf-report.md`
 - `evidence/metrics/final_pdf_report_summary.json`
 - `evidence/metrics/final_pdf_report_summary.txt`

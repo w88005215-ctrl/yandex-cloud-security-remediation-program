@@ -4,7 +4,7 @@
   "cloud_actions": "none",
   "repair_type": "append-only publication artifact inclusion repair",
   "problem": "Phase 13.17 committed the PDF index and metadata, but the PDF itself was ignored by .gitignore and was not tracked.",
-  "artifact": "reports/yandex_cloud_security_remediation_final_report_ru_en.pdf",
+  "artifact": "yandex_cloud_security_remediation_final_report_ru_en.pdf",
   "sha256": "588081f758e6cf851d9528fc050020851d486bc725bb856c6d24f558c0055150",
   "size_bytes": 109524,
   "git_history_rewrite": false,

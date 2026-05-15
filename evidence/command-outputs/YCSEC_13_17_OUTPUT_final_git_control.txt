@@ -19,7 +19,7 @@ d75cebd (tag: v0.13.6-final-remediation-metrics) docs: consolidate final remedia
 11c4767 (tag: v0.13.5a2-kyverno-runner-hardening) fix: harden Kyverno admission MKS runner
 
 PDF artifact:
-reports/yandex_cloud_security_remediation_final_report_ru_en.pdf
+yandex_cloud_security_remediation_final_report_ru_en.pdf
 
 Status:
  M README.md

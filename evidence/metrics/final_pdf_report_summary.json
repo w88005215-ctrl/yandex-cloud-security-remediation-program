@@ -2,7 +2,7 @@
   "generated_at": "2026-05-15T06:04:15.196528+00:00",
   "phase": "13.17",
   "cloud_actions": "none",
-  "artifact": "reports/yandex_cloud_security_remediation_final_report_ru_en.pdf",
+  "artifact": "yandex_cloud_security_remediation_final_report_ru_en.pdf",
   "sha256": "588081f758e6cf851d9528fc050020851d486bc725bb856c6d24f558c0055150",
   "size_bytes": 109524,
   "purpose": "final bilingual PDF report for portfolio, technical review, interview defense, and project defense",

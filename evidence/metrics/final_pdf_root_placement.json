@@ -1,0 +1,10 @@
+{
+  "phase": "13.17B",
+  "generated_at": "2026-05-15T06:20:20.682700+00:00",
+  "cloud_actions": "none",
+  "action": "Final PDF report placed in the repository root beside README.md.",
+  "pdf_path": "yandex_cloud_security_remediation_final_report_ru_en.pdf",
+  "pdf_size_bytes": 109524,
+  "pdf_sha256": "588081f758e6cf851d9528fc050020851d486bc725bb856c6d24f558c0055150",
+  "publication_reason": "The final PDF is a presentation-grade public artifact and must be directly visible from the repository root."
+}

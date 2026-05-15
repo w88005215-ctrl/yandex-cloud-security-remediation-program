@@ -1,24 +1,10 @@
-Phase 13.17A final PDF artifact inclusion repair
-Date: 2026-05-15T06:06:05+00:00
+Phase 13.17B final PDF root placement git control
+Date: 2026-05-15T06:20:20+00:00
 Cloud actions: NONE
 
-Problem:
-Phase 13.17 added README/index/metrics for the PDF report, but the PDF file itself was ignored by .gitignore and was not committed.
-
-Repair:
-The PDF is force-added with git add -f.
-
-PDF:
-yandex_cloud_security_remediation_final_report_ru_en.pdf
-
-Size bytes:
-109524
-
-SHA256:
-588081f758e6cf851d9528fc050020851d486bc725bb856c6d24f558c0055150
-
-Current HEAD:
-461aae5 (HEAD -> main, tag: v0.13.17-final-pdf-report, origin/main, origin/HEAD) docs: add final PDF report
+HEAD:
+3a14b7f (HEAD -> main, tag: v0.13.17a-final-pdf-artifact-inclusion, origin/main, origin/HEAD) docs: include final PDF artifact
+461aae5 (tag: v0.13.17-final-pdf-report) docs: add final PDF report
 d01f4eb (tag: v0.13.16-publication-artifact-curation) docs: curate final publication artifacts
 5f14582 (tag: v0.13.15-final-project-completion-report) docs: add final project completion report
 cf5f74a (tag: v0.13.14a-final-audit-append-closeout) docs: close final audit sanitized evidence
@@ -28,3 +14,13 @@ be44587 (tag: v0.13.14-final-repository-audit) docs: add final repository audit 
 a18df35 (tag: v0.13.11-retained-bootstrap-cleanup) docs: record retained bootstrap cleanup
 4233e3c (tag: v0.13.10-final-reports-publication-summary) docs: add final technical reports and publication summary
 10f1fdd (tag: v0.13.9-cross-cloud-publication-readiness) docs: add cross-cloud mapping and publication readiness
+90759e4 (tag: v0.13.8-final-risk-register) docs: add final risk register
+
+Root PDF:
+-rw-r--r--. 1 user user 107K May 15 06:04 yandex_cloud_security_remediation_final_report_ru_en.pdf
+
+Root PDF checksum:
+588081f758e6cf851d9528fc050020851d486bc725bb856c6d24f558c0055150  yandex_cloud_security_remediation_final_report_ru_en.pdf
+
+Expected tag:
+v0.13.17b-final-pdf-root-placement

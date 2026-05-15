@@ -3,7 +3,7 @@ Date: 2026-05-15T06:04:15+00:00
 Cloud actions: NONE
 
 PDF:
-reports/yandex_cloud_security_remediation_final_report_ru_en.pdf
+yandex_cloud_security_remediation_final_report_ru_en.pdf
 
 Size bytes:
 109524

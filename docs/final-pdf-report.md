@@ -4,7 +4,7 @@ This document records the final bilingual PDF report added to the public reposit
 
 ## Artifact
 
-- PDF: [`reports/yandex_cloud_security_remediation_final_report_ru_en.pdf`](../reports/yandex_cloud_security_remediation_final_report_ru_en.pdf)
+- PDF: [`yandex_cloud_security_remediation_final_report_ru_en.pdf`](../yandex_cloud_security_remediation_final_report_ru_en.pdf)
 
 ## Purpose
 
